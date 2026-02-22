@@ -1,0 +1,36 @@
+Rank,Symbol,Company,Sector,Market_Cap_Category,Final_Score,Base_Score,Diversity_Bonus,Catalyst_Bonus,Tier,Raw_Mentions,Unique_Sources,Unique_Signals,Signals,Top_Sources,Upside_Pct,Catalyst,Has_Deal,Deal_Value,Deal_Partner,Regulatory_Status,Screening_Start_Date,Screening_End_Date,As_Of_Running
+1,GOOGL,Alphabet Inc.,Technology,Mega Cap,76,52,19,5,A,10,9,5,"S3,S5,S6,S7,S8","Bank of America,FinancialContent,Morningstar",,Strategic Acquisition: Wiz (private),TRUE,$32B,Wiz (private),EU unconditional approval Feb 10. US cleared Nov 2025. Israel/UK/Australia pending,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+2,NVDA,NVIDIA Corporation,Technology,Mega Cap,70,54,16,0,A,10,8,4,"S1,S4,S5,S6","JP Morgan,FinancialContent,Goldman Sachs,KeyBanc,Morningstar",35%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+3,MSFT,Microsoft Corporation,Technology,Mega Cap,62,41,21,0,A,9,9,6,"S1,S3,S4,S5,S6,S8","Bank of America,JP Morgan,Goldman Sachs,Citi,FactSet",20%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+4,MU,Micron Technology Inc,Technology,Large Cap,46,35,11,0,A,7,5,3,"S1,S4,S6","Morgan Stanley,Seeking Alpha",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+5,AMZN,Amazon.com,Technology,Mega Cap,45,33,12,0,A,6,6,3,"S4,S5,S8","JP Morgan,FinancialContent",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+6,TSLA,Tesla Inc,Consumer Discretionary,Mega Cap,42,29,13,0,A,6,5,4,"S1,S4,S5,S6","Morgan Stanley,Benchmark,Cantor Fitzgerald,MarketBeat,Morningstar",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+7,NFLX,Netflix Inc.,Communication Services,Mega Cap,37,22,10,5,A,4,4,3,"S1,S7,S8","Bernstein,Paramount IR",,Mega Acquisition: Warner Bros. Discovery (WBD),TRUE,$82.7B enterprise value ($27.75/share),Warner Bros. Discovery (WBD),Under DOJ review. Senate hearing held. Competing Paramount bid at $30/share,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+8,AAPL,Apple Inc,Technology,Mega Cap,36,23,13,0,A,5,5,4,"S1,S3,S4,S8","Citi,FactSet,24/7 Wall St",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+9,PANW,Palo Alto Networks,Technology/Cybersecurity,Large Cap,30,20,5,5,A,4,3,1,S7,"Company IR,GuruFocus",,Strategic Acquisition (Completed): CyberArk Software (CYBR),TRUE,$25B,CyberArk Software (CYBR),Approved - FTC & EU cleared with minor behavioral remedies,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+10,TSM,Taiwan Semiconductor,Technology,Mega Cap,28,19,9,0,B,4,3,3,"S3,S5,S6","UBS,Morningstar",33%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+11,AMD,Advanced Micro Devices,Technology,Large Cap,28,20,8,0,B,4,2,3,"S1,S4,S6",Seeking Alpha,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+12,AMAT,Applied Materials,Technology,Large Cap,25,16,9,0,B,3,3,3,"S1,S3,S6","Summit Insights,Zacks",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+13,LLY,Eli Lilly & Company,Healthcare,Mega Cap,25,18,7,0,B,3,3,2,"S1,S8",JP Morgan,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+14,TMO,Thermo Fisher Scientific,Healthcare,Mega Cap,22,14,5,3,B,3,3,1,S7,"TipRanks,StockTitan",,Strategic Acquisition: Clario Holdings (private),TRUE,$8.875B + up to $525M earn-out,Clario Holdings (private),Pending regulatory approvals. $3.8B notes priced Feb 9,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+15,META,Meta Platforms,Technology,Mega Cap,22,13,9,0,B,3,3,3,"S5,S6,S8","JP Morgan,Morningstar",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+16,KO,Coca-Cola Company,Consumer Staples,Mega Cap,22,13,9,0,B,3,3,3,"S1,S6,S8","UBS,Morningstar",,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+17,CTRA,Coterra Energy,Energy,Large Cap,21,10,6,5,B,2,2,2,"S6,S7",Insider Monkey,11%,Mega Merger: Devon Energy (DVN),TRUE,$58B combined / $21.4B,Devon Energy (DVN),Pending - Shareholder + regulatory approval needed,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+18,DVN,Devon Energy,Energy,Large Cap,19,10,4,5,C,2,2,1,S7,Company IR,5%,Mega Merger: Coterra Energy (CTRA),TRUE,$58B combined / $21.4B acquisition,Coterra Energy (CTRA),Pending - DOJ/regulatory review underway,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+19,COF,Capital One Financial,Financials,Large Cap,19,10,6,3,C,2,2,2,"S6,S7",Insider Monkey,,Strategic Acquisition: Brex (AI fintech),TRUE,$5.15B,Brex (AI fintech),Announced Jan 2026. Pending.,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+20,BKNG,Booking Holdings,Consumer Discretionary,Large Cap,18,12,6,0,C,2,2,2,"S1,S4",Gordon Haskett,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+21,PLTR,Palantir Technologies,Technology,Large Cap,18,12,6,0,C,2,2,2,"S1,S4",Daiwa,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+22,XOM,ExxonMobil,Energy,Mega Cap,18,12,6,0,C,2,2,2,"S2,S4",Seeking Alpha,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+23,CVX,Chevron Corporation,Energy,Mega Cap,18,12,6,0,C,2,2,2,"S2,S8",Seeking Alpha,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+24,SLB,SLB (Schlumberger),Energy,Large Cap,16,10,6,0,C,2,2,2,"S1,S6","TipRanks,Morningstar",27%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+25,EOG,EOG Resources,Energy,Large Cap,16,10,6,0,C,2,2,2,"S1,S6","TipRanks,Morningstar",24%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+26,PFE,Pfizer Inc.,Healthcare,Large Cap,16,10,6,0,C,2,2,2,"S6,S8",Insider Monkey,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+27,ADBE,Adobe Inc.,Technology,Large Cap,16,10,6,0,C,2,2,2,"S6,S8",Insider Monkey,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+28,DIS,The Walt Disney Company,Communication Services,Large Cap,16,10,6,0,C,2,2,2,"S4,S6",Insider Monkey,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+29,GS,Goldman Sachs,Financials,Large Cap,15,9,6,0,C,2,2,2,"S4,S5",Bank of America,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+30,CRM,Salesforce,Technology,Large Cap,15,9,6,0,C,2,2,2,"S4,S5",Goldman Sachs,,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+31,UNP,Union Pacific,Industrials,Large Cap,14,6,3,5,C,1,1,1,S7,,,Mega Merger (Proposed): Norfolk Southern (NSC),TRUE,$85B (proposed),Norfolk Southern (NSC),Intense scrutiny from STB and DOJ,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+32,NSC,Norfolk Southern,Industrials,Large Cap,14,6,3,5,C,1,1,1,S7,,,Mega Merger (Proposed): Union Pacific (UNP),TRUE,$85B (proposed),Union Pacific (UNP),Intense scrutiny from STB and DOJ,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+33,LNG,Cheniere Energy,Energy,Large Cap,13,7,6,0,C,2,2,2,"S1,S6","Goldman Sachs,Insider Monkey",19%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+34,WBD,Warner Bros. Discovery,Communication Services,Large Cap,12,4,3,5,C,1,1,1,S7,Netflix IR,,Acquisition Target: Netflix (NFLX) / Paramount competing,TRUE,$82.7B (Netflix) vs ~$78B (Paramount at $30/share),Netflix (NFLX) / Paramount competing,DOJ Second Request issued. Political scrutiny. Competing bids.,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
+35,JPM,JPMorgan Chase,Financials,Mega Cap,11,5,6,0,C,2,2,2,"S5,S6","Bank of America,TD Securities",30%,,FALSE,,,,2026-02-08,2026-02-15,22/02/2026 04:31 UTC
