@@ -387,8 +387,8 @@ function applyFilter() {
   filtered = DATA.filter(d => {
     if (search && !d.Ticker.toUpperCase().includes(search)) return false;
     if (f === 'all') return true;
-    if (f === 'news') return d.In_News_Screening === 'TRUE';
-    if (f === 'deal') return d.Has_Deal === 'TRUE';
+    if (f === 'news') return String(d.In_News_Screening).toLowerCase() === 'true';
+    if (f === 'deal') return String(d.Has_Deal).toLowerCase() === 'true';
     if (f === 'DS') return d.Conviction_Tag === 'Double Strong';
     if (f === 'HG') return d.Conviction_Tag === 'Hidden Gem';
     if (['Platinum','Gold','Silver','Bronze','Monitor'].includes(f)) return d._tier === f;
@@ -432,7 +432,7 @@ function renderTable() {
     const ret1y = parseFloat(d.Ret_1Y_Pct) || 0;
     const rsi = parseFloat(d.RSI_Value) || 0;
     const pen = parseFloat(d.Penalty_Total) || 0;
-    const inNews = d.In_News_Screening === 'TRUE';
+    const inNews = String(d.In_News_Screening).toLowerCase() === 'true';
     const tag = d.Conviction_Tag;
     
     const tagCls = tag === 'Double Strong' ? 'DS' : tag === 'News Only' ? 'NO' : tag === 'Hidden Gem' ? 'HG' : tag === 'Momentum Only' ? 'MO' : tag === 'Double Weak' ? 'DW' : '';
@@ -487,7 +487,7 @@ window.goPage = function(p) { currentPage = p; renderTable(); document.querySele
 // RENDER STATS
 // ============================================================
 function renderStats() {
-  const inNews = DATA.filter(d => d.In_News_Screening === 'TRUE').length;
+  const inNews = DATA.filter(d => String(d.In_News_Screening).toLowerCase() === 'true').length;
   const plat = DATA.filter(d => d._tier === 'Platinum').length;
   const gold = DATA.filter(d => d._tier === 'Gold').length;
   const ds = DATA.filter(d => d.Conviction_Tag === 'Double Strong').length;
@@ -518,8 +518,8 @@ function renderScatter() {
   if (charts.scatter) charts.scatter.destroy();
   
   // Only plot stocks with news or top 50 by momentum
-  const newsStocks = DATA.filter(d => d.In_News_Screening === 'TRUE');
-  const topMom = DATA.filter(d => d.In_News_Screening !== 'TRUE').slice(0, 20);
+  const newsStocks = DATA.filter(d => String(d.In_News_Screening).toLowerCase() === 'true');
+  const topMom = DATA.filter(d => String(d.In_News_Screening).toLowerCase() !== 'true').slice(0, 20);
   const plotData = [...newsStocks, ...topMom];
   
   const tagColor = t => t === 'Double Strong' ? '#34D399' : t === 'News Only' ? '#60A5FA' : t === 'Hidden Gem' ? '#A78BFA' : t === 'Momentum Only' ? '#FB923C' : t === 'Double Weak' ? '#F87171' : '#6B7280';
@@ -532,7 +532,7 @@ function renderScatter() {
         backgroundColor: plotData.map(d => tagColor(d.Conviction_Tag)),
         borderColor: plotData.map(d => tagColor(d.Conviction_Tag)),
         borderWidth: 1.5,
-        pointRadius: plotData.map(d => d.In_News_Screening === 'TRUE' ? 7 : 5),
+        pointRadius: plotData.map(d => String(d.In_News_Screening).toLowerCase() === 'true' ? 7 : 5),
         pointHoverRadius: 10
       }]
     },
@@ -600,8 +600,8 @@ function showDetail(ticker) {
   const d = DATA.find(r => r.Ticker === ticker);
   if (!d) return;
   
-  const inNews = d.In_News_Screening === 'TRUE';
-  const hasDeal = d.Has_Deal === 'TRUE';
+  const inNews = String(d.In_News_Screening).toLowerCase() === 'true';
+  const hasDeal = String(d.Has_Deal).toLowerCase() === 'true';
   const ret1y = parseFloat(d.Ret_1Y_Pct)||0;
   const ret6m = parseFloat(d.Ret_6M_Pct)||0;
   const ret1m = parseFloat(d.Ret_1M_Pct)||0;
