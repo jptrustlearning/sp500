@@ -638,7 +638,7 @@ function showDetail(ticker) {
       <div class="di"><span class="k">Return 1M</span><span class="vv ${ret1m>=0?'pos':'neg'}">${ret1m>=0?'+':''}${ret1m.toFixed(1)}%</span></div>
       <div class="di"><span class="k">Return 1W</span><span class="vv ${ret1w>=0?'pos':'neg'}">${ret1w>=0?'+':''}${ret1w.toFixed(1)}%</span></div>
       <div class="di"><span class="k">RSI</span><span class="vv" style="color:${rsiColor(rsi)}">${rsi.toFixed(1)}</span></div>
-      <div class="di"><span class="k">Golden Cross</span><span class="vv">${d.Golden_Cross === 'True' ? '✅ Yes' : '❌ No'}</span></div>
+      <div class="di"><span class="k">Golden Cross</span><span class="vv">${String(d.Golden_Cross).toLowerCase() === 'true' ? '✅ Yes' : '❌ No'}</span></div>
       <div class="di"><span class="k">Volatility</span><span class="vv">${parseFloat(d.Volatility_Pct).toFixed(1)}%</span></div>
       <div class="di"><span class="k">Penalty</span><span class="vv" style="color:${pen<0?'var(--red)':'var(--text3)'}">${pen}</span></div>
       <div class="di"><span class="k">Price</span><span class="vv">$${parseFloat(d.Price).toFixed(2)}</span></div>
