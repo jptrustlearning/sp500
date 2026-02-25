@@ -128,7 +128,7 @@ tbody td{padding:8px;white-space:nowrap;vertical-align:middle}
 /* Detail Overlay */
 .overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:100;backdrop-filter:blur(4px)}
 .overlay.open{display:flex;align-items:center;justify-content:center}
-.detail{background:var(--bg2);border:1px solid var(--border2);border-radius:18px;padding:28px;max-width:660px;width:92%;max-height:85vh;overflow-y:auto;position:relative}
+.detail{background:var(--bg2);border:1px solid var(--border2);border-radius:18px;padding:28px;max-width:720px;width:92%;max-height:85vh;overflow-y:auto;position:relative}
 .detail .close{position:absolute;top:14px;right:14px;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);width:30px;height:30px;border-radius:7px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
 .detail .close:hover{color:var(--gold);border-color:var(--gold)}
 .detail .dtk{font-family:var(--font-h);font-size:1.8rem;color:var(--gold)}
@@ -146,6 +146,24 @@ tbody td{padding:8px;white-space:nowrap;vertical-align:middle}
 .dcat{background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 14px;margin-top:14px}
 .dcat .l{font-size:.66rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
 .dcat .v{color:var(--text);font-size:.85rem}
+
+/* Detail Tabs */
+.detail-tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:1px solid var(--border2)}
+.detail-tab{padding:10px 20px;font-size:.82rem;font-weight:600;color:var(--text3);cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;font-family:var(--font-b);transition:.2s}
+.detail-tab:hover{color:var(--text2)}
+.detail-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+/* Profile styles */
+.profile-brief{background:linear-gradient(135deg,rgba(232,185,49,.08),rgba(96,165,250,.05));border:1px solid rgba(232,185,49,.15);border-radius:12px;padding:18px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+.profile-brief::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--gold),var(--blue))}
+.profile-brief .plbl{font-size:.66rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;font-weight:600}
+.profile-brief .ptxt{color:var(--text);font-size:.88rem;line-height:1.7}
+.profile-detail-box{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+.profile-detail-box .plbl{font-size:.66rem;color:var(--cyan);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;font-weight:600}
+.profile-detail-box .ptxt{color:var(--text2);font-size:.82rem;line-height:1.85}
+.profile-ind{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;background:var(--purple-dim);border:1px solid rgba(167,139,250,.2);border-radius:8px;font-size:.72rem;color:var(--purple);font-weight:500;margin-bottom:14px}
+.no-profile{text-align:center;padding:30px 20px;color:var(--text3);font-size:.85rem}
 
 .footer{text-align:center;padding:24px 0;color:var(--text3);font-size:.78rem;border-top:1px solid var(--border);margin-top:30px}
 .footer strong{color:var(--gold)}
@@ -266,8 +284,8 @@ tbody td{padding:8px;white-space:nowrap;vertical-align:middle}
   </div>
 
   <footer class="footer">
-    <p><strong>JP Trust Learning</strong> &bull; Combined Score Dashboard v1.0</p>
-    <p style="margin-top:4px">News Screening + Momentum Analysis &bull; S&P 500</p>
+    <p><strong>JP Trust Learning</strong> &bull; Combined Score Dashboard v2.0</p>
+    <p style="margin-top:4px">News Screening + Momentum Analysis + Company Profiles &bull; S&P 500</p>
   </footer>
 </div>
 
@@ -276,8 +294,10 @@ tbody td{padding:8px;white-space:nowrap;vertical-align:middle}
 // CONFIG
 // ============================================================
 const CSV_URL = 'https://raw.githubusercontent.com/jptrustlearning/sp500/main/output_combined_score_sp500.csv';
+const PROFILE_URL = 'https://raw.githubusercontent.com/jptrustlearning/sp500/main/profiles/all_profiles.csv';
 
 let DATA = [];
+let PROFILES = {};
 let filtered = [];
 let sortCol = 'rank';
 let sortAsc = true;
@@ -294,13 +314,23 @@ document.addEventListener('DOMContentLoaded', loadData);
 async function loadData() {
   const statusEl = document.getElementById('status');
   try {
-    const res = await fetch(CSV_URL);
+    const [res, profRes] = await Promise.all([
+      fetch(CSV_URL),
+      fetch(PROFILE_URL).catch(() => null)
+    ]);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const text = await res.text();
     DATA = parseCSV(text);
     
+    // Parse profiles into lookup map
+    if (profRes && profRes.ok) {
+      const profText = await profRes.text();
+      parseCSV(profText).forEach(p => { PROFILES[p.Ticker] = p; });
+    }
+    
+    const profCount = Object.keys(PROFILES).length;
     statusEl.className = 'status-indicator success';
-    statusEl.innerHTML = '<span>●</span> GITHUB DATA LOADED — ' + DATA.length + ' STOCKS';
+    statusEl.innerHTML = '<span>●</span> GITHUB DATA LOADED — ' + DATA.length + ' STOCKS' + (profCount ? ' + ' + profCount + ' PROFILES' : '');
     
     // Set period label
     if (DATA.length > 0) {
@@ -600,6 +630,7 @@ function showDetail(ticker) {
   const d = DATA.find(r => r.Ticker === ticker);
   if (!d) return;
   
+  const prof = PROFILES[ticker] || null;
   const inNews = String(d.In_News_Screening).toLowerCase() === 'true';
   const hasDeal = String(d.Has_Deal).toLowerCase() === 'true';
   const ret1y = parseFloat(d.Ret_1Y_Pct)||0;
@@ -609,14 +640,37 @@ function showDetail(ticker) {
   const rsi = parseFloat(d.RSI_Value)||0;
   const pen = parseFloat(d.Penalty_Total)||0;
   
+  const esc = s => s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : '';
+  const companyName = prof ? esc(prof.Company) : (d.Company || d.Ticker);
+  const sectorName = prof ? esc(prof.Sector) : (d.Sector || '');
+  const tagCls = d.Conviction_Tag==='Double Strong'?'DS':d.Conviction_Tag==='News Only'?'NO':d.Conviction_Tag==='Hidden Gem'?'HG':d.Conviction_Tag==='Momentum Only'?'MO':d.Conviction_Tag==='Double Weak'?'DW':'';
+  
+  // Profile tab content
+  let profHTML = '';
+  if (prof) {
+    profHTML = `
+      ${prof.Industry ? '<div class="profile-ind">🏭 '+esc(prof.Industry)+'</div>' : ''}
+      <div class="profile-brief"><div class="plbl">📋 ภาพรวม</div><div class="ptxt">${esc(prof.Brief_Overview)}</div></div>
+      <div class="profile-detail-box"><div class="plbl">📊 วิเคราะห์เชิงลึก</div><div class="ptxt">${esc(prof.Detailed_Profile)}</div></div>
+    `;
+  } else {
+    profHTML = '<div class="no-profile"><div style="font-size:2rem;margin-bottom:8px;opacity:.4">🏢</div><div>ยังไม่มีข้อมูล Company Profile สำหรับ '+ticker+'</div><div style="font-size:.75rem;margin-top:6px">ข้อมูลจะถูกเพิ่มในอนาคต</div></div>';
+  }
+  
   const panel = document.getElementById('detailPanel');
   panel.innerHTML = `
     <button class="close" onclick="closeDetail()">✕</button>
     <div class="dtk">${d.Ticker} <span class="tier-badge tier-${d._tier}" style="font-size:.7rem;vertical-align:middle">${d._tier}</span>
-    ${d.Conviction_Tag ? '<span class="tag-badge tag-'+(d.Conviction_Tag==='Double Strong'?'DS':d.Conviction_Tag==='News Only'?'NO':d.Conviction_Tag==='Hidden Gem'?'HG':d.Conviction_Tag==='Momentum Only'?'MO':'DW')+'" style="font-size:.65rem;vertical-align:middle">'+d.Conviction_Tag+'</span>' : ''}
+    ${d.Conviction_Tag ? '<span class="tag-badge tag-'+tagCls+'" style="font-size:.65rem;vertical-align:middle">'+d.Conviction_Tag+'</span>' : ''}
     </div>
-    <div class="dco">${d.Company || d.Ticker} ${d.Sector ? '• '+d.Sector : ''} ${d.Market_Cap ? '• '+d.Market_Cap : ''}</div>
+    <div class="dco">${companyName} ${sectorName ? '• '+sectorName : ''} ${d.Market_Cap ? '• '+d.Market_Cap : ''}</div>
     
+    <div class="detail-tabs">
+      <button class="detail-tab active" onclick="switchTab(this,'tab-scores')">📊 Score & Data</button>
+      <button class="detail-tab" onclick="switchTab(this,'tab-profile')">🏢 Company Profile${prof ? '' : ' <span style="font-size:.6rem;opacity:.5">(N/A)</span>'}</button>
+    </div>
+    
+    <div class="tab-content active" id="tab-scores">
     <div class="dsg">
       <div class="dsc"><div class="v" style="color:${combColor(d._combined)}">${d._combined.toFixed(1)}</div><div class="l">Combined</div></div>
       <div class="dsc"><div class="v" style="color:${parseInt(d.News_Score_Raw)>0?'var(--blue)':'var(--text3)'}">${d.News_Score_Raw}</div><div class="l">News Score</div></div>
@@ -654,9 +708,21 @@ function showDetail(ticker) {
     ${d.Catalyst ? '<div class="dcat"><div class="l">Catalyst</div><div class="v">'+d.Catalyst+'</div></div>' : ''}
     ${hasDeal ? '<div class="dcat" style="border-left-color:var(--purple);background:var(--purple-dim);margin-top:8px"><div class="l" style="color:var(--purple)">Deal</div><div class="v">'+d.Deal_Partner+' — '+d.Deal_Value+'</div></div>' : ''}
     ${d.Top_Sources ? '<div style="margin-top:10px;font-size:.75rem;color:var(--text3)">Sources: '+d.Top_Sources+'</div>' : ''}
+    </div>
+    
+    <div class="tab-content" id="tab-profile">
+      ${profHTML}
+    </div>
   `;
   
   document.getElementById('overlay').classList.add('open');
+}
+
+function switchTab(btn, tabId) {
+  btn.closest('.detail').querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  btn.closest('.detail').querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
 }
 
 function closeDetail() { document.getElementById('overlay').classList.remove('open'); }
