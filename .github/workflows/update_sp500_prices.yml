@@ -1,0 +1,44 @@
+name: Daily S&P 500 Update
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ เวลา 00:00 UTC = 07:00 เวลาไทย
+    # (อังคาร-เสาร์ UTC = จันทร์-ศุกร์ ตลาด US ปิดแล้ว)
+    - cron: '0 0 * * 2-6'
+  workflow_dispatch:
+    # กด Run workflow ด้วยมือได้จาก Actions tab
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas requests beautifulsoup4
+
+      - name: Run S&P 500 price updater
+        run: python scripts/update_sp500_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_sp500_daily.csv logs/
+          # Only commit if there are changes
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "📈 S&P500 daily update — ${TIMESTAMP}"
+            git push
+          )
