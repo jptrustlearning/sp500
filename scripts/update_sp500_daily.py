@@ -120,9 +120,9 @@ def main():
     print('📈 S&P 500 Daily Price Updater — GitHub Actions')
     print('=' * 60)
 
-    # Get tickers
-    tickers = get_sp500_tickers()
-    print(f'\n📋 Found {len(tickers)} S&P 500 tickers')
+    # Get current S&P 500 tickers from Wikipedia
+    sp500_tickers = get_sp500_tickers()
+    print(f'\n📋 Current S&P 500: {len(sp500_tickers)} tickers')
 
     # Create logs folder
     os.makedirs(LOG_FOLDER, exist_ok=True)
@@ -133,12 +133,39 @@ def main():
         df_existing['Date'] = pd.to_datetime(df_existing['Date'])
         last_date = df_existing['Date'].max()
         start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
-        print(f'📂 Existing: {len(df_existing):,} rows, {df_existing["Ticker"].nunique()} tickers')
+        existing_tickers = set(df_existing['Ticker'].unique())
+        print(f'📂 Existing: {len(df_existing):,} rows, {len(existing_tickers)} tickers')
         print(f'📅 Last date: {last_date.date()}')
     else:
         df_existing = pd.DataFrame(columns=['Ticker', 'Date', 'Open', 'High', 'Low', 'Close', 'Volume'])
         start_date = FALLBACK_START
+        existing_tickers = set()
         print(f'📂 No existing file — starting from {FALLBACK_START}')
+
+    # Merge tickers: keep ALL existing + add any new from S&P 500
+    # Never remove old tickers, only add new ones
+    sp500_set = set(sp500_tickers)
+    all_tickers = sorted(sp500_set | existing_tickers)
+
+    new_additions = sorted(sp500_set - existing_tickers)
+    removed_from_index = sorted(existing_tickers - sp500_set)
+
+    print(f'\n📊 Ticker Summary:')
+    print(f'   S&P 500 current:  {len(sp500_set)}')
+    print(f'   Already tracking: {len(existing_tickers)}')
+    print(f'   Total to fetch:   {len(all_tickers)}')
+
+    if new_additions:
+        print(f'   🆕 New additions ({len(new_additions)}): {", ".join(new_additions[:30])}')
+        if len(new_additions) > 30:
+            print(f'      ... and {len(new_additions) - 30} more')
+
+    if removed_from_index:
+        print(f'   📌 Removed from index but kept ({len(removed_from_index)}): {", ".join(removed_from_index[:30])}')
+        if len(removed_from_index) > 30:
+            print(f'      ... and {len(removed_from_index) - 30} more')
+
+    tickers = all_tickers
 
     end_date = datetime.now().strftime('%Y-%m-%d')
     print(f'\n🔄 Fetching: {start_date} → {end_date}')
