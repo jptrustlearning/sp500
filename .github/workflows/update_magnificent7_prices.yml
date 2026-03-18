@@ -1,0 +1,43 @@
+name: Daily Magnificent 7 Update
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ เวลา 00:30 UTC = 07:30 เวลาไทย
+    # (หลัง Benchmark 15 นาที เพื่อไม่ให้ชนกัน)
+    - cron: '30 0 * * 2-6'
+  workflow_dispatch:
+    # กด Run workflow ด้วยมือได้จาก Actions tab
+
+jobs:
+  update-mag7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run Magnificent 7 price updater
+        run: python scripts/update_magnificent7_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_magnificent7_daily.csv logs/
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "📊 Magnificent 7 daily update — ${TIMESTAMP}"
+            git push
+          )

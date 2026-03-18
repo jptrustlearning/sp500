@@ -1,0 +1,38 @@
+name: "[One-Time] Backfill Magnificent 7 from 2015"
+
+on:
+  workflow_dispatch:
+    # กด Run workflow ด้วยมือเท่านั้น — ไม่มี schedule
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run backfill (2015-01-01 → 2021-12-31)
+        run: python scripts/backfill_magnificent7_2015.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_magnificent7_daily.csv logs/
+          git diff --cached --quiet || (
+            git commit -m "📊 Magnificent 7 backfill 2015-2021 — one-time historical data"
+            git push
+          )
