@@ -81,10 +81,14 @@ if __name__ == '__main__':
     if os.path.exists(CSV_FILE):
         df_existing = pd.read_csv(CSV_FILE)
         df_existing['Date'] = pd.to_datetime(df_existing['Date'])
-        last_date = df_existing['Date'].max()
-        start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
-        print(f'📂 Existing: {len(df_existing):,} rows')
-        print(f'📅 Last date: {last_date.date()}')
+        if len(df_existing) > 0 and pd.notna(df_existing['Date'].max()):
+            last_date = df_existing['Date'].max()
+            start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
+            print(f'📂 Existing: {len(df_existing):,} rows')
+            print(f'📅 Last date: {last_date.date()}')
+        else:
+            start_date = FALLBACK_START
+            print(f'📂 Existing file is empty — starting from {FALLBACK_START}')
     else:
         df_existing = pd.DataFrame(columns=['Ticker', 'Date', 'Open', 'High', 'Low', 'Close', 'Volume'])
         start_date = FALLBACK_START
