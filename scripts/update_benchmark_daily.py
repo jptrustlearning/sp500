@@ -23,7 +23,7 @@ from datetime import datetime, timedelta
 # =============================================================================
 CSV_FILE = 'input_benchmark_daily.csv'
 LOG_FOLDER = 'logs'
-FALLBACK_START = '2022-01-01'
+FALLBACK_START = '2015-01-01'
 
 # Benchmark ETFs
 TICKERS = ['SPY', 'QQQ', 'DIA']
