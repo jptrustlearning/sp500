@@ -312,10 +312,9 @@ def build_statement_csv(all_data, statement_type, period):
     return pd.DataFrame(rows)
 
 
-def build_ratios_csv(all_data):
-    """Build a wide-format CSV for current ratios.
-    Columns: Ticker, Most Recent Quarter, ..., ratio1, ratio2, ...
-    No download timestamp — makes dedup easier.
+def build_ratios_current_csv(all_data):
+    """Build ratios_current.csv — latest snapshot, overwrite every run.
+    Columns: Ticker, Most Recent Quarter, Last Fiscal Year End, ratio1, ratio2, ...
     """
     rows = []
     for data in all_data:
@@ -323,6 +322,46 @@ def build_ratios_csv(all_data):
             continue
         row = {"Ticker": data["ticker"]}
         row.update(data.get("ratios", {}))
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def build_ratios_quarterly_csv(all_data):
+    """Build ratios_quarterly.csv — append per quarter.
+    Dedup key: Ticker + Most Recent Quarter
+    """
+    rows = []
+    for data in all_data:
+        if data is None:
+            continue
+        ratios = data.get("ratios", {})
+        if "Most Recent Quarter" not in ratios:
+            continue
+        row = {"Ticker": data["ticker"]}
+        row.update(ratios)
+        # Remove annual-only fields to keep it clean
+        row.pop("Last Fiscal Year End", None)
+        row.pop("Next Fiscal Year End", None)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def build_ratios_annual_csv(all_data):
+    """Build ratios_annual.csv — append per fiscal year.
+    Dedup key: Ticker + Last Fiscal Year End
+    """
+    rows = []
+    for data in all_data:
+        if data is None:
+            continue
+        ratios = data.get("ratios", {})
+        if "Last Fiscal Year End" not in ratios:
+            continue
+        row = {"Ticker": data["ticker"]}
+        row.update(ratios)
+        # Remove quarterly-only fields to keep it clean
+        row.pop("Most Recent Quarter", None)
+        row.pop("Earnings Date", None)
         rows.append(row)
     return pd.DataFrame(rows)
 
@@ -473,14 +512,28 @@ def main():
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
-    # 7) Current Ratios — dedup by Ticker + Most Recent Quarter
-    df = build_ratios_csv(all_data)
+    # 7) Ratios — Current snapshot (overwrite every run)
+    df = build_ratios_current_csv(all_data)
     if not df.empty:
         path = output_dir / "ratios_current.csv"
-        ratio_keys = ["Ticker", "Most Recent Quarter"]
-        df = merge_with_existing(df, path, ratio_keys)
         df.to_csv(path, index=False)
-        logger.info(f"  Saved {path} ({len(df)} rows)")
+        logger.info(f"  Saved {path} ({len(df)} rows) [overwrite]")
+
+    # 8) Ratios — Quarterly (append, dedup by Ticker + Most Recent Quarter)
+    df = build_ratios_quarterly_csv(all_data)
+    if not df.empty:
+        path = output_dir / "ratios_quarterly.csv"
+        df = merge_with_existing(df, path, ["Ticker", "Most Recent Quarter"])
+        df.to_csv(path, index=False)
+        logger.info(f"  Saved {path} ({len(df)} rows) [append]")
+
+    # 9) Ratios — Annual (append, dedup by Ticker + Last Fiscal Year End)
+    df = build_ratios_annual_csv(all_data)
+    if not df.empty:
+        path = output_dir / "ratios_annual.csv"
+        df = merge_with_existing(df, path, ["Ticker", "Last Fiscal Year End"])
+        df.to_csv(path, index=False)
+        logger.info(f"  Saved {path} ({len(df)} rows) [append]")
 
     # --- Summary ---
     summary = {
