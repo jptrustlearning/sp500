@@ -1,0 +1,46 @@
+Ticker,Date,Metric,Value
+AAPL,2025-09-30,Operating Cash Flow,111482000000.0
+AAPL,2024-09-30,Operating Cash Flow,118254000000.0
+AAPL,2023-09-30,Operating Cash Flow,110543000000.0
+AAPL,2022-09-30,Operating Cash Flow,122151000000.0
+AAPL,2021-09-30,Operating Cash Flow,
+AAPL,2025-09-30,Free Cash Flow,98767000000.0
+AAPL,2024-09-30,Free Cash Flow,108807000000.0
+AAPL,2023-09-30,Free Cash Flow,99584000000.0
+AAPL,2022-09-30,Free Cash Flow,111443000000.0
+AAPL,2021-09-30,Free Cash Flow,
+AAPL,2025-09-30,Capital Expenditure,-12715000000.0
+AAPL,2024-09-30,Capital Expenditure,-9447000000.0
+AAPL,2023-09-30,Capital Expenditure,-10959000000.0
+AAPL,2022-09-30,Capital Expenditure,-10708000000.0
+AAPL,2021-09-30,Capital Expenditure,
+AAPL,2025-09-30,Investing Cash Flow,15195000000.0
+AAPL,2024-09-30,Investing Cash Flow,2935000000.0
+AAPL,2023-09-30,Investing Cash Flow,3705000000.0
+AAPL,2022-09-30,Investing Cash Flow,-22354000000.0
+AAPL,2021-09-30,Investing Cash Flow,
+AAPL,2025-09-30,Financing Cash Flow,-120686000000.0
+AAPL,2024-09-30,Financing Cash Flow,-121983000000.0
+AAPL,2023-09-30,Financing Cash Flow,-108488000000.0
+AAPL,2022-09-30,Financing Cash Flow,-110749000000.0
+AAPL,2021-09-30,Financing Cash Flow,
+AAPL,2025-09-30,Repurchase Of Capital Stock,-90711000000.0
+AAPL,2024-09-30,Repurchase Of Capital Stock,-94949000000.0
+AAPL,2023-09-30,Repurchase Of Capital Stock,-77550000000.0
+AAPL,2022-09-30,Repurchase Of Capital Stock,-89402000000.0
+AAPL,2021-09-30,Repurchase Of Capital Stock,
+AAPL,2025-09-30,Cash Dividends Paid,-15421000000.0
+AAPL,2024-09-30,Cash Dividends Paid,-15234000000.0
+AAPL,2023-09-30,Cash Dividends Paid,-15025000000.0
+AAPL,2022-09-30,Cash Dividends Paid,-14841000000.0
+AAPL,2021-09-30,Cash Dividends Paid,
+AAPL,2025-09-30,Issuance Of Debt,4481000000.0
+AAPL,2024-09-30,Issuance Of Debt,0.0
+AAPL,2023-09-30,Issuance Of Debt,5228000000.0
+AAPL,2022-09-30,Issuance Of Debt,5465000000.0
+AAPL,2021-09-30,Issuance Of Debt,
+AAPL,2025-09-30,Repayment Of Debt,-10932000000.0
+AAPL,2024-09-30,Repayment Of Debt,-9958000000.0
+AAPL,2023-09-30,Repayment Of Debt,-11151000000.0
+AAPL,2022-09-30,Repayment Of Debt,-9543000000.0
+AAPL,2021-09-30,Repayment Of Debt,
