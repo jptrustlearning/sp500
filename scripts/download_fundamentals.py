@@ -314,17 +314,41 @@ def build_statement_csv(all_data, statement_type, period):
 
 def build_ratios_csv(all_data):
     """Build a wide-format CSV for current ratios.
-    Columns: Ticker, Downloaded At, Most Recent Quarter, ..., ratio1, ratio2, ...
+    Columns: Ticker, Most Recent Quarter, ..., ratio1, ratio2, ...
+    No download timestamp — makes dedup easier.
     """
     rows = []
     for data in all_data:
         if data is None:
             continue
         row = {"Ticker": data["ticker"]}
-        row["Downloaded At"] = data.get("download_time", "")
         row.update(data.get("ratios", {}))
         rows.append(row)
     return pd.DataFrame(rows)
+
+
+def merge_with_existing(new_df, csv_path, key_columns):
+    """Merge new data with existing CSV — append only new records.
+    Dedup based on key_columns (e.g. ['Ticker', 'Date', 'Metric']).
+    """
+    if not csv_path.exists():
+        return new_df
+
+    try:
+        existing_df = pd.read_csv(csv_path)
+        # Ensure same columns exist for merge
+        for col in key_columns:
+            if col not in existing_df.columns:
+                return new_df
+
+        combined = pd.concat([existing_df, new_df], ignore_index=True)
+        # Drop duplicates: keep last (= newest data wins if values changed)
+        combined = combined.drop_duplicates(subset=key_columns, keep="last")
+        combined = combined.sort_values(key_columns).reset_index(drop=True)
+        return combined
+    except Exception as e:
+        logging.warning(f"Could not merge with {csv_path}: {e}. Using new data only.")
+        return new_df
 
 
 # ============================================================
@@ -395,14 +419,17 @@ def main():
         if i % 50 == 0:
             logger.info(f"  Progress: {i}/{len(tickers)} ({success} ok, {failed} failed)")
 
-    # --- Build CSVs ---
-    logger.info("Building CSV files...")
+    # --- Build & Merge CSVs (append only new records) ---
+    logger.info("Building CSV files (merging with existing)...")
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d")
+
+    STMT_KEYS = ["Ticker", "Date", "Metric"]
 
     # 1) Annual Income Statement
     df = build_statement_csv(all_data, "income", "annual")
     if not df.empty:
         path = output_dir / "income_annual.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
@@ -410,6 +437,7 @@ def main():
     df = build_statement_csv(all_data, "balance", "annual")
     if not df.empty:
         path = output_dir / "balance_annual.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
@@ -417,6 +445,7 @@ def main():
     df = build_statement_csv(all_data, "cashflow", "annual")
     if not df.empty:
         path = output_dir / "cashflow_annual.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
@@ -424,6 +453,7 @@ def main():
     df = build_statement_csv(all_data, "income", "quarterly")
     if not df.empty:
         path = output_dir / "income_quarterly.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
@@ -431,6 +461,7 @@ def main():
     df = build_statement_csv(all_data, "balance", "quarterly")
     if not df.empty:
         path = output_dir / "balance_quarterly.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
@@ -438,13 +469,16 @@ def main():
     df = build_statement_csv(all_data, "cashflow", "quarterly")
     if not df.empty:
         path = output_dir / "cashflow_quarterly.csv"
+        df = merge_with_existing(df, path, STMT_KEYS)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
-    # 7) Current Ratios (snapshot)
+    # 7) Current Ratios — dedup by Ticker + Most Recent Quarter
     df = build_ratios_csv(all_data)
     if not df.empty:
         path = output_dir / "ratios_current.csv"
+        ratio_keys = ["Ticker", "Most Recent Quarter"]
+        df = merge_with_existing(df, path, ratio_keys)
         df.to_csv(path, index=False)
         logger.info(f"  Saved {path} ({len(df)} rows)")
 
