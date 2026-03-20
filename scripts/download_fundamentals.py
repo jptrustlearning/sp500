@@ -125,21 +125,36 @@ def setup_logging():
 # TICKER LIST
 # ============================================================
 def get_sp500_tickers(csv_path=None):
-    """Get S&P 500 ticker list. Uses Wikipedia as fallback."""
+    """Get S&P 500 ticker list from CSV file.
+    Priority: --sp500-csv arg > input_sp500_daily.csv in repo > Wikipedia fallback
+    """
+    # 1) Explicit CSV path provided
     if csv_path and os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
-        # Try common column names
         for col in ["Ticker", "ticker", "Symbol", "symbol"]:
             if col in df.columns:
                 tickers = df[col].dropna().unique().tolist()
                 logging.info(f"Loaded {len(tickers)} tickers from {csv_path}")
                 return sorted(tickers)
-        # If no matching column, use first column
         tickers = df.iloc[:, 0].dropna().unique().tolist()
         logging.info(f"Loaded {len(tickers)} tickers from {csv_path} (first column)")
         return sorted(tickers)
 
-    # Fallback: download from Wikipedia
+    # 2) Auto-detect input_sp500_daily.csv in repo (works in GitHub Actions)
+    auto_paths = [
+        Path("../input_sp500_daily.csv"),       # when running from scripts/
+        Path("input_sp500_daily.csv"),           # when running from repo root
+    ]
+    for p in auto_paths:
+        if p.exists():
+            df = pd.read_csv(p)
+            for col in ["Ticker", "ticker", "Symbol", "symbol"]:
+                if col in df.columns:
+                    tickers = df[col].dropna().unique().tolist()
+                    logging.info(f"Loaded {len(tickers)} tickers from {p}")
+                    return sorted(tickers)
+
+    # 3) Fallback: download from Wikipedia
     try:
         tables = pd.read_html(
             "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
