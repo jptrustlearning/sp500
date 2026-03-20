@@ -191,12 +191,36 @@ def safe_extract(df, fields, ticker):
 
 
 def extract_ratios(info):
-    """Extract key ratios from ticker.info dict."""
+    """Extract key ratios from ticker.info dict.
+    Includes reporting period dates and fiscal year info."""
     result = {}
     for key, label in RATIO_KEYS.items():
         val = info.get(key)
         if val is not None:
             result[label] = val
+
+    # --- Reporting period metadata ---
+    # Most recent quarter end date
+    mrq = info.get("mostRecentQuarter")
+    if mrq:
+        result["Most Recent Quarter"] = datetime.fromtimestamp(mrq, tz=timezone.utc).strftime("%Y-%m-%d")
+
+    # Last fiscal year end
+    fy_end = info.get("lastFiscalYearEnd")
+    if fy_end:
+        result["Last Fiscal Year End"] = datetime.fromtimestamp(fy_end, tz=timezone.utc).strftime("%Y-%m-%d")
+
+    # Next fiscal year end
+    nfy_end = info.get("nextFiscalYearEnd")
+    if nfy_end:
+        result["Next Fiscal Year End"] = datetime.fromtimestamp(nfy_end, tz=timezone.utc).strftime("%Y-%m-%d")
+
+    # Earnings dates (next)
+    # Note: earningsTimestamp may not always be available
+    earnings_ts = info.get("earningsTimestamp")
+    if earnings_ts:
+        result["Earnings Date"] = datetime.fromtimestamp(earnings_ts, tz=timezone.utc).strftime("%Y-%m-%d")
+
     return result
 
 
@@ -290,13 +314,14 @@ def build_statement_csv(all_data, statement_type, period):
 
 def build_ratios_csv(all_data):
     """Build a wide-format CSV for current ratios.
-    Columns: Ticker, ratio1, ratio2, ...
+    Columns: Ticker, Downloaded At, Most Recent Quarter, ..., ratio1, ratio2, ...
     """
     rows = []
     for data in all_data:
         if data is None:
             continue
         row = {"Ticker": data["ticker"]}
+        row["Downloaded At"] = data.get("download_time", "")
         row.update(data.get("ratios", {}))
         rows.append(row)
     return pd.DataFrame(rows)
