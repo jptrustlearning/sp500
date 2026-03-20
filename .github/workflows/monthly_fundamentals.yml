@@ -1,0 +1,90 @@
+# ============================================================
+# SP500 Fundamental Data — Monthly Download
+# ============================================================
+# แยกจาก daily OHLCV pipeline
+# รันรายเดือน วันที่ 20 ของเดือน (หลัง earnings season)
+# สามารถ manual trigger ได้
+# ============================================================
+
+name: "Monthly Fundamentals Download"
+
+on:
+  schedule:
+    # วันที่ 20 ของทุกเดือน เวลา 02:00 UTC
+    # เลือกวันที่ 20 เพราะ earnings season มักจบกลางเดือน
+    - cron: "0 2 20 * *"
+
+  # Manual trigger (workflow_dispatch) พร้อม option เลือก tickers
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Comma-separated tickers (leave empty for full S&P 500)"
+        required: false
+        default: ""
+      force_run:
+        description: "Force run even if recently updated"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  download-fundamentals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120  # หุ้น 500 ตัว อาจใช้เวลา 1-2 ชม.
+
+    steps:
+      # 1) Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2) Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # 3) Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install yfinance pandas lxml html5lib
+
+      # 4) Run download script
+      - name: Download fundamental data
+        run: |
+          cd scripts
+          if [ -n "${{ github.event.inputs.tickers }}" ]; then
+            python download_fundamentals.py --tickers "${{ github.event.inputs.tickers }}" --output-dir ../fundamentals
+          else
+            python download_fundamentals.py --output-dir ../fundamentals
+          fi
+
+      # 5) Commit & Push
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add fundamentals/
+          
+          # Check if there are changes to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "📊 Fundamentals update: ${TIMESTAMP}"
+            git push
+            echo "✅ Changes committed and pushed"
+          fi
+
+      # 6) Upload logs as artifact (kept for 30 days)
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fundamental-logs-${{ github.run_id }}
+          path: fundamentals/logs/
+          retention-days: 30
