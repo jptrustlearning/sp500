@@ -669,19 +669,30 @@ const ROWS_PER_PAGE = 20;
 let currentSort = { key: 'rank', dir: 'asc' };
 
 // ============================================================
+// Data URLs — GitHub raw content (works on Pages + local)
+// ============================================================
+const GITHUB_RAW = 'https://raw.githubusercontent.com/jptrustlearning/sp500/main/';
+const DATA_URLS = {
+  combined: GITHUB_RAW + 'output_combined_score_sp500.csv',
+  profiles: GITHUB_RAW + 'all_profiles.csv',
+  daily:    GITHUB_RAW + 'latest_daily.csv',
+  fund:     GITHUB_RAW + 'fundamentals/ratios_current.csv'
+};
+
+// ============================================================
 // Data Loading
 // ============================================================
 async function loadData() {
   try {
     const [combinedRes, profilesRes, dailyRes] = await Promise.all([
-      loadCSV('output_combined_score_sp500.csv'),
-      loadCSV('all_profiles.csv'),
-      loadCSV('latest_daily.csv')
+      loadCSV(DATA_URLS.combined),
+      loadCSV(DATA_URLS.profiles),
+      loadCSV(DATA_URLS.daily)
     ]);
 
     // Try loading fundamentals
     let fundRes = [];
-    try { fundRes = await loadCSV('fundamentals/ratios_current.csv'); } catch(e) {}
+    try { fundRes = await loadCSV(DATA_URLS.fund); } catch(e) {}
 
     // Build profile map
     profilesRes.forEach(p => {
@@ -774,14 +785,16 @@ async function loadData() {
   }
 }
 
-function loadCSV(filename) {
-  return new Promise((resolve, reject) => {
-    Papa.parse(filename, {
-      download: true, header: true, skipEmptyLines: true,
-      complete: res => resolve(res.data),
-      error: err => reject(err)
+function loadCSV(url) {
+  return fetch(url)
+    .then(function(res) {
+      if (!res.ok) throw new Error('Failed to load: ' + url + ' (' + res.status + ')');
+      return res.text();
+    })
+    .then(function(text) {
+      var result = Papa.parse(text, { header: true, skipEmptyLines: true });
+      return result.data;
     });
-  });
 }
 
 // ============================================================
