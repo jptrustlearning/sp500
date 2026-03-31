@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&P 500 Daily Scanner (Full) | JP Trust Learning</title>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --bg: #0a0e27; --bg2: #0f1535; --bg3: #151b42; --card: #111740;
+  --border: rgba(212,175,55,.12); --border2: rgba(212,175,55,.25);
+  --gold: #D4AF37; --gold2: #F5D76E; --gold-dim: rgba(212,175,55,.12); --gold-glow: rgba(212,175,55,.35);
+  --green: #00C853; --green-dim: rgba(0,200,83,.12);
+  --red: #FF1744; --red-dim: rgba(255,23,68,.12);
+  --blue: #60A5FA; --blue-dim: rgba(96,165,250,.15);
+  --purple: #A78BFA; --cyan: #22D3EE;
+  --text: #E8E6E1; --text2: #9CA3AF; --text3: #6B7280;
+  --font: 'Anuphan', sans-serif; --font-mono: 'JetBrains Mono', monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; font-size: 14px; line-height: 1.6; }
+.container { max-width: 1500px; margin: 0 auto; padding: 16px; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { color: var(--gold2); }
+button { font-family: var(--font); cursor: pointer; }
+::selection { background: var(--gold); color: var(--bg); }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Gold Shimmer Divider */
+.gold-divider {
+  height: 2px; margin: 20px auto; max-width: 600px; position: relative;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  overflow: hidden;
+}
+.gold-divider::after {
+  content: ''; position: absolute; top: -1px; left: -100%; width: 60%; height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold2), rgba(255,255,255,.8), var(--gold2), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer { 0%{left:-100%} 100%{left:200%} }
+@keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.6} }
+
+/* Header */
+.header { text-align: center; padding: 30px 0 10px; position: relative; }
+.header::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 300px;
+  background: radial-gradient(ellipse, rgba(212,175,55,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.brand-link {
+  position: absolute; top: 16px; right: 16px; display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border: 1px solid var(--border2); border-radius: 8px;
+  background: var(--gold-dim); font-size: .78rem; font-weight: 600; color: var(--gold);
+  transition: .3s;
+}
+.brand-link:hover { background: rgba(212,175,55,.25); color: var(--gold2); }
+.brand-link i { font-size: 1rem; }
+.header h1 {
+  font-family: var(--font); font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  background: linear-gradient(135deg, #D4AF37, #F5D76E, #D4AF37);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.header .subtitle { font-size: .9rem; color: var(--text2); margin-bottom: 6px; font-weight: 400; }
+.header .date-badge {
+  display: inline-block; padding: 5px 18px; background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 50px; color: var(--text2); font-size: .78rem; margin-top: 8px;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, rgba(212,175,55,.15), rgba(212,175,55,.05));
+  border: 1px solid var(--border2); border-radius: 12px; padding: 14px 24px;
+  margin: 16px 0; display: flex; align-items: center; justify-content: center;
+  gap: 12px; flex-wrap: wrap; animation: fadeIn .6s;
+}
+.cta-banner .cta-text { font-size: .88rem; color: var(--gold); font-weight: 500; }
+.cta-btn {
+  padding: 8px 20px; border-radius: 8px; border: none; font-weight: 600; font-size: .82rem;
+  background: linear-gradient(135deg, var(--gold), #c9a020); color: var(--bg);
+  transition: .3s; display: inline-flex; align-items: center; gap: 6px;
+}
+.cta-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--gold-glow); }
+
+/* Market Overview */
+.market-overview {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;
+}
+.market-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px; text-align: center; transition: .3s;
+}
+.market-card:hover { border-color: var(--border2); }
+.market-card .mc-ticker { font-family: var(--font-mono); font-weight: 600; font-size: 1rem; color: var(--gold); }
+.market-card .mc-price { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; margin: 4px 0; }
+.market-card .mc-change { font-family: var(--font-mono); font-weight: 700; font-size: .95rem; }
+.market-card .mc-label { font-size: .68rem; color: var(--text3); margin-top: 2px; }
+
+/* Magnificent 7 */
+.mag7-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 12px;
+}
+.mag7-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px; text-align: center; transition: .3s;
+}
+.mag7-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+.mag7-card .m7-ticker { font-family: var(--font-mono); font-weight: 700; color: var(--gold); font-size: .9rem; }
+.mag7-card .m7-price { font-family: var(--font-mono); font-size: 1rem; font-weight: 600; margin: 4px 0; }
+.mag7-card .m7-change { font-family: var(--font-mono); font-weight: 700; font-size: .85rem; }
+
+/* Sector Heatmap */
+.heatmap-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px; margin-top: 12px;
+}
+.heatmap-cell {
+  padding: 14px 10px; border-radius: 10px; text-align: center; cursor: pointer;
+  border: 1px solid var(--border); transition: .3s; position: relative; min-height: 44px;
+}
+.heatmap-cell:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.4); }
+.heatmap-cell .sector-name { font-size: .72rem; color: var(--text2); margin-bottom: 4px; font-weight: 500; }
+.heatmap-cell .sector-pct { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; }
+.heatmap-cell .sector-count { font-size: .65rem; color: var(--text3); margin-top: 2px; }
+
+/* Filter Bar */
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+  padding: 14px 18px; background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; margin-bottom: 16px;
+}
+.filter-bar input, .filter-bar select {
+  padding: 9px 14px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg2); color: var(--text); font-family: var(--font); font-size: .82rem;
+  outline: none; transition: .2s; min-height: 44px;
+}
+.filter-bar input:focus, .filter-bar select:focus { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold-dim); }
+.filter-bar input { flex: 1; min-width: 180px; }
+.filter-bar select { min-width: 130px; }
+.clear-btn {
+  padding: 9px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: transparent; color: var(--text3); font-size: .78rem; transition: .2s; min-height: 44px;
+}
+.clear-btn:hover { border-color: var(--red); color: var(--red); }
+
+/* Section */
+.section {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 20px; margin-bottom: 16px; animation: fadeIn .5s;
+}
+.section-title {
+  font-family: var(--font); font-weight: 700; font-size: 1.05rem; color: var(--text);
+  margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+}
+.section-title .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.section-title .lock { color: var(--gold); font-size: .85rem; }
+
+/* Stock of the Day */
+.sotd-card {
+  background: linear-gradient(135deg, rgba(212,175,55,.08), rgba(212,175,55,.02));
+  border: 2px solid var(--gold); border-radius: 14px; padding: 24px; margin-bottom: 16px;
+  animation: fadeIn .6s; position: relative; overflow: hidden;
+}
+.sotd-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold2), var(--gold));
+}
+.sotd-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.sotd-badge {
+  background: linear-gradient(135deg, var(--gold), #c9a020); color: var(--bg);
+  padding: 4px 14px; border-radius: 20px; font-size: .75rem; font-weight: 700;
+}
+.sotd-ticker { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--gold); }
+.sotd-company { color: var(--text2); font-size: .9rem; }
+.sotd-metrics {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px;
+}
+.sotd-metric {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 12px; text-align: center;
+}
+.sotd-metric .sm-label { font-size: .68rem; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+.sotd-metric .sm-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; margin-top: 2px; }
+.sotd-cta {
+  margin-top: 16px; text-align: center; font-size: .85rem; color: var(--text2);
+}
+
+/* Table */
+.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+.table-wrap::-webkit-scrollbar { height: 8px; }
+.scroll-hint {
+  display: none; text-align: center; padding: 6px; font-size: .72rem; color: var(--text3);
+  background: var(--bg3); border-bottom: 1px solid var(--border);
+}
+table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+thead { position: sticky; top: 0; z-index: 10; }
+thead th {
+  padding: 10px 12px; text-align: left; font-weight: 600; font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .5px; color: var(--gold);
+  background: var(--bg3); border-bottom: 2px solid var(--gold-dim);
+  white-space: nowrap; cursor: pointer; user-select: none; min-height: 44px;
+}
+thead th:hover { color: var(--gold2); }
+thead th .info-icon {
+  display: inline-block; width: 14px; height: 14px; line-height: 14px; text-align: center;
+  border-radius: 50%; background: var(--gold-dim); color: var(--gold); font-size: .6rem;
+  margin-left: 4px; cursor: help; vertical-align: middle; font-style: normal;
+}
+thead th .sort-arrow { font-size: .6rem; margin-left: 3px; opacity: .4; }
+thead th .sort-arrow.active { opacity: 1; color: var(--gold2); }
+tbody tr { border-bottom: 1px solid rgba(255,255,255,.03); transition: .15s; }
+tbody tr:nth-child(even) { background: rgba(255,255,255,.015); }
+tbody tr:hover { background: rgba(212,175,55,.06); }
+td { padding: 9px 12px; white-space: nowrap; vertical-align: middle; }
+td.ticker { font-family: var(--font-mono); font-weight: 700; color: var(--gold); font-size: .88rem; }
+td.company { color: var(--text2); font-size: .75rem; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+td.positive { color: var(--green); font-weight: 600; }
+td.negative { color: var(--red); font-weight: 600; }
+td.num { font-family: var(--font-mono); }
+
+/* Signal Badges */
+.signal-badge {
+  display: inline-block; padding: 1px 6px; border-radius: 10px; font-size: .62rem;
+  font-weight: 600; margin: 1px; white-space: nowrap;
+}
+.signal-s1 { background: rgba(96,165,250,.15); color: var(--blue); border: 1px solid rgba(96,165,250,.3); }
+.signal-s4 { background: rgba(167,139,250,.15); color: var(--purple); border: 1px solid rgba(167,139,250,.3); }
+.signal-s5 { background: rgba(0,200,83,.12); color: var(--green); border: 1px solid rgba(0,200,83,.25); }
+.signal-s6 { background: rgba(34,211,238,.12); color: var(--cyan); border: 1px solid rgba(34,211,238,.25); }
+.signal-s7 { background: rgba(251,191,36,.12); color: #FBBF24; border: 1px solid rgba(251,191,36,.25); }
+.signal-s8 { background: rgba(244,114,182,.12); color: #F472B6; border: 1px solid rgba(244,114,182,.25); }
+
+/* Tier Badges */
+.tier-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: .65rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.tier-platinum { background: linear-gradient(135deg,#E5E4E2,#C0C0C0); color: #1a1a2e; }
+.tier-gold { background: linear-gradient(135deg,#D4AF37,#F5D76E); color: #1a1a2e; }
+.tier-silver { background: rgba(192,192,192,.2); color: #C0C0C0; border: 1px solid rgba(192,192,192,.3); }
+.tier-bronze { background: rgba(205,127,50,.15); color: #CD7F32; border: 1px solid rgba(205,127,50,.2); }
+.tier-monitor { background: rgba(107,114,128,.15); color: var(--text3); border: 1px solid rgba(107,114,128,.2); }
+
+/* Premium — unlocked in full version */
+.premium-cell { position: relative; }
+.premium-cell-wrap { position: relative; min-height: 44px; }
+.premium-cell-wrap .lock-overlay { display: none; }
+
+/* Tooltip */
+.edu-tooltip {
+  display: none; position: fixed; z-index: 9999; max-width: 340px; padding: 14px 18px;
+  background: var(--bg3); border: 1px solid var(--gold); border-radius: 10px;
+  color: var(--text); font-size: .8rem; line-height: 1.6;
+  box-shadow: 0 8px 32px rgba(0,0,0,.6); pointer-events: none;
+}
+.edu-tooltip.show { display: block; animation: fadeIn .2s; }
+.edu-tooltip .tt-title { color: var(--gold); font-weight: 700; margin-bottom: 4px; font-size: .85rem; }
+
+/* Premium tooltip */
+.premium-tooltip {
+  display: none; position: fixed; z-index: 9999; padding: 12px 18px;
+  background: linear-gradient(135deg, var(--bg3), #1a2050); border: 1px solid var(--gold);
+  border-radius: 10px; color: var(--gold); font-size: .82rem; font-weight: 500;
+  box-shadow: 0 8px 32px rgba(0,0,0,.6); white-space: nowrap;
+}
+.premium-tooltip.show { display: block; animation: fadeIn .2s; }
+
+/* Pagination */
+.pagination {
+  display: flex; justify-content: center; align-items: center; gap: 6px;
+  margin-top: 16px; flex-wrap: wrap;
+}
+.page-btn {
+  padding: 7px 14px; border-radius: 6px; border: 1px solid var(--border);
+  background: transparent; color: var(--text2); font-size: .78rem; font-family: var(--font); transition: .2s;
+  min-height: 44px; min-width: 44px;
+}
+.page-btn:hover { border-color: var(--gold); color: var(--gold); }
+.page-btn.active { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 700; }
+.page-btn:disabled { opacity: .3; cursor: not-allowed; }
+.page-info { color: var(--text3); font-size: .78rem; padding: 0 8px; }
+
+/* Scoring Cards */
+.score-cards-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px; margin-top: 12px;
+}
+.score-card {
+  background: var(--bg2); border: 1px solid var(--gold-dim); border-radius: 12px;
+  padding: 16px; position: relative; overflow: hidden;
+}
+.score-card::before {
+  content:''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold2), var(--gold));
+}
+.score-card .sc-ticker { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; color: var(--gold); }
+.score-card .sc-company { font-size: .72rem; color: var(--text3); margin-bottom: 8px; }
+.score-card .sc-score { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
+.score-card .sc-tier { font-size: .7rem; margin-bottom: 6px; }
+.score-card .sc-meta { font-size: .7rem; color: var(--text3); }
+.score-card .sc-meta span { margin-right: 10px; }
+
+/* Scoring section — unlocked in full version */
+.blurred-section .blur-content { }
+.blurred-section .blur-overlay { display: none; }
+
+/* Floating CTA */
+.floating-cta {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100;
+  padding: 12px 24px; border-radius: 50px; border: none;
+  background: linear-gradient(135deg, var(--gold), #c9a020);
+  color: var(--bg); font-weight: 700; font-size: .88rem;
+  box-shadow: 0 4px 24px var(--gold-glow); transition: .3s;
+  display: flex; align-items: center; gap: 8px; min-height: 44px;
+}
+.floating-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 32px var(--gold-glow); }
+
+/* Top Movers */
+.movers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mover-list { display: flex; flex-direction: column; gap: 6px; }
+.mover-list .mover-title { font-size: .82rem; font-weight: 700; margin-bottom: 4px; }
+.mover-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; border-radius: 8px; background: var(--bg2);
+  border: 1px solid var(--border); font-size: .8rem; min-height: 44px;
+}
+.mover-item .m-ticker { font-family: var(--font-mono); font-weight: 700; min-width: 50px; }
+.mover-item .m-pct { font-family: var(--font-mono); font-weight: 700; min-width: 70px; text-align: right; }
+.mover-item .m-price { font-family: var(--font-mono); color: var(--text3); font-size: .75rem; }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 24px; color: var(--text3); font-size: .72rem;
+  border-top: 1px solid var(--border); margin-top: 20px;
+}
+.footer a { color: var(--gold); }
+
+/* Loading */
+.loading-screen {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 300px; gap: 16px;
+}
+.spinner {
+  width: 40px; height: 40px; border: 3px solid var(--gold-dim);
+  border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Score color helper */
+.score-high { color: var(--green); }
+.score-mid { color: #FFC107; }
+.score-low { color: var(--red); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 8px; }
+  .brand-link { position: static; margin: 0 auto 10px; justify-content: center; }
+  .header { padding-top: 10px; }
+  .market-overview { grid-template-columns: 1fr; gap: 8px; }
+  .filter-bar { flex-direction: column; }
+  .filter-bar input, .filter-bar select { width: 100%; min-width: auto; }
+  .movers-grid { grid-template-columns: 1fr; }
+  .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
+  .mag7-grid { grid-template-columns: repeat(2, 1fr); }
+  .score-cards-grid { grid-template-columns: 1fr; }
+  .sotd-metrics { grid-template-columns: repeat(2, 1fr); }
+  table { font-size: .72rem; }
+  td, th { padding: 6px 8px; }
+  .floating-cta { bottom: 12px; right: 12px; font-size: .78rem; padding: 10px 18px; }
+  .scroll-hint { display: block; }
+}
+</style>
+</head>
+<body>
+
+<!-- Educational Tooltip -->
+<div class="edu-tooltip" id="eduTooltip"></div>
+<!-- Premium Tooltip -->
+<div class="premium-tooltip" id="premiumTooltip"></div>
+
+<!-- Full version — no floating CTA -->
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <a href="https://jptrustlearning.com" target="_blank" class="brand-link">
+      <i class="fas fa-graduation-cap"></i> JP TRUST LEARNING
+    </a>
+    <h1>S&P 500 Daily Scanner (Full)</h1>
+    <div class="subtitle">สแกนเนอร์หุ้น S&P 500 รายวัน — วิเคราะห์ข้อมูลราคา คะแนน และสัญญาณทุกตัวในจักรวาล S&P 500</div>
+    <div class="gold-divider"></div>
+    <div class="date-badge" id="dateBadge"><i class="far fa-calendar-alt"></i> กำลังโหลดข้อมูล...</div>
+  </header>
+
+  <!-- Full version — no CTA banner -->
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="spinner"></div>
+    <div style="color:var(--text2);font-size:.88rem;">กำลังโหลดข้อมูล S&P 500...</div>
+  </div>
+
+  <!-- Main Content (hidden until loaded) -->
+  <div id="mainContent" style="display:none;">
+
+    <!-- Market Overview -->
+    <div class="section" style="padding:14px 20px;">
+      <div class="section-title" style="margin-bottom:10px;"><span class="dot"></span> ภาพรวมตลาด <span class="info-icon" data-tooltip="market-overview">ℹ</span></div>
+      <div class="market-overview" id="marketOverview">
+        <div class="market-card"><div class="mc-ticker">SPY</div><div class="mc-price">-</div><div class="mc-change">-</div><div class="mc-label">S&P 500 ETF</div></div>
+        <div class="market-card"><div class="mc-ticker">QQQ</div><div class="mc-price">-</div><div class="mc-change">-</div><div class="mc-label">Nasdaq 100 ETF</div></div>
+        <div class="market-card"><div class="mc-ticker">DIA</div><div class="mc-price">-</div><div class="mc-change">-</div><div class="mc-label">Dow Jones ETF</div></div>
+      </div>
+    </div>
+
+    <!-- Magnificent 7 -->
+    <div class="section">
+      <div class="section-title"><span class="dot"></span> Magnificent 7 <span class="info-icon" data-tooltip="mag7">ℹ</span></div>
+      <div class="mag7-grid" id="mag7Grid"></div>
+    </div>
+
+    <!-- Stock of the Day -->
+    <div id="sotdSection"></div>
+
+    <div class="gold-divider"></div>
+
+    <!-- Top Movers -->
+    <div class="section" id="moversSection">
+      <div class="section-title"><span class="dot"></span> หุ้นเคลื่อนไหวมากที่สุดวันนี้</div>
+      <div class="movers-grid">
+        <div class="mover-list">
+          <div class="mover-title" style="color:var(--green);">&#x1f7e2; หุ้นขึ้นมากที่สุด</div>
+          <div id="topGainers"></div>
+        </div>
+        <div class="mover-list">
+          <div class="mover-title" style="color:var(--red);">&#x1f534; หุ้นลงมากที่สุด</div>
+          <div id="topLosers"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sector Heatmap -->
+    <div class="section">
+      <div class="section-title"><span class="dot"></span> แผนที่ความร้อนกลุ่มอุตสาหกรรม <span class="info-icon" data-tooltip="sector-heatmap">ℹ</span></div>
+      <div class="heatmap-grid" id="sectorHeatmap"></div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="&#x1f50d; ค้นหาหุ้น... (ชื่อหรือ ticker)">
+      <select id="sectorFilter"><option value="">ทุกกลุ่มอุตสาหกรรม</option></select>
+      <select id="tierFilter"><option value="">ทุกระดับ</option>
+        <option value="Platinum">Platinum</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="Bronze">Bronze</option>
+        <option value="Monitor">Monitor</option>
+      </select>
+      <select id="sortSelect">
+        <option value="rank-asc">เรียงตาม: อันดับ (สูง&#x2192;ต่ำ)</option>
+        <option value="price-desc">ราคา (สูง&#x2192;ต่ำ)</option>
+        <option value="price-asc">ราคา (ต่ำ&#x2192;สูง)</option>
+        <option value="change-desc">เปลี่ยนแปลง% (สูง&#x2192;ต่ำ)</option>
+        <option value="change-asc">เปลี่ยนแปลง% (ต่ำ&#x2192;สูง)</option>
+        <option value="volume-desc">ปริมาณซื้อขาย (สูง&#x2192;ต่ำ)</option>
+        <option value="score-desc">คะแนนรวม (สูง&#x2192;ต่ำ)</option>
+        <option value="momentum-desc">โมเมนตัม (สูง&#x2192;ต่ำ)</option>
+        <option value="news-desc">ข่าว (สูง&#x2192;ต่ำ)</option>
+        <option value="ret1m-desc">Ret 1M% (สูง&#x2192;ต่ำ)</option>
+        <option value="ticker-asc">Ticker (A&#x2192;Z)</option>
+      </select>
+      <button class="clear-btn" onclick="clearFilters()"><i class="fas fa-times"></i> ล้างตัวกรอง</button>
+      <span id="resultCount" style="color:var(--text3);font-size:.78rem;margin-left:auto;"></span>
+    </div>
+
+    <!-- Main Table -->
+    <div class="section" style="padding:0;overflow:hidden;">
+      <div class="scroll-hint"><i class="fas fa-arrows-left-right"></i> เลื่อนซ้าย-ขวาเพื่อดูข้อมูลเพิ่มเติม</div>
+      <div class="table-wrap">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th data-sort="rank"># <span class="info-icon" data-tooltip="rank">ℹ</span> <span class="sort-arrow" id="arrow-rank">&#x25B2;</span></th>
+              <th data-sort="ticker">Ticker <span class="sort-arrow" id="arrow-ticker">&#x25B2;</span></th>
+              <th data-sort="company">บริษัท</th>
+              <th data-sort="sector">กลุ่ม</th>
+              <th data-sort="price">ราคา <span class="info-icon" data-tooltip="price">ℹ</span> <span class="sort-arrow" id="arrow-price">&#x25BC;</span></th>
+              <th data-sort="change">เปลี่ยนแปลง% <span class="info-icon" data-tooltip="change">ℹ</span> <span class="sort-arrow" id="arrow-change">&#x25BC;</span></th>
+              <th data-sort="volume">ปริมาณ <span class="info-icon" data-tooltip="volume">ℹ</span> <span class="sort-arrow" id="arrow-volume">&#x25BC;</span></th>
+              <th data-sort="tier">ระดับ <span class="info-icon" data-tooltip="tier">ℹ</span></th>
+              <th data-sort="combined">คะแนนรวม <span class="info-icon" data-tooltip="combined-score">ℹ</span> <span class="sort-arrow" id="arrow-combined">&#x25BC;</span></th>
+              <th data-sort="momentum">โมเมนตัม <span class="info-icon" data-tooltip="momentum">ℹ</span> <span class="sort-arrow" id="arrow-momentum">&#x25BC;</span></th>
+              <th data-sort="news">ข่าว <span class="info-icon" data-tooltip="news-score">ℹ</span> <span class="sort-arrow" id="arrow-news">&#x25BC;</span></th>
+              <th>สัญญาณ <span class="info-icon" data-tooltip="signals">ℹ</span></th>
+              <th>Conviction <span class="info-icon" data-tooltip="conviction">ℹ</span></th>
+              <th data-sort="ret1m">Ret 1M% <span class="info-icon" data-tooltip="ret1m">ℹ</span> <span class="sort-arrow" id="arrow-ret1m">&#x25BC;</span></th>
+              <th>RSI <span class="info-icon" data-tooltip="rsi">ℹ</span></th>
+              <th>PE <span class="info-icon" data-tooltip="pe">ℹ</span></th>
+              <th>Div% <span class="info-icon" data-tooltip="dividend">ℹ</span></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <!-- Full version — no unlock row -->
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- Scoring Cards (Full — unlocked) -->
+    <div class="section">
+      <div class="section-title"><span class="dot"></span> <i class="fas fa-trophy" style="color:var(--gold)"></i> Top 10 หุ้นคะแนนสูงสุด</div>
+      <div class="score-cards-grid" id="scoreCards"></div>
+    </div>
+
+  </div><!-- /mainContent -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div style="margin-bottom:8px;">
+      <a href="https://jptrustlearning.com" target="_blank" style="font-size:.88rem;font-weight:600;">
+        <i class="fas fa-graduation-cap"></i> JP TRUST LEARNING
+      </a>
+    </div>
+    <div>ข้อมูลนี้จัดทำขึ้นเพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำในการลงทุน กรุณาศึกษาข้อมูลเพิ่มเติมก่อนตัดสินใจลงทุน</div>
+    <div style="margin-top:6px;">แหล่งข้อมูล: Yahoo Finance, Bloomberg, Morgan Stanley, Goldman Sachs | สร้างโดย JP Trust Learning</div>
+  </footer>
+
+</div><!-- /container -->
+
+<script>
+// ============================================================
+// Utility: HTML escape to prevent XSS
+// ============================================================
+function esc(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ============================================================
+// Signal Decode Map (Thai)
+// ============================================================
+const SIGNAL_MAP = {
+  'S1': { label: 'Top Pick', cls: 'signal-s1', desc: 'นักวิเคราะห์แนะนำอันดับต้น' },
+  'S2': { label: 'Upgrade', cls: 'signal-s1', desc: 'ถูกปรับเรทติ้งขึ้น' },
+  'S3': { label: 'Earnings Beat', cls: 'signal-s5', desc: 'กำไรดีกว่าคาด' },
+  'S4': { label: 'อันดับสูง', cls: 'signal-s4', desc: 'จัดอันดับสูงจากหลายแหล่ง' },
+  'S5': { label: 'แนะนำซื้อ', cls: 'signal-s5', desc: 'นักวิเคราะห์แนะนำซื้อ' },
+  'S6': { label: 'เป้าหมายสูง', cls: 'signal-s6', desc: 'ราคาเป้าหมายสูงกว่าปัจจุบัน' },
+  'S7': { label: 'M&A', cls: 'signal-s7', desc: 'มีการควบรวมกิจการ' },
+  'S8': { label: 'Catalyst', cls: 'signal-s8', desc: 'มีปัจจัยเร่งสำคัญ' }
+};
+
+function renderSignals(signalStr) {
+  if (!signalStr) return '-';
+  const signals = signalStr.replace(/"/g,'').split(',').map(s => s.trim()).filter(Boolean);
+  if (!signals.length) return '-';
+  return signals.map(code => {
+    const info = SIGNAL_MAP[code];
+    if (!info) return '<span class="signal-badge signal-s1">' + esc(code) + '</span>';
+    return '<span class="signal-badge ' + info.cls + '" title="' + esc(info.desc) + '">' + esc(info.label) + '</span>';
+  }).join('');
+}
+
+// ============================================================
+// Educational Tooltips Data (Thai)
+// ============================================================
+const TOOLTIPS = {
+  'rank': { title: 'อันดับ (Rank)', desc: 'อันดับจากคะแนนรวม Combined Score — อันดับ 1 คือหุ้นที่ได้คะแนนสูงสุด รวมจากคะแนนข่าวและโมเมนตัม' },
+  'price': { title: 'ราคาปิด (Close Price)', desc: 'ราคาปิดล่าสุดของหุ้น หน่วยเป็นดอลลาร์สหรัฐ (USD)' },
+  'change': { title: 'เปลี่ยนแปลงรายวัน% (Daily Change %)', desc: 'การเปลี่ยนแปลงของราคาจากวันก่อนหน้า — สีเขียว = ราคาขึ้น สีแดง = ราคาลง' },
+  'volume': { title: 'ปริมาณการซื้อขาย (Volume)', desc: 'ปริมาณการซื้อขายล่าสุด — Volume สูงผิดปกติอาจบ่งบอกถึงข่าวสำคัญหรือความสนใจจากนักลงทุนสถาบัน ยิ่ง Volume สูง ยิ่งมีสภาพคล่องมาก' },
+  'tier': { title: 'ระดับ (Tier)', desc: 'ระดับจากคะแนนรวม — Platinum (สูงสุด) > Gold > Silver > Bronze > Monitor (ต่ำสุด) ระดับสูงหมายความว่ามีทั้งข่าวดีและโมเมนตัมที่แข็งแกร่ง' },
+  'combined-score': { title: 'คะแนนรวม (Combined Score)', desc: 'คะแนนรวมจาก News + Momentum — ยิ่งสูงยิ่งน่าสนใจ คำนวณจากคะแนนข่าว (50%) และโมเมนตัม (50%) ค่าสูงสุด 100' },
+  'momentum': { title: 'คะแนนโมเมนตัม (Momentum Score)', desc: 'วัดความแข็งแกร่งของแนวโน้มราคาจาก 5 มิติ: ผลตอบแทน, ปริมาณซื้อขาย, RSI, เส้นค่าเฉลี่ย, ความผันผวน ค่ายิ่งสูง = โมเมนตัมยิ่งแข็ง' },
+  'news-score': { title: 'คะแนนข่าว (News Score)', desc: 'คะแนนจากการวิเคราะห์ข่าวจากแหล่งชั้นนำ เช่น Morgan Stanley, Goldman Sachs, JPMorgan ค่ายิ่งสูง = ข่าวเชิงบวกมาก' },
+  'signals': { title: 'สัญญาณ (Signals)', desc: 'สัญญาณจากระบบวิเคราะห์: Top Pick = นักวิเคราะห์แนะนำ, แนะนำซื้อ = Buy Rating, M&A = มีดีลควบรวม, Catalyst = มีปัจจัยเร่ง — ยิ่งมีหลายสัญญาณยิ่งดี' },
+  'conviction': { title: 'ระดับความเชื่อมั่น (Conviction)', desc: 'Double Strong = ทั้งข่าวและโมเมนตัมแข็ง, News Only = มีแต่ข่าวดี, Momentum Only = มีแต่โมเมนตัม, Hidden Gem = อัญมณีซ่อนเร้น, Double Weak = ทั้งสองอ่อน' },
+  'ret1m': { title: 'ผลตอบแทน 1 เดือน (Return 1M%)', desc: 'ผลตอบแทนย้อนหลัง 1 เดือน — ค่าบวก = ขึ้น ค่าลบ = ลง ใช้ดูโมเมนตัมล่าสุด' },
+  'rsi': { title: 'RSI (Relative Strength Index)', desc: 'ดัชนีความแข็งแกร่งสัมพัทธ์ — >70 = Overbought (อาจมีแรงขาย), <30 = Oversold (อาจมีแรงซื้อ), 50 = สมดุล' },
+  'pe': { title: 'P/E Ratio (อัตราส่วนราคาต่อกำไร)', desc: 'ค่ายิ่งต่ำ = หุ้นอาจถูก ค่าเฉลี่ย S&P 500 อยู่ที่ ~20-25 ค่าสูง = ตลาดคาดหวังการเติบโตสูง' },
+  'dividend': { title: 'อัตราเงินปันผล (Dividend Yield %)', desc: 'ผลตอบแทนจากเงินปันผลต่อปี ค่าสูง = รายได้จากปันผลมาก เฉลี่ย S&P 500 อยู่ที่ ~1.3%' },
+  'sector-heatmap': { title: 'แผนที่ความร้อนกลุ่มอุตสาหกรรม', desc: 'แสดงผลตอบแทนเฉลี่ยรายวันของแต่ละกลุ่มอุตสาหกรรม สีเขียว = กำไร สีแดง = ขาดทุน ยิ่งสีเข้ม = เปลี่ยนแปลงมาก คลิกเพื่อกรองหุ้นในกลุ่มนั้น' },
+  'market-overview': { title: 'ภาพรวมตลาด', desc: 'แสดงราคาและการเปลี่ยนแปลงรายวันของ ETF หลักที่ติดตามดัชนีสำคัญ: SPY (S&P 500), QQQ (Nasdaq 100), DIA (Dow Jones) เป็นตัวชี้วัดทิศทางตลาดโดยรวม' },
+  'mag7': { title: 'Magnificent 7', desc: '7 หุ้นเทคโนโลยีขนาดใหญ่ที่สุดของสหรัฐฯ: Apple, Microsoft, Amazon, Alphabet (Google), Meta, Nvidia, Tesla — กลุ่มนี้มีอิทธิพลสูงต่อดัชนี S&P 500' }
+};
+
+// Sector name translations
+const SECTOR_TH = {
+  'Technology': 'เทคโนโลยี',
+  'Healthcare': 'สุขภาพ',
+  'Health Care': 'สุขภาพ',
+  'Financials': 'การเงิน',
+  'Energy': 'พลังงาน',
+  'Industrials': 'อุตสาหกรรม',
+  'Consumer Discretionary': 'สินค้าฟุ่มเฟือย',
+  'Consumer Staples': 'สินค้าจำเป็น',
+  'Materials': 'วัสดุ',
+  'Real Estate': 'อสังหาริมทรัพย์',
+  'Utilities': 'สาธารณูปโภค',
+  'Communication Services': 'สื่อสาร',
+  'Information Technology': 'เทคโนโลยีสารสนเทศ'
+};
+
+const MAG7_TICKERS = ['AAPL', 'MSFT', 'AMZN', 'GOOGL', 'META', 'NVDA', 'TSLA'];
+const BENCHMARK_TICKERS = ['SPY', 'QQQ', 'DIA'];
+const BENCHMARK_LABELS = { 'SPY': 'S&P 500 ETF', 'QQQ': 'Nasdaq 100 ETF', 'DIA': 'Dow Jones ETF' };
+
+// ============================================================
+// State
+// ============================================================
+let allData = [];
+let filteredData = [];
+let profileMap = {};
+let fundamentalsMap = {};
+let dailyMap = {};
+let currentPage = 1;
+const ROWS_PER_PAGE = 20;
+let currentSort = { key: 'rank', dir: 'asc' };
+
+// ============================================================
+// Data URLs — GitHub raw content (works on Pages + local)
+// ============================================================
+const GITHUB_RAW = 'https://raw.githubusercontent.com/jptrustlearning/sp500/main/';
+const DATA_URLS = {
+  combined: GITHUB_RAW + 'output_combined_score_sp500.csv',
+  profiles: GITHUB_RAW + 'all_profiles.csv',
+  daily:    GITHUB_RAW + 'latest_daily.csv',
+  fund:     GITHUB_RAW + 'fundamentals/ratios_current.csv'
+};
+
+// ============================================================
+// Data Loading
+// ============================================================
+async function loadData() {
+  try {
+    const [combinedRes, profilesRes, dailyRes] = await Promise.all([
+      loadCSV(DATA_URLS.combined),
+      loadCSV(DATA_URLS.profiles),
+      loadCSV(DATA_URLS.daily)
+    ]);
+
+    // Try loading fundamentals
+    let fundRes = [];
+    try { fundRes = await loadCSV(DATA_URLS.fund); } catch(e) {}
+
+    // Build profile map
+    profilesRes.forEach(p => {
+      if (p.Ticker) profileMap[p.Ticker] = p;
+    });
+
+    // Build fundamentals map
+    fundRes.forEach(f => {
+      if (f.Ticker) fundamentalsMap[f.Ticker] = f;
+    });
+
+    // Build daily price map (latest OHLCV + daily change)
+    dailyRes.forEach(d => {
+      if (d.Ticker) dailyMap[d.Ticker] = d;
+    });
+
+    // Render Market Overview (benchmarks)
+    renderMarketOverview();
+
+    // Render Magnificent 7
+    renderMag7();
+
+    // Process combined data
+    allData = combinedRes.filter(r => r.Ticker && r.Ticker.trim()).map((r, i) => {
+      const profile = profileMap[r.Ticker] || {};
+      const fund = fundamentalsMap[r.Ticker] || {};
+      const daily = dailyMap[r.Ticker] || {};
+      const price = parseFloat(daily.Close) || parseFloat(r.Price) || 0;
+      const dailyChange = parseFloat(daily.Daily_Change_Pct) || 0;
+      const volume = parseInt(daily.Volume) || 0;
+      const ret1w = parseFloat(r.Ret_1W_Pct) || 0;
+      const ret1m = parseFloat(r.Ret_1M_Pct) || 0;
+      const combined = parseFloat(r.Combined_Balanced) || 0;
+      const momentum = parseFloat(r.Mom_Score) || 0;
+      const newsScore = parseFloat(r.News_Score_Raw) || 0;
+      const rsi = parseFloat(r.RSI_Value) || 0;
+      const rank = parseInt(r.Rank) || (i + 1);
+
+      let companyName = r.Company || r.Ticker;
+      let sector = r.Sector || profile.Sector || '';
+
+      return {
+        rank, ticker: r.Ticker, company: companyName,
+        sector, price, change: dailyChange, ret1w, ret1m,
+        volume, tier: r.Combined_Tier || '', combined, momentum,
+        newsScore, newsNorm: parseFloat(r.News_Score_Norm) || 0,
+        newsTier: r.News_Tier || '', momTier: r.Mom_Tier || '',
+        rsi, ma50: parseFloat(r.MA50) || 0, ma200: parseFloat(r.MA200) || 0,
+        goldenCross: r.Golden_Cross === 'True',
+        volatility: parseFloat(r.Volatility_Pct) || 0,
+        signals: r.Signals || '', conviction: r.Conviction_Tag || '',
+        warnings: r.Warning_Flags || '',
+        catalyst: r.Catalyst || '', hasDeal: r.Has_Deal === 'TRUE',
+        dealValue: r.Deal_Value || '', dealPartner: r.Deal_Partner || '',
+        upside: parseFloat(r.Upside_Pct) || 0,
+        marketCap: r.Market_Cap || '',
+        pe: parseFloat(fund['Trailing P/E']) || null,
+        pb: parseFloat(fund['P/B']) || null,
+        divYield: parseFloat(fund['Dividend Yield']) || null,
+        roe: parseFloat(fund['ROE']) || null,
+        beta: parseFloat(fund['Beta']) || null,
+        asOf: r.As_Of_Running || '',
+        dailyDate: daily.Date || ''
+      };
+    });
+
+    // Parse date
+    const dateStr = dailyRes.length > 0 ? dailyRes[0].Date : (allData.length > 0 ? allData[0].asOf : '');
+    if (dateStr) {
+      document.getElementById('dateBadge').innerHTML =
+        '<i class="far fa-calendar-alt"></i> อัปเดตล่าสุด: ' + esc(dateStr);
+    }
+
+    filteredData = [...allData];
+    populateSectorFilter();
+    renderSectorHeatmap();
+    renderTopMovers();
+    renderStockOfTheDay();
+    renderScoringCards();
+    applyFiltersAndSort();
+
+    document.getElementById('loadingScreen').style.display = 'none';
+    document.getElementById('mainContent').style.display = 'block';
+
+  } catch(err) {
+    console.error('Error loading data:', err);
+    document.getElementById('loadingScreen').innerHTML =
+      '<div style="color:var(--red);font-size:1rem;">เกิดข้อผิดพลาดในการโหลดข้อมูล</div>' +
+      '<div style="color:var(--text3);font-size:.82rem;">' + esc(err.message) + '</div>';
+  }
+}
+
+function loadCSV(url) {
+  return fetch(url)
+    .then(function(res) {
+      if (!res.ok) throw new Error('Failed to load: ' + url + ' (' + res.status + ')');
+      return res.text();
+    })
+    .then(function(text) {
+      var result = Papa.parse(text, { header: true, skipEmptyLines: true });
+      return result.data;
+    });
+}
+
+// ============================================================
+// Market Overview
+// ============================================================
+function renderMarketOverview() {
+  const container = document.getElementById('marketOverview');
+  container.innerHTML = BENCHMARK_TICKERS.map(ticker => {
+    const d = dailyMap[ticker];
+    if (!d) return '';
+    const price = parseFloat(d.Close) || 0;
+    const change = parseFloat(d.Daily_Change_Pct) || 0;
+    const color = change >= 0 ? 'var(--green)' : 'var(--red)';
+    const prefix = change >= 0 ? '+' : '';
+    return '<div class="market-card">' +
+      '<div class="mc-ticker">' + esc(ticker) + '</div>' +
+      '<div class="mc-price" style="color:' + color + '">$' + price.toFixed(2) + '</div>' +
+      '<div class="mc-change" style="color:' + color + '">' + prefix + change.toFixed(2) + '%</div>' +
+      '<div class="mc-label">' + esc(BENCHMARK_LABELS[ticker] || '') + '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ============================================================
+// Magnificent 7
+// ============================================================
+function renderMag7() {
+  const container = document.getElementById('mag7Grid');
+  container.innerHTML = MAG7_TICKERS.map(ticker => {
+    const d = dailyMap[ticker];
+    if (!d) return '';
+    const price = parseFloat(d.Close) || 0;
+    const change = parseFloat(d.Daily_Change_Pct) || 0;
+    const color = change >= 0 ? 'var(--green)' : 'var(--red)';
+    const prefix = change >= 0 ? '+' : '';
+    return '<div class="mag7-card">' +
+      '<div class="m7-ticker">' + esc(ticker) + '</div>' +
+      '<div class="m7-price" style="color:' + color + '">$' + price.toFixed(2) + '</div>' +
+      '<div class="m7-change" style="color:' + color + '">' + prefix + change.toFixed(2) + '%</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ============================================================
+// Stock of the Day (Premium teaser)
+// ============================================================
+function renderStockOfTheDay() {
+  if (!allData.length) return;
+  const top = [...allData].sort((a, b) => b.combined - a.combined)[0];
+  if (!top) return;
+
+  const scoreColor = top.combined >= 80 ? 'var(--green)' : top.combined >= 50 ? '#FFC107' : 'var(--red)';
+  const chgColor = top.change >= 0 ? 'var(--green)' : 'var(--red)';
+  const chgPrefix = top.change >= 0 ? '+' : '';
+
+  document.getElementById('sotdSection').innerHTML =
+    '<div class="sotd-card">' +
+      '<div class="sotd-header">' +
+        '<span class="sotd-badge"><i class="fas fa-star"></i> หุ้นแนะนำวันนี้</span>' +
+        '<span class="sotd-ticker">' + esc(top.ticker) + '</span>' +
+        '<span class="sotd-company">' + esc(top.company) + ' | ' + esc(SECTOR_TH[top.sector] || top.sector) + '</span>' +
+      '</div>' +
+      '<div class="sotd-metrics">' +
+        '<div class="sotd-metric"><div class="sm-label">ราคา</div><div class="sm-value" style="color:var(--text)">$' + top.price.toFixed(2) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">เปลี่ยนแปลง%</div><div class="sm-value" style="color:' + chgColor + '">' + chgPrefix + top.change.toFixed(2) + '%</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">คะแนนรวม</div><div class="sm-value" style="color:' + scoreColor + '">' + top.combined.toFixed(1) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">โมเมนตัม</div><div class="sm-value" style="color:var(--blue)">' + top.momentum.toFixed(1) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">ข่าว</div><div class="sm-value" style="color:var(--purple)">' + top.newsScore.toFixed(0) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">ระดับ</div><div class="sm-value">' + tierBadge(top.tier) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">สัญญาณ</div><div class="sm-value" style="font-size:.8rem">' + renderSignals(top.signals) + '</div></div>' +
+        '<div class="sotd-metric"><div class="sm-label">Conviction</div><div class="sm-value" style="font-size:.8rem;color:var(--cyan)">' + esc(top.conviction || '-') + '</div></div>' +
+      '</div>' +
+    '</div>';
+}
+
+// ============================================================
+// Sector Filter
+// ============================================================
+function populateSectorFilter() {
+  const sectors = [...new Set(allData.map(d => d.sector).filter(Boolean))].sort();
+  const sel = document.getElementById('sectorFilter');
+  sectors.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = (SECTOR_TH[s] || s) + ' (' + s + ')';
+    sel.appendChild(opt);
+  });
+}
+
+// ============================================================
+// Sector Heatmap
+// ============================================================
+function renderSectorHeatmap() {
+  const sectorData = {};
+  allData.forEach(d => {
+    if (!d.sector) return;
+    if (!sectorData[d.sector]) sectorData[d.sector] = { total: 0, count: 0 };
+    sectorData[d.sector].total += d.change;
+    sectorData[d.sector].count++;
+  });
+
+  const container = document.getElementById('sectorHeatmap');
+  container.innerHTML = '';
+
+  const sectors = Object.keys(sectorData).sort();
+  sectors.forEach(s => {
+    const avg = sectorData[s].total / sectorData[s].count;
+    const count = sectorData[s].count;
+    const intensity = Math.min(Math.abs(avg) / 3, 1);
+    const bgColor = avg >= 0
+      ? 'rgba(0,200,83,' + (0.08 + intensity * 0.25) + ')'
+      : 'rgba(255,23,68,' + (0.08 + intensity * 0.25) + ')';
+    const borderColor = avg >= 0
+      ? 'rgba(0,200,83,' + (0.2 + intensity * 0.3) + ')'
+      : 'rgba(255,23,68,' + (0.2 + intensity * 0.3) + ')';
+
+    const cell = document.createElement('div');
+    cell.className = 'heatmap-cell';
+    cell.style.background = bgColor;
+    cell.style.borderColor = borderColor;
+    cell.innerHTML =
+      '<div class="sector-name">' + esc(SECTOR_TH[s] || s) + '</div>' +
+      '<div class="sector-pct" style="color:' + (avg >= 0 ? 'var(--green)' : 'var(--red)') + '">' +
+        (avg >= 0 ? '+' : '') + avg.toFixed(2) + '%' +
+      '</div>' +
+      '<div class="sector-count">' + count + ' หุ้น</div>';
+    cell.onclick = function() {
+      document.getElementById('sectorFilter').value = s;
+      applyFiltersAndSort();
+      document.querySelector('.filter-bar').scrollIntoView({ behavior: 'smooth' });
+    };
+    container.appendChild(cell);
+  });
+}
+
+// ============================================================
+// Top Movers
+// ============================================================
+function renderTopMovers() {
+  const sorted = [...allData].sort((a, b) => b.change - a.change);
+  const gainers = sorted.slice(0, 5);
+  const losers = sorted.slice(-5).reverse();
+
+  document.getElementById('topGainers').innerHTML = gainers.map(function(d) {
+    return '<div class="mover-item">' +
+      '<span class="m-ticker" style="color:var(--gold)">' + esc(d.ticker) + '</span>' +
+      '<span class="m-price">$' + d.price.toFixed(2) + '</span>' +
+      '<span class="m-pct" style="color:var(--green)">' + (d.change >= 0 ? '+' : '') + d.change.toFixed(2) + '%</span>' +
+    '</div>';
+  }).join('');
+
+  document.getElementById('topLosers').innerHTML = losers.map(function(d) {
+    return '<div class="mover-item">' +
+      '<span class="m-ticker" style="color:var(--gold)">' + esc(d.ticker) + '</span>' +
+      '<span class="m-price">$' + d.price.toFixed(2) + '</span>' +
+      '<span class="m-pct" style="color:var(--red)">' + d.change.toFixed(2) + '%</span>' +
+    '</div>';
+  }).join('');
+}
+
+// ============================================================
+// Scoring Cards (blurred)
+// ============================================================
+function renderScoringCards() {
+  const top10 = [...allData].sort((a, b) => b.combined - a.combined).slice(0, 10);
+  const container = document.getElementById('scoreCards');
+  container.innerHTML = top10.map(function(d) {
+    const scoreColor = d.combined >= 80 ? 'var(--green)' : d.combined >= 50 ? '#FFC107' : 'var(--red)';
+    return '<div class="score-card">' +
+      '<div class="sc-ticker">' + esc(d.ticker) + '</div>' +
+      '<div class="sc-company">' + esc(d.company) + '</div>' +
+      '<div class="sc-score" style="color:' + scoreColor + '">' + d.combined.toFixed(1) + '</div>' +
+      '<div class="sc-tier">' + tierBadge(d.tier) + '</div>' +
+      '<div class="sc-meta">' +
+        '<span>Mom: ' + d.momentum.toFixed(1) + '</span>' +
+        '<span>News: ' + d.newsScore.toFixed(0) + '</span>' +
+        (d.conviction ? '<span>' + esc(d.conviction) + '</span>' : '') +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ============================================================
+// Filtering & Sorting
+// ============================================================
+function applyFiltersAndSort() {
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+  const sector = document.getElementById('sectorFilter').value;
+  const tier = document.getElementById('tierFilter').value;
+  const sortVal = document.getElementById('sortSelect').value;
+
+  filteredData = allData.filter(function(d) {
+    if (search && d.ticker.toLowerCase().indexOf(search) === -1 && d.company.toLowerCase().indexOf(search) === -1) return false;
+    if (sector && d.sector !== sector) return false;
+    if (tier && d.tier !== tier) return false;
+    return true;
+  });
+
+  // Sort
+  var parts = sortVal.split('-');
+  var key = parts[0];
+  var dir = parts[1];
+  var mult = dir === 'desc' ? -1 : 1;
+  filteredData.sort(function(a, b) {
+    var va, vb;
+    switch(key) {
+      case 'rank': va = a.rank; vb = b.rank; break;
+      case 'price': va = a.price; vb = b.price; break;
+      case 'change': va = a.change; vb = b.change; break;
+      case 'volume': va = a.volume; vb = b.volume; break;
+      case 'score': va = a.combined; vb = b.combined; break;
+      case 'momentum': va = a.momentum; vb = b.momentum; break;
+      case 'news': va = a.newsScore; vb = b.newsScore; break;
+      case 'ret1m': va = a.ret1m; vb = b.ret1m; break;
+      case 'ticker': return mult * a.ticker.localeCompare(b.ticker);
+      default: va = a.rank; vb = b.rank;
+    }
+    return mult * (va - vb);
+  });
+
+  currentPage = 1;
+  updateSortArrows(sortVal);
+  renderTable();
+  document.getElementById('resultCount').textContent = 'แสดง ' + filteredData.length + ' จาก ' + allData.length + ' หุ้น';
+}
+
+function updateSortArrows(sortVal) {
+  // Reset all arrows
+  document.querySelectorAll('.sort-arrow').forEach(function(el) { el.classList.remove('active'); });
+  var parts = sortVal.split('-');
+  var key = parts[0];
+  var dir = parts[1];
+  var arrowMap = { 'rank':'arrow-rank', 'ticker':'arrow-ticker', 'price':'arrow-price', 'change':'arrow-change', 'volume':'arrow-volume', 'score':'arrow-combined', 'momentum':'arrow-momentum', 'news':'arrow-news', 'ret1m':'arrow-ret1m' };
+  var arrowId = arrowMap[key];
+  if (arrowId) {
+    var el = document.getElementById(arrowId);
+    if (el) {
+      el.classList.add('active');
+      el.innerHTML = dir === 'desc' ? '&#x25BC;' : '&#x25B2;';
+    }
+  }
+}
+
+function clearFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('sectorFilter').value = '';
+  document.getElementById('tierFilter').value = '';
+  document.getElementById('sortSelect').value = 'rank-asc';
+  applyFiltersAndSort();
+}
+
+// ============================================================
+// Table Rendering
+// ============================================================
+function renderTable() {
+  var start = (currentPage - 1) * ROWS_PER_PAGE;
+  var pageData = filteredData.slice(start, start + ROWS_PER_PAGE);
+  var tbody = document.getElementById('tableBody');
+
+  tbody.innerHTML = pageData.map(function(d) {
+    var chgClass = d.change >= 0 ? 'positive' : 'negative';
+    var chgPrefix = d.change >= 0 ? '+' : '';
+    var ret1mClass = d.ret1m >= 0 ? 'positive' : 'negative';
+    var ret1mPrefix = d.ret1m >= 0 ? '+' : '';
+    var scoreColor = d.combined >= 80 ? 'score-high' : d.combined >= 50 ? 'score-mid' : 'score-low';
+    var momColor = d.momentum >= 80 ? 'score-high' : d.momentum >= 50 ? 'score-mid' : 'score-low';
+    var peDisplay = d.pe !== null ? d.pe.toFixed(1) : 'N/A';
+    var divDisplay = d.divYield !== null ? (d.divYield * 100).toFixed(2) + '%' : 'N/A';
+    var volDisplay = d.volume > 0 ? formatNum(d.volume) : '-';
+
+    return '<tr>' +
+      '<td class="num">' + d.rank + '</td>' +
+      '<td class="ticker">' + esc(d.ticker) + '</td>' +
+      '<td class="company" title="' + esc(d.company) + '">' + esc(d.company) + '</td>' +
+      '<td><span style="font-size:.72rem;color:var(--text3)">' + esc(SECTOR_TH[d.sector] || d.sector || '-') + '</span></td>' +
+      '<td class="num">$' + d.price.toFixed(2) + '</td>' +
+      '<td class="num ' + chgClass + '">' + chgPrefix + d.change.toFixed(2) + '%</td>' +
+      '<td class="num" style="color:var(--text3)">' + volDisplay + '</td>' +
+      '<td>' + tierBadge(d.tier) + '</td>' +
+      '<td class="num ' + scoreColor + '">' + d.combined.toFixed(1) + '</td>' +
+      '<td class="num ' + momColor + '">' + d.momentum.toFixed(1) + '</td>' +
+      '<td class="num">' + d.newsScore.toFixed(0) + '</td>' +
+      '<td style="font-size:.7rem">' + renderSignals(d.signals) + '</td>' +
+      '<td style="font-size:.7rem">' + esc(d.conviction || '-') + '</td>' +
+      '<td class="num ' + ret1mClass + '">' + ret1mPrefix + d.ret1m.toFixed(2) + '%</td>' +
+      '<td class="num">' + d.rsi.toFixed(1) + '</td>' +
+      '<td class="num">' + peDisplay + '</td>' +
+      '<td class="num">' + divDisplay + '</td>' +
+    '</tr>';
+  }).join('');
+
+  renderPagination();
+}
+
+function tierBadge(tier) {
+  if (!tier) return '<span class="tier-badge tier-monitor">-</span>';
+  var cls = 'tier-' + tier.toLowerCase();
+  return '<span class="tier-badge ' + cls + '">' + esc(tier) + '</span>';
+}
+
+function formatNum(n) {
+  if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
+  if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(1) + 'K';
+  return n.toString();
+}
+
+// ============================================================
+// Pagination
+// ============================================================
+function renderPagination() {
+  var totalPages = Math.ceil(filteredData.length / ROWS_PER_PAGE);
+  var container = document.getElementById('pagination');
+  if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+  var html = '<button class="page-btn" onclick="goPage(' + (currentPage-1) + ')" ' + (currentPage===1?'disabled':'') + '><i class="fas fa-chevron-left"></i></button>';
+
+  var start = Math.max(1, currentPage - 3);
+  var end = Math.min(totalPages, currentPage + 3);
+
+  if (start > 1) {
+    html += '<button class="page-btn" onclick="goPage(1)">1</button>';
+    if (start > 2) html += '<span class="page-info">...</span>';
+  }
+
+  for (var i = start; i <= end; i++) {
+    html += '<button class="page-btn ' + (i===currentPage?'active':'') + '" onclick="goPage(' + i + ')">' + i + '</button>';
+  }
+
+  if (end < totalPages) {
+    if (end < totalPages - 1) html += '<span class="page-info">...</span>';
+    html += '<button class="page-btn" onclick="goPage(' + totalPages + ')">' + totalPages + '</button>';
+  }
+
+  html += '<button class="page-btn" onclick="goPage(' + (currentPage+1) + ')" ' + (currentPage===totalPages?'disabled':'') + '><i class="fas fa-chevron-right"></i></button>';
+  html += '<span class="page-info">หน้า ' + currentPage + ' / ' + totalPages + '</span>';
+  container.innerHTML = html;
+}
+
+function goPage(p) {
+  var totalPages = Math.ceil(filteredData.length / ROWS_PER_PAGE);
+  if (p < 1 || p > totalPages) return;
+  currentPage = p;
+  renderTable();
+  document.querySelector('.table-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ============================================================
+// Tooltips
+// ============================================================
+function showEduTooltip(e, key) {
+  var tt = TOOLTIPS[key];
+  if (!tt) return;
+  var el = document.getElementById('eduTooltip');
+  el.innerHTML = '<div class="tt-title">' + esc(tt.title) + '</div><div>' + esc(tt.desc) + '</div>';
+  el.className = 'edu-tooltip show';
+
+  var rect = e.target.getBoundingClientRect();
+  var left = rect.left;
+  var top = rect.bottom + 8;
+  if (left + 340 > window.innerWidth) left = window.innerWidth - 350;
+  if (left < 10) left = 10;
+  if (top + 200 > window.innerHeight) top = rect.top - 120;
+
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+}
+
+function hideEduTooltip() {
+  document.getElementById('eduTooltip').className = 'edu-tooltip';
+}
+
+function showPremiumTip(e) {
+  var el = document.getElementById('premiumTooltip');
+  el.innerHTML = '&#x1f512; สมาชิก Premier/Platinum เท่านั้น — <a href="https://jptrustlearning.com" target="_blank" style="color:#F5D76E;text-decoration:underline;">สมัครเลย!</a>';
+  el.className = 'premium-tooltip show';
+  el.style.pointerEvents = 'auto';
+
+  var rect = e.currentTarget.getBoundingClientRect();
+  var left = rect.left;
+  var top = rect.top - 40;
+  if (left + 300 > window.innerWidth) left = window.innerWidth - 310;
+  if (top < 10) top = rect.bottom + 5;
+
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  clearTimeout(window._premTipTimer);
+  window._premTipTimer = setTimeout(function() {
+    el.className = 'premium-tooltip';
+  }, 3000);
+}
+
+// ============================================================
+// Event Listeners
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+  // Search/filter events
+  document.getElementById('searchInput').addEventListener('input', debounce(applyFiltersAndSort, 250));
+  document.getElementById('sectorFilter').addEventListener('change', applyFiltersAndSort);
+  document.getElementById('tierFilter').addEventListener('change', applyFiltersAndSort);
+  document.getElementById('sortSelect').addEventListener('change', applyFiltersAndSort);
+
+  // Info icon tooltips
+  document.addEventListener('mouseover', function(e) {
+    var icon = e.target.closest('[data-tooltip]');
+    if (icon) showEduTooltip(e, icon.dataset.tooltip);
+  });
+  document.addEventListener('mouseout', function(e) {
+    var icon = e.target.closest('[data-tooltip]');
+    if (icon) hideEduTooltip();
+  });
+
+  // Click on info icons for mobile
+  document.addEventListener('click', function(e) {
+    var icon = e.target.closest('[data-tooltip]');
+    if (icon) {
+      e.stopPropagation();
+      showEduTooltip(e, icon.dataset.tooltip);
+      setTimeout(hideEduTooltip, 4000);
+    }
+  });
+
+  // Close premium tooltip on outside click
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.premium-cell-wrap') && !e.target.closest('.premium-tooltip')) {
+      document.getElementById('premiumTooltip').className = 'premium-tooltip';
+    }
+  });
+
+  // Column header sorting
+  document.querySelectorAll('thead th[data-sort]').forEach(function(th) {
+    th.addEventListener('click', function() {
+      var key = th.dataset.sort;
+      var sortMap = {
+        'rank': 'rank-asc', 'ticker': 'ticker-asc', 'price': 'price-desc',
+        'change': 'change-desc', 'volume': 'volume-desc', 'tier': 'rank-asc',
+        'combined': 'score-desc', 'momentum': 'momentum-desc',
+        'news': 'news-desc', 'ret1m': 'ret1m-desc',
+        'company': 'ticker-asc', 'sector': 'ticker-asc'
+      };
+      var current = document.getElementById('sortSelect').value;
+      var target = sortMap[key] || 'rank-asc';
+      if (current === target) {
+        var p = target.split('-');
+        document.getElementById('sortSelect').value = p[0] + '-' + (p[1] === 'desc' ? 'asc' : 'desc');
+      } else {
+        document.getElementById('sortSelect').value = target;
+      }
+      applyFiltersAndSort();
+    });
+  });
+
+  // Load data
+  loadData();
+});
+
+function debounce(fn, ms) {
+  var timer;
+  return function() {
+    var args = arguments;
+    var ctx = this;
+    clearTimeout(timer);
+    timer = setTimeout(function() { fn.apply(ctx, args); }, ms);
+  };
+}
+</script>
+</body>
+</html>
