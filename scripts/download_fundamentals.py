@@ -39,6 +39,7 @@ RETRY_DELAY = 5  # seconds
 
 # Fields to extract
 INCOME_FIELDS = [
+    # --- existing ---
     "Total Revenue",
     "Net Income",
     "Gross Profit",
@@ -49,9 +50,20 @@ INCOME_FIELDS = [
     "Total Expenses",
     "Cost Of Revenue",
     "Research And Development",
+    # --- new: shares (for per-share calculations) ---
+    "Basic Average Shares",
+    "Diluted Average Shares",
+    # --- new: detailed P&L ---
+    "EBIT",
+    "Interest Expense",
+    "Tax Provision",
+    "Pretax Income",
+    "Selling General And Administration",
+    "Stock Based Compensation",
 ]
 
 BALANCE_FIELDS = [
+    # --- existing ---
     "Total Assets",
     "Total Liabilities Net Minority Interest",
     "Stockholders Equity",
@@ -62,21 +74,42 @@ BALANCE_FIELDS = [
     "Current Liabilities",
     "Long Term Debt",
     "Working Capital",
+    # --- new: shares ---
+    "Ordinary Shares Number",
+    "Share Issued",
+    # --- new: working capital detail ---
+    "Accounts Receivable",
+    "Inventory",
+    "Accounts Payable",
+    # --- new: assets detail ---
+    "Net PPE",
+    "Goodwill And Other Intangible Assets",
+    "Net Tangible Assets",
+    # --- new: equity & capital ---
+    "Retained Earnings",
+    "Invested Capital",
 ]
 
 CASHFLOW_FIELDS = [
+    # --- existing ---
     "Operating Cash Flow",
     "Free Cash Flow",
     "Capital Expenditure",
-    "Investing Cash Flow",  # renamed from Investing Activities
-    "Financing Cash Flow",  # renamed from Financing Activities
+    "Investing Cash Flow",
+    "Financing Cash Flow",
     "Repurchase Of Capital Stock",
     "Cash Dividends Paid",
     "Issuance Of Debt",
     "Repayment Of Debt",
+    # --- new ---
+    "Depreciation And Amortization",
+    "Stock Based Compensation",
+    "Change In Working Capital",
+    "Issuance Of Capital Stock",
 ]
 
 RATIO_KEYS = {
+    # --- existing ---
     "trailingPE": "Trailing P/E",
     "forwardPE": "Forward P/E",
     "priceToBook": "P/B",
@@ -100,6 +133,16 @@ RATIO_KEYS = {
     "beta": "Beta",
     "sector": "Sector",
     "industry": "Industry",
+    # --- new ---
+    "sharesOutstanding": "Shares Outstanding",
+    "floatShares": "Float Shares",
+    "bookValue": "Book Value Per Share",
+    "priceToSalesTrailing12Months": "P/S",
+    "enterpriseToRevenue": "EV/Revenue",
+    "enterpriseToEbitda": "EV/EBITDA",
+    "heldPercentInsiders": "Insider Ownership",
+    "heldPercentInstitutions": "Institutional Ownership",
+    "shortRatio": "Short Ratio",
 }
 
 # ============================================================
