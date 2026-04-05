@@ -1,0 +1,83 @@
+# ============================================================
+# SP500 Calculated Ratios — Monthly Pipeline
+# ============================================================
+# คำนวณ 29+ financial ratios จาก raw data
+# รันหลัง monthly_fundamentals.yml (วันที่ 20, เวลา 04:00 UTC)
+# หรือ manual trigger ได้
+# ============================================================
+
+name: "Monthly Calculated Ratios"
+
+on:
+  schedule:
+    # วันที่ 20 ของทุกเดือน เวลา 04:00 UTC
+    # 2 ชม. หลัง fundamentals download (02:00 UTC)
+    - cron: "0 4 20 * *"
+
+  # Trigger เมื่อ fundamentals download เสร็จ
+  workflow_run:
+    workflows: ["Monthly Fundamentals Download"]
+    types:
+      - completed
+
+  # Manual trigger
+  workflow_dispatch:
+
+jobs:
+  calculate-ratios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    # ถ้า trigger จาก workflow_run → รันเฉพาะเมื่อ download สำเร็จ
+    if: >
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      # 1) Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      # 2) Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3) Install dependencies
+      - name: Install dependencies
+        run: pip install pandas numpy
+
+      # 4) Run calculation script
+      - name: Calculate ratios
+        run: |
+          cd scripts
+          python calculate_ratios.py --input-dir ../fundamentals --output-dir ../fundamentals
+
+      # 5) Commit & Push
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add fundamentals/calculated_ratios_*.csv fundamentals/calc_ratios_summary.json
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "📈 Calculated ratios update: ${TIMESTAMP}"
+            git push
+            echo "✅ Calculated ratios committed and pushed"
+          fi
+
+      # 6) Upload logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: calc-ratios-logs-${{ github.run_id }}
+          path: fundamentals/logs/
+          retention-days: 30
