@@ -369,6 +369,12 @@ def build_ratios_annual_csv(all_data):
 def merge_with_existing(new_df, csv_path, key_columns):
     """Merge new data with existing CSV — append only new records.
     Dedup based on key_columns (e.g. ['Ticker', 'Date', 'Metric']).
+
+    Smart merge rules:
+    - New key (not in existing) → append
+    - Same key, existing has value, new is empty → keep existing
+    - Same key, existing is empty, new has value → use new (fill gap)
+    - Same key, both have values → keep new (updated data)
     """
     if not csv_path.exists():
         return new_df
@@ -380,9 +386,37 @@ def merge_with_existing(new_df, csv_path, key_columns):
             if col not in existing_df.columns:
                 return new_df
 
+        # Find which value columns to check (non-key columns)
+        value_cols = [c for c in new_df.columns if c not in key_columns]
+
+        # Tag source for tracking
+        existing_df["_source"] = "existing"
+        new_df["_source"] = "new"
+
         combined = pd.concat([existing_df, new_df], ignore_index=True)
-        # Drop duplicates: keep last (= newest data wins if values changed)
-        combined = combined.drop_duplicates(subset=key_columns, keep="last")
+
+        # For each duplicate key, pick the row with more non-null values
+        # If tie, prefer new data (updated)
+        def pick_best(group):
+            if len(group) == 1:
+                return group.iloc[0]
+            # Count non-null values in value columns (exclude key cols and _source)
+            check_cols = [c for c in value_cols if c in group.columns]
+            group = group.copy()
+            group["_completeness"] = group[check_cols].notna().sum(axis=1)
+            # Sort: more complete first, then new over existing (for ties)
+            group["_is_new"] = (group["_source"] == "new").astype(int)
+            group = group.sort_values(
+                ["_completeness", "_is_new"], ascending=[False, False]
+            )
+            return group.iloc[0]
+
+        combined = combined.groupby(key_columns, sort=False).apply(
+            pick_best, include_groups=False
+        ).reset_index()
+
+        # Clean up helper columns
+        combined = combined.drop(columns=["_source", "_completeness", "_is_new"], errors="ignore")
         combined = combined.sort_values(key_columns).reset_index(drop=True)
         return combined
     except Exception as e:
