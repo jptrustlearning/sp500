@@ -1,134 +1,761 @@
-Ticker,Date,Metric,Value
-NVDA,2026-01-31,Total Assets,206803000000.0
-NVDA,2025-10-31,Total Assets,161148000000.0
-NVDA,2025-07-31,Total Assets,140740000000.0
-NVDA,2025-04-30,Total Assets,125254000000.0
-NVDA,2025-01-31,Total Assets,111601000000.0
-NVDA,2024-10-31,Total Assets,
-NVDA,2024-07-31,Total Assets,
-NVDA,2026-01-31,Total Liabilities Net Minority Interest,49510000000.0
-NVDA,2025-10-31,Total Liabilities Net Minority Interest,42251000000.0
-NVDA,2025-07-31,Total Liabilities Net Minority Interest,40609000000.0
-NVDA,2025-04-30,Total Liabilities Net Minority Interest,41411000000.0
-NVDA,2025-01-31,Total Liabilities Net Minority Interest,32274000000.0
-NVDA,2024-10-31,Total Liabilities Net Minority Interest,
-NVDA,2024-07-31,Total Liabilities Net Minority Interest,
-NVDA,2026-01-31,Stockholders Equity,157293000000.0
-NVDA,2025-10-31,Stockholders Equity,118897000000.0
-NVDA,2025-07-31,Stockholders Equity,100131000000.0
-NVDA,2025-04-30,Stockholders Equity,83843000000.0
-NVDA,2025-01-31,Stockholders Equity,79327000000.0
-NVDA,2024-10-31,Stockholders Equity,
-NVDA,2024-07-31,Stockholders Equity,
-NVDA,2026-01-31,Total Debt,11040000000.0
-NVDA,2025-10-31,Total Debt,10481000000.0
-NVDA,2025-07-31,Total Debt,10598000000.0
-NVDA,2025-04-30,Total Debt,10285000000.0
-NVDA,2025-01-31,Total Debt,9982000000.0
-NVDA,2024-10-31,Total Debt,
-NVDA,2024-07-31,Total Debt,
-NVDA,2026-01-31,Cash And Cash Equivalents,10605000000.0
-NVDA,2025-10-31,Cash And Cash Equivalents,11486000000.0
-NVDA,2025-07-31,Cash And Cash Equivalents,11639000000.0
-NVDA,2025-04-30,Cash And Cash Equivalents,15234000000.0
-NVDA,2025-01-31,Cash And Cash Equivalents,8589000000.0
-NVDA,2024-10-31,Cash And Cash Equivalents,
-NVDA,2024-07-31,Cash And Cash Equivalents,
-NVDA,2026-01-31,Current Assets,125605000000.0
-NVDA,2025-10-31,Current Assets,116492000000.0
-NVDA,2025-07-31,Current Assets,102219000000.0
-NVDA,2025-04-30,Current Assets,89935000000.0
-NVDA,2025-01-31,Current Assets,80126000000.0
-NVDA,2024-10-31,Current Assets,
-NVDA,2024-07-31,Current Assets,
-NVDA,2026-01-31,Current Liabilities,32163000000.0
-NVDA,2025-10-31,Current Liabilities,26075000000.0
-NVDA,2025-07-31,Current Liabilities,24257000000.0
-NVDA,2025-04-30,Current Liabilities,26542000000.0
-NVDA,2025-01-31,Current Liabilities,18047000000.0
-NVDA,2024-10-31,Current Liabilities,
-NVDA,2024-07-31,Current Liabilities,
-NVDA,2026-01-31,Long Term Debt,7469000000.0
-NVDA,2025-10-31,Long Term Debt,7468000000.0
-NVDA,2025-07-31,Long Term Debt,8466000000.0
-NVDA,2025-04-30,Long Term Debt,8464000000.0
-NVDA,2025-01-31,Long Term Debt,8463000000.0
-NVDA,2024-10-31,Long Term Debt,
-NVDA,2024-07-31,Long Term Debt,
-NVDA,2026-01-31,Working Capital,93442000000.0
-NVDA,2025-10-31,Working Capital,90417000000.0
-NVDA,2025-07-31,Working Capital,77962000000.0
-NVDA,2025-04-30,Working Capital,63393000000.0
-NVDA,2025-01-31,Working Capital,62079000000.0
-NVDA,2024-10-31,Working Capital,
-NVDA,2024-07-31,Working Capital,
-NVDA,2026-01-31,Ordinary Shares Number,24304000000.0
-NVDA,2025-10-31,Ordinary Shares Number,24305000000.0
-NVDA,2025-07-31,Ordinary Shares Number,24347000000.0
-NVDA,2025-04-30,Ordinary Shares Number,24387557065.0
-NVDA,2025-01-31,Ordinary Shares Number,24477000000.0
-NVDA,2024-10-31,Ordinary Shares Number,
-NVDA,2024-07-31,Ordinary Shares Number,
-NVDA,2026-01-31,Share Issued,24304000000.0
-NVDA,2025-10-31,Share Issued,24305000000.0
-NVDA,2025-07-31,Share Issued,24347000000.0
-NVDA,2025-04-30,Share Issued,24387557065.0
-NVDA,2025-01-31,Share Issued,24477000000.0
-NVDA,2024-10-31,Share Issued,
-NVDA,2024-07-31,Share Issued,
-NVDA,2026-01-31,Accounts Receivable,38466000000.0
-NVDA,2025-10-31,Accounts Receivable,33391000000.0
-NVDA,2025-07-31,Accounts Receivable,27808000000.0
-NVDA,2025-04-30,Accounts Receivable,22132000000.0
-NVDA,2025-01-31,Accounts Receivable,23065000000.0
-NVDA,2024-10-31,Accounts Receivable,
-NVDA,2024-07-31,Accounts Receivable,
-NVDA,2026-01-31,Inventory,21403000000.0
-NVDA,2025-10-31,Inventory,19784000000.0
-NVDA,2025-07-31,Inventory,14962000000.0
-NVDA,2025-04-30,Inventory,11333000000.0
-NVDA,2025-01-31,Inventory,10080000000.0
-NVDA,2024-10-31,Inventory,
-NVDA,2024-07-31,Inventory,
-NVDA,2026-01-31,Accounts Payable,9812000000.0
-NVDA,2025-10-31,Accounts Payable,8624000000.0
-NVDA,2025-07-31,Accounts Payable,9064000000.0
-NVDA,2025-04-30,Accounts Payable,7331000000.0
-NVDA,2025-01-31,Accounts Payable,6310000000.0
-NVDA,2024-10-31,Accounts Payable,
-NVDA,2024-07-31,Accounts Payable,
-NVDA,2026-01-31,Net PPE,13250000000.0
-NVDA,2025-10-31,Net PPE,12061000000.0
-NVDA,2025-07-31,Net PPE,11225000000.0
-NVDA,2025-04-30,Net PPE,8946000000.0
-NVDA,2025-01-31,Net PPE,8076000000.0
-NVDA,2024-10-31,Net PPE,
-NVDA,2024-07-31,Net PPE,
-NVDA,2026-01-31,Goodwill And Other Intangible Assets,24138000000.0
-NVDA,2025-10-31,Goodwill And Other Intangible Assets,7197000000.0
-NVDA,2025-07-31,Goodwill And Other Intangible Assets,6510000000.0
-NVDA,2025-04-30,Goodwill And Other Intangible Assets,6267000000.0
-NVDA,2025-01-31,Goodwill And Other Intangible Assets,5995000000.0
-NVDA,2024-10-31,Goodwill And Other Intangible Assets,
-NVDA,2024-07-31,Goodwill And Other Intangible Assets,
-NVDA,2026-01-31,Net Tangible Assets,133155000000.0
-NVDA,2025-10-31,Net Tangible Assets,111700000000.0
-NVDA,2025-07-31,Net Tangible Assets,93621000000.0
-NVDA,2025-04-30,Net Tangible Assets,77576000000.0
-NVDA,2025-01-31,Net Tangible Assets,73332000000.0
-NVDA,2024-10-31,Net Tangible Assets,
-NVDA,2024-07-31,Net Tangible Assets,
-NVDA,2026-01-31,Retained Earnings,146973000000.0
-NVDA,2025-10-31,Retained Earnings,107908000000.0
-NVDA,2025-07-31,Retained Earnings,88737000000.0
-NVDA,2025-04-30,Retained Earnings,72158000000.0
-NVDA,2025-01-31,Retained Earnings,68038000000.0
-NVDA,2024-10-31,Retained Earnings,
-NVDA,2024-07-31,Retained Earnings,
-NVDA,2026-01-31,Invested Capital,165761000000.0
-NVDA,2025-10-31,Invested Capital,127364000000.0
-NVDA,2025-07-31,Invested Capital,108597000000.0
-NVDA,2025-04-30,Invested Capital,92307000000.0
-NVDA,2025-01-31,Invested Capital,87790000000.0
-NVDA,2024-10-31,Invested Capital,
-NVDA,2024-07-31,Invested Capital,
+Ticker,Date,Metric,level_3,0
+AAPL,2024-09-30,Accounts Payable,Value,
+AAPL,2024-09-30,Accounts Payable,_source,new
+AAPL,2024-09-30,Accounts Receivable,Value,
+AAPL,2024-09-30,Accounts Receivable,_source,new
+AAPL,2024-09-30,Cash And Cash Equivalents,Value,
+AAPL,2024-09-30,Cash And Cash Equivalents,_source,new
+AAPL,2024-09-30,Current Assets,Value,
+AAPL,2024-09-30,Current Assets,_source,new
+AAPL,2024-09-30,Current Liabilities,Value,
+AAPL,2024-09-30,Current Liabilities,_source,new
+AAPL,2024-09-30,Inventory,Value,
+AAPL,2024-09-30,Inventory,_source,new
+AAPL,2024-09-30,Invested Capital,Value,
+AAPL,2024-09-30,Invested Capital,_source,new
+AAPL,2024-09-30,Long Term Debt,Value,
+AAPL,2024-09-30,Long Term Debt,_source,new
+AAPL,2024-09-30,Net Debt,Value,
+AAPL,2024-09-30,Net Debt,_source,new
+AAPL,2024-09-30,Net PPE,Value,
+AAPL,2024-09-30,Net PPE,_source,new
+AAPL,2024-09-30,Net Tangible Assets,Value,
+AAPL,2024-09-30,Net Tangible Assets,_source,new
+AAPL,2024-09-30,Ordinary Shares Number,Value,
+AAPL,2024-09-30,Ordinary Shares Number,_source,new
+AAPL,2024-09-30,Retained Earnings,Value,
+AAPL,2024-09-30,Retained Earnings,_source,new
+AAPL,2024-09-30,Share Issued,Value,
+AAPL,2024-09-30,Share Issued,_source,new
+AAPL,2024-09-30,Stockholders Equity,Value,
+AAPL,2024-09-30,Stockholders Equity,_source,new
+AAPL,2024-09-30,Total Assets,Value,
+AAPL,2024-09-30,Total Assets,_source,new
+AAPL,2024-09-30,Total Debt,Value,
+AAPL,2024-09-30,Total Debt,_source,new
+AAPL,2024-09-30,Total Liabilities Net Minority Interest,Value,
+AAPL,2024-09-30,Total Liabilities Net Minority Interest,_source,new
+AAPL,2024-09-30,Working Capital,Value,
+AAPL,2024-09-30,Working Capital,_source,new
+AAPL,2024-12-31,Accounts Payable,Value,61910000000.0
+AAPL,2024-12-31,Accounts Payable,_source,new
+AAPL,2024-12-31,Accounts Receivable,Value,29639000000.0
+AAPL,2024-12-31,Accounts Receivable,_source,new
+AAPL,2024-12-31,Cash And Cash Equivalents,Value,30299000000.0
+AAPL,2024-12-31,Cash And Cash Equivalents,_source,new
+AAPL,2024-12-31,Current Assets,Value,133240000000.0
+AAPL,2024-12-31,Current Assets,_source,new
+AAPL,2024-12-31,Current Liabilities,Value,144365000000.0
+AAPL,2024-12-31,Current Liabilities,_source,new
+AAPL,2024-12-31,Inventory,Value,6911000000.0
+AAPL,2024-12-31,Inventory,_source,new
+AAPL,2024-12-31,Invested Capital,Value,163557000000.0
+AAPL,2024-12-31,Invested Capital,_source,new
+AAPL,2024-12-31,Long Term Debt,Value,83956000000.0
+AAPL,2024-12-31,Long Term Debt,_source,new
+AAPL,2024-12-31,Net Debt,Value,66500000000.0
+AAPL,2024-12-31,Net Debt,_source,new
+AAPL,2024-12-31,Net PPE,Value,46069000000.0
+AAPL,2024-12-31,Net PPE,_source,new
+AAPL,2024-12-31,Net Tangible Assets,Value,66758000000.0
+AAPL,2024-12-31,Net Tangible Assets,_source,new
+AAPL,2024-12-31,Ordinary Shares Number,Value,15037874000.0
+AAPL,2024-12-31,Ordinary Shares Number,_source,new
+AAPL,2024-12-31,Retained Earnings,Value,-11221000000.0
+AAPL,2024-12-31,Retained Earnings,_source,new
+AAPL,2024-12-31,Share Issued,Value,15037874000.0
+AAPL,2024-12-31,Share Issued,_source,new
+AAPL,2024-12-31,Stockholders Equity,Value,66758000000.0
+AAPL,2024-12-31,Stockholders Equity,_source,new
+AAPL,2024-12-31,Total Assets,Value,344085000000.0
+AAPL,2024-12-31,Total Assets,_source,new
+AAPL,2024-12-31,Total Debt,Value,96799000000.0
+AAPL,2024-12-31,Total Debt,_source,new
+AAPL,2024-12-31,Total Liabilities Net Minority Interest,Value,277327000000.0
+AAPL,2024-12-31,Total Liabilities Net Minority Interest,_source,new
+AAPL,2024-12-31,Working Capital,Value,-11125000000.0
+AAPL,2024-12-31,Working Capital,_source,new
+AAPL,2025-03-31,Accounts Payable,Value,54126000000.0
+AAPL,2025-03-31,Accounts Payable,_source,new
+AAPL,2025-03-31,Accounts Receivable,Value,26136000000.0
+AAPL,2025-03-31,Accounts Receivable,_source,new
+AAPL,2025-03-31,Cash And Cash Equivalents,Value,28162000000.0
+AAPL,2025-03-31,Cash And Cash Equivalents,_source,new
+AAPL,2025-03-31,Current Assets,Value,118674000000.0
+AAPL,2025-03-31,Current Assets,_source,new
+AAPL,2025-03-31,Current Liabilities,Value,144571000000.0
+AAPL,2025-03-31,Current Liabilities,_source,new
+AAPL,2025-03-31,Inventory,Value,6269000000.0
+AAPL,2025-03-31,Inventory,_source,new
+AAPL,2025-03-31,Invested Capital,Value,164982000000.0
+AAPL,2025-03-31,Invested Capital,_source,new
+AAPL,2025-03-31,Long Term Debt,Value,78566000000.0
+AAPL,2025-03-31,Long Term Debt,_source,new
+AAPL,2025-03-31,Net Debt,Value,70024000000.0
+AAPL,2025-03-31,Net Debt,_source,new
+AAPL,2025-03-31,Net PPE,Value,46876000000.0
+AAPL,2025-03-31,Net PPE,_source,new
+AAPL,2025-03-31,Net Tangible Assets,Value,66796000000.0
+AAPL,2025-03-31,Net Tangible Assets,_source,new
+AAPL,2025-03-31,Ordinary Shares Number,Value,14939315000.0
+AAPL,2025-03-31,Ordinary Shares Number,_source,new
+AAPL,2025-03-31,Retained Earnings,Value,-15552000000.0
+AAPL,2025-03-31,Retained Earnings,_source,new
+AAPL,2025-03-31,Share Issued,Value,14939315000.0
+AAPL,2025-03-31,Share Issued,_source,new
+AAPL,2025-03-31,Stockholders Equity,Value,66796000000.0
+AAPL,2025-03-31,Stockholders Equity,_source,new
+AAPL,2025-03-31,Total Assets,Value,331233000000.0
+AAPL,2025-03-31,Total Assets,_source,new
+AAPL,2025-03-31,Total Debt,Value,98186000000.0
+AAPL,2025-03-31,Total Debt,_source,new
+AAPL,2025-03-31,Total Liabilities Net Minority Interest,Value,264437000000.0
+AAPL,2025-03-31,Total Liabilities Net Minority Interest,_source,new
+AAPL,2025-03-31,Working Capital,Value,-25897000000.0
+AAPL,2025-03-31,Working Capital,_source,new
+AAPL,2025-06-30,Accounts Payable,Value,50374000000.0
+AAPL,2025-06-30,Accounts Payable,_source,new
+AAPL,2025-06-30,Accounts Receivable,Value,27557000000.0
+AAPL,2025-06-30,Accounts Receivable,_source,new
+AAPL,2025-06-30,Cash And Cash Equivalents,Value,36269000000.0
+AAPL,2025-06-30,Cash And Cash Equivalents,_source,new
+AAPL,2025-06-30,Current Assets,Value,122491000000.0
+AAPL,2025-06-30,Current Assets,_source,new
+AAPL,2025-06-30,Current Liabilities,Value,141120000000.0
+AAPL,2025-06-30,Current Liabilities,_source,new
+AAPL,2025-06-30,Inventory,Value,5925000000.0
+AAPL,2025-06-30,Inventory,_source,new
+AAPL,2025-06-30,Invested Capital,Value,167528000000.0
+AAPL,2025-06-30,Invested Capital,_source,new
+AAPL,2025-06-30,Long Term Debt,Value,82430000000.0
+AAPL,2025-06-30,Long Term Debt,_source,new
+AAPL,2025-06-30,Net Debt,Value,65429000000.0
+AAPL,2025-06-30,Net Debt,_source,new
+AAPL,2025-06-30,Net PPE,Value,48508000000.0
+AAPL,2025-06-30,Net PPE,_source,new
+AAPL,2025-06-30,Net Tangible Assets,Value,65830000000.0
+AAPL,2025-06-30,Net Tangible Assets,_source,new
+AAPL,2025-06-30,Ordinary Shares Number,Value,14856722000.0
+AAPL,2025-06-30,Ordinary Shares Number,_source,new
+AAPL,2025-06-30,Retained Earnings,Value,-17607000000.0
+AAPL,2025-06-30,Retained Earnings,_source,new
+AAPL,2025-06-30,Share Issued,Value,14856722000.0
+AAPL,2025-06-30,Share Issued,_source,new
+AAPL,2025-06-30,Stockholders Equity,Value,65830000000.0
+AAPL,2025-06-30,Stockholders Equity,_source,new
+AAPL,2025-06-30,Total Assets,Value,331495000000.0
+AAPL,2025-06-30,Total Assets,_source,new
+AAPL,2025-06-30,Total Debt,Value,101698000000.0
+AAPL,2025-06-30,Total Debt,_source,new
+AAPL,2025-06-30,Total Liabilities Net Minority Interest,Value,265665000000.0
+AAPL,2025-06-30,Total Liabilities Net Minority Interest,_source,new
+AAPL,2025-06-30,Working Capital,Value,-18629000000.0
+AAPL,2025-06-30,Working Capital,_source,new
+AAPL,2025-09-30,Accounts Payable,Value,69860000000.0
+AAPL,2025-09-30,Accounts Payable,_source,new
+AAPL,2025-09-30,Accounts Receivable,Value,39777000000.0
+AAPL,2025-09-30,Accounts Receivable,_source,new
+AAPL,2025-09-30,Cash And Cash Equivalents,Value,35934000000.0
+AAPL,2025-09-30,Cash And Cash Equivalents,_source,new
+AAPL,2025-09-30,Current Assets,Value,147957000000.0
+AAPL,2025-09-30,Current Assets,_source,new
+AAPL,2025-09-30,Current Liabilities,Value,165631000000.0
+AAPL,2025-09-30,Current Liabilities,_source,new
+AAPL,2025-09-30,Inventory,Value,5718000000.0
+AAPL,2025-09-30,Inventory,_source,new
+AAPL,2025-09-30,Invested Capital,Value,172390000000.0
+AAPL,2025-09-30,Invested Capital,_source,new
+AAPL,2025-09-30,Long Term Debt,Value,78328000000.0
+AAPL,2025-09-30,Long Term Debt,_source,new
+AAPL,2025-09-30,Net Debt,Value,62723000000.0
+AAPL,2025-09-30,Net Debt,_source,new
+AAPL,2025-09-30,Net PPE,Value,49834000000.0
+AAPL,2025-09-30,Net PPE,_source,new
+AAPL,2025-09-30,Net Tangible Assets,Value,73733000000.0
+AAPL,2025-09-30,Net Tangible Assets,_source,new
+AAPL,2025-09-30,Ordinary Shares Number,Value,14773260000.0
+AAPL,2025-09-30,Ordinary Shares Number,_source,new
+AAPL,2025-09-30,Retained Earnings,Value,-14264000000.0
+AAPL,2025-09-30,Retained Earnings,_source,new
+AAPL,2025-09-30,Share Issued,Value,14773260000.0
+AAPL,2025-09-30,Share Issued,_source,new
+AAPL,2025-09-30,Stockholders Equity,Value,73733000000.0
+AAPL,2025-09-30,Stockholders Equity,_source,new
+AAPL,2025-09-30,Total Assets,Value,359241000000.0
+AAPL,2025-09-30,Total Assets,_source,new
+AAPL,2025-09-30,Total Debt,Value,98657000000.0
+AAPL,2025-09-30,Total Debt,_source,new
+AAPL,2025-09-30,Total Liabilities Net Minority Interest,Value,285508000000.0
+AAPL,2025-09-30,Total Liabilities Net Minority Interest,_source,new
+AAPL,2025-09-30,Working Capital,Value,-17674000000.0
+AAPL,2025-09-30,Working Capital,_source,new
+AAPL,2025-12-31,Accounts Payable,Value,70587000000.0
+AAPL,2025-12-31,Accounts Payable,_source,new
+AAPL,2025-12-31,Accounts Receivable,Value,39921000000.0
+AAPL,2025-12-31,Accounts Receivable,_source,new
+AAPL,2025-12-31,Cash And Cash Equivalents,Value,45317000000.0
+AAPL,2025-12-31,Cash And Cash Equivalents,_source,new
+AAPL,2025-12-31,Current Assets,Value,158104000000.0
+AAPL,2025-12-31,Current Assets,_source,new
+AAPL,2025-12-31,Current Liabilities,Value,162367000000.0
+AAPL,2025-12-31,Current Liabilities,_source,new
+AAPL,2025-12-31,Inventory,Value,5875000000.0
+AAPL,2025-12-31,Inventory,_source,new
+AAPL,2025-12-31,Invested Capital,Value,178699000000.0
+AAPL,2025-12-31,Invested Capital,_source,new
+AAPL,2025-12-31,Long Term Debt,Value,76685000000.0
+AAPL,2025-12-31,Long Term Debt,_source,new
+AAPL,2025-12-31,Net Debt,Value,45192000000.0
+AAPL,2025-12-31,Net Debt,_source,new
+AAPL,2025-12-31,Net PPE,Value,50159000000.0
+AAPL,2025-12-31,Net PPE,_source,new
+AAPL,2025-12-31,Net Tangible Assets,Value,88190000000.0
+AAPL,2025-12-31,Net Tangible Assets,_source,new
+AAPL,2025-12-31,Ordinary Shares Number,Value,14697926000.0
+AAPL,2025-12-31,Ordinary Shares Number,_source,new
+AAPL,2025-12-31,Retained Earnings,Value,-2177000000.0
+AAPL,2025-12-31,Retained Earnings,_source,new
+AAPL,2025-12-31,Share Issued,Value,14697926000.0
+AAPL,2025-12-31,Share Issued,_source,new
+AAPL,2025-12-31,Stockholders Equity,Value,88190000000.0
+AAPL,2025-12-31,Stockholders Equity,_source,new
+AAPL,2025-12-31,Total Assets,Value,379297000000.0
+AAPL,2025-12-31,Total Assets,_source,new
+AAPL,2025-12-31,Total Debt,Value,90509000000.0
+AAPL,2025-12-31,Total Debt,_source,new
+AAPL,2025-12-31,Total Liabilities Net Minority Interest,Value,291107000000.0
+AAPL,2025-12-31,Total Liabilities Net Minority Interest,_source,new
+AAPL,2025-12-31,Working Capital,Value,-4263000000.0
+AAPL,2025-12-31,Working Capital,_source,new
+NVDA,2024-07-31,Accounts Payable,Value,
+NVDA,2024-07-31,Accounts Payable,_source,new
+NVDA,2024-07-31,Accounts Payable,_completeness,0
+NVDA,2024-07-31,Accounts Payable,_is_new,1
+NVDA,2024-07-31,Accounts Receivable,Value,
+NVDA,2024-07-31,Accounts Receivable,_source,new
+NVDA,2024-07-31,Accounts Receivable,_completeness,0
+NVDA,2024-07-31,Accounts Receivable,_is_new,1
+NVDA,2024-07-31,Cash And Cash Equivalents,Value,
+NVDA,2024-07-31,Cash And Cash Equivalents,_source,new
+NVDA,2024-07-31,Cash And Cash Equivalents,_completeness,0
+NVDA,2024-07-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2024-07-31,Current Assets,Value,
+NVDA,2024-07-31,Current Assets,_source,new
+NVDA,2024-07-31,Current Assets,_completeness,0
+NVDA,2024-07-31,Current Assets,_is_new,1
+NVDA,2024-07-31,Current Liabilities,Value,
+NVDA,2024-07-31,Current Liabilities,_source,new
+NVDA,2024-07-31,Current Liabilities,_completeness,0
+NVDA,2024-07-31,Current Liabilities,_is_new,1
+NVDA,2024-07-31,Goodwill And Other Intangible Assets,Value,
+NVDA,2024-07-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2024-07-31,Goodwill And Other Intangible Assets,_completeness,0
+NVDA,2024-07-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2024-07-31,Inventory,Value,
+NVDA,2024-07-31,Inventory,_source,new
+NVDA,2024-07-31,Inventory,_completeness,0
+NVDA,2024-07-31,Inventory,_is_new,1
+NVDA,2024-07-31,Invested Capital,Value,
+NVDA,2024-07-31,Invested Capital,_source,new
+NVDA,2024-07-31,Invested Capital,_completeness,0
+NVDA,2024-07-31,Invested Capital,_is_new,1
+NVDA,2024-07-31,Long Term Debt,Value,
+NVDA,2024-07-31,Long Term Debt,_source,new
+NVDA,2024-07-31,Long Term Debt,_completeness,0
+NVDA,2024-07-31,Long Term Debt,_is_new,1
+NVDA,2024-07-31,Net PPE,Value,
+NVDA,2024-07-31,Net PPE,_source,new
+NVDA,2024-07-31,Net PPE,_completeness,0
+NVDA,2024-07-31,Net PPE,_is_new,1
+NVDA,2024-07-31,Net Tangible Assets,Value,
+NVDA,2024-07-31,Net Tangible Assets,_source,new
+NVDA,2024-07-31,Net Tangible Assets,_completeness,0
+NVDA,2024-07-31,Net Tangible Assets,_is_new,1
+NVDA,2024-07-31,Ordinary Shares Number,Value,
+NVDA,2024-07-31,Ordinary Shares Number,_source,new
+NVDA,2024-07-31,Ordinary Shares Number,_completeness,0
+NVDA,2024-07-31,Ordinary Shares Number,_is_new,1
+NVDA,2024-07-31,Retained Earnings,Value,
+NVDA,2024-07-31,Retained Earnings,_source,new
+NVDA,2024-07-31,Retained Earnings,_completeness,0
+NVDA,2024-07-31,Retained Earnings,_is_new,1
+NVDA,2024-07-31,Share Issued,Value,
+NVDA,2024-07-31,Share Issued,_source,new
+NVDA,2024-07-31,Share Issued,_completeness,0
+NVDA,2024-07-31,Share Issued,_is_new,1
+NVDA,2024-07-31,Stockholders Equity,Value,
+NVDA,2024-07-31,Stockholders Equity,_source,new
+NVDA,2024-07-31,Stockholders Equity,_completeness,0
+NVDA,2024-07-31,Stockholders Equity,_is_new,1
+NVDA,2024-07-31,Total Assets,Value,
+NVDA,2024-07-31,Total Assets,_source,new
+NVDA,2024-07-31,Total Assets,_completeness,0
+NVDA,2024-07-31,Total Assets,_is_new,1
+NVDA,2024-07-31,Total Debt,Value,
+NVDA,2024-07-31,Total Debt,_source,new
+NVDA,2024-07-31,Total Debt,_completeness,0
+NVDA,2024-07-31,Total Debt,_is_new,1
+NVDA,2024-07-31,Total Liabilities Net Minority Interest,Value,
+NVDA,2024-07-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2024-07-31,Total Liabilities Net Minority Interest,_completeness,0
+NVDA,2024-07-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2024-07-31,Working Capital,Value,
+NVDA,2024-07-31,Working Capital,_source,new
+NVDA,2024-07-31,Working Capital,_completeness,0
+NVDA,2024-07-31,Working Capital,_is_new,1
+NVDA,2024-10-31,Accounts Payable,Value,
+NVDA,2024-10-31,Accounts Payable,_source,new
+NVDA,2024-10-31,Accounts Payable,_completeness,0
+NVDA,2024-10-31,Accounts Payable,_is_new,1
+NVDA,2024-10-31,Accounts Receivable,Value,
+NVDA,2024-10-31,Accounts Receivable,_source,new
+NVDA,2024-10-31,Accounts Receivable,_completeness,0
+NVDA,2024-10-31,Accounts Receivable,_is_new,1
+NVDA,2024-10-31,Cash And Cash Equivalents,Value,
+NVDA,2024-10-31,Cash And Cash Equivalents,_source,new
+NVDA,2024-10-31,Cash And Cash Equivalents,_completeness,0
+NVDA,2024-10-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2024-10-31,Current Assets,Value,
+NVDA,2024-10-31,Current Assets,_source,new
+NVDA,2024-10-31,Current Assets,_completeness,0
+NVDA,2024-10-31,Current Assets,_is_new,1
+NVDA,2024-10-31,Current Liabilities,Value,
+NVDA,2024-10-31,Current Liabilities,_source,new
+NVDA,2024-10-31,Current Liabilities,_completeness,0
+NVDA,2024-10-31,Current Liabilities,_is_new,1
+NVDA,2024-10-31,Goodwill And Other Intangible Assets,Value,
+NVDA,2024-10-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2024-10-31,Goodwill And Other Intangible Assets,_completeness,0
+NVDA,2024-10-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2024-10-31,Inventory,Value,
+NVDA,2024-10-31,Inventory,_source,new
+NVDA,2024-10-31,Inventory,_completeness,0
+NVDA,2024-10-31,Inventory,_is_new,1
+NVDA,2024-10-31,Invested Capital,Value,
+NVDA,2024-10-31,Invested Capital,_source,new
+NVDA,2024-10-31,Invested Capital,_completeness,0
+NVDA,2024-10-31,Invested Capital,_is_new,1
+NVDA,2024-10-31,Long Term Debt,Value,
+NVDA,2024-10-31,Long Term Debt,_source,new
+NVDA,2024-10-31,Long Term Debt,_completeness,0
+NVDA,2024-10-31,Long Term Debt,_is_new,1
+NVDA,2024-10-31,Net PPE,Value,
+NVDA,2024-10-31,Net PPE,_source,new
+NVDA,2024-10-31,Net PPE,_completeness,0
+NVDA,2024-10-31,Net PPE,_is_new,1
+NVDA,2024-10-31,Net Tangible Assets,Value,
+NVDA,2024-10-31,Net Tangible Assets,_source,new
+NVDA,2024-10-31,Net Tangible Assets,_completeness,0
+NVDA,2024-10-31,Net Tangible Assets,_is_new,1
+NVDA,2024-10-31,Ordinary Shares Number,Value,
+NVDA,2024-10-31,Ordinary Shares Number,_source,new
+NVDA,2024-10-31,Ordinary Shares Number,_completeness,0
+NVDA,2024-10-31,Ordinary Shares Number,_is_new,1
+NVDA,2024-10-31,Retained Earnings,Value,
+NVDA,2024-10-31,Retained Earnings,_source,new
+NVDA,2024-10-31,Retained Earnings,_completeness,0
+NVDA,2024-10-31,Retained Earnings,_is_new,1
+NVDA,2024-10-31,Share Issued,Value,
+NVDA,2024-10-31,Share Issued,_source,new
+NVDA,2024-10-31,Share Issued,_completeness,0
+NVDA,2024-10-31,Share Issued,_is_new,1
+NVDA,2024-10-31,Stockholders Equity,Value,
+NVDA,2024-10-31,Stockholders Equity,_source,new
+NVDA,2024-10-31,Stockholders Equity,_completeness,0
+NVDA,2024-10-31,Stockholders Equity,_is_new,1
+NVDA,2024-10-31,Total Assets,Value,
+NVDA,2024-10-31,Total Assets,_source,new
+NVDA,2024-10-31,Total Assets,_completeness,0
+NVDA,2024-10-31,Total Assets,_is_new,1
+NVDA,2024-10-31,Total Debt,Value,
+NVDA,2024-10-31,Total Debt,_source,new
+NVDA,2024-10-31,Total Debt,_completeness,0
+NVDA,2024-10-31,Total Debt,_is_new,1
+NVDA,2024-10-31,Total Liabilities Net Minority Interest,Value,
+NVDA,2024-10-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2024-10-31,Total Liabilities Net Minority Interest,_completeness,0
+NVDA,2024-10-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2024-10-31,Working Capital,Value,
+NVDA,2024-10-31,Working Capital,_source,new
+NVDA,2024-10-31,Working Capital,_completeness,0
+NVDA,2024-10-31,Working Capital,_is_new,1
+NVDA,2025-01-31,Accounts Payable,Value,6310000000.0
+NVDA,2025-01-31,Accounts Payable,_source,new
+NVDA,2025-01-31,Accounts Payable,_completeness,1
+NVDA,2025-01-31,Accounts Payable,_is_new,1
+NVDA,2025-01-31,Accounts Receivable,Value,23065000000.0
+NVDA,2025-01-31,Accounts Receivable,_source,new
+NVDA,2025-01-31,Accounts Receivable,_completeness,1
+NVDA,2025-01-31,Accounts Receivable,_is_new,1
+NVDA,2025-01-31,Cash And Cash Equivalents,Value,8589000000.0
+NVDA,2025-01-31,Cash And Cash Equivalents,_source,new
+NVDA,2025-01-31,Cash And Cash Equivalents,_completeness,1
+NVDA,2025-01-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2025-01-31,Current Assets,Value,80126000000.0
+NVDA,2025-01-31,Current Assets,_source,new
+NVDA,2025-01-31,Current Assets,_completeness,1
+NVDA,2025-01-31,Current Assets,_is_new,1
+NVDA,2025-01-31,Current Liabilities,Value,18047000000.0
+NVDA,2025-01-31,Current Liabilities,_source,new
+NVDA,2025-01-31,Current Liabilities,_completeness,1
+NVDA,2025-01-31,Current Liabilities,_is_new,1
+NVDA,2025-01-31,Goodwill And Other Intangible Assets,Value,5995000000.0
+NVDA,2025-01-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2025-01-31,Goodwill And Other Intangible Assets,_completeness,1
+NVDA,2025-01-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2025-01-31,Inventory,Value,10080000000.0
+NVDA,2025-01-31,Inventory,_source,new
+NVDA,2025-01-31,Inventory,_completeness,1
+NVDA,2025-01-31,Inventory,_is_new,1
+NVDA,2025-01-31,Invested Capital,Value,87790000000.0
+NVDA,2025-01-31,Invested Capital,_source,new
+NVDA,2025-01-31,Invested Capital,_completeness,1
+NVDA,2025-01-31,Invested Capital,_is_new,1
+NVDA,2025-01-31,Long Term Debt,Value,8463000000.0
+NVDA,2025-01-31,Long Term Debt,_source,new
+NVDA,2025-01-31,Long Term Debt,_completeness,1
+NVDA,2025-01-31,Long Term Debt,_is_new,1
+NVDA,2025-01-31,Net PPE,Value,8076000000.0
+NVDA,2025-01-31,Net PPE,_source,new
+NVDA,2025-01-31,Net PPE,_completeness,1
+NVDA,2025-01-31,Net PPE,_is_new,1
+NVDA,2025-01-31,Net Tangible Assets,Value,73332000000.0
+NVDA,2025-01-31,Net Tangible Assets,_source,new
+NVDA,2025-01-31,Net Tangible Assets,_completeness,1
+NVDA,2025-01-31,Net Tangible Assets,_is_new,1
+NVDA,2025-01-31,Ordinary Shares Number,Value,24477000000.0
+NVDA,2025-01-31,Ordinary Shares Number,_source,new
+NVDA,2025-01-31,Ordinary Shares Number,_completeness,1
+NVDA,2025-01-31,Ordinary Shares Number,_is_new,1
+NVDA,2025-01-31,Retained Earnings,Value,68038000000.0
+NVDA,2025-01-31,Retained Earnings,_source,new
+NVDA,2025-01-31,Retained Earnings,_completeness,1
+NVDA,2025-01-31,Retained Earnings,_is_new,1
+NVDA,2025-01-31,Share Issued,Value,24477000000.0
+NVDA,2025-01-31,Share Issued,_source,new
+NVDA,2025-01-31,Share Issued,_completeness,1
+NVDA,2025-01-31,Share Issued,_is_new,1
+NVDA,2025-01-31,Stockholders Equity,Value,79327000000.0
+NVDA,2025-01-31,Stockholders Equity,_source,new
+NVDA,2025-01-31,Stockholders Equity,_completeness,1
+NVDA,2025-01-31,Stockholders Equity,_is_new,1
+NVDA,2025-01-31,Total Assets,Value,111601000000.0
+NVDA,2025-01-31,Total Assets,_source,new
+NVDA,2025-01-31,Total Assets,_completeness,1
+NVDA,2025-01-31,Total Assets,_is_new,1
+NVDA,2025-01-31,Total Debt,Value,9982000000.0
+NVDA,2025-01-31,Total Debt,_source,new
+NVDA,2025-01-31,Total Debt,_completeness,1
+NVDA,2025-01-31,Total Debt,_is_new,1
+NVDA,2025-01-31,Total Liabilities Net Minority Interest,Value,32274000000.0
+NVDA,2025-01-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2025-01-31,Total Liabilities Net Minority Interest,_completeness,1
+NVDA,2025-01-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2025-01-31,Working Capital,Value,62079000000.0
+NVDA,2025-01-31,Working Capital,_source,new
+NVDA,2025-01-31,Working Capital,_completeness,1
+NVDA,2025-01-31,Working Capital,_is_new,1
+NVDA,2025-04-30,Accounts Payable,Value,7331000000.0
+NVDA,2025-04-30,Accounts Payable,_source,new
+NVDA,2025-04-30,Accounts Payable,_completeness,1
+NVDA,2025-04-30,Accounts Payable,_is_new,1
+NVDA,2025-04-30,Accounts Receivable,Value,22132000000.0
+NVDA,2025-04-30,Accounts Receivable,_source,new
+NVDA,2025-04-30,Accounts Receivable,_completeness,1
+NVDA,2025-04-30,Accounts Receivable,_is_new,1
+NVDA,2025-04-30,Cash And Cash Equivalents,Value,15234000000.0
+NVDA,2025-04-30,Cash And Cash Equivalents,_source,new
+NVDA,2025-04-30,Cash And Cash Equivalents,_completeness,1
+NVDA,2025-04-30,Cash And Cash Equivalents,_is_new,1
+NVDA,2025-04-30,Current Assets,Value,89935000000.0
+NVDA,2025-04-30,Current Assets,_source,new
+NVDA,2025-04-30,Current Assets,_completeness,1
+NVDA,2025-04-30,Current Assets,_is_new,1
+NVDA,2025-04-30,Current Liabilities,Value,26542000000.0
+NVDA,2025-04-30,Current Liabilities,_source,new
+NVDA,2025-04-30,Current Liabilities,_completeness,1
+NVDA,2025-04-30,Current Liabilities,_is_new,1
+NVDA,2025-04-30,Goodwill And Other Intangible Assets,Value,6267000000.0
+NVDA,2025-04-30,Goodwill And Other Intangible Assets,_source,new
+NVDA,2025-04-30,Goodwill And Other Intangible Assets,_completeness,1
+NVDA,2025-04-30,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2025-04-30,Inventory,Value,11333000000.0
+NVDA,2025-04-30,Inventory,_source,new
+NVDA,2025-04-30,Inventory,_completeness,1
+NVDA,2025-04-30,Inventory,_is_new,1
+NVDA,2025-04-30,Invested Capital,Value,92307000000.0
+NVDA,2025-04-30,Invested Capital,_source,new
+NVDA,2025-04-30,Invested Capital,_completeness,1
+NVDA,2025-04-30,Invested Capital,_is_new,1
+NVDA,2025-04-30,Long Term Debt,Value,8464000000.0
+NVDA,2025-04-30,Long Term Debt,_source,new
+NVDA,2025-04-30,Long Term Debt,_completeness,1
+NVDA,2025-04-30,Long Term Debt,_is_new,1
+NVDA,2025-04-30,Net PPE,Value,8946000000.0
+NVDA,2025-04-30,Net PPE,_source,new
+NVDA,2025-04-30,Net PPE,_completeness,1
+NVDA,2025-04-30,Net PPE,_is_new,1
+NVDA,2025-04-30,Net Tangible Assets,Value,77576000000.0
+NVDA,2025-04-30,Net Tangible Assets,_source,new
+NVDA,2025-04-30,Net Tangible Assets,_completeness,1
+NVDA,2025-04-30,Net Tangible Assets,_is_new,1
+NVDA,2025-04-30,Ordinary Shares Number,Value,24387557065.0
+NVDA,2025-04-30,Ordinary Shares Number,_source,new
+NVDA,2025-04-30,Ordinary Shares Number,_completeness,1
+NVDA,2025-04-30,Ordinary Shares Number,_is_new,1
+NVDA,2025-04-30,Retained Earnings,Value,72158000000.0
+NVDA,2025-04-30,Retained Earnings,_source,new
+NVDA,2025-04-30,Retained Earnings,_completeness,1
+NVDA,2025-04-30,Retained Earnings,_is_new,1
+NVDA,2025-04-30,Share Issued,Value,24387557065.0
+NVDA,2025-04-30,Share Issued,_source,new
+NVDA,2025-04-30,Share Issued,_completeness,1
+NVDA,2025-04-30,Share Issued,_is_new,1
+NVDA,2025-04-30,Stockholders Equity,Value,83843000000.0
+NVDA,2025-04-30,Stockholders Equity,_source,new
+NVDA,2025-04-30,Stockholders Equity,_completeness,1
+NVDA,2025-04-30,Stockholders Equity,_is_new,1
+NVDA,2025-04-30,Total Assets,Value,125254000000.0
+NVDA,2025-04-30,Total Assets,_source,new
+NVDA,2025-04-30,Total Assets,_completeness,1
+NVDA,2025-04-30,Total Assets,_is_new,1
+NVDA,2025-04-30,Total Debt,Value,10285000000.0
+NVDA,2025-04-30,Total Debt,_source,new
+NVDA,2025-04-30,Total Debt,_completeness,1
+NVDA,2025-04-30,Total Debt,_is_new,1
+NVDA,2025-04-30,Total Liabilities Net Minority Interest,Value,41411000000.0
+NVDA,2025-04-30,Total Liabilities Net Minority Interest,_source,new
+NVDA,2025-04-30,Total Liabilities Net Minority Interest,_completeness,1
+NVDA,2025-04-30,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2025-04-30,Working Capital,Value,63393000000.0
+NVDA,2025-04-30,Working Capital,_source,new
+NVDA,2025-04-30,Working Capital,_completeness,1
+NVDA,2025-04-30,Working Capital,_is_new,1
+NVDA,2025-07-31,Accounts Payable,Value,9064000000.0
+NVDA,2025-07-31,Accounts Payable,_source,new
+NVDA,2025-07-31,Accounts Payable,_completeness,1
+NVDA,2025-07-31,Accounts Payable,_is_new,1
+NVDA,2025-07-31,Accounts Receivable,Value,27808000000.0
+NVDA,2025-07-31,Accounts Receivable,_source,new
+NVDA,2025-07-31,Accounts Receivable,_completeness,1
+NVDA,2025-07-31,Accounts Receivable,_is_new,1
+NVDA,2025-07-31,Cash And Cash Equivalents,Value,11639000000.0
+NVDA,2025-07-31,Cash And Cash Equivalents,_source,new
+NVDA,2025-07-31,Cash And Cash Equivalents,_completeness,1
+NVDA,2025-07-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2025-07-31,Current Assets,Value,102219000000.0
+NVDA,2025-07-31,Current Assets,_source,new
+NVDA,2025-07-31,Current Assets,_completeness,1
+NVDA,2025-07-31,Current Assets,_is_new,1
+NVDA,2025-07-31,Current Liabilities,Value,24257000000.0
+NVDA,2025-07-31,Current Liabilities,_source,new
+NVDA,2025-07-31,Current Liabilities,_completeness,1
+NVDA,2025-07-31,Current Liabilities,_is_new,1
+NVDA,2025-07-31,Goodwill And Other Intangible Assets,Value,6510000000.0
+NVDA,2025-07-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2025-07-31,Goodwill And Other Intangible Assets,_completeness,1
+NVDA,2025-07-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2025-07-31,Inventory,Value,14962000000.0
+NVDA,2025-07-31,Inventory,_source,new
+NVDA,2025-07-31,Inventory,_completeness,1
+NVDA,2025-07-31,Inventory,_is_new,1
+NVDA,2025-07-31,Invested Capital,Value,108597000000.0
+NVDA,2025-07-31,Invested Capital,_source,new
+NVDA,2025-07-31,Invested Capital,_completeness,1
+NVDA,2025-07-31,Invested Capital,_is_new,1
+NVDA,2025-07-31,Long Term Debt,Value,8466000000.0
+NVDA,2025-07-31,Long Term Debt,_source,new
+NVDA,2025-07-31,Long Term Debt,_completeness,1
+NVDA,2025-07-31,Long Term Debt,_is_new,1
+NVDA,2025-07-31,Net PPE,Value,11225000000.0
+NVDA,2025-07-31,Net PPE,_source,new
+NVDA,2025-07-31,Net PPE,_completeness,1
+NVDA,2025-07-31,Net PPE,_is_new,1
+NVDA,2025-07-31,Net Tangible Assets,Value,93621000000.0
+NVDA,2025-07-31,Net Tangible Assets,_source,new
+NVDA,2025-07-31,Net Tangible Assets,_completeness,1
+NVDA,2025-07-31,Net Tangible Assets,_is_new,1
+NVDA,2025-07-31,Ordinary Shares Number,Value,24347000000.0
+NVDA,2025-07-31,Ordinary Shares Number,_source,new
+NVDA,2025-07-31,Ordinary Shares Number,_completeness,1
+NVDA,2025-07-31,Ordinary Shares Number,_is_new,1
+NVDA,2025-07-31,Retained Earnings,Value,88737000000.0
+NVDA,2025-07-31,Retained Earnings,_source,new
+NVDA,2025-07-31,Retained Earnings,_completeness,1
+NVDA,2025-07-31,Retained Earnings,_is_new,1
+NVDA,2025-07-31,Share Issued,Value,24347000000.0
+NVDA,2025-07-31,Share Issued,_source,new
+NVDA,2025-07-31,Share Issued,_completeness,1
+NVDA,2025-07-31,Share Issued,_is_new,1
+NVDA,2025-07-31,Stockholders Equity,Value,100131000000.0
+NVDA,2025-07-31,Stockholders Equity,_source,new
+NVDA,2025-07-31,Stockholders Equity,_completeness,1
+NVDA,2025-07-31,Stockholders Equity,_is_new,1
+NVDA,2025-07-31,Total Assets,Value,140740000000.0
+NVDA,2025-07-31,Total Assets,_source,new
+NVDA,2025-07-31,Total Assets,_completeness,1
+NVDA,2025-07-31,Total Assets,_is_new,1
+NVDA,2025-07-31,Total Debt,Value,10598000000.0
+NVDA,2025-07-31,Total Debt,_source,new
+NVDA,2025-07-31,Total Debt,_completeness,1
+NVDA,2025-07-31,Total Debt,_is_new,1
+NVDA,2025-07-31,Total Liabilities Net Minority Interest,Value,40609000000.0
+NVDA,2025-07-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2025-07-31,Total Liabilities Net Minority Interest,_completeness,1
+NVDA,2025-07-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2025-07-31,Working Capital,Value,77962000000.0
+NVDA,2025-07-31,Working Capital,_source,new
+NVDA,2025-07-31,Working Capital,_completeness,1
+NVDA,2025-07-31,Working Capital,_is_new,1
+NVDA,2025-10-31,Accounts Payable,Value,8624000000.0
+NVDA,2025-10-31,Accounts Payable,_source,new
+NVDA,2025-10-31,Accounts Payable,_completeness,1
+NVDA,2025-10-31,Accounts Payable,_is_new,1
+NVDA,2025-10-31,Accounts Receivable,Value,33391000000.0
+NVDA,2025-10-31,Accounts Receivable,_source,new
+NVDA,2025-10-31,Accounts Receivable,_completeness,1
+NVDA,2025-10-31,Accounts Receivable,_is_new,1
+NVDA,2025-10-31,Cash And Cash Equivalents,Value,11486000000.0
+NVDA,2025-10-31,Cash And Cash Equivalents,_source,new
+NVDA,2025-10-31,Cash And Cash Equivalents,_completeness,1
+NVDA,2025-10-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2025-10-31,Current Assets,Value,116492000000.0
+NVDA,2025-10-31,Current Assets,_source,new
+NVDA,2025-10-31,Current Assets,_completeness,1
+NVDA,2025-10-31,Current Assets,_is_new,1
+NVDA,2025-10-31,Current Liabilities,Value,26075000000.0
+NVDA,2025-10-31,Current Liabilities,_source,new
+NVDA,2025-10-31,Current Liabilities,_completeness,1
+NVDA,2025-10-31,Current Liabilities,_is_new,1
+NVDA,2025-10-31,Goodwill And Other Intangible Assets,Value,7197000000.0
+NVDA,2025-10-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2025-10-31,Goodwill And Other Intangible Assets,_completeness,1
+NVDA,2025-10-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2025-10-31,Inventory,Value,19784000000.0
+NVDA,2025-10-31,Inventory,_source,new
+NVDA,2025-10-31,Inventory,_completeness,1
+NVDA,2025-10-31,Inventory,_is_new,1
+NVDA,2025-10-31,Invested Capital,Value,127364000000.0
+NVDA,2025-10-31,Invested Capital,_source,new
+NVDA,2025-10-31,Invested Capital,_completeness,1
+NVDA,2025-10-31,Invested Capital,_is_new,1
+NVDA,2025-10-31,Long Term Debt,Value,7468000000.0
+NVDA,2025-10-31,Long Term Debt,_source,new
+NVDA,2025-10-31,Long Term Debt,_completeness,1
+NVDA,2025-10-31,Long Term Debt,_is_new,1
+NVDA,2025-10-31,Net PPE,Value,12061000000.0
+NVDA,2025-10-31,Net PPE,_source,new
+NVDA,2025-10-31,Net PPE,_completeness,1
+NVDA,2025-10-31,Net PPE,_is_new,1
+NVDA,2025-10-31,Net Tangible Assets,Value,111700000000.0
+NVDA,2025-10-31,Net Tangible Assets,_source,new
+NVDA,2025-10-31,Net Tangible Assets,_completeness,1
+NVDA,2025-10-31,Net Tangible Assets,_is_new,1
+NVDA,2025-10-31,Ordinary Shares Number,Value,24305000000.0
+NVDA,2025-10-31,Ordinary Shares Number,_source,new
+NVDA,2025-10-31,Ordinary Shares Number,_completeness,1
+NVDA,2025-10-31,Ordinary Shares Number,_is_new,1
+NVDA,2025-10-31,Retained Earnings,Value,107908000000.0
+NVDA,2025-10-31,Retained Earnings,_source,new
+NVDA,2025-10-31,Retained Earnings,_completeness,1
+NVDA,2025-10-31,Retained Earnings,_is_new,1
+NVDA,2025-10-31,Share Issued,Value,24305000000.0
+NVDA,2025-10-31,Share Issued,_source,new
+NVDA,2025-10-31,Share Issued,_completeness,1
+NVDA,2025-10-31,Share Issued,_is_new,1
+NVDA,2025-10-31,Stockholders Equity,Value,118897000000.0
+NVDA,2025-10-31,Stockholders Equity,_source,new
+NVDA,2025-10-31,Stockholders Equity,_completeness,1
+NVDA,2025-10-31,Stockholders Equity,_is_new,1
+NVDA,2025-10-31,Total Assets,Value,161148000000.0
+NVDA,2025-10-31,Total Assets,_source,new
+NVDA,2025-10-31,Total Assets,_completeness,1
+NVDA,2025-10-31,Total Assets,_is_new,1
+NVDA,2025-10-31,Total Debt,Value,10481000000.0
+NVDA,2025-10-31,Total Debt,_source,new
+NVDA,2025-10-31,Total Debt,_completeness,1
+NVDA,2025-10-31,Total Debt,_is_new,1
+NVDA,2025-10-31,Total Liabilities Net Minority Interest,Value,42251000000.0
+NVDA,2025-10-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2025-10-31,Total Liabilities Net Minority Interest,_completeness,1
+NVDA,2025-10-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2025-10-31,Working Capital,Value,90417000000.0
+NVDA,2025-10-31,Working Capital,_source,new
+NVDA,2025-10-31,Working Capital,_completeness,1
+NVDA,2025-10-31,Working Capital,_is_new,1
+NVDA,2026-01-31,Accounts Payable,Value,9812000000.0
+NVDA,2026-01-31,Accounts Payable,_source,new
+NVDA,2026-01-31,Accounts Payable,_completeness,1
+NVDA,2026-01-31,Accounts Payable,_is_new,1
+NVDA,2026-01-31,Accounts Receivable,Value,38466000000.0
+NVDA,2026-01-31,Accounts Receivable,_source,new
+NVDA,2026-01-31,Accounts Receivable,_completeness,1
+NVDA,2026-01-31,Accounts Receivable,_is_new,1
+NVDA,2026-01-31,Cash And Cash Equivalents,Value,10605000000.0
+NVDA,2026-01-31,Cash And Cash Equivalents,_source,new
+NVDA,2026-01-31,Cash And Cash Equivalents,_completeness,1
+NVDA,2026-01-31,Cash And Cash Equivalents,_is_new,1
+NVDA,2026-01-31,Current Assets,Value,125605000000.0
+NVDA,2026-01-31,Current Assets,_source,new
+NVDA,2026-01-31,Current Assets,_completeness,1
+NVDA,2026-01-31,Current Assets,_is_new,1
+NVDA,2026-01-31,Current Liabilities,Value,32163000000.0
+NVDA,2026-01-31,Current Liabilities,_source,new
+NVDA,2026-01-31,Current Liabilities,_completeness,1
+NVDA,2026-01-31,Current Liabilities,_is_new,1
+NVDA,2026-01-31,Goodwill And Other Intangible Assets,Value,24138000000.0
+NVDA,2026-01-31,Goodwill And Other Intangible Assets,_source,new
+NVDA,2026-01-31,Goodwill And Other Intangible Assets,_completeness,1
+NVDA,2026-01-31,Goodwill And Other Intangible Assets,_is_new,1
+NVDA,2026-01-31,Inventory,Value,21403000000.0
+NVDA,2026-01-31,Inventory,_source,new
+NVDA,2026-01-31,Inventory,_completeness,1
+NVDA,2026-01-31,Inventory,_is_new,1
+NVDA,2026-01-31,Invested Capital,Value,165761000000.0
+NVDA,2026-01-31,Invested Capital,_source,new
+NVDA,2026-01-31,Invested Capital,_completeness,1
+NVDA,2026-01-31,Invested Capital,_is_new,1
+NVDA,2026-01-31,Long Term Debt,Value,7469000000.0
+NVDA,2026-01-31,Long Term Debt,_source,new
+NVDA,2026-01-31,Long Term Debt,_completeness,1
+NVDA,2026-01-31,Long Term Debt,_is_new,1
+NVDA,2026-01-31,Net PPE,Value,13250000000.0
+NVDA,2026-01-31,Net PPE,_source,new
+NVDA,2026-01-31,Net PPE,_completeness,1
+NVDA,2026-01-31,Net PPE,_is_new,1
+NVDA,2026-01-31,Net Tangible Assets,Value,133155000000.0
+NVDA,2026-01-31,Net Tangible Assets,_source,new
+NVDA,2026-01-31,Net Tangible Assets,_completeness,1
+NVDA,2026-01-31,Net Tangible Assets,_is_new,1
+NVDA,2026-01-31,Ordinary Shares Number,Value,24304000000.0
+NVDA,2026-01-31,Ordinary Shares Number,_source,new
+NVDA,2026-01-31,Ordinary Shares Number,_completeness,1
+NVDA,2026-01-31,Ordinary Shares Number,_is_new,1
+NVDA,2026-01-31,Retained Earnings,Value,146973000000.0
+NVDA,2026-01-31,Retained Earnings,_source,new
+NVDA,2026-01-31,Retained Earnings,_completeness,1
+NVDA,2026-01-31,Retained Earnings,_is_new,1
+NVDA,2026-01-31,Share Issued,Value,24304000000.0
+NVDA,2026-01-31,Share Issued,_source,new
+NVDA,2026-01-31,Share Issued,_completeness,1
+NVDA,2026-01-31,Share Issued,_is_new,1
+NVDA,2026-01-31,Stockholders Equity,Value,157293000000.0
+NVDA,2026-01-31,Stockholders Equity,_source,new
+NVDA,2026-01-31,Stockholders Equity,_completeness,1
+NVDA,2026-01-31,Stockholders Equity,_is_new,1
+NVDA,2026-01-31,Total Assets,Value,206803000000.0
+NVDA,2026-01-31,Total Assets,_source,new
+NVDA,2026-01-31,Total Assets,_completeness,1
+NVDA,2026-01-31,Total Assets,_is_new,1
+NVDA,2026-01-31,Total Debt,Value,11040000000.0
+NVDA,2026-01-31,Total Debt,_source,new
+NVDA,2026-01-31,Total Debt,_completeness,1
+NVDA,2026-01-31,Total Debt,_is_new,1
+NVDA,2026-01-31,Total Liabilities Net Minority Interest,Value,49510000000.0
+NVDA,2026-01-31,Total Liabilities Net Minority Interest,_source,new
+NVDA,2026-01-31,Total Liabilities Net Minority Interest,_completeness,1
+NVDA,2026-01-31,Total Liabilities Net Minority Interest,_is_new,1
+NVDA,2026-01-31,Working Capital,Value,93442000000.0
+NVDA,2026-01-31,Working Capital,_source,new
+NVDA,2026-01-31,Working Capital,_completeness,1
+NVDA,2026-01-31,Working Capital,_is_new,1

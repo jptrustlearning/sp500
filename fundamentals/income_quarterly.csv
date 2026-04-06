@@ -1,86 +1,501 @@
-Ticker,Date,Metric,Value
-NVDA,2026-01-31,Total Revenue,68127000000.0
-NVDA,2025-10-31,Total Revenue,57006000000.0
-NVDA,2025-07-31,Total Revenue,46743000000.0
-NVDA,2025-04-30,Total Revenue,44062000000.0
-NVDA,2025-01-31,Total Revenue,39331000000.0
-NVDA,2026-01-31,Net Income,42960000000.0
-NVDA,2025-10-31,Net Income,31910000000.0
-NVDA,2025-07-31,Net Income,26422000000.0
-NVDA,2025-04-30,Net Income,18775000000.0
-NVDA,2025-01-31,Net Income,22091000000.0
-NVDA,2026-01-31,Gross Profit,51093000000.0
-NVDA,2025-10-31,Gross Profit,41849000000.0
-NVDA,2025-07-31,Gross Profit,33853000000.0
-NVDA,2025-04-30,Gross Profit,26668000000.0
-NVDA,2025-01-31,Gross Profit,28723000000.0
-NVDA,2026-01-31,Operating Income,44299000000.0
-NVDA,2025-10-31,Operating Income,36010000000.0
-NVDA,2025-07-31,Operating Income,28440000000.0
-NVDA,2025-04-30,Operating Income,21638000000.0
-NVDA,2025-01-31,Operating Income,24034000000.0
-NVDA,2026-01-31,EBITDA,51283000000.0
-NVDA,2025-10-31,EBITDA,38748000000.0
-NVDA,2025-07-31,EBITDA,31937000000.0
-NVDA,2025-04-30,EBITDA,22584000000.0
-NVDA,2025-01-31,EBITDA,25821000000.0
-NVDA,2026-01-31,Basic EPS,1.77
-NVDA,2025-10-31,Basic EPS,1.31
-NVDA,2025-07-31,Basic EPS,1.08
-NVDA,2025-04-30,Basic EPS,0.77
-NVDA,2025-01-31,Basic EPS,0.9
-NVDA,2026-01-31,Diluted EPS,1.76
-NVDA,2025-10-31,Diluted EPS,1.3
-NVDA,2025-07-31,Diluted EPS,1.08
-NVDA,2025-04-30,Diluted EPS,0.76
-NVDA,2025-01-31,Diluted EPS,0.89
-NVDA,2026-01-31,Total Expenses,23828000000.0
-NVDA,2025-10-31,Total Expenses,20996000000.0
-NVDA,2025-07-31,Total Expenses,18303000000.0
-NVDA,2025-04-30,Total Expenses,22424000000.0
-NVDA,2025-01-31,Total Expenses,15297000000.0
-NVDA,2026-01-31,Cost Of Revenue,17034000000.0
-NVDA,2025-10-31,Cost Of Revenue,15157000000.0
-NVDA,2025-07-31,Cost Of Revenue,12890000000.0
-NVDA,2025-04-30,Cost Of Revenue,17394000000.0
-NVDA,2025-01-31,Cost Of Revenue,10608000000.0
-NVDA,2026-01-31,Research And Development,5512000000.0
-NVDA,2025-10-31,Research And Development,4705000000.0
-NVDA,2025-07-31,Research And Development,4291000000.0
-NVDA,2025-04-30,Research And Development,3989000000.0
-NVDA,2025-01-31,Research And Development,3714000000.0
-NVDA,2026-01-31,Basic Average Shares,24304000000.0
-NVDA,2025-10-31,Basic Average Shares,24327000000.0
-NVDA,2025-07-31,Basic Average Shares,24366000000.0
-NVDA,2025-04-30,Basic Average Shares,24441000000.0
-NVDA,2025-01-31,Basic Average Shares,24489000000.0
-NVDA,2026-01-31,Diluted Average Shares,24432000000.0
-NVDA,2025-10-31,Diluted Average Shares,24483000000.0
-NVDA,2025-07-31,Diluted Average Shares,24532000000.0
-NVDA,2025-04-30,Diluted Average Shares,24611000000.0
-NVDA,2025-01-31,Diluted Average Shares,24706000000.0
-NVDA,2026-01-31,EBIT,50471000000.0
-NVDA,2025-10-31,EBIT,37997000000.0
-NVDA,2025-07-31,EBIT,31268000000.0
-NVDA,2025-04-30,EBIT,21973000000.0
-NVDA,2025-01-31,EBIT,25278000000.0
-NVDA,2026-01-31,Interest Expense,73000000.0
-NVDA,2025-10-31,Interest Expense,61000000.0
-NVDA,2025-07-31,Interest Expense,62000000.0
-NVDA,2025-04-30,Interest Expense,63000000.0
-NVDA,2025-01-31,Interest Expense,61000000.0
-NVDA,2026-01-31,Tax Provision,7438000000.0
-NVDA,2025-10-31,Tax Provision,6026000000.0
-NVDA,2025-07-31,Tax Provision,4784000000.0
-NVDA,2025-04-30,Tax Provision,3135000000.0
-NVDA,2025-01-31,Tax Provision,3126000000.0
-NVDA,2026-01-31,Pretax Income,50398000000.0
-NVDA,2025-10-31,Pretax Income,37936000000.0
-NVDA,2025-07-31,Pretax Income,31206000000.0
-NVDA,2025-04-30,Pretax Income,21910000000.0
-NVDA,2025-01-31,Pretax Income,25217000000.0
-NVDA,2026-01-31,Selling General And Administration,1282000000.0
-NVDA,2025-10-31,Selling General And Administration,1134000000.0
-NVDA,2025-07-31,Selling General And Administration,1122000000.0
-NVDA,2025-04-30,Selling General And Administration,1041000000.0
-NVDA,2025-01-31,Selling General And Administration,975000000.0
+Ticker,Date,Metric,level_3,0
+AAPL,2024-12-31,Basic Average Shares,Value,15081724000.0
+AAPL,2024-12-31,Basic Average Shares,_source,new
+AAPL,2024-12-31,Basic EPS,Value,2.41
+AAPL,2024-12-31,Basic EPS,_source,new
+AAPL,2024-12-31,Cost Of Revenue,Value,66025000000.0
+AAPL,2024-12-31,Cost Of Revenue,_source,new
+AAPL,2024-12-31,Diluted Average Shares,Value,15150865000.0
+AAPL,2024-12-31,Diluted Average Shares,_source,new
+AAPL,2024-12-31,Diluted EPS,Value,2.4
+AAPL,2024-12-31,Diluted EPS,_source,new
+AAPL,2024-12-31,EBIT,Value,42832000000.0
+AAPL,2024-12-31,EBIT,_source,new
+AAPL,2024-12-31,EBITDA,Value,45912000000.0
+AAPL,2024-12-31,EBITDA,_source,new
+AAPL,2024-12-31,Gross Profit,Value,58275000000.0
+AAPL,2024-12-31,Gross Profit,_source,new
+AAPL,2024-12-31,Net Income,Value,36330000000.0
+AAPL,2024-12-31,Net Income,_source,new
+AAPL,2024-12-31,Operating Income,Value,42832000000.0
+AAPL,2024-12-31,Operating Income,_source,new
+AAPL,2024-12-31,Pretax Income,Value,42584000000.0
+AAPL,2024-12-31,Pretax Income,_source,new
+AAPL,2024-12-31,Research And Development,Value,8268000000.0
+AAPL,2024-12-31,Research And Development,_source,new
+AAPL,2024-12-31,Selling General And Administration,Value,7175000000.0
+AAPL,2024-12-31,Selling General And Administration,_source,new
+AAPL,2024-12-31,Tax Provision,Value,6254000000.0
+AAPL,2024-12-31,Tax Provision,_source,new
+AAPL,2024-12-31,Total Expenses,Value,81468000000.0
+AAPL,2024-12-31,Total Expenses,_source,new
+AAPL,2024-12-31,Total Revenue,Value,124300000000.0
+AAPL,2024-12-31,Total Revenue,_source,new
+AAPL,2025-03-31,Basic Average Shares,Value,14994082000.0
+AAPL,2025-03-31,Basic Average Shares,_source,new
+AAPL,2025-03-31,Basic EPS,Value,1.65
+AAPL,2025-03-31,Basic EPS,_source,new
+AAPL,2025-03-31,Cost Of Revenue,Value,50492000000.0
+AAPL,2025-03-31,Cost Of Revenue,_source,new
+AAPL,2025-03-31,Diluted Average Shares,Value,15056133000.0
+AAPL,2025-03-31,Diluted Average Shares,_source,new
+AAPL,2025-03-31,Diluted EPS,Value,1.65
+AAPL,2025-03-31,Diluted EPS,_source,new
+AAPL,2025-03-31,EBIT,Value,29589000000.0
+AAPL,2025-03-31,EBIT,_source,new
+AAPL,2025-03-31,EBITDA,Value,32250000000.0
+AAPL,2025-03-31,EBITDA,_source,new
+AAPL,2025-03-31,Gross Profit,Value,44867000000.0
+AAPL,2025-03-31,Gross Profit,_source,new
+AAPL,2025-03-31,Net Income,Value,24780000000.0
+AAPL,2025-03-31,Net Income,_source,new
+AAPL,2025-03-31,Operating Income,Value,29589000000.0
+AAPL,2025-03-31,Operating Income,_source,new
+AAPL,2025-03-31,Pretax Income,Value,29310000000.0
+AAPL,2025-03-31,Pretax Income,_source,new
+AAPL,2025-03-31,Research And Development,Value,8550000000.0
+AAPL,2025-03-31,Research And Development,_source,new
+AAPL,2025-03-31,Selling General And Administration,Value,6728000000.0
+AAPL,2025-03-31,Selling General And Administration,_source,new
+AAPL,2025-03-31,Tax Provision,Value,4530000000.0
+AAPL,2025-03-31,Tax Provision,_source,new
+AAPL,2025-03-31,Total Expenses,Value,65770000000.0
+AAPL,2025-03-31,Total Expenses,_source,new
+AAPL,2025-03-31,Total Revenue,Value,95359000000.0
+AAPL,2025-03-31,Total Revenue,_source,new
+AAPL,2025-06-30,Basic Average Shares,Value,14902886000.0
+AAPL,2025-06-30,Basic Average Shares,_source,new
+AAPL,2025-06-30,Basic EPS,Value,1.57
+AAPL,2025-06-30,Basic EPS,_source,new
+AAPL,2025-06-30,Cost Of Revenue,Value,50318000000.0
+AAPL,2025-06-30,Cost Of Revenue,_source,new
+AAPL,2025-06-30,Diluted Average Shares,Value,14948179000.0
+AAPL,2025-06-30,Diluted Average Shares,_source,new
+AAPL,2025-06-30,Diluted EPS,Value,1.57
+AAPL,2025-06-30,Diluted EPS,_source,new
+AAPL,2025-06-30,EBIT,Value,28202000000.0
+AAPL,2025-06-30,EBIT,_source,new
+AAPL,2025-06-30,EBITDA,Value,31032000000.0
+AAPL,2025-06-30,EBITDA,_source,new
+AAPL,2025-06-30,Gross Profit,Value,43718000000.0
+AAPL,2025-06-30,Gross Profit,_source,new
+AAPL,2025-06-30,Net Income,Value,23434000000.0
+AAPL,2025-06-30,Net Income,_source,new
+AAPL,2025-06-30,Operating Income,Value,28202000000.0
+AAPL,2025-06-30,Operating Income,_source,new
+AAPL,2025-06-30,Pretax Income,Value,28031000000.0
+AAPL,2025-06-30,Pretax Income,_source,new
+AAPL,2025-06-30,Research And Development,Value,8866000000.0
+AAPL,2025-06-30,Research And Development,_source,new
+AAPL,2025-06-30,Selling General And Administration,Value,6650000000.0
+AAPL,2025-06-30,Selling General And Administration,_source,new
+AAPL,2025-06-30,Tax Provision,Value,4597000000.0
+AAPL,2025-06-30,Tax Provision,_source,new
+AAPL,2025-06-30,Total Expenses,Value,65834000000.0
+AAPL,2025-06-30,Total Expenses,_source,new
+AAPL,2025-06-30,Total Revenue,Value,94036000000.0
+AAPL,2025-06-30,Total Revenue,_source,new
+AAPL,2025-09-30,Basic Average Shares,Value,14815307000.0
+AAPL,2025-09-30,Basic Average Shares,_source,new
+AAPL,2025-09-30,Basic EPS,Value,1.85
+AAPL,2025-09-30,Basic EPS,_source,new
+AAPL,2025-09-30,Cost Of Revenue,Value,54125000000.0
+AAPL,2025-09-30,Cost Of Revenue,_source,new
+AAPL,2025-09-30,Diluted Average Shares,Value,14863609000.0
+AAPL,2025-09-30,Diluted Average Shares,_source,new
+AAPL,2025-09-30,Diluted EPS,Value,1.85
+AAPL,2025-09-30,Diluted EPS,_source,new
+AAPL,2025-09-30,EBIT,Value,32427000000.0
+AAPL,2025-09-30,EBIT,_source,new
+AAPL,2025-09-30,EBITDA,Value,35554000000.0
+AAPL,2025-09-30,EBITDA,_source,new
+AAPL,2025-09-30,Gross Profit,Value,48341000000.0
+AAPL,2025-09-30,Gross Profit,_source,new
+AAPL,2025-09-30,Net Income,Value,27466000000.0
+AAPL,2025-09-30,Net Income,_source,new
+AAPL,2025-09-30,Operating Income,Value,32427000000.0
+AAPL,2025-09-30,Operating Income,_source,new
+AAPL,2025-09-30,Pretax Income,Value,32804000000.0
+AAPL,2025-09-30,Pretax Income,_source,new
+AAPL,2025-09-30,Research And Development,Value,8866000000.0
+AAPL,2025-09-30,Research And Development,_source,new
+AAPL,2025-09-30,Selling General And Administration,Value,7048000000.0
+AAPL,2025-09-30,Selling General And Administration,_source,new
+AAPL,2025-09-30,Tax Provision,Value,5338000000.0
+AAPL,2025-09-30,Tax Provision,_source,new
+AAPL,2025-09-30,Total Expenses,Value,70039000000.0
+AAPL,2025-09-30,Total Expenses,_source,new
+AAPL,2025-09-30,Total Revenue,Value,102466000000.0
+AAPL,2025-09-30,Total Revenue,_source,new
+AAPL,2025-12-31,Basic Average Shares,Value,14748158000.0
+AAPL,2025-12-31,Basic Average Shares,_source,new
+AAPL,2025-12-31,Basic EPS,Value,2.85
+AAPL,2025-12-31,Basic EPS,_source,new
+AAPL,2025-12-31,Cost Of Revenue,Value,74525000000.0
+AAPL,2025-12-31,Cost Of Revenue,_source,new
+AAPL,2025-12-31,Diluted Average Shares,Value,14810356000.0
+AAPL,2025-12-31,Diluted Average Shares,_source,new
+AAPL,2025-12-31,Diluted EPS,Value,2.84
+AAPL,2025-12-31,Diluted EPS,_source,new
+AAPL,2025-12-31,EBIT,Value,50852000000.0
+AAPL,2025-12-31,EBIT,_source,new
+AAPL,2025-12-31,EBITDA,Value,54066000000.0
+AAPL,2025-12-31,EBITDA,_source,new
+AAPL,2025-12-31,Gross Profit,Value,69231000000.0
+AAPL,2025-12-31,Gross Profit,_source,new
+AAPL,2025-12-31,Net Income,Value,42097000000.0
+AAPL,2025-12-31,Net Income,_source,new
+AAPL,2025-12-31,Operating Income,Value,50852000000.0
+AAPL,2025-12-31,Operating Income,_source,new
+AAPL,2025-12-31,Pretax Income,Value,51002000000.0
+AAPL,2025-12-31,Pretax Income,_source,new
+AAPL,2025-12-31,Research And Development,Value,10887000000.0
+AAPL,2025-12-31,Research And Development,_source,new
+AAPL,2025-12-31,Selling General And Administration,Value,7492000000.0
+AAPL,2025-12-31,Selling General And Administration,_source,new
+AAPL,2025-12-31,Tax Provision,Value,8905000000.0
+AAPL,2025-12-31,Tax Provision,_source,new
+AAPL,2025-12-31,Total Expenses,Value,92904000000.0
+AAPL,2025-12-31,Total Expenses,_source,new
+AAPL,2025-12-31,Total Revenue,Value,143756000000.0
+AAPL,2025-12-31,Total Revenue,_source,new
+NVDA,2025-01-31,Basic Average Shares,Value,24489000000.0
+NVDA,2025-01-31,Basic Average Shares,_source,new
+NVDA,2025-01-31,Basic Average Shares,_completeness,1
+NVDA,2025-01-31,Basic Average Shares,_is_new,1
+NVDA,2025-01-31,Basic EPS,Value,0.9
+NVDA,2025-01-31,Basic EPS,_source,new
+NVDA,2025-01-31,Basic EPS,_completeness,1
+NVDA,2025-01-31,Basic EPS,_is_new,1
+NVDA,2025-01-31,Cost Of Revenue,Value,10608000000.0
+NVDA,2025-01-31,Cost Of Revenue,_source,new
+NVDA,2025-01-31,Cost Of Revenue,_completeness,1
+NVDA,2025-01-31,Cost Of Revenue,_is_new,1
+NVDA,2025-01-31,Diluted Average Shares,Value,24706000000.0
+NVDA,2025-01-31,Diluted Average Shares,_source,new
+NVDA,2025-01-31,Diluted Average Shares,_completeness,1
+NVDA,2025-01-31,Diluted Average Shares,_is_new,1
+NVDA,2025-01-31,Diluted EPS,Value,0.89
+NVDA,2025-01-31,Diluted EPS,_source,new
+NVDA,2025-01-31,Diluted EPS,_completeness,1
+NVDA,2025-01-31,Diluted EPS,_is_new,1
+NVDA,2025-01-31,EBIT,Value,25278000000.0
+NVDA,2025-01-31,EBIT,_source,new
+NVDA,2025-01-31,EBIT,_completeness,1
+NVDA,2025-01-31,EBIT,_is_new,1
+NVDA,2025-01-31,EBITDA,Value,25821000000.0
+NVDA,2025-01-31,EBITDA,_source,new
+NVDA,2025-01-31,EBITDA,_completeness,1
+NVDA,2025-01-31,EBITDA,_is_new,1
+NVDA,2025-01-31,Gross Profit,Value,28723000000.0
+NVDA,2025-01-31,Gross Profit,_source,new
+NVDA,2025-01-31,Gross Profit,_completeness,1
+NVDA,2025-01-31,Gross Profit,_is_new,1
+NVDA,2025-01-31,Interest Expense,Value,61000000.0
+NVDA,2025-01-31,Interest Expense,_source,new
+NVDA,2025-01-31,Interest Expense,_completeness,1
+NVDA,2025-01-31,Interest Expense,_is_new,1
+NVDA,2025-01-31,Net Income,Value,22091000000.0
+NVDA,2025-01-31,Net Income,_source,new
+NVDA,2025-01-31,Net Income,_completeness,1
+NVDA,2025-01-31,Net Income,_is_new,1
+NVDA,2025-01-31,Operating Income,Value,24034000000.0
+NVDA,2025-01-31,Operating Income,_source,new
+NVDA,2025-01-31,Operating Income,_completeness,1
+NVDA,2025-01-31,Operating Income,_is_new,1
+NVDA,2025-01-31,Pretax Income,Value,25217000000.0
+NVDA,2025-01-31,Pretax Income,_source,new
+NVDA,2025-01-31,Pretax Income,_completeness,1
+NVDA,2025-01-31,Pretax Income,_is_new,1
+NVDA,2025-01-31,Research And Development,Value,3714000000.0
+NVDA,2025-01-31,Research And Development,_source,new
+NVDA,2025-01-31,Research And Development,_completeness,1
+NVDA,2025-01-31,Research And Development,_is_new,1
+NVDA,2025-01-31,Selling General And Administration,Value,975000000.0
+NVDA,2025-01-31,Selling General And Administration,_source,new
+NVDA,2025-01-31,Selling General And Administration,_completeness,1
+NVDA,2025-01-31,Selling General And Administration,_is_new,1
+NVDA,2025-01-31,Tax Provision,Value,3126000000.0
+NVDA,2025-01-31,Tax Provision,_source,new
+NVDA,2025-01-31,Tax Provision,_completeness,1
+NVDA,2025-01-31,Tax Provision,_is_new,1
+NVDA,2025-01-31,Total Expenses,Value,15297000000.0
+NVDA,2025-01-31,Total Expenses,_source,new
+NVDA,2025-01-31,Total Expenses,_completeness,1
+NVDA,2025-01-31,Total Expenses,_is_new,1
+NVDA,2025-01-31,Total Revenue,Value,39331000000.0
+NVDA,2025-01-31,Total Revenue,_source,new
+NVDA,2025-01-31,Total Revenue,_completeness,1
+NVDA,2025-01-31,Total Revenue,_is_new,1
+NVDA,2025-04-30,Basic Average Shares,Value,24441000000.0
+NVDA,2025-04-30,Basic Average Shares,_source,new
+NVDA,2025-04-30,Basic Average Shares,_completeness,1
+NVDA,2025-04-30,Basic Average Shares,_is_new,1
+NVDA,2025-04-30,Basic EPS,Value,0.77
+NVDA,2025-04-30,Basic EPS,_source,new
+NVDA,2025-04-30,Basic EPS,_completeness,1
+NVDA,2025-04-30,Basic EPS,_is_new,1
+NVDA,2025-04-30,Cost Of Revenue,Value,17394000000.0
+NVDA,2025-04-30,Cost Of Revenue,_source,new
+NVDA,2025-04-30,Cost Of Revenue,_completeness,1
+NVDA,2025-04-30,Cost Of Revenue,_is_new,1
+NVDA,2025-04-30,Diluted Average Shares,Value,24611000000.0
+NVDA,2025-04-30,Diluted Average Shares,_source,new
+NVDA,2025-04-30,Diluted Average Shares,_completeness,1
+NVDA,2025-04-30,Diluted Average Shares,_is_new,1
+NVDA,2025-04-30,Diluted EPS,Value,0.76
+NVDA,2025-04-30,Diluted EPS,_source,new
+NVDA,2025-04-30,Diluted EPS,_completeness,1
+NVDA,2025-04-30,Diluted EPS,_is_new,1
+NVDA,2025-04-30,EBIT,Value,21973000000.0
+NVDA,2025-04-30,EBIT,_source,new
+NVDA,2025-04-30,EBIT,_completeness,1
+NVDA,2025-04-30,EBIT,_is_new,1
+NVDA,2025-04-30,EBITDA,Value,22584000000.0
+NVDA,2025-04-30,EBITDA,_source,new
+NVDA,2025-04-30,EBITDA,_completeness,1
+NVDA,2025-04-30,EBITDA,_is_new,1
+NVDA,2025-04-30,Gross Profit,Value,26668000000.0
+NVDA,2025-04-30,Gross Profit,_source,new
+NVDA,2025-04-30,Gross Profit,_completeness,1
+NVDA,2025-04-30,Gross Profit,_is_new,1
+NVDA,2025-04-30,Interest Expense,Value,63000000.0
+NVDA,2025-04-30,Interest Expense,_source,new
+NVDA,2025-04-30,Interest Expense,_completeness,1
+NVDA,2025-04-30,Interest Expense,_is_new,1
+NVDA,2025-04-30,Net Income,Value,18775000000.0
+NVDA,2025-04-30,Net Income,_source,new
+NVDA,2025-04-30,Net Income,_completeness,1
+NVDA,2025-04-30,Net Income,_is_new,1
+NVDA,2025-04-30,Operating Income,Value,21638000000.0
+NVDA,2025-04-30,Operating Income,_source,new
+NVDA,2025-04-30,Operating Income,_completeness,1
+NVDA,2025-04-30,Operating Income,_is_new,1
+NVDA,2025-04-30,Pretax Income,Value,21910000000.0
+NVDA,2025-04-30,Pretax Income,_source,new
+NVDA,2025-04-30,Pretax Income,_completeness,1
+NVDA,2025-04-30,Pretax Income,_is_new,1
+NVDA,2025-04-30,Research And Development,Value,3989000000.0
+NVDA,2025-04-30,Research And Development,_source,new
+NVDA,2025-04-30,Research And Development,_completeness,1
+NVDA,2025-04-30,Research And Development,_is_new,1
+NVDA,2025-04-30,Selling General And Administration,Value,1041000000.0
+NVDA,2025-04-30,Selling General And Administration,_source,new
+NVDA,2025-04-30,Selling General And Administration,_completeness,1
+NVDA,2025-04-30,Selling General And Administration,_is_new,1
+NVDA,2025-04-30,Tax Provision,Value,3135000000.0
+NVDA,2025-04-30,Tax Provision,_source,new
+NVDA,2025-04-30,Tax Provision,_completeness,1
+NVDA,2025-04-30,Tax Provision,_is_new,1
+NVDA,2025-04-30,Total Expenses,Value,22424000000.0
+NVDA,2025-04-30,Total Expenses,_source,new
+NVDA,2025-04-30,Total Expenses,_completeness,1
+NVDA,2025-04-30,Total Expenses,_is_new,1
+NVDA,2025-04-30,Total Revenue,Value,44062000000.0
+NVDA,2025-04-30,Total Revenue,_source,new
+NVDA,2025-04-30,Total Revenue,_completeness,1
+NVDA,2025-04-30,Total Revenue,_is_new,1
+NVDA,2025-07-31,Basic Average Shares,Value,24366000000.0
+NVDA,2025-07-31,Basic Average Shares,_source,new
+NVDA,2025-07-31,Basic Average Shares,_completeness,1
+NVDA,2025-07-31,Basic Average Shares,_is_new,1
+NVDA,2025-07-31,Basic EPS,Value,1.08
+NVDA,2025-07-31,Basic EPS,_source,new
+NVDA,2025-07-31,Basic EPS,_completeness,1
+NVDA,2025-07-31,Basic EPS,_is_new,1
+NVDA,2025-07-31,Cost Of Revenue,Value,12890000000.0
+NVDA,2025-07-31,Cost Of Revenue,_source,new
+NVDA,2025-07-31,Cost Of Revenue,_completeness,1
+NVDA,2025-07-31,Cost Of Revenue,_is_new,1
+NVDA,2025-07-31,Diluted Average Shares,Value,24532000000.0
+NVDA,2025-07-31,Diluted Average Shares,_source,new
+NVDA,2025-07-31,Diluted Average Shares,_completeness,1
+NVDA,2025-07-31,Diluted Average Shares,_is_new,1
+NVDA,2025-07-31,Diluted EPS,Value,1.08
+NVDA,2025-07-31,Diluted EPS,_source,new
+NVDA,2025-07-31,Diluted EPS,_completeness,1
+NVDA,2025-07-31,Diluted EPS,_is_new,1
+NVDA,2025-07-31,EBIT,Value,31268000000.0
+NVDA,2025-07-31,EBIT,_source,new
+NVDA,2025-07-31,EBIT,_completeness,1
+NVDA,2025-07-31,EBIT,_is_new,1
+NVDA,2025-07-31,EBITDA,Value,31937000000.0
+NVDA,2025-07-31,EBITDA,_source,new
+NVDA,2025-07-31,EBITDA,_completeness,1
+NVDA,2025-07-31,EBITDA,_is_new,1
+NVDA,2025-07-31,Gross Profit,Value,33853000000.0
+NVDA,2025-07-31,Gross Profit,_source,new
+NVDA,2025-07-31,Gross Profit,_completeness,1
+NVDA,2025-07-31,Gross Profit,_is_new,1
+NVDA,2025-07-31,Interest Expense,Value,62000000.0
+NVDA,2025-07-31,Interest Expense,_source,new
+NVDA,2025-07-31,Interest Expense,_completeness,1
+NVDA,2025-07-31,Interest Expense,_is_new,1
+NVDA,2025-07-31,Net Income,Value,26422000000.0
+NVDA,2025-07-31,Net Income,_source,new
+NVDA,2025-07-31,Net Income,_completeness,1
+NVDA,2025-07-31,Net Income,_is_new,1
+NVDA,2025-07-31,Operating Income,Value,28440000000.0
+NVDA,2025-07-31,Operating Income,_source,new
+NVDA,2025-07-31,Operating Income,_completeness,1
+NVDA,2025-07-31,Operating Income,_is_new,1
+NVDA,2025-07-31,Pretax Income,Value,31206000000.0
+NVDA,2025-07-31,Pretax Income,_source,new
+NVDA,2025-07-31,Pretax Income,_completeness,1
+NVDA,2025-07-31,Pretax Income,_is_new,1
+NVDA,2025-07-31,Research And Development,Value,4291000000.0
+NVDA,2025-07-31,Research And Development,_source,new
+NVDA,2025-07-31,Research And Development,_completeness,1
+NVDA,2025-07-31,Research And Development,_is_new,1
+NVDA,2025-07-31,Selling General And Administration,Value,1122000000.0
+NVDA,2025-07-31,Selling General And Administration,_source,new
+NVDA,2025-07-31,Selling General And Administration,_completeness,1
+NVDA,2025-07-31,Selling General And Administration,_is_new,1
+NVDA,2025-07-31,Tax Provision,Value,4784000000.0
+NVDA,2025-07-31,Tax Provision,_source,new
+NVDA,2025-07-31,Tax Provision,_completeness,1
+NVDA,2025-07-31,Tax Provision,_is_new,1
+NVDA,2025-07-31,Total Expenses,Value,18303000000.0
+NVDA,2025-07-31,Total Expenses,_source,new
+NVDA,2025-07-31,Total Expenses,_completeness,1
+NVDA,2025-07-31,Total Expenses,_is_new,1
+NVDA,2025-07-31,Total Revenue,Value,46743000000.0
+NVDA,2025-07-31,Total Revenue,_source,new
+NVDA,2025-07-31,Total Revenue,_completeness,1
+NVDA,2025-07-31,Total Revenue,_is_new,1
+NVDA,2025-10-31,Basic Average Shares,Value,24327000000.0
+NVDA,2025-10-31,Basic Average Shares,_source,new
+NVDA,2025-10-31,Basic Average Shares,_completeness,1
+NVDA,2025-10-31,Basic Average Shares,_is_new,1
+NVDA,2025-10-31,Basic EPS,Value,1.31
+NVDA,2025-10-31,Basic EPS,_source,new
+NVDA,2025-10-31,Basic EPS,_completeness,1
+NVDA,2025-10-31,Basic EPS,_is_new,1
+NVDA,2025-10-31,Cost Of Revenue,Value,15157000000.0
+NVDA,2025-10-31,Cost Of Revenue,_source,new
+NVDA,2025-10-31,Cost Of Revenue,_completeness,1
+NVDA,2025-10-31,Cost Of Revenue,_is_new,1
+NVDA,2025-10-31,Diluted Average Shares,Value,24483000000.0
+NVDA,2025-10-31,Diluted Average Shares,_source,new
+NVDA,2025-10-31,Diluted Average Shares,_completeness,1
+NVDA,2025-10-31,Diluted Average Shares,_is_new,1
+NVDA,2025-10-31,Diluted EPS,Value,1.3
+NVDA,2025-10-31,Diluted EPS,_source,new
+NVDA,2025-10-31,Diluted EPS,_completeness,1
+NVDA,2025-10-31,Diluted EPS,_is_new,1
+NVDA,2025-10-31,EBIT,Value,37997000000.0
+NVDA,2025-10-31,EBIT,_source,new
+NVDA,2025-10-31,EBIT,_completeness,1
+NVDA,2025-10-31,EBIT,_is_new,1
+NVDA,2025-10-31,EBITDA,Value,38748000000.0
+NVDA,2025-10-31,EBITDA,_source,new
+NVDA,2025-10-31,EBITDA,_completeness,1
+NVDA,2025-10-31,EBITDA,_is_new,1
+NVDA,2025-10-31,Gross Profit,Value,41849000000.0
+NVDA,2025-10-31,Gross Profit,_source,new
+NVDA,2025-10-31,Gross Profit,_completeness,1
+NVDA,2025-10-31,Gross Profit,_is_new,1
+NVDA,2025-10-31,Interest Expense,Value,61000000.0
+NVDA,2025-10-31,Interest Expense,_source,new
+NVDA,2025-10-31,Interest Expense,_completeness,1
+NVDA,2025-10-31,Interest Expense,_is_new,1
+NVDA,2025-10-31,Net Income,Value,31910000000.0
+NVDA,2025-10-31,Net Income,_source,new
+NVDA,2025-10-31,Net Income,_completeness,1
+NVDA,2025-10-31,Net Income,_is_new,1
+NVDA,2025-10-31,Operating Income,Value,36010000000.0
+NVDA,2025-10-31,Operating Income,_source,new
+NVDA,2025-10-31,Operating Income,_completeness,1
+NVDA,2025-10-31,Operating Income,_is_new,1
+NVDA,2025-10-31,Pretax Income,Value,37936000000.0
+NVDA,2025-10-31,Pretax Income,_source,new
+NVDA,2025-10-31,Pretax Income,_completeness,1
+NVDA,2025-10-31,Pretax Income,_is_new,1
+NVDA,2025-10-31,Research And Development,Value,4705000000.0
+NVDA,2025-10-31,Research And Development,_source,new
+NVDA,2025-10-31,Research And Development,_completeness,1
+NVDA,2025-10-31,Research And Development,_is_new,1
+NVDA,2025-10-31,Selling General And Administration,Value,1134000000.0
+NVDA,2025-10-31,Selling General And Administration,_source,new
+NVDA,2025-10-31,Selling General And Administration,_completeness,1
+NVDA,2025-10-31,Selling General And Administration,_is_new,1
+NVDA,2025-10-31,Tax Provision,Value,6026000000.0
+NVDA,2025-10-31,Tax Provision,_source,new
+NVDA,2025-10-31,Tax Provision,_completeness,1
+NVDA,2025-10-31,Tax Provision,_is_new,1
+NVDA,2025-10-31,Total Expenses,Value,20996000000.0
+NVDA,2025-10-31,Total Expenses,_source,new
+NVDA,2025-10-31,Total Expenses,_completeness,1
+NVDA,2025-10-31,Total Expenses,_is_new,1
+NVDA,2025-10-31,Total Revenue,Value,57006000000.0
+NVDA,2025-10-31,Total Revenue,_source,new
+NVDA,2025-10-31,Total Revenue,_completeness,1
+NVDA,2025-10-31,Total Revenue,_is_new,1
+NVDA,2026-01-31,Basic Average Shares,Value,24304000000.0
+NVDA,2026-01-31,Basic Average Shares,_source,new
+NVDA,2026-01-31,Basic Average Shares,_completeness,1
+NVDA,2026-01-31,Basic Average Shares,_is_new,1
+NVDA,2026-01-31,Basic EPS,Value,1.77
+NVDA,2026-01-31,Basic EPS,_source,new
+NVDA,2026-01-31,Basic EPS,_completeness,1
+NVDA,2026-01-31,Basic EPS,_is_new,1
+NVDA,2026-01-31,Cost Of Revenue,Value,17034000000.0
+NVDA,2026-01-31,Cost Of Revenue,_source,new
+NVDA,2026-01-31,Cost Of Revenue,_completeness,1
+NVDA,2026-01-31,Cost Of Revenue,_is_new,1
+NVDA,2026-01-31,Diluted Average Shares,Value,24432000000.0
+NVDA,2026-01-31,Diluted Average Shares,_source,new
+NVDA,2026-01-31,Diluted Average Shares,_completeness,1
+NVDA,2026-01-31,Diluted Average Shares,_is_new,1
+NVDA,2026-01-31,Diluted EPS,Value,1.76
+NVDA,2026-01-31,Diluted EPS,_source,new
+NVDA,2026-01-31,Diluted EPS,_completeness,1
+NVDA,2026-01-31,Diluted EPS,_is_new,1
+NVDA,2026-01-31,EBIT,Value,50471000000.0
+NVDA,2026-01-31,EBIT,_source,new
+NVDA,2026-01-31,EBIT,_completeness,1
+NVDA,2026-01-31,EBIT,_is_new,1
+NVDA,2026-01-31,EBITDA,Value,51283000000.0
+NVDA,2026-01-31,EBITDA,_source,new
+NVDA,2026-01-31,EBITDA,_completeness,1
+NVDA,2026-01-31,EBITDA,_is_new,1
+NVDA,2026-01-31,Gross Profit,Value,51093000000.0
+NVDA,2026-01-31,Gross Profit,_source,new
+NVDA,2026-01-31,Gross Profit,_completeness,1
+NVDA,2026-01-31,Gross Profit,_is_new,1
+NVDA,2026-01-31,Interest Expense,Value,73000000.0
+NVDA,2026-01-31,Interest Expense,_source,new
+NVDA,2026-01-31,Interest Expense,_completeness,1
+NVDA,2026-01-31,Interest Expense,_is_new,1
+NVDA,2026-01-31,Net Income,Value,42960000000.0
+NVDA,2026-01-31,Net Income,_source,new
+NVDA,2026-01-31,Net Income,_completeness,1
+NVDA,2026-01-31,Net Income,_is_new,1
+NVDA,2026-01-31,Operating Income,Value,44299000000.0
+NVDA,2026-01-31,Operating Income,_source,new
+NVDA,2026-01-31,Operating Income,_completeness,1
+NVDA,2026-01-31,Operating Income,_is_new,1
+NVDA,2026-01-31,Pretax Income,Value,50398000000.0
+NVDA,2026-01-31,Pretax Income,_source,new
+NVDA,2026-01-31,Pretax Income,_completeness,1
+NVDA,2026-01-31,Pretax Income,_is_new,1
+NVDA,2026-01-31,Research And Development,Value,5512000000.0
+NVDA,2026-01-31,Research And Development,_source,new
+NVDA,2026-01-31,Research And Development,_completeness,1
+NVDA,2026-01-31,Research And Development,_is_new,1
+NVDA,2026-01-31,Selling General And Administration,Value,1282000000.0
+NVDA,2026-01-31,Selling General And Administration,_source,new
+NVDA,2026-01-31,Selling General And Administration,_completeness,1
+NVDA,2026-01-31,Selling General And Administration,_is_new,1
+NVDA,2026-01-31,Tax Provision,Value,7438000000.0
+NVDA,2026-01-31,Tax Provision,_source,new
+NVDA,2026-01-31,Tax Provision,_completeness,1
+NVDA,2026-01-31,Tax Provision,_is_new,1
+NVDA,2026-01-31,Total Expenses,Value,23828000000.0
+NVDA,2026-01-31,Total Expenses,_source,new
+NVDA,2026-01-31,Total Expenses,_completeness,1
+NVDA,2026-01-31,Total Expenses,_is_new,1
+NVDA,2026-01-31,Total Revenue,Value,68127000000.0
+NVDA,2026-01-31,Total Revenue,_source,new
+NVDA,2026-01-31,Total Revenue,_completeness,1
+NVDA,2026-01-31,Total Revenue,_is_new,1
