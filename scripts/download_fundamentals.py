@@ -429,37 +429,27 @@ def merge_with_existing(new_df, csv_path, key_columns):
             if col not in existing_df.columns:
                 return new_df
 
-        # Find which value columns to check (non-key columns)
+        # Find value columns (non-key)
         value_cols = [c for c in new_df.columns if c not in key_columns]
 
-        # Tag source for tracking
-        existing_df["_source"] = "existing"
-        new_df["_source"] = "new"
+        # Score completeness: more non-null value columns = higher score
+        # Then concat with new data last so it wins ties
+        existing_df["_completeness"] = existing_df[value_cols].notna().sum(axis=1)
+        existing_df["_priority"] = 0  # existing = lower priority
+        new_df["_completeness"] = new_df[value_cols].notna().sum(axis=1)
+        new_df["_priority"] = 1  # new = higher priority
 
         combined = pd.concat([existing_df, new_df], ignore_index=True)
 
-        # For each duplicate key, pick the row with more non-null values
-        # If tie, prefer new data (updated)
-        def pick_best(group):
-            if len(group) == 1:
-                return group.iloc[0]
-            # Count non-null values in value columns (exclude key cols and _source)
-            check_cols = [c for c in value_cols if c in group.columns]
-            group = group.copy()
-            group["_completeness"] = group[check_cols].notna().sum(axis=1)
-            # Sort: more complete first, then new over existing (for ties)
-            group["_is_new"] = (group["_source"] == "new").astype(int)
-            group = group.sort_values(
-                ["_completeness", "_is_new"], ascending=[False, False]
-            )
-            return group.iloc[0]
-
-        combined = combined.groupby(key_columns, sort=False).apply(
-            pick_best, include_groups=False
-        ).reset_index()
+        # Sort: most complete first, then new over existing (for ties)
+        combined = combined.sort_values(
+            ["_completeness", "_priority"], ascending=[False, False]
+        )
+        # Keep first (= most complete / newest)
+        combined = combined.drop_duplicates(subset=key_columns, keep="first")
 
         # Clean up helper columns
-        combined = combined.drop(columns=["_source", "_completeness", "_is_new"], errors="ignore")
+        combined = combined.drop(columns=["_completeness", "_priority"], errors="ignore")
         combined = combined.sort_values(key_columns).reset_index(drop=True)
         return combined
     except Exception as e:

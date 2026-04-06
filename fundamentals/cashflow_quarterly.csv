@@ -1,409 +1,139 @@
-Ticker,Date,Metric,level_3,0
-AAPL,2024-09-30,Capital Expenditure,Value,
-AAPL,2024-09-30,Capital Expenditure,_source,new
-AAPL,2024-09-30,Cash Dividends Paid,Value,
-AAPL,2024-09-30,Cash Dividends Paid,_source,new
-AAPL,2024-09-30,Change In Working Capital,Value,
-AAPL,2024-09-30,Change In Working Capital,_source,new
-AAPL,2024-09-30,Depreciation And Amortization,Value,
-AAPL,2024-09-30,Depreciation And Amortization,_source,new
-AAPL,2024-09-30,Financing Cash Flow,Value,
-AAPL,2024-09-30,Financing Cash Flow,_source,new
-AAPL,2024-09-30,Free Cash Flow,Value,
-AAPL,2024-09-30,Free Cash Flow,_source,new
-AAPL,2024-09-30,Investing Cash Flow,Value,
-AAPL,2024-09-30,Investing Cash Flow,_source,new
-AAPL,2024-09-30,Issuance Of Debt,Value,0.0
-AAPL,2024-09-30,Issuance Of Debt,_source,new
-AAPL,2024-09-30,Operating Cash Flow,Value,
-AAPL,2024-09-30,Operating Cash Flow,_source,new
-AAPL,2024-09-30,Repayment Of Debt,Value,
-AAPL,2024-09-30,Repayment Of Debt,_source,new
-AAPL,2024-09-30,Repurchase Of Capital Stock,Value,
-AAPL,2024-09-30,Repurchase Of Capital Stock,_source,new
-AAPL,2024-09-30,Stock Based Compensation,Value,
-AAPL,2024-09-30,Stock Based Compensation,_source,new
-AAPL,2024-12-31,Capital Expenditure,Value,-2940000000.0
-AAPL,2024-12-31,Capital Expenditure,_source,new
-AAPL,2024-12-31,Cash Dividends Paid,Value,-3856000000.0
-AAPL,2024-12-31,Cash Dividends Paid,_source,new
-AAPL,2024-12-31,Change In Working Capital,Value,-10752000000.0
-AAPL,2024-12-31,Change In Working Capital,_source,new
-AAPL,2024-12-31,Depreciation And Amortization,Value,3080000000.0
-AAPL,2024-12-31,Depreciation And Amortization,_source,new
-AAPL,2024-12-31,Financing Cash Flow,Value,-39371000000.0
-AAPL,2024-12-31,Financing Cash Flow,_source,new
-AAPL,2024-12-31,Free Cash Flow,Value,26995000000.0
-AAPL,2024-12-31,Free Cash Flow,_source,new
-AAPL,2024-12-31,Investing Cash Flow,Value,9792000000.0
-AAPL,2024-12-31,Investing Cash Flow,_source,new
-AAPL,2024-12-31,Issuance Of Debt,Value,
-AAPL,2024-12-31,Issuance Of Debt,_source,new
-AAPL,2024-12-31,Operating Cash Flow,Value,29935000000.0
-AAPL,2024-12-31,Operating Cash Flow,_source,new
-AAPL,2024-12-31,Repayment Of Debt,Value,-8953000000.0
-AAPL,2024-12-31,Repayment Of Debt,_source,new
-AAPL,2024-12-31,Repurchase Of Capital Stock,Value,-23606000000.0
-AAPL,2024-12-31,Repurchase Of Capital Stock,_source,new
-AAPL,2024-12-31,Stock Based Compensation,Value,3286000000.0
-AAPL,2024-12-31,Stock Based Compensation,_source,new
-AAPL,2025-03-31,Capital Expenditure,Value,-3071000000.0
-AAPL,2025-03-31,Capital Expenditure,_source,new
-AAPL,2025-03-31,Cash Dividends Paid,Value,-3758000000.0
-AAPL,2025-03-31,Cash Dividends Paid,_source,new
-AAPL,2025-03-31,Change In Working Capital,Value,-6507000000.0
-AAPL,2025-03-31,Change In Working Capital,_source,new
-AAPL,2025-03-31,Depreciation And Amortization,Value,2661000000.0
-AAPL,2025-03-31,Depreciation And Amortization,_source,new
-AAPL,2025-03-31,Financing Cash Flow,Value,-29006000000.0
-AAPL,2025-03-31,Financing Cash Flow,_source,new
-AAPL,2025-03-31,Free Cash Flow,Value,20881000000.0
-AAPL,2025-03-31,Free Cash Flow,_source,new
-AAPL,2025-03-31,Investing Cash Flow,Value,2917000000.0
-AAPL,2025-03-31,Investing Cash Flow,_source,new
-AAPL,2025-03-31,Issuance Of Debt,Value,
-AAPL,2025-03-31,Issuance Of Debt,_source,new
-AAPL,2025-03-31,Operating Cash Flow,Value,23952000000.0
-AAPL,2025-03-31,Operating Cash Flow,_source,new
-AAPL,2025-03-31,Repayment Of Debt,Value,976000000.0
-AAPL,2025-03-31,Repayment Of Debt,_source,new
-AAPL,2025-03-31,Repurchase Of Capital Stock,Value,-25898000000.0
-AAPL,2025-03-31,Repurchase Of Capital Stock,_source,new
-AAPL,2025-03-31,Stock Based Compensation,Value,3226000000.0
-AAPL,2025-03-31,Stock Based Compensation,_source,new
-AAPL,2025-06-30,Capital Expenditure,Value,-3462000000.0
-AAPL,2025-06-30,Capital Expenditure,_source,new
-AAPL,2025-06-30,Cash Dividends Paid,Value,-3945000000.0
-AAPL,2025-06-30,Cash Dividends Paid,_source,new
-AAPL,2025-06-30,Change In Working Capital,Value,-2034000000.0
-AAPL,2025-06-30,Change In Working Capital,_source,new
-AAPL,2025-06-30,Depreciation And Amortization,Value,2830000000.0
-AAPL,2025-06-30,Depreciation And Amortization,_source,new
-AAPL,2025-06-30,Financing Cash Flow,Value,-24833000000.0
-AAPL,2025-06-30,Financing Cash Flow,_source,new
-AAPL,2025-06-30,Free Cash Flow,Value,24405000000.0
-AAPL,2025-06-30,Free Cash Flow,_source,new
-AAPL,2025-06-30,Investing Cash Flow,Value,5073000000.0
-AAPL,2025-06-30,Investing Cash Flow,_source,new
-AAPL,2025-06-30,Issuance Of Debt,Value,
-AAPL,2025-06-30,Issuance Of Debt,_source,new
-AAPL,2025-06-30,Operating Cash Flow,Value,27867000000.0
-AAPL,2025-06-30,Operating Cash Flow,_source,new
-AAPL,2025-06-30,Repayment Of Debt,Value,-1770000000.0
-AAPL,2025-06-30,Repayment Of Debt,_source,new
-AAPL,2025-06-30,Repurchase Of Capital Stock,Value,-21075000000.0
-AAPL,2025-06-30,Repurchase Of Capital Stock,_source,new
-AAPL,2025-06-30,Stock Based Compensation,Value,3168000000.0
-AAPL,2025-06-30,Stock Based Compensation,_source,new
-AAPL,2025-09-30,Capital Expenditure,Value,-3242000000.0
-AAPL,2025-09-30,Capital Expenditure,_source,new
-AAPL,2025-09-30,Cash Dividends Paid,Value,-3862000000.0
-AAPL,2025-09-30,Cash Dividends Paid,_source,new
-AAPL,2025-09-30,Change In Working Capital,Value,-5707000000.0
-AAPL,2025-09-30,Change In Working Capital,_source,new
-AAPL,2025-09-30,Depreciation And Amortization,Value,3127000000.0
-AAPL,2025-09-30,Depreciation And Amortization,_source,new
-AAPL,2025-09-30,Financing Cash Flow,Value,-27476000000.0
-AAPL,2025-09-30,Financing Cash Flow,_source,new
-AAPL,2025-09-30,Free Cash Flow,Value,26486000000.0
-AAPL,2025-09-30,Free Cash Flow,_source,new
-AAPL,2025-09-30,Investing Cash Flow,Value,-2587000000.0
-AAPL,2025-09-30,Investing Cash Flow,_source,new
-AAPL,2025-09-30,Issuance Of Debt,Value,0.0
-AAPL,2025-09-30,Issuance Of Debt,_source,new
-AAPL,2025-09-30,Operating Cash Flow,Value,29728000000.0
-AAPL,2025-09-30,Operating Cash Flow,_source,new
-AAPL,2025-09-30,Repayment Of Debt,Value,-1185000000.0
-AAPL,2025-09-30,Repayment Of Debt,_source,new
-AAPL,2025-09-30,Repurchase Of Capital Stock,Value,-20132000000.0
-AAPL,2025-09-30,Repurchase Of Capital Stock,_source,new
-AAPL,2025-09-30,Stock Based Compensation,Value,3183000000.0
-AAPL,2025-09-30,Stock Based Compensation,_source,new
-AAPL,2025-12-31,Capital Expenditure,Value,-2373000000.0
-AAPL,2025-12-31,Capital Expenditure,_source,new
-AAPL,2025-12-31,Cash Dividends Paid,Value,-3921000000.0
-AAPL,2025-12-31,Cash Dividends Paid,_source,new
-AAPL,2025-12-31,Change In Working Capital,Value,5548000000.0
-AAPL,2025-12-31,Change In Working Capital,_source,new
-AAPL,2025-12-31,Depreciation And Amortization,Value,3214000000.0
-AAPL,2025-12-31,Depreciation And Amortization,_source,new
-AAPL,2025-12-31,Financing Cash Flow,Value,-39656000000.0
-AAPL,2025-12-31,Financing Cash Flow,_source,new
-AAPL,2025-12-31,Free Cash Flow,Value,51552000000.0
-AAPL,2025-12-31,Free Cash Flow,_source,new
-AAPL,2025-12-31,Investing Cash Flow,Value,-4886000000.0
-AAPL,2025-12-31,Investing Cash Flow,_source,new
-AAPL,2025-12-31,Issuance Of Debt,Value,
-AAPL,2025-12-31,Issuance Of Debt,_source,new
-AAPL,2025-12-31,Operating Cash Flow,Value,53925000000.0
-AAPL,2025-12-31,Operating Cash Flow,_source,new
-AAPL,2025-12-31,Repayment Of Debt,Value,-8074000000.0
-AAPL,2025-12-31,Repayment Of Debt,_source,new
-AAPL,2025-12-31,Repurchase Of Capital Stock,Value,-24701000000.0
-AAPL,2025-12-31,Repurchase Of Capital Stock,_source,new
-AAPL,2025-12-31,Stock Based Compensation,Value,3594000000.0
-AAPL,2025-12-31,Stock Based Compensation,_source,new
-NVDA,2024-10-31,Capital Expenditure,Value,
-NVDA,2024-10-31,Capital Expenditure,_source,new
-NVDA,2024-10-31,Capital Expenditure,_completeness,0
-NVDA,2024-10-31,Capital Expenditure,_is_new,1
-NVDA,2024-10-31,Cash Dividends Paid,Value,
-NVDA,2024-10-31,Cash Dividends Paid,_source,new
-NVDA,2024-10-31,Cash Dividends Paid,_completeness,0
-NVDA,2024-10-31,Cash Dividends Paid,_is_new,1
-NVDA,2024-10-31,Change In Working Capital,Value,
-NVDA,2024-10-31,Change In Working Capital,_source,new
-NVDA,2024-10-31,Change In Working Capital,_completeness,0
-NVDA,2024-10-31,Change In Working Capital,_is_new,1
-NVDA,2024-10-31,Depreciation And Amortization,Value,
-NVDA,2024-10-31,Depreciation And Amortization,_source,new
-NVDA,2024-10-31,Depreciation And Amortization,_completeness,0
-NVDA,2024-10-31,Depreciation And Amortization,_is_new,1
-NVDA,2024-10-31,Financing Cash Flow,Value,
-NVDA,2024-10-31,Financing Cash Flow,_source,new
-NVDA,2024-10-31,Financing Cash Flow,_completeness,0
-NVDA,2024-10-31,Financing Cash Flow,_is_new,1
-NVDA,2024-10-31,Free Cash Flow,Value,
-NVDA,2024-10-31,Free Cash Flow,_source,new
-NVDA,2024-10-31,Free Cash Flow,_completeness,0
-NVDA,2024-10-31,Free Cash Flow,_is_new,1
-NVDA,2024-10-31,Investing Cash Flow,Value,
-NVDA,2024-10-31,Investing Cash Flow,_source,new
-NVDA,2024-10-31,Investing Cash Flow,_completeness,0
-NVDA,2024-10-31,Investing Cash Flow,_is_new,1
-NVDA,2024-10-31,Operating Cash Flow,Value,
-NVDA,2024-10-31,Operating Cash Flow,_source,new
-NVDA,2024-10-31,Operating Cash Flow,_completeness,0
-NVDA,2024-10-31,Operating Cash Flow,_is_new,1
-NVDA,2024-10-31,Repayment Of Debt,Value,0.0
-NVDA,2024-10-31,Repayment Of Debt,_source,new
-NVDA,2024-10-31,Repayment Of Debt,_completeness,1
-NVDA,2024-10-31,Repayment Of Debt,_is_new,1
-NVDA,2024-10-31,Repurchase Of Capital Stock,Value,
-NVDA,2024-10-31,Repurchase Of Capital Stock,_source,new
-NVDA,2024-10-31,Repurchase Of Capital Stock,_completeness,0
-NVDA,2024-10-31,Repurchase Of Capital Stock,_is_new,1
-NVDA,2024-10-31,Stock Based Compensation,Value,
-NVDA,2024-10-31,Stock Based Compensation,_source,new
-NVDA,2024-10-31,Stock Based Compensation,_completeness,0
-NVDA,2024-10-31,Stock Based Compensation,_is_new,1
-NVDA,2025-01-31,Capital Expenditure,Value,-1077000000.0
-NVDA,2025-01-31,Capital Expenditure,_source,new
-NVDA,2025-01-31,Capital Expenditure,_completeness,1
-NVDA,2025-01-31,Capital Expenditure,_is_new,1
-NVDA,2025-01-31,Cash Dividends Paid,Value,-245000000.0
-NVDA,2025-01-31,Cash Dividends Paid,_source,new
-NVDA,2025-01-31,Cash Dividends Paid,_completeness,1
-NVDA,2025-01-31,Cash Dividends Paid,_is_new,1
-NVDA,2025-01-31,Change In Working Capital,Value,-5863000000.0
-NVDA,2025-01-31,Change In Working Capital,_source,new
-NVDA,2025-01-31,Change In Working Capital,_completeness,1
-NVDA,2025-01-31,Change In Working Capital,_is_new,1
-NVDA,2025-01-31,Depreciation And Amortization,Value,543000000.0
-NVDA,2025-01-31,Depreciation And Amortization,_source,new
-NVDA,2025-01-31,Depreciation And Amortization,_completeness,1
-NVDA,2025-01-31,Depreciation And Amortization,_is_new,1
-NVDA,2025-01-31,Financing Cash Flow,Value,-9949000000.0
-NVDA,2025-01-31,Financing Cash Flow,_source,new
-NVDA,2025-01-31,Financing Cash Flow,_completeness,1
-NVDA,2025-01-31,Financing Cash Flow,_is_new,1
-NVDA,2025-01-31,Free Cash Flow,Value,15552000000.0
-NVDA,2025-01-31,Free Cash Flow,_source,new
-NVDA,2025-01-31,Free Cash Flow,_completeness,1
-NVDA,2025-01-31,Free Cash Flow,_is_new,1
-NVDA,2025-01-31,Investing Cash Flow,Value,-7198000000.0
-NVDA,2025-01-31,Investing Cash Flow,_source,new
-NVDA,2025-01-31,Investing Cash Flow,_completeness,1
-NVDA,2025-01-31,Investing Cash Flow,_is_new,1
-NVDA,2025-01-31,Operating Cash Flow,Value,16629000000.0
-NVDA,2025-01-31,Operating Cash Flow,_source,new
-NVDA,2025-01-31,Operating Cash Flow,_completeness,1
-NVDA,2025-01-31,Operating Cash Flow,_is_new,1
-NVDA,2025-01-31,Repayment Of Debt,Value,0.0
-NVDA,2025-01-31,Repayment Of Debt,_source,new
-NVDA,2025-01-31,Repayment Of Debt,_completeness,1
-NVDA,2025-01-31,Repayment Of Debt,_is_new,1
-NVDA,2025-01-31,Repurchase Of Capital Stock,Value,-7811000000.0
-NVDA,2025-01-31,Repurchase Of Capital Stock,_source,new
-NVDA,2025-01-31,Repurchase Of Capital Stock,_completeness,1
-NVDA,2025-01-31,Repurchase Of Capital Stock,_is_new,1
-NVDA,2025-01-31,Stock Based Compensation,Value,1321000000.0
-NVDA,2025-01-31,Stock Based Compensation,_source,new
-NVDA,2025-01-31,Stock Based Compensation,_completeness,1
-NVDA,2025-01-31,Stock Based Compensation,_is_new,1
-NVDA,2025-04-30,Capital Expenditure,Value,-1227000000.0
-NVDA,2025-04-30,Capital Expenditure,_source,new
-NVDA,2025-04-30,Capital Expenditure,_completeness,1
-NVDA,2025-04-30,Capital Expenditure,_is_new,1
-NVDA,2025-04-30,Cash Dividends Paid,Value,-244000000.0
-NVDA,2025-04-30,Cash Dividends Paid,_source,new
-NVDA,2025-04-30,Cash Dividends Paid,_completeness,1
-NVDA,2025-04-30,Cash Dividends Paid,_is_new,1
-NVDA,2025-04-30,Change In Working Capital,Value,8654000000.0
-NVDA,2025-04-30,Change In Working Capital,_source,new
-NVDA,2025-04-30,Change In Working Capital,_completeness,1
-NVDA,2025-04-30,Change In Working Capital,_is_new,1
-NVDA,2025-04-30,Depreciation And Amortization,Value,611000000.0
-NVDA,2025-04-30,Depreciation And Amortization,_source,new
-NVDA,2025-04-30,Depreciation And Amortization,_completeness,1
-NVDA,2025-04-30,Depreciation And Amortization,_is_new,1
-NVDA,2025-04-30,Financing Cash Flow,Value,-15553000000.0
-NVDA,2025-04-30,Financing Cash Flow,_source,new
-NVDA,2025-04-30,Financing Cash Flow,_completeness,1
-NVDA,2025-04-30,Financing Cash Flow,_is_new,1
-NVDA,2025-04-30,Free Cash Flow,Value,26187000000.0
-NVDA,2025-04-30,Free Cash Flow,_source,new
-NVDA,2025-04-30,Free Cash Flow,_completeness,1
-NVDA,2025-04-30,Free Cash Flow,_is_new,1
-NVDA,2025-04-30,Investing Cash Flow,Value,-5216000000.0
-NVDA,2025-04-30,Investing Cash Flow,_source,new
-NVDA,2025-04-30,Investing Cash Flow,_completeness,1
-NVDA,2025-04-30,Investing Cash Flow,_is_new,1
-NVDA,2025-04-30,Operating Cash Flow,Value,27414000000.0
-NVDA,2025-04-30,Operating Cash Flow,_source,new
-NVDA,2025-04-30,Operating Cash Flow,_completeness,1
-NVDA,2025-04-30,Operating Cash Flow,_is_new,1
-NVDA,2025-04-30,Repayment Of Debt,Value,
-NVDA,2025-04-30,Repayment Of Debt,_source,new
-NVDA,2025-04-30,Repayment Of Debt,_completeness,0
-NVDA,2025-04-30,Repayment Of Debt,_is_new,1
-NVDA,2025-04-30,Repurchase Of Capital Stock,Value,-14095000000.0
-NVDA,2025-04-30,Repurchase Of Capital Stock,_source,new
-NVDA,2025-04-30,Repurchase Of Capital Stock,_completeness,1
-NVDA,2025-04-30,Repurchase Of Capital Stock,_is_new,1
-NVDA,2025-04-30,Stock Based Compensation,Value,1474000000.0
-NVDA,2025-04-30,Stock Based Compensation,_source,new
-NVDA,2025-04-30,Stock Based Compensation,_completeness,1
-NVDA,2025-04-30,Stock Based Compensation,_is_new,1
-NVDA,2025-07-31,Capital Expenditure,Value,-1895000000.0
-NVDA,2025-07-31,Capital Expenditure,_source,new
-NVDA,2025-07-31,Capital Expenditure,_completeness,1
-NVDA,2025-07-31,Capital Expenditure,_is_new,1
-NVDA,2025-07-31,Cash Dividends Paid,Value,-244000000.0
-NVDA,2025-07-31,Cash Dividends Paid,_source,new
-NVDA,2025-07-31,Cash Dividends Paid,_completeness,1
-NVDA,2025-07-31,Cash Dividends Paid,_is_new,1
-NVDA,2025-07-31,Change In Working Capital,Value,-11022000000.0
-NVDA,2025-07-31,Change In Working Capital,_source,new
-NVDA,2025-07-31,Change In Working Capital,_completeness,1
-NVDA,2025-07-31,Change In Working Capital,_is_new,1
-NVDA,2025-07-31,Depreciation And Amortization,Value,669000000.0
-NVDA,2025-07-31,Depreciation And Amortization,_source,new
-NVDA,2025-07-31,Depreciation And Amortization,_completeness,1
-NVDA,2025-07-31,Depreciation And Amortization,_is_new,1
-NVDA,2025-07-31,Financing Cash Flow,Value,-11833000000.0
-NVDA,2025-07-31,Financing Cash Flow,_source,new
-NVDA,2025-07-31,Financing Cash Flow,_completeness,1
-NVDA,2025-07-31,Financing Cash Flow,_is_new,1
-NVDA,2025-07-31,Free Cash Flow,Value,13470000000.0
-NVDA,2025-07-31,Free Cash Flow,_source,new
-NVDA,2025-07-31,Free Cash Flow,_completeness,1
-NVDA,2025-07-31,Free Cash Flow,_is_new,1
-NVDA,2025-07-31,Investing Cash Flow,Value,-7127000000.0
-NVDA,2025-07-31,Investing Cash Flow,_source,new
-NVDA,2025-07-31,Investing Cash Flow,_completeness,1
-NVDA,2025-07-31,Investing Cash Flow,_is_new,1
-NVDA,2025-07-31,Operating Cash Flow,Value,15365000000.0
-NVDA,2025-07-31,Operating Cash Flow,_source,new
-NVDA,2025-07-31,Operating Cash Flow,_completeness,1
-NVDA,2025-07-31,Operating Cash Flow,_is_new,1
-NVDA,2025-07-31,Repayment Of Debt,Value,
-NVDA,2025-07-31,Repayment Of Debt,_source,new
-NVDA,2025-07-31,Repayment Of Debt,_completeness,0
-NVDA,2025-07-31,Repayment Of Debt,_is_new,1
-NVDA,2025-07-31,Repurchase Of Capital Stock,Value,-9720000000.0
-NVDA,2025-07-31,Repurchase Of Capital Stock,_source,new
-NVDA,2025-07-31,Repurchase Of Capital Stock,_completeness,1
-NVDA,2025-07-31,Repurchase Of Capital Stock,_is_new,1
-NVDA,2025-07-31,Stock Based Compensation,Value,1625000000.0
-NVDA,2025-07-31,Stock Based Compensation,_source,new
-NVDA,2025-07-31,Stock Based Compensation,_completeness,1
-NVDA,2025-07-31,Stock Based Compensation,_is_new,1
-NVDA,2025-10-31,Capital Expenditure,Value,-1636000000.0
-NVDA,2025-10-31,Capital Expenditure,_source,new
-NVDA,2025-10-31,Capital Expenditure,_completeness,1
-NVDA,2025-10-31,Capital Expenditure,_is_new,1
-NVDA,2025-10-31,Cash Dividends Paid,Value,-244000000.0
-NVDA,2025-10-31,Cash Dividends Paid,_source,new
-NVDA,2025-10-31,Cash Dividends Paid,_completeness,1
-NVDA,2025-10-31,Cash Dividends Paid,_is_new,1
-NVDA,2025-10-31,Change In Working Capital,Value,-9256000000.0
-NVDA,2025-10-31,Change In Working Capital,_source,new
-NVDA,2025-10-31,Change In Working Capital,_completeness,1
-NVDA,2025-10-31,Change In Working Capital,_is_new,1
-NVDA,2025-10-31,Depreciation And Amortization,Value,751000000.0
-NVDA,2025-10-31,Depreciation And Amortization,_source,new
-NVDA,2025-10-31,Depreciation And Amortization,_completeness,1
-NVDA,2025-10-31,Depreciation And Amortization,_is_new,1
-NVDA,2025-10-31,Financing Cash Flow,Value,-14880000000.0
-NVDA,2025-10-31,Financing Cash Flow,_source,new
-NVDA,2025-10-31,Financing Cash Flow,_completeness,1
-NVDA,2025-10-31,Financing Cash Flow,_is_new,1
-NVDA,2025-10-31,Free Cash Flow,Value,22115000000.0
-NVDA,2025-10-31,Free Cash Flow,_source,new
-NVDA,2025-10-31,Free Cash Flow,_completeness,1
-NVDA,2025-10-31,Free Cash Flow,_is_new,1
-NVDA,2025-10-31,Investing Cash Flow,Value,-9024000000.0
-NVDA,2025-10-31,Investing Cash Flow,_source,new
-NVDA,2025-10-31,Investing Cash Flow,_completeness,1
-NVDA,2025-10-31,Investing Cash Flow,_is_new,1
-NVDA,2025-10-31,Operating Cash Flow,Value,23751000000.0
-NVDA,2025-10-31,Operating Cash Flow,_source,new
-NVDA,2025-10-31,Operating Cash Flow,_completeness,1
-NVDA,2025-10-31,Operating Cash Flow,_is_new,1
-NVDA,2025-10-31,Repayment Of Debt,Value,0.0
-NVDA,2025-10-31,Repayment Of Debt,_source,new
-NVDA,2025-10-31,Repayment Of Debt,_completeness,1
-NVDA,2025-10-31,Repayment Of Debt,_is_new,1
-NVDA,2025-10-31,Repurchase Of Capital Stock,Value,-12456000000.0
-NVDA,2025-10-31,Repurchase Of Capital Stock,_source,new
-NVDA,2025-10-31,Repurchase Of Capital Stock,_completeness,1
-NVDA,2025-10-31,Repurchase Of Capital Stock,_is_new,1
-NVDA,2025-10-31,Stock Based Compensation,Value,1654000000.0
-NVDA,2025-10-31,Stock Based Compensation,_source,new
-NVDA,2025-10-31,Stock Based Compensation,_completeness,1
-NVDA,2025-10-31,Stock Based Compensation,_is_new,1
-NVDA,2026-01-31,Capital Expenditure,Value,-1284000000.0
-NVDA,2026-01-31,Capital Expenditure,_source,new
-NVDA,2026-01-31,Capital Expenditure,_completeness,1
-NVDA,2026-01-31,Capital Expenditure,_is_new,1
-NVDA,2026-01-31,Cash Dividends Paid,Value,-242000000.0
-NVDA,2026-01-31,Cash Dividends Paid,_source,new
-NVDA,2026-01-31,Cash Dividends Paid,_completeness,1
-NVDA,2026-01-31,Cash Dividends Paid,_is_new,1
-NVDA,2026-01-31,Change In Working Capital,Value,-4325000000.0
-NVDA,2026-01-31,Change In Working Capital,_source,new
-NVDA,2026-01-31,Change In Working Capital,_completeness,1
-NVDA,2026-01-31,Change In Working Capital,_is_new,1
-NVDA,2026-01-31,Depreciation And Amortization,Value,812000000.0
-NVDA,2026-01-31,Depreciation And Amortization,_source,new
-NVDA,2026-01-31,Depreciation And Amortization,_completeness,1
-NVDA,2026-01-31,Depreciation And Amortization,_is_new,1
-NVDA,2026-01-31,Financing Cash Flow,Value,-6208000000.0
-NVDA,2026-01-31,Financing Cash Flow,_source,new
-NVDA,2026-01-31,Financing Cash Flow,_completeness,1
-NVDA,2026-01-31,Financing Cash Flow,_is_new,1
-NVDA,2026-01-31,Free Cash Flow,Value,34904000000.0
-NVDA,2026-01-31,Free Cash Flow,_source,new
-NVDA,2026-01-31,Free Cash Flow,_completeness,1
-NVDA,2026-01-31,Free Cash Flow,_is_new,1
-NVDA,2026-01-31,Investing Cash Flow,Value,-30861000000.0
-NVDA,2026-01-31,Investing Cash Flow,_source,new
-NVDA,2026-01-31,Investing Cash Flow,_completeness,1
-NVDA,2026-01-31,Investing Cash Flow,_is_new,1
-NVDA,2026-01-31,Operating Cash Flow,Value,36188000000.0
-NVDA,2026-01-31,Operating Cash Flow,_source,new
-NVDA,2026-01-31,Operating Cash Flow,_completeness,1
-NVDA,2026-01-31,Operating Cash Flow,_is_new,1
-NVDA,2026-01-31,Repayment Of Debt,Value,0.0
-NVDA,2026-01-31,Repayment Of Debt,_source,new
-NVDA,2026-01-31,Repayment Of Debt,_completeness,1
-NVDA,2026-01-31,Repayment Of Debt,_is_new,1
-NVDA,2026-01-31,Repurchase Of Capital Stock,Value,-3815000000.0
-NVDA,2026-01-31,Repurchase Of Capital Stock,_source,new
-NVDA,2026-01-31,Repurchase Of Capital Stock,_completeness,1
-NVDA,2026-01-31,Repurchase Of Capital Stock,_is_new,1
-NVDA,2026-01-31,Stock Based Compensation,Value,1633000000.0
-NVDA,2026-01-31,Stock Based Compensation,_source,new
-NVDA,2026-01-31,Stock Based Compensation,_completeness,1
-NVDA,2026-01-31,Stock Based Compensation,_is_new,1
+Ticker,Date,Metric,Value
+AAPL,2024-09-30,Capital Expenditure,
+AAPL,2024-09-30,Cash Dividends Paid,
+AAPL,2024-09-30,Change In Working Capital,
+AAPL,2024-09-30,Depreciation And Amortization,
+AAPL,2024-09-30,Financing Cash Flow,
+AAPL,2024-09-30,Free Cash Flow,
+AAPL,2024-09-30,Investing Cash Flow,
+AAPL,2024-09-30,Issuance Of Debt,0.0
+AAPL,2024-09-30,Operating Cash Flow,
+AAPL,2024-09-30,Repayment Of Debt,
+AAPL,2024-09-30,Repurchase Of Capital Stock,
+AAPL,2024-09-30,Stock Based Compensation,
+AAPL,2024-12-31,Capital Expenditure,-2940000000.0
+AAPL,2024-12-31,Cash Dividends Paid,-3856000000.0
+AAPL,2024-12-31,Change In Working Capital,-10752000000.0
+AAPL,2024-12-31,Depreciation And Amortization,3080000000.0
+AAPL,2024-12-31,Financing Cash Flow,-39371000000.0
+AAPL,2024-12-31,Free Cash Flow,26995000000.0
+AAPL,2024-12-31,Investing Cash Flow,9792000000.0
+AAPL,2024-12-31,Issuance Of Debt,
+AAPL,2024-12-31,Operating Cash Flow,29935000000.0
+AAPL,2024-12-31,Repayment Of Debt,-8953000000.0
+AAPL,2024-12-31,Repurchase Of Capital Stock,-23606000000.0
+AAPL,2024-12-31,Stock Based Compensation,3286000000.0
+AAPL,2025-03-31,Capital Expenditure,-3071000000.0
+AAPL,2025-03-31,Cash Dividends Paid,-3758000000.0
+AAPL,2025-03-31,Change In Working Capital,-6507000000.0
+AAPL,2025-03-31,Depreciation And Amortization,2661000000.0
+AAPL,2025-03-31,Financing Cash Flow,-29006000000.0
+AAPL,2025-03-31,Free Cash Flow,20881000000.0
+AAPL,2025-03-31,Investing Cash Flow,2917000000.0
+AAPL,2025-03-31,Issuance Of Debt,
+AAPL,2025-03-31,Operating Cash Flow,23952000000.0
+AAPL,2025-03-31,Repayment Of Debt,976000000.0
+AAPL,2025-03-31,Repurchase Of Capital Stock,-25898000000.0
+AAPL,2025-03-31,Stock Based Compensation,3226000000.0
+AAPL,2025-06-30,Capital Expenditure,-3462000000.0
+AAPL,2025-06-30,Cash Dividends Paid,-3945000000.0
+AAPL,2025-06-30,Change In Working Capital,-2034000000.0
+AAPL,2025-06-30,Depreciation And Amortization,2830000000.0
+AAPL,2025-06-30,Financing Cash Flow,-24833000000.0
+AAPL,2025-06-30,Free Cash Flow,24405000000.0
+AAPL,2025-06-30,Investing Cash Flow,5073000000.0
+AAPL,2025-06-30,Issuance Of Debt,
+AAPL,2025-06-30,Operating Cash Flow,27867000000.0
+AAPL,2025-06-30,Repayment Of Debt,-1770000000.0
+AAPL,2025-06-30,Repurchase Of Capital Stock,-21075000000.0
+AAPL,2025-06-30,Stock Based Compensation,3168000000.0
+AAPL,2025-09-30,Capital Expenditure,-3242000000.0
+AAPL,2025-09-30,Cash Dividends Paid,-3862000000.0
+AAPL,2025-09-30,Change In Working Capital,-5707000000.0
+AAPL,2025-09-30,Depreciation And Amortization,3127000000.0
+AAPL,2025-09-30,Financing Cash Flow,-27476000000.0
+AAPL,2025-09-30,Free Cash Flow,26486000000.0
+AAPL,2025-09-30,Investing Cash Flow,-2587000000.0
+AAPL,2025-09-30,Issuance Of Debt,0.0
+AAPL,2025-09-30,Operating Cash Flow,29728000000.0
+AAPL,2025-09-30,Repayment Of Debt,-1185000000.0
+AAPL,2025-09-30,Repurchase Of Capital Stock,-20132000000.0
+AAPL,2025-09-30,Stock Based Compensation,3183000000.0
+AAPL,2025-12-31,Capital Expenditure,-2373000000.0
+AAPL,2025-12-31,Cash Dividends Paid,-3921000000.0
+AAPL,2025-12-31,Change In Working Capital,5548000000.0
+AAPL,2025-12-31,Depreciation And Amortization,3214000000.0
+AAPL,2025-12-31,Financing Cash Flow,-39656000000.0
+AAPL,2025-12-31,Free Cash Flow,51552000000.0
+AAPL,2025-12-31,Investing Cash Flow,-4886000000.0
+AAPL,2025-12-31,Issuance Of Debt,
+AAPL,2025-12-31,Operating Cash Flow,53925000000.0
+AAPL,2025-12-31,Repayment Of Debt,-8074000000.0
+AAPL,2025-12-31,Repurchase Of Capital Stock,-24701000000.0
+AAPL,2025-12-31,Stock Based Compensation,3594000000.0
+NVDA,2024-10-31,Capital Expenditure,
+NVDA,2024-10-31,Cash Dividends Paid,
+NVDA,2024-10-31,Change In Working Capital,
+NVDA,2024-10-31,Depreciation And Amortization,
+NVDA,2024-10-31,Financing Cash Flow,
+NVDA,2024-10-31,Free Cash Flow,
+NVDA,2024-10-31,Investing Cash Flow,
+NVDA,2024-10-31,Operating Cash Flow,
+NVDA,2024-10-31,Repayment Of Debt,0.0
+NVDA,2024-10-31,Repurchase Of Capital Stock,
+NVDA,2024-10-31,Stock Based Compensation,
+NVDA,2025-01-31,Capital Expenditure,-1077000000.0
+NVDA,2025-01-31,Cash Dividends Paid,-245000000.0
+NVDA,2025-01-31,Change In Working Capital,-5863000000.0
+NVDA,2025-01-31,Depreciation And Amortization,543000000.0
+NVDA,2025-01-31,Financing Cash Flow,-9949000000.0
+NVDA,2025-01-31,Free Cash Flow,15552000000.0
+NVDA,2025-01-31,Investing Cash Flow,-7198000000.0
+NVDA,2025-01-31,Operating Cash Flow,16629000000.0
+NVDA,2025-01-31,Repayment Of Debt,0.0
+NVDA,2025-01-31,Repurchase Of Capital Stock,-7811000000.0
+NVDA,2025-01-31,Stock Based Compensation,1321000000.0
+NVDA,2025-04-30,Capital Expenditure,-1227000000.0
+NVDA,2025-04-30,Cash Dividends Paid,-244000000.0
+NVDA,2025-04-30,Change In Working Capital,8654000000.0
+NVDA,2025-04-30,Depreciation And Amortization,611000000.0
+NVDA,2025-04-30,Financing Cash Flow,-15553000000.0
+NVDA,2025-04-30,Free Cash Flow,26187000000.0
+NVDA,2025-04-30,Investing Cash Flow,-5216000000.0
+NVDA,2025-04-30,Operating Cash Flow,27414000000.0
+NVDA,2025-04-30,Repayment Of Debt,
+NVDA,2025-04-30,Repurchase Of Capital Stock,-14095000000.0
+NVDA,2025-04-30,Stock Based Compensation,1474000000.0
+NVDA,2025-07-31,Capital Expenditure,-1895000000.0
+NVDA,2025-07-31,Cash Dividends Paid,-244000000.0
+NVDA,2025-07-31,Change In Working Capital,-11022000000.0
+NVDA,2025-07-31,Depreciation And Amortization,669000000.0
+NVDA,2025-07-31,Financing Cash Flow,-11833000000.0
+NVDA,2025-07-31,Free Cash Flow,13470000000.0
+NVDA,2025-07-31,Investing Cash Flow,-7127000000.0
+NVDA,2025-07-31,Operating Cash Flow,15365000000.0
+NVDA,2025-07-31,Repayment Of Debt,
+NVDA,2025-07-31,Repurchase Of Capital Stock,-9720000000.0
+NVDA,2025-07-31,Stock Based Compensation,1625000000.0
+NVDA,2025-10-31,Capital Expenditure,-1636000000.0
+NVDA,2025-10-31,Cash Dividends Paid,-244000000.0
+NVDA,2025-10-31,Change In Working Capital,-9256000000.0
+NVDA,2025-10-31,Depreciation And Amortization,751000000.0
+NVDA,2025-10-31,Financing Cash Flow,-14880000000.0
+NVDA,2025-10-31,Free Cash Flow,22115000000.0
+NVDA,2025-10-31,Investing Cash Flow,-9024000000.0
+NVDA,2025-10-31,Operating Cash Flow,23751000000.0
+NVDA,2025-10-31,Repayment Of Debt,0.0
+NVDA,2025-10-31,Repurchase Of Capital Stock,-12456000000.0
+NVDA,2025-10-31,Stock Based Compensation,1654000000.0
+NVDA,2026-01-31,Capital Expenditure,-1284000000.0
+NVDA,2026-01-31,Cash Dividends Paid,-242000000.0
+NVDA,2026-01-31,Change In Working Capital,-4325000000.0
+NVDA,2026-01-31,Depreciation And Amortization,812000000.0
+NVDA,2026-01-31,Financing Cash Flow,-6208000000.0
+NVDA,2026-01-31,Free Cash Flow,34904000000.0
+NVDA,2026-01-31,Investing Cash Flow,-30861000000.0
+NVDA,2026-01-31,Operating Cash Flow,36188000000.0
+NVDA,2026-01-31,Repayment Of Debt,0.0
+NVDA,2026-01-31,Repurchase Of Capital Stock,-3815000000.0
+NVDA,2026-01-31,Stock Based Compensation,1633000000.0
