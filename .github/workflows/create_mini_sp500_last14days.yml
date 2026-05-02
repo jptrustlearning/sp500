@@ -1,0 +1,53 @@
+name: Mini S&P 500 — Last 14 Days
+
+# Runs automatically after "Daily S&P 500 Update" finishes successfully,
+# producing a small (~300 KB) slice of input_sp500_daily.csv with only
+# the last 14 trading days. Used by the News page Market Movers sparkline
+# so it doesn't have to download the full 63 MB CSV.
+on:
+  workflow_run:
+    workflows: ["Daily S&P 500 Update"]
+    types:
+      - completed
+  workflow_dispatch:
+    # Manual trigger from Actions tab
+
+jobs:
+  create-mini:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Only run if the upstream workflow succeeded (skip on failed daily update,
+    # but always run on manual dispatch).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+          # workflow_run starts from the default ref — make sure we have
+          # the freshly committed input_sp500_daily.csv from the upstream job.
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Generate mini_sp500_last14days.csv
+        run: python scripts/create_mini_sp500_last14days.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add mini_sp500_last14days.csv
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "📊 Mini S&P500 (last 14 days) — ${TIMESTAMP}"
+            git pull --rebase origin main
+            git push
+          )
