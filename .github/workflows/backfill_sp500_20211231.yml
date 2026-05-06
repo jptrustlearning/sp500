@@ -1,0 +1,42 @@
+name: "[One-Time] Backfill SP500 2021-12-31"
+
+# One-time fix for the missing 2021-12-31 data in input_sp500_daily.csv.
+# Dec 31, 2021 was a Friday and NYSE was OPEN — the original Yahoo Finance pipeline
+# missed it. Benchmark CSV has SPY/QQQ/DIA fine; only the SP500 universe is missing.
+# After successful run, this workflow + scripts/backfill_sp500_20211231.py can be deleted.
+
+on:
+  workflow_dispatch:
+    # Manual trigger only — no schedule.
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run backfill (2021-12-31 only)
+        run: python scripts/backfill_sp500_20211231.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_sp500_daily.csv
+          git diff --cached --quiet || (
+            git commit -m "fix(data): backfill 2021-12-31 (was missing — Dec 31 NYSE was open, original Yahoo pipeline glitched)"
+            git push
+          )
