@@ -1,0 +1,42 @@
+name: "[One-Time] Backfill SP500 from 2001 (since2001 CSV)"
+
+# ⚠️ One-time historical backfill for HIST 2001 testing.
+# Target file: input_sp500_daily_since2001.csv (separate from production CSV).
+# Survivorship-biased: only fetches data for current S&P 500 constituents.
+# Run manually via "Run workflow" — no schedule.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas requests beautifulsoup4
+
+      - name: Run backfill (2001-01-01 → 2014-12-31)
+        run: python scripts/backfill_sp500_2001.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_sp500_daily_since2001.csv logs/
+          git diff --cached --quiet || (
+            git commit -m "📈 S&P500 backfill 2001-2014 → since2001 CSV (one-time historical, survivorship-biased)"
+            git push
+          )
