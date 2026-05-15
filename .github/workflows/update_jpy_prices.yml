@@ -1,0 +1,47 @@
+name: Daily USDJPY Update
+
+# Auto-detects: if input_jpy_daily.csv missing/empty → initial backfill from 2001;
+# else → incremental update from last date + 1.
+# First run = full historical (~6,500 rows, ~325 KB).
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ เวลา 00:20 UTC = 07:20 เวลาไทย
+    # (หลัง benchmark update 5 นาที เพื่อไม่ให้ชนกัน)
+    - cron: '20 0 * * 2-6'
+  workflow_dispatch:
+
+jobs:
+  update-jpy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run JPY price updater
+        run: python scripts/update_jpy_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_jpy_daily.csv logs/
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "💴 USDJPY daily update — ${TIMESTAMP}"
+            git pull --rebase origin main
+            git push
+          )
