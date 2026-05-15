@@ -4,8 +4,11 @@ S&P 500 Historical Backfill — ONE-TIME SCRIPT (HIST 2001)
 JP Trust Learning
 
 Downloads historical data from 2001-01-01 to 2014-12-31 for current S&P 500
-constituents and merges with input_sp500_daily_since2001.csv
-(which already contains 2015+ data, duplicated from production).
+constituents and writes it to input_sp500_daily_since2001.csv (REPLACES file).
+
+The since2001 CSV stores ONLY 2001-2014 data (not 2015+) to stay under
+GitHub's 100 MB file-size limit. The HTML dashboard fetches BOTH this file
+AND the production CSV (which has 2015+) and concatenates them in-browser.
 
 ⚠️ SURVIVORSHIP BIAS WARNING:
 This script uses the CURRENT S&P 500 ticker list from Wikipedia. Companies
@@ -18,7 +21,7 @@ Use this dataset only for stress-testing strategy survival through known bear
 markets (.com crash 2000-2002, GFC 2007-2009), NOT for absolute return claims.
 
 Run once via GitHub Actions workflow_dispatch.
-Target file: input_sp500_daily_since2001.csv (separate from production)
+Target file: input_sp500_daily_since2001.csv (REPLACES existing file)
 """
 
 import yfinance as yf
@@ -105,7 +108,8 @@ if __name__ == '__main__':
     print('=' * 60)
     print('📊 S&P 500 Historical Backfill — HIST 2001 (ONE-TIME)')
     print(f'📅 Period: {BACKFILL_START} → {BACKFILL_END}')
-    print(f'💾 Target: {CSV_FILE}')
+    print(f'💾 Target: {CSV_FILE} (will OVERWRITE existing file)')
+    print('ℹ️  Stores only 2001-2014; HTML fetches production CSV for 2015+')
     print('⚠️  SURVIVORSHIP-BIASED: only current SP500 constituents.')
     print('=' * 60)
 
@@ -116,20 +120,11 @@ if __name__ == '__main__':
         exit(1)
     print(f'📋 Found {len(tickers)} tickers (current S&P 500)')
 
-    # Read existing data (should be 2015+ — duplicated from production)
-    if os.path.exists(CSV_FILE):
-        df_existing = pd.read_csv(CSV_FILE)
-        df_existing['Date'] = pd.to_datetime(df_existing['Date'])
-        print(f'📂 Existing: {len(df_existing):,} rows ({df_existing["Date"].min().date()} → {df_existing["Date"].max().date()})')
-    else:
-        df_existing = pd.DataFrame(columns=['Ticker', 'Date', 'Open', 'High', 'Low', 'Close', 'Volume'])
-        print(f'📂 No existing {CSV_FILE} — starting from empty')
-
-    # Download historical data
+    # Download historical data — no merge with existing
     all_data = []
     success_count = 0
     failed_tickers = []
-    empty_tickers = []  # tickers that returned no data (likely didn't exist in 2001-2014)
+    empty_tickers = []
 
     print(f'\n📥 Downloading {len(tickers)} tickers ({BACKFILL_START} → {BACKFILL_END})...')
     print('-' * 60)
@@ -159,23 +154,30 @@ if __name__ == '__main__':
         exit(1)
 
     df_historical = pd.concat(all_data, ignore_index=True)
-    print(f'\n📊 Downloaded {len(df_historical):,} historical rows from {success_count} tickers')
+    df_historical['Date'] = pd.to_datetime(df_historical['Date'])
 
-    # Merge: historical (2001-2014) + existing (2015+)
-    df_all = pd.concat([df_historical, df_existing], ignore_index=True)
-    df_all['Date'] = pd.to_datetime(df_all['Date'])
-    df_all = df_all.drop_duplicates(subset=['Ticker', 'Date'], keep='last')
-    df_all = df_all.sort_values(['Ticker', 'Date']).reset_index(drop=True)
+    # Belt-and-suspenders: clip strictly to BACKFILL_END
+    end_dt = pd.Timestamp(BACKFILL_END)
+    df_historical = df_historical[df_historical['Date'] <= end_dt]
 
-    # Save
-    df_out = df_all.copy()
+    df_historical = df_historical.drop_duplicates(subset=['Ticker', 'Date'], keep='last')
+    df_historical = df_historical.sort_values(['Ticker', 'Date']).reset_index(drop=True)
+
+    print(f'\n📊 Downloaded {len(df_historical):,} rows from {success_count} tickers (2001-2014 only)')
+
+    # Save — OVERWRITE the file (no merge)
+    df_out = df_historical.copy()
     df_out['Date'] = df_out['Date'].dt.strftime('%Y-%m-%d')
 
-    # Main file
     df_out.to_csv(CSV_FILE, index=False)
-    print(f'\n💾 Saved: {CSV_FILE}')
 
-    # Log file
+    # Report file size
+    size_mb = os.path.getsize(CSV_FILE) / (1024 * 1024)
+    print(f'\n💾 Saved: {CSV_FILE} ({size_mb:.1f} MB)')
+    if size_mb > 95:
+        print(f'⚠️  WARNING: file is {size_mb:.1f} MB — approaching GitHub 100MB limit')
+
+    # Log file (timestamped backup)
     os.makedirs(LOG_FOLDER, exist_ok=True)
     timestamp = datetime.now().strftime('%Y%m%d_%H%M')
     log_filename = f'input_sp500_daily_since2001_backfill_{timestamp}.csv'
@@ -183,9 +185,9 @@ if __name__ == '__main__':
     df_out.to_csv(log_path, index=False)
     print(f'💾 Saved: {LOG_FOLDER}/{log_filename}')
 
-    total_tickers = df_all['Ticker'].nunique()
-    print(f'\n📊 Total: {len(df_all):,} rows | {total_tickers} tickers')
-    print(f'📅 Range: {df_all["Date"].min().date()} → {df_all["Date"].max().date()}')
+    total_tickers = df_historical['Ticker'].nunique()
+    print(f'\n📊 Total: {len(df_historical):,} rows | {total_tickers} tickers')
+    print(f'📅 Range: {df_historical["Date"].min().date()} → {df_historical["Date"].max().date()}')
 
     if failed_tickers:
         print(f'\n⚠️ Network/fetch failures ({len(failed_tickers)}): {", ".join(failed_tickers[:30])}')
@@ -195,4 +197,5 @@ if __name__ == '__main__':
     print('\n' + '=' * 60)
     print('🎉 BACKFILL DONE!')
     print('⚠️  Reminder: dataset is survivorship-biased — see script header.')
+    print('ℹ️  HTML dashboard will fetch this file + production CSV in parallel.')
     print('=' * 60)
