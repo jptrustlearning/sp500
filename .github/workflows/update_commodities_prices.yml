@@ -1,0 +1,48 @@
+name: Daily Commodities Update (WTI + Gold)
+
+# Auto-detects: if input_commodities_daily.csv missing/empty → initial backfill from 2001;
+# else → incremental update per-ticker from each ticker's last date + 1.
+# Adding a new ticker later automatically backfills it while existing ones do incremental.
+# First run = full historical (~6,500 rows × 2 tickers, ~520 KB).
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ เวลา 00:25 UTC = 07:25 เวลาไทย
+    # (หลัง JPY update 5 นาที เพื่อไม่ให้ชนกัน)
+    - cron: '25 0 * * 2-6'
+  workflow_dispatch:
+
+jobs:
+  update-commodities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run commodities price updater
+        run: python scripts/update_commodities_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_commodities_daily.csv logs/
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "🛢️🥇 Commodities (WTI/GOLD) daily update — ${TIMESTAMP}"
+            git pull --rebase origin main
+            git push
+          )
