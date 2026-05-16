@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 """
-Commodities Daily Price Updater — GitHub Actions Version
+Commodities & Macro-Proxy ETF Daily Price Updater — GitHub Actions Version
 JP Trust Learning
 
-Downloads daily price data for commodity futures:
-  - WTI crude oil (Yahoo: CL=F → stored as 'WTI')
-  - Gold (Yahoo: GC=F → stored as 'GOLD')
+Downloads daily price data for commodity futures and macro-proxy ETFs:
+  - WTI crude oil    (Yahoo: CL=F → stored as 'WTI',  since 2001)
+  - Gold             (Yahoo: GC=F → stored as 'GOLD', since 2001)
+  - FXY              (Yahoo: FXY  → stored as 'FXY',  since 2007)
+                     CurrencyShares Japanese Yen Trust — proxy for JPY strength
+  - USL              (Yahoo: USL  → stored as 'USL',  since 2007)
+                     United States 12-Month Oil Fund — 12M-spread WTI ETF
+                     (less contango decay than USO)
 
-Auto-detects mode: initial backfill from 2001 if CSV missing/empty,
-else incremental update from each ticker's last date + 1.
+Auto-detects mode PER TICKER: initial backfill from 2001 (or each ticker's
+inception date, whichever is later) if missing from CSV, else incremental
+update from that ticker's last date + 1.
 
 Output format matches input_benchmark_daily.csv:
   Ticker, Date, Open, High, Low, Close, Volume
@@ -33,8 +39,10 @@ FALLBACK_START = '2001-01-01'
 
 # (Yahoo ticker, CSV label)
 TICKERS = [
-    ('CL=F', 'WTI'),    # WTI crude oil front-month futures
-    ('GC=F', 'GOLD'),   # Gold front-month futures
+    ('CL=F', 'WTI'),    # WTI crude oil front-month futures (since 2001)
+    ('GC=F', 'GOLD'),   # Gold front-month futures (since 2001)
+    ('FXY',  'FXY'),    # Invesco CurrencyShares Japanese Yen Trust ETF — proxy for JPY strength (since 2007)
+    ('USL',  'USL'),    # United States 12-Month Oil Fund — 12M-spread WTI ETF, less contango decay than USO (since 2007)
 ]
 
 # =============================================================================
@@ -78,7 +86,7 @@ def download_commodity_data(yahoo_ticker, label, start_date, end_date, retry_cou
 # =============================================================================
 if __name__ == '__main__':
     print('=' * 60)
-    print('🛢️🥇 Commodities Daily Updater — JP Trust Learning')
+    print('🛢️🥇💴 Commodities + Macro ETFs Daily Updater — JP Trust Learning')
     print(f'📌 Tickers: {", ".join([f"{y}→{l}" for y, l in TICKERS])}')
     print('=' * 60)
 

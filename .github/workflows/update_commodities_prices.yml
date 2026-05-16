@@ -1,9 +1,18 @@
-name: Daily Commodities Update (WTI + Gold)
+name: Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL)
 
-# Auto-detects: if input_commodities_daily.csv missing/empty → initial backfill from 2001;
-# else → incremental update per-ticker from each ticker's last date + 1.
-# Adding a new ticker later automatically backfills it while existing ones do incremental.
-# First run = full historical (~6,500 rows × 2 tickers, ~520 KB).
+# Auto-detects PER TICKER: if input_commodities_daily.csv missing the ticker
+# → initial backfill from 2001 (or ticker inception, whichever is later);
+# else → incremental update from that ticker's last date + 1.
+# Adding new tickers later automatically backfills them while existing ones
+# do incremental.
+#
+# Tickers tracked:
+#   CL=F → WTI   (crude oil futures, since 2001)
+#   GC=F → GOLD  (gold futures, since 2001)
+#   FXY  → FXY   (CurrencyShares Japanese Yen Trust ETF, since 2007)
+#   USL  → USL   (12-Month WTI Oil ETF, since 2007)
+#
+# First run with all 4 = ~6,500×2 + ~4,800×2 = ~22,500 rows / ~1.1 MB.
 
 on:
   schedule:
@@ -42,7 +51,7 @@ jobs:
           git add input_commodities_daily.csv logs/
           git diff --cached --quiet || (
             TIMESTAMP=$(date -u +"%Y-%m-%d")
-            git commit -m "🛢️🥇 Commodities (WTI/GOLD) daily update — ${TIMESTAMP}"
+            git commit -m "🛢️🥇💴 Commodities+ETFs (WTI/GOLD/FXY/USL) daily update — ${TIMESTAMP}"
             git pull --rebase origin main
             git push
           )
