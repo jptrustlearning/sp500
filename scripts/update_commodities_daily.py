@@ -21,6 +21,10 @@ Downloads daily price data for commodity futures and macro-proxy ETFs:
   - BIL              (Yahoo: BIL  → stored as 'BIL',  since 2007)
                      SPDR 1-3 Month T-Bill ETF — cash-equivalent fallback
                      for the pre-2020 period when SGOV didn't exist
+  - SHY              (Yahoo: SHY  → stored as 'SHY',  since Jul 2002)
+                     iShares 1-3 Year Treasury Bond ETF — pre-2007 cash-equiv
+                     fallback. Duration 2yr (vs ~0.1yr for SGOV/BIL) so more
+                     rate-sensitive, but still tracks short-rates reasonably
 
 Auto-detects mode PER TICKER: initial backfill from 2001 (or each ticker's
 inception date, whichever is later) if missing from CSV, else incremental
@@ -57,6 +61,7 @@ TICKERS = [
     ('GLD',  'GLD'),    # SPDR Gold Shares — most-liquid gold ETF (since 2004)
     ('SGOV', 'SGOV'),   # iShares 0-3 Month Treasury Bond ETF — modern cash-equivalent (since May 2020)
     ('BIL',  'BIL'),    # SPDR 1-3 Month T-Bill ETF — cash-equivalent fallback for pre-2020 (since 2007)
+    ('SHY',  'SHY'),    # iShares 1-3 Year Treasury Bond ETF — pre-BIL cash-equiv fallback (since Jul 2002)
 ]
 
 # =============================================================================
