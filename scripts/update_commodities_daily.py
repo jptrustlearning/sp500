@@ -11,6 +11,10 @@ Downloads daily price data for commodity futures and macro-proxy ETFs:
   - USL              (Yahoo: USL  → stored as 'USL',  since 2007)
                      United States 12-Month Oil Fund — 12M-spread WTI ETF
                      (less contango decay than USO)
+  - USO              (Yahoo: USO  → stored as 'USO',  since 2006)
+                     United States Oil Fund — front-month WTI ETF (most liquid)
+  - GLD              (Yahoo: GLD  → stored as 'GLD',  since 2004)
+                     SPDR Gold Shares — most-liquid gold ETF
 
 Auto-detects mode PER TICKER: initial backfill from 2001 (or each ticker's
 inception date, whichever is later) if missing from CSV, else incremental
@@ -43,6 +47,8 @@ TICKERS = [
     ('GC=F', 'GOLD'),   # Gold front-month futures (since 2001)
     ('FXY',  'FXY'),    # Invesco CurrencyShares Japanese Yen Trust ETF — proxy for JPY strength (since 2007)
     ('USL',  'USL'),    # United States 12-Month Oil Fund — 12M-spread WTI ETF, less contango decay than USO (since 2007)
+    ('USO',  'USO'),    # United States Oil Fund — front-month WTI ETF, most-liquid oil ETF (since 2006)
+    ('GLD',  'GLD'),    # SPDR Gold Shares — most-liquid gold ETF (since 2004)
 ]
 
 # =============================================================================
