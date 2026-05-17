@@ -15,6 +15,12 @@ Downloads daily price data for commodity futures and macro-proxy ETFs:
                      United States Oil Fund — front-month WTI ETF (most liquid)
   - GLD              (Yahoo: GLD  → stored as 'GLD',  since 2004)
                      SPDR Gold Shares — most-liquid gold ETF
+  - SGOV             (Yahoo: SGOV → stored as 'SGOV', since May 2020)
+                     iShares 0-3 Month Treasury Bond ETF — cash-equivalent
+                     (modern, low expense ratio, very tight tracking)
+  - BIL              (Yahoo: BIL  → stored as 'BIL',  since 2007)
+                     SPDR 1-3 Month T-Bill ETF — cash-equivalent fallback
+                     for the pre-2020 period when SGOV didn't exist
 
 Auto-detects mode PER TICKER: initial backfill from 2001 (or each ticker's
 inception date, whichever is later) if missing from CSV, else incremental
@@ -49,6 +55,8 @@ TICKERS = [
     ('USL',  'USL'),    # United States 12-Month Oil Fund — 12M-spread WTI ETF, less contango decay than USO (since 2007)
     ('USO',  'USO'),    # United States Oil Fund — front-month WTI ETF, most-liquid oil ETF (since 2006)
     ('GLD',  'GLD'),    # SPDR Gold Shares — most-liquid gold ETF (since 2004)
+    ('SGOV', 'SGOV'),   # iShares 0-3 Month Treasury Bond ETF — modern cash-equivalent (since May 2020)
+    ('BIL',  'BIL'),    # SPDR 1-3 Month T-Bill ETF — cash-equivalent fallback for pre-2020 (since 2007)
 ]
 
 # =============================================================================

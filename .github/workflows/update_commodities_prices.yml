@@ -1,4 +1,4 @@
-name: Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD)
+name: Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL)
 
 # Auto-detects PER TICKER: if input_commodities_daily.csv missing the ticker
 # → initial backfill from 2001 (or ticker inception, whichever is later);
@@ -13,6 +13,8 @@ name: Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD)
 #   USL  → USL   (12-Month WTI Oil ETF, since 2007)
 #   USO  → USO   (front-month WTI Oil ETF, since 2006)
 #   GLD  → GLD   (SPDR Gold Shares ETF, since 2004)
+#   SGOV → SGOV  (iShares 0-3 Month T-Bond, since May 2020) — cash-equivalent
+#   BIL  → BIL   (SPDR 1-3 Month T-Bill, since 2007) — pre-2020 cash fallback
 #
 # First run with all 4 = ~6,500×2 + ~4,800×2 = ~22,500 rows / ~1.1 MB.
 
@@ -53,7 +55,7 @@ jobs:
           git add input_commodities_daily.csv logs/
           git diff --cached --quiet || (
             TIMESTAMP=$(date -u +"%Y-%m-%d")
-            git commit -m "🛢️🥇💴 Commodities+ETFs (WTI/GOLD/FXY/USL/USO/GLD) daily — ${TIMESTAMP}"
+            git commit -m "🛢️🥇💴💵 Commodities+ETFs (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL) daily — ${TIMESTAMP}"
             git pull --rebase origin main
             git push
           )
