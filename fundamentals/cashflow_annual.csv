@@ -3878,6 +3878,66 @@ BMY,2025-12-31,Operating Cash Flow,14156000000.0
 BMY,2025-12-31,Repayment Of Debt,-10940000000.0
 BMY,2025-12-31,Repurchase Of Capital Stock,0.0
 BMY,2025-12-31,Stock Based Compensation,553000000.0
+BNY,2021-12-31,Capital Expenditure,
+BNY,2021-12-31,Cash Dividends Paid,
+BNY,2021-12-31,Change In Working Capital,
+BNY,2021-12-31,Depreciation And Amortization,
+BNY,2021-12-31,Financing Cash Flow,
+BNY,2021-12-31,Free Cash Flow,
+BNY,2021-12-31,Investing Cash Flow,
+BNY,2021-12-31,Issuance Of Capital Stock,
+BNY,2021-12-31,Issuance Of Debt,
+BNY,2021-12-31,Operating Cash Flow,
+BNY,2021-12-31,Repayment Of Debt,
+BNY,2021-12-31,Repurchase Of Capital Stock,
+BNY,2022-12-31,Capital Expenditure,-1346000000.0
+BNY,2022-12-31,Cash Dividends Paid,-1376000000.0
+BNY,2022-12-31,Change In Working Capital,9396000000.0
+BNY,2022-12-31,Depreciation And Amortization,1778000000.0
+BNY,2022-12-31,Financing Cash Flow,-33654000000.0
+BNY,2022-12-31,Free Cash Flow,13722000000.0
+BNY,2022-12-31,Investing Cash Flow,19874000000.0
+BNY,2022-12-31,Issuance Of Capital Stock,14000000.0
+BNY,2022-12-31,Issuance Of Debt,9929000000.0
+BNY,2022-12-31,Operating Cash Flow,15068000000.0
+BNY,2022-12-31,Repayment Of Debt,-4000000000.0
+BNY,2022-12-31,Repurchase Of Capital Stock,-124000000.0
+BNY,2023-12-31,Capital Expenditure,-1220000000.0
+BNY,2023-12-31,Cash Dividends Paid,-1487000000.0
+BNY,2023-12-31,Change In Working Capital,925000000.0
+BNY,2023-12-31,Depreciation And Amortization,1887000000.0
+BNY,2023-12-31,Financing Cash Flow,-3519000000.0
+BNY,2023-12-31,Free Cash Flow,4692000000.0
+BNY,2023-12-31,Investing Cash Flow,-5810000000.0
+BNY,2023-12-31,Issuance Of Capital Stock,16000000.0
+BNY,2023-12-31,Issuance Of Debt,6487000000.0
+BNY,2023-12-31,Operating Cash Flow,5912000000.0
+BNY,2023-12-31,Repayment Of Debt,-6059000000.0
+BNY,2023-12-31,Repurchase Of Capital Stock,-3104000000.0
+BNY,2024-12-31,Capital Expenditure,-1469000000.0
+BNY,2024-12-31,Cash Dividends Paid,-1542000000.0
+BNY,2024-12-31,Change In Working Capital,-5451000000.0
+BNY,2024-12-31,Depreciation And Amortization,1803000000.0
+BNY,2024-12-31,Financing Cash Flow,6338000000.0
+BNY,2024-12-31,Free Cash Flow,-782000000.0
+BNY,2024-12-31,Investing Cash Flow,-9479000000.0
+BNY,2024-12-31,Issuance Of Capital Stock,17000000.0
+BNY,2024-12-31,Issuance Of Debt,5737000000.0
+BNY,2024-12-31,Operating Cash Flow,687000000.0
+BNY,2024-12-31,Repayment Of Debt,-5963000000.0
+BNY,2024-12-31,Repurchase Of Capital Stock,-3064000000.0
+BNY,2025-12-31,Capital Expenditure,-1553000000.0
+BNY,2025-12-31,Cash Dividends Paid,-1685000000.0
+BNY,2025-12-31,Change In Working Capital,-813000000.0
+BNY,2025-12-31,Depreciation And Amortization,1852000000.0
+BNY,2025-12-31,Financing Cash Flow,39714000000.0
+BNY,2025-12-31,Free Cash Flow,5177000000.0
+BNY,2025-12-31,Investing Cash Flow,-44283000000.0
+BNY,2025-12-31,Issuance Of Capital Stock,1502000000.0
+BNY,2025-12-31,Issuance Of Debt,5737000000.0
+BNY,2025-12-31,Operating Cash Flow,6730000000.0
+BNY,2025-12-31,Repayment Of Debt,-5509000000.0
+BNY,2025-12-31,Repurchase Of Capital Stock,-4535000000.0
 BR,2021-06-30,Capital Expenditure,
 BR,2021-06-30,Cash Dividends Paid,
 BR,2021-06-30,Change In Working Capital,
@@ -5655,7 +5715,7 @@ CMCSA,2025-12-31,Investing Cash Flow,-16157000000.0
 CMCSA,2025-12-31,Issuance Of Debt,3494000000.0
 CMCSA,2025-12-31,Operating Cash Flow,33643000000.0
 CMCSA,2025-12-31,Repayment Of Debt,-5740000000.0
-CMCSA,2025-12-31,Repurchase Of Capital Stock,
+CMCSA,2025-12-31,Repurchase Of Capital Stock,-7155000000.0
 CMCSA,2025-12-31,Stock Based Compensation,1288000000.0
 CME,2021-12-31,Capital Expenditure,
 CME,2021-12-31,Cash Dividends Paid,
@@ -7888,7 +7948,7 @@ DECK,2023-03-31,Repurchase Of Capital Stock,-314060000.0
 DECK,2023-03-31,Stock Based Compensation,26897000.0
 DECK,2024-03-31,Capital Expenditure,-89365000.0
 DECK,2024-03-31,Change In Working Capital,167806000.0
-DECK,2024-03-31,Depreciation And Amortization,57166000.0
+DECK,2024-03-31,Depreciation And Amortization,57587000.0
 DECK,2024-03-31,Financing Cash Flow,-417675000.0
 DECK,2024-03-31,Free Cash Flow,943819000.0
 DECK,2024-03-31,Investing Cash Flow,-89331000.0
@@ -7900,7 +7960,7 @@ DECK,2024-03-31,Repurchase Of Capital Stock,-424905000.0
 DECK,2024-03-31,Stock Based Compensation,37288000.0
 DECK,2025-03-31,Capital Expenditure,-86171000.0
 DECK,2025-03-31,Change In Working Capital,-38204000.0
-DECK,2025-03-31,Depreciation And Amortization,68426000.0
+DECK,2025-03-31,Depreciation And Amortization,69353000.0
 DECK,2025-03-31,Financing Cash Flow,-581334000.0
 DECK,2025-03-31,Free Cash Flow,958352000.0
 DECK,2025-03-31,Investing Cash Flow,-75003000.0
@@ -7910,6 +7970,18 @@ DECK,2025-03-31,Operating Cash Flow,1044523000.0
 DECK,2025-03-31,Repayment Of Debt,
 DECK,2025-03-31,Repurchase Of Capital Stock,-582121000.0
 DECK,2025-03-31,Stock Based Compensation,37943000.0
+DECK,2026-03-31,Capital Expenditure,-84623000.0
+DECK,2026-03-31,Change In Working Capital,18593000.0
+DECK,2026-03-31,Depreciation And Amortization,75773000.0
+DECK,2026-03-31,Financing Cash Flow,-1084044000.0
+DECK,2026-03-31,Free Cash Flow,1097332000.0
+DECK,2026-03-31,Investing Cash Flow,-84612000.0
+DECK,2026-03-31,Issuance Of Capital Stock,4509000.0
+DECK,2026-03-31,Issuance Of Debt,
+DECK,2026-03-31,Operating Cash Flow,1181955000.0
+DECK,2026-03-31,Repayment Of Debt,
+DECK,2026-03-31,Repurchase Of Capital Stock,-1083510000.0
+DECK,2026-03-31,Stock Based Compensation,44835000.0
 DELL,2023-01-31,Capital Expenditure,-3003000000.0
 DELL,2023-01-31,Cash Dividends Paid,-964000000.0
 DELL,2023-01-31,Change In Working Capital,-3188000000.0
@@ -10988,6 +11060,33 @@ FDX,2025-05-31,Operating Cash Flow,7036000000.0
 FDX,2025-05-31,Repayment Of Debt,-157000000.0
 FDX,2025-05-31,Repurchase Of Capital Stock,-3017000000.0
 FDX,2025-05-31,Stock Based Compensation,154000000.0
+FDXF,2023-05-31,Capital Expenditure,-558000000.0
+FDXF,2023-05-31,Change In Working Capital,-531000000.0
+FDXF,2023-05-31,Depreciation And Amortization,387000000.0
+FDXF,2023-05-31,Financing Cash Flow,-1256000000.0
+FDXF,2023-05-31,Free Cash Flow,1194000000.0
+FDXF,2023-05-31,Investing Cash Flow,-502000000.0
+FDXF,2023-05-31,Operating Cash Flow,1752000000.0
+FDXF,2023-05-31,Repayment Of Debt,-1000000.0
+FDXF,2023-05-31,Stock Based Compensation,13000000.0
+FDXF,2024-05-31,Capital Expenditure,-461000000.0
+FDXF,2024-05-31,Change In Working Capital,-617000000.0
+FDXF,2024-05-31,Depreciation And Amortization,404000000.0
+FDXF,2024-05-31,Financing Cash Flow,-1126000000.0
+FDXF,2024-05-31,Free Cash Flow,1080000000.0
+FDXF,2024-05-31,Investing Cash Flow,-403000000.0
+FDXF,2024-05-31,Operating Cash Flow,1541000000.0
+FDXF,2024-05-31,Repayment Of Debt,-1000000.0
+FDXF,2024-05-31,Stock Based Compensation,12000000.0
+FDXF,2025-05-31,Capital Expenditure,-437000000.0
+FDXF,2025-05-31,Change In Working Capital,-488000000.0
+FDXF,2025-05-31,Depreciation And Amortization,416000000.0
+FDXF,2025-05-31,Financing Cash Flow,-1140000000.0
+FDXF,2025-05-31,Free Cash Flow,1094000000.0
+FDXF,2025-05-31,Investing Cash Flow,-385000000.0
+FDXF,2025-05-31,Operating Cash Flow,1531000000.0
+FDXF,2025-05-31,Repayment Of Debt,-63000000.0
+FDXF,2025-05-31,Stock Based Compensation,10000000.0
 FE,2021-12-31,Capital Expenditure,
 FE,2021-12-31,Cash Dividends Paid,
 FE,2021-12-31,Change In Working Capital,
@@ -11398,6 +11497,66 @@ FIX,2025-12-31,Operating Cash Flow,1186356000.0
 FIX,2025-12-31,Repayment Of Debt,-143059000.0
 FIX,2025-12-31,Repurchase Of Capital Stock,-215999000.0
 FIX,2025-12-31,Stock Based Compensation,21809000.0
+FLEX,2022-03-31,Capital Expenditure,
+FLEX,2022-03-31,Change In Working Capital,
+FLEX,2022-03-31,Depreciation And Amortization,
+FLEX,2022-03-31,Financing Cash Flow,
+FLEX,2022-03-31,Free Cash Flow,
+FLEX,2022-03-31,Investing Cash Flow,
+FLEX,2022-03-31,Issuance Of Capital Stock,0.0
+FLEX,2022-03-31,Issuance Of Debt,
+FLEX,2022-03-31,Operating Cash Flow,
+FLEX,2022-03-31,Repayment Of Debt,
+FLEX,2022-03-31,Repurchase Of Capital Stock,
+FLEX,2022-03-31,Stock Based Compensation,
+FLEX,2023-03-31,Capital Expenditure,-635000000.0
+FLEX,2023-03-31,Change In Working Capital,-615000000.0
+FLEX,2023-03-31,Depreciation And Amortization,501000000.0
+FLEX,2023-03-31,Financing Cash Flow,2000000.0
+FLEX,2023-03-31,Free Cash Flow,315000000.0
+FLEX,2023-03-31,Investing Cash Flow,-604000000.0
+FLEX,2023-03-31,Issuance Of Capital Stock,694000000.0
+FLEX,2023-03-31,Issuance Of Debt,718000000.0
+FLEX,2023-03-31,Operating Cash Flow,950000000.0
+FLEX,2023-03-31,Repayment Of Debt,-1024000000.0
+FLEX,2023-03-31,Repurchase Of Capital Stock,-337000000.0
+FLEX,2023-03-31,Stock Based Compensation,133000000.0
+FLEX,2024-03-31,Capital Expenditure,-530000000.0
+FLEX,2024-03-31,Change In Working Capital,-251000000.0
+FLEX,2024-03-31,Depreciation And Amortization,537000000.0
+FLEX,2024-03-31,Financing Cash Flow,-1656000000.0
+FLEX,2024-03-31,Free Cash Flow,796000000.0
+FLEX,2024-03-31,Investing Cash Flow,-492000000.0
+FLEX,2024-03-31,Issuance Of Capital Stock,
+FLEX,2024-03-31,Issuance Of Debt,2000000.0
+FLEX,2024-03-31,Operating Cash Flow,1326000000.0
+FLEX,2024-03-31,Repayment Of Debt,-409000000.0
+FLEX,2024-03-31,Repurchase Of Capital Stock,-1298000000.0
+FLEX,2024-03-31,Stock Based Compensation,152000000.0
+FLEX,2025-03-31,Capital Expenditure,-438000000.0
+FLEX,2025-03-31,Change In Working Capital,-165000000.0
+FLEX,2025-03-31,Depreciation And Amortization,539000000.0
+FLEX,2025-03-31,Financing Cash Flow,-821000000.0
+FLEX,2025-03-31,Free Cash Flow,1067000000.0
+FLEX,2025-03-31,Investing Cash Flow,-838000000.0
+FLEX,2025-03-31,Issuance Of Capital Stock,
+FLEX,2025-03-31,Issuance Of Debt,499000000.0
+FLEX,2025-03-31,Operating Cash Flow,1505000000.0
+FLEX,2025-03-31,Repayment Of Debt,-58000000.0
+FLEX,2025-03-31,Repurchase Of Capital Stock,-1257000000.0
+FLEX,2025-03-31,Stock Based Compensation,125000000.0
+FLEX,2026-03-31,Capital Expenditure,-633000000.0
+FLEX,2026-03-31,Change In Working Capital,-129000000.0
+FLEX,2026-03-31,Depreciation And Amortization,563000000.0
+FLEX,2026-03-31,Financing Cash Flow,-924000000.0
+FLEX,2026-03-31,Free Cash Flow,1052000000.0
+FLEX,2026-03-31,Investing Cash Flow,-672000000.0
+FLEX,2026-03-31,Issuance Of Capital Stock,
+FLEX,2026-03-31,Issuance Of Debt,1251000000.0
+FLEX,2026-03-31,Operating Cash Flow,1685000000.0
+FLEX,2026-03-31,Repayment Of Debt,-1217000000.0
+FLEX,2026-03-31,Repurchase Of Capital Stock,-944000000.0
+FLEX,2026-03-31,Stock Based Compensation,142000000.0
 FOX,2021-06-30,Capital Expenditure,
 FOX,2021-06-30,Cash Dividends Paid,
 FOX,2021-06-30,Change In Working Capital,
@@ -12031,6 +12190,18 @@ GEN,2025-03-31,Operating Cash Flow,1221000000.0
 GEN,2025-03-31,Repayment Of Debt,-1311000000.0
 GEN,2025-03-31,Repurchase Of Capital Stock,-272000000.0
 GEN,2025-03-31,Stock Based Compensation,133000000.0
+GEN,2026-03-31,Capital Expenditure,-22000000.0
+GEN,2026-03-31,Cash Dividends Paid,-312000000.0
+GEN,2026-03-31,Change In Working Capital,-647000000.0
+GEN,2026-03-31,Depreciation And Amortization,493000000.0
+GEN,2026-03-31,Financing Cash Flow,-1133000000.0
+GEN,2026-03-31,Free Cash Flow,1523000000.0
+GEN,2026-03-31,Investing Cash Flow,-1011000000.0
+GEN,2026-03-31,Issuance Of Debt,3475000000.0
+GEN,2026-03-31,Operating Cash Flow,1545000000.0
+GEN,2026-03-31,Repayment Of Debt,-3620000000.0
+GEN,2026-03-31,Repurchase Of Capital Stock,-634000000.0
+GEN,2026-03-31,Stock Based Compensation,237000000.0
 GEV,2022-12-31,Capital Expenditure,-513000000.0
 GEV,2022-12-31,Cash Dividends Paid,
 GEV,2022-12-31,Change In Working Capital,579000000.0
@@ -17713,6 +17884,19 @@ MCHP,2025-03-31,Operating Cash Flow,898100000.0
 MCHP,2025-03-31,Repayment Of Debt,-17605700000.0
 MCHP,2025-03-31,Repurchase Of Capital Stock,-96500000.0
 MCHP,2025-03-31,Stock Based Compensation,180400000.0
+MCHP,2026-03-31,Capital Expenditure,-91100000.0
+MCHP,2026-03-31,Cash Dividends Paid,-1092500000.0
+MCHP,2026-03-31,Change In Working Capital,-167700000.0
+MCHP,2026-03-31,Depreciation And Amortization,689300000.0
+MCHP,2026-03-31,Financing Cash Flow,-1298000000.0
+MCHP,2026-03-31,Free Cash Flow,871000000.0
+MCHP,2026-03-31,Investing Cash Flow,-195500000.0
+MCHP,2026-03-31,Issuance Of Capital Stock,61700000.0
+MCHP,2026-03-31,Issuance Of Debt,7316300000.0
+MCHP,2026-03-31,Operating Cash Flow,962100000.0
+MCHP,2026-03-31,Repayment Of Debt,-7444200000.0
+MCHP,2026-03-31,Repurchase Of Capital Stock,0.0
+MCHP,2026-03-31,Stock Based Compensation,255400000.0
 MCK,2022-03-31,Capital Expenditure,-535000000.0
 MCK,2022-03-31,Cash Dividends Paid,-277000000.0
 MCK,2022-03-31,Change In Working Capital,-124000000.0
@@ -17946,6 +18130,19 @@ MDT,2025-04-30,Operating Cash Flow,7044000000.0
 MDT,2025-04-30,Repayment Of Debt,-1070000000.0
 MDT,2025-04-30,Repurchase Of Capital Stock,-3235000000.0
 MDT,2025-04-30,Stock Based Compensation,429000000.0
+MDT,2026-04-30,Capital Expenditure,-1904000000.0
+MDT,2026-04-30,Cash Dividends Paid,-3639000000.0
+MDT,2026-04-30,Change In Working Capital,-1423000000.0
+MDT,2026-04-30,Depreciation And Amortization,2958000000.0
+MDT,2026-04-30,Financing Cash Flow,-4751000000.0
+MDT,2026-04-30,Free Cash Flow,5426000000.0
+MDT,2026-04-30,Investing Cash Flow,-2934000000.0
+MDT,2026-04-30,Issuance Of Capital Stock,1054000000.0
+MDT,2026-04-30,Issuance Of Debt,1756000000.0
+MDT,2026-04-30,Operating Cash Flow,7330000000.0
+MDT,2026-04-30,Repayment Of Debt,-2930000000.0
+MDT,2026-04-30,Repurchase Of Capital Stock,-1035000000.0
+MDT,2026-04-30,Stock Based Compensation,457000000.0
 MET,2021-12-31,Cash Dividends Paid,
 MET,2021-12-31,Change In Working Capital,
 MET,2021-12-31,Depreciation And Amortization,
@@ -18814,6 +19011,66 @@ MRSH,2025-12-31,Operating Cash Flow,5292000000.0
 MRSH,2025-12-31,Repayment Of Debt,-519000000.0
 MRSH,2025-12-31,Repurchase Of Capital Stock,-2012000000.0
 MRSH,2025-12-31,Stock Based Compensation,394000000.0
+MRVL,2022-01-31,Capital Expenditure,
+MRVL,2022-01-31,Cash Dividends Paid,
+MRVL,2022-01-31,Change In Working Capital,
+MRVL,2022-01-31,Depreciation And Amortization,
+MRVL,2022-01-31,Financing Cash Flow,
+MRVL,2022-01-31,Free Cash Flow,
+MRVL,2022-01-31,Investing Cash Flow,
+MRVL,2022-01-31,Issuance Of Debt,
+MRVL,2022-01-31,Operating Cash Flow,
+MRVL,2022-01-31,Repayment Of Debt,
+MRVL,2022-01-31,Repurchase Of Capital Stock,
+MRVL,2022-01-31,Stock Based Compensation,
+MRVL,2023-01-31,Capital Expenditure,-217300000.0
+MRVL,2023-01-31,Cash Dividends Paid,-204400000.0
+MRVL,2023-01-31,Change In Working Capital,-649800000.0
+MRVL,2023-01-31,Depreciation And Amortization,1392300000.0
+MRVL,2023-01-31,Financing Cash Flow,-662900000.0
+MRVL,2023-01-31,Free Cash Flow,1071500000.0
+MRVL,2023-01-31,Investing Cash Flow,-328400000.0
+MRVL,2023-01-31,Issuance Of Debt,200000000.0
+MRVL,2023-01-31,Operating Cash Flow,1288800000.0
+MRVL,2023-01-31,Repayment Of Debt,-265600000.0
+MRVL,2023-01-31,Repurchase Of Capital Stock,-115000000.0
+MRVL,2023-01-31,Stock Based Compensation,552400000.0
+MRVL,2024-01-31,Capital Expenditure,-350200000.0
+MRVL,2024-01-31,Cash Dividends Paid,-206800000.0
+MRVL,2024-01-31,Change In Working Capital,57800000.0
+MRVL,2024-01-31,Depreciation And Amortization,1397700000.0
+MRVL,2024-01-31,Financing Cash Flow,-980200000.0
+MRVL,2024-01-31,Free Cash Flow,1020300000.0
+MRVL,2024-01-31,Investing Cash Flow,-350500000.0
+MRVL,2024-01-31,Issuance Of Debt,1295300000.0
+MRVL,2024-01-31,Operating Cash Flow,1370500000.0
+MRVL,2024-01-31,Repayment Of Debt,-1622500000.0
+MRVL,2024-01-31,Repurchase Of Capital Stock,-150000000.0
+MRVL,2024-01-31,Stock Based Compensation,609800000.0
+MRVL,2025-01-31,Capital Expenditure,-291600000.0
+MRVL,2025-01-31,Cash Dividends Paid,-207500000.0
+MRVL,2025-01-31,Change In Working Capital,129100000.0
+MRVL,2025-01-31,Depreciation And Amortization,1356900000.0
+MRVL,2025-01-31,Financing Cash Flow,-1383000000.0
+MRVL,2025-01-31,Free Cash Flow,1389600000.0
+MRVL,2025-01-31,Investing Cash Flow,-300700000.0
+MRVL,2025-01-31,Issuance Of Debt,0.0
+MRVL,2025-01-31,Operating Cash Flow,1681200000.0
+MRVL,2025-01-31,Repayment Of Debt,-109400000.0
+MRVL,2025-01-31,Repurchase Of Capital Stock,-725000000.0
+MRVL,2025-01-31,Stock Based Compensation,597400000.0
+MRVL,2026-01-31,Capital Expenditure,-358600000.0
+MRVL,2026-01-31,Cash Dividends Paid,-205100000.0
+MRVL,2026-01-31,Change In Working Capital,-1108300000.0
+MRVL,2026-01-31,Depreciation And Amortization,1290600000.0
+MRVL,2026-01-31,Financing Cash Flow,-2157800000.0
+MRVL,2026-01-31,Free Cash Flow,1391900000.0
+MRVL,2026-01-31,Investing Cash Flow,2097800000.0
+MRVL,2026-01-31,Issuance Of Debt,1198600000.0
+MRVL,2026-01-31,Operating Cash Flow,1750500000.0
+MRVL,2026-01-31,Repayment Of Debt,-790600000.0
+MRVL,2026-01-31,Repurchase Of Capital Stock,-2040100000.0
+MRVL,2026-01-31,Stock Based Compensation,590800000.0
 MS,2021-12-31,Capital Expenditure,
 MS,2021-12-31,Cash Dividends Paid,
 MS,2021-12-31,Change In Working Capital,
@@ -20082,6 +20339,18 @@ NTAP,2025-04-30,Operating Cash Flow,1506000000.0
 NTAP,2025-04-30,Repayment Of Debt,-400000000.0
 NTAP,2025-04-30,Repurchase Of Capital Stock,-1150000000.0
 NTAP,2025-04-30,Stock Based Compensation,386000000.0
+NTAP,2026-04-30,Capital Expenditure,-198000000.0
+NTAP,2026-04-30,Cash Dividends Paid,-413000000.0
+NTAP,2026-04-30,Change In Working Capital,-23000000.0
+NTAP,2026-04-30,Depreciation And Amortization,200000000.0
+NTAP,2026-04-30,Financing Cash Flow,-2147000000.0
+NTAP,2026-04-30,Free Cash Flow,1869000000.0
+NTAP,2026-04-30,Investing Cash Flow,-595000000.0
+NTAP,2026-04-30,Issuance Of Debt,0.0
+NTAP,2026-04-30,Operating Cash Flow,2067000000.0
+NTAP,2026-04-30,Repayment Of Debt,-750000000.0
+NTAP,2026-04-30,Repurchase Of Capital Stock,-950000000.0
+NTAP,2026-04-30,Stock Based Compensation,382000000.0
 NTRS,2021-12-31,Capital Expenditure,
 NTRS,2021-12-31,Cash Dividends Paid,
 NTRS,2021-12-31,Change In Working Capital,
@@ -23255,7 +23524,7 @@ RL,2024-03-31,Depreciation And Amortization,229000000.0
 RL,2024-03-31,Financing Cash Flow,-665600000.0
 RL,2024-03-31,Free Cash Flow,904900000.0
 RL,2024-03-31,Investing Cash Flow,-256800000.0
-RL,2024-03-31,Issuance Of Debt,
+RL,2024-03-31,Issuance Of Debt,0.0
 RL,2024-03-31,Operating Cash Flow,1069700000.0
 RL,2024-03-31,Repayment Of Debt,-21300000.0
 RL,2024-03-31,Repurchase Of Capital Stock,-449700000.0
@@ -23267,11 +23536,23 @@ RL,2025-03-31,Depreciation And Amortization,219600000.0
 RL,2025-03-31,Financing Cash Flow,-704000000.0
 RL,2025-03-31,Free Cash Flow,1018900000.0
 RL,2025-03-31,Investing Cash Flow,-264100000.0
-RL,2025-03-31,Issuance Of Debt,
+RL,2025-03-31,Issuance Of Debt,0.0
 RL,2025-03-31,Operating Cash Flow,1235100000.0
 RL,2025-03-31,Repayment Of Debt,-22000000.0
 RL,2025-03-31,Repurchase Of Capital Stock,-480900000.0
 RL,2025-03-31,Stock Based Compensation,107900000.0
+RL,2026-03-31,Capital Expenditure,-449300000.0
+RL,2026-03-31,Cash Dividends Paid,-216500000.0
+RL,2026-03-31,Change In Working Capital,-158300000.0
+RL,2026-03-31,Depreciation And Amortization,233000000.0
+RL,2026-03-31,Financing Cash Flow,-769700000.0
+RL,2026-03-31,Free Cash Flow,704900000.0
+RL,2026-03-31,Investing Cash Flow,-356600000.0
+RL,2026-03-31,Issuance Of Debt,498200000.0
+RL,2026-03-31,Operating Cash Flow,1154200000.0
+RL,2026-03-31,Repayment Of Debt,-423200000.0
+RL,2026-03-31,Repurchase Of Capital Stock,-623800000.0
+RL,2026-03-31,Stock Based Compensation,111000000.0
 RMD,2021-06-30,Capital Expenditure,
 RMD,2021-06-30,Cash Dividends Paid,
 RMD,2021-06-30,Change In Working Capital,
@@ -24137,6 +24418,18 @@ SJM,2025-04-30,Operating Cash Flow,1210400000.0
 SJM,2025-04-30,Repayment Of Debt,-1300000000.0
 SJM,2025-04-30,Repurchase Of Capital Stock,-3300000.0
 SJM,2025-04-30,Stock Based Compensation,29900000.0
+SJM,2026-04-30,Capital Expenditure,-317400000.0
+SJM,2026-04-30,Cash Dividends Paid,-464700000.0
+SJM,2026-04-30,Change In Working Capital,89600000.0
+SJM,2026-04-30,Depreciation And Amortization,557000000.0
+SJM,2026-04-30,Financing Cash Flow,-1226500000.0
+SJM,2026-04-30,Free Cash Flow,1156200000.0
+SJM,2026-04-30,Investing Cash Flow,-258800000.0
+SJM,2026-04-30,Issuance Of Debt,0.0
+SJM,2026-04-30,Operating Cash Flow,1473600000.0
+SJM,2026-04-30,Repayment Of Debt,-500000000.0
+SJM,2026-04-30,Repurchase Of Capital Stock,-5600000.0
+SJM,2026-04-30,Stock Based Compensation,23600000.0
 SLB,2021-12-31,Capital Expenditure,
 SLB,2021-12-31,Cash Dividends Paid,
 SLB,2021-12-31,Change In Working Capital,
@@ -24734,28 +25027,39 @@ STE,2023-03-31,Operating Cash Flow,756947000.0
 STE,2023-03-31,Repayment Of Debt,-247875000.0
 STE,2023-03-31,Repurchase Of Capital Stock,-308565000.0
 STE,2023-03-31,Stock Based Compensation,38951000.0
-STE,2024-03-31,Capital Expenditure,-360326000.0
-STE,2024-03-31,Cash Dividends Paid,-200570000.0
-STE,2024-03-31,Change In Working Capital,-146078000.0
-STE,2024-03-31,Financing Cash Flow,-85186000.0
-STE,2024-03-31,Free Cash Flow,612948000.0
-STE,2024-03-31,Investing Cash Flow,-887361000.0
-STE,2024-03-31,Issuance Of Debt,181486000.0
-STE,2024-03-31,Operating Cash Flow,973274000.0
+STE,2024-03-31,Capital Expenditure,-360300000.0
+STE,2024-03-31,Cash Dividends Paid,-200600000.0
+STE,2024-03-31,Change In Working Capital,-146200000.0
+STE,2024-03-31,Financing Cash Flow,-85200000.0
+STE,2024-03-31,Free Cash Flow,613000000.0
+STE,2024-03-31,Investing Cash Flow,-887400000.0
+STE,2024-03-31,Issuance Of Debt,181500000.0
+STE,2024-03-31,Operating Cash Flow,973300000.0
 STE,2024-03-31,Repayment Of Debt,-60000000.0
-STE,2024-03-31,Repurchase Of Capital Stock,-11765000.0
-STE,2024-03-31,Stock Based Compensation,56535000.0
-STE,2025-03-31,Capital Expenditure,-370091000.0
-STE,2025-03-31,Cash Dividends Paid,-219875000.0
-STE,2025-03-31,Change In Working Capital,66513000.0
-STE,2025-03-31,Financing Cash Flow,-1572364000.0
-STE,2025-03-31,Free Cash Flow,777996000.0
-STE,2025-03-31,Investing Cash Flow,388773000.0
+STE,2024-03-31,Repurchase Of Capital Stock,-11800000.0
+STE,2024-03-31,Stock Based Compensation,56500000.0
+STE,2025-03-31,Capital Expenditure,-370100000.0
+STE,2025-03-31,Cash Dividends Paid,-219900000.0
+STE,2025-03-31,Change In Working Capital,66500000.0
+STE,2025-03-31,Financing Cash Flow,-1572400000.0
+STE,2025-03-31,Free Cash Flow,778000000.0
+STE,2025-03-31,Investing Cash Flow,388800000.0
 STE,2025-03-31,Issuance Of Debt,
-STE,2025-03-31,Operating Cash Flow,1148087000.0
-STE,2025-03-31,Repayment Of Debt,-1164429000.0
-STE,2025-03-31,Repurchase Of Capital Stock,-211321000.0
-STE,2025-03-31,Stock Based Compensation,57397000.0
+STE,2025-03-31,Operating Cash Flow,1148100000.0
+STE,2025-03-31,Repayment Of Debt,-1164400000.0
+STE,2025-03-31,Repurchase Of Capital Stock,-211300000.0
+STE,2025-03-31,Stock Based Compensation,57400000.0
+STE,2026-03-31,Capital Expenditure,-369000000.0
+STE,2026-03-31,Cash Dividends Paid,-241800000.0
+STE,2026-03-31,Change In Working Capital,27100000.0
+STE,2026-03-31,Financing Cash Flow,-568200000.0
+STE,2026-03-31,Free Cash Flow,972400000.0
+STE,2026-03-31,Investing Cash Flow,-512500000.0
+STE,2026-03-31,Issuance Of Debt,3000000.0
+STE,2026-03-31,Operating Cash Flow,1341400000.0
+STE,2026-03-31,Repayment Of Debt,-125000000.0
+STE,2026-03-31,Repurchase Of Capital Stock,-235500000.0
+STE,2026-03-31,Stock Based Compensation,61700000.0
 STLD,2021-12-31,Capital Expenditure,
 STLD,2021-12-31,Cash Dividends Paid,
 STLD,2021-12-31,Change In Working Capital,
@@ -26814,6 +27118,18 @@ TTWO,2025-03-31,Operating Cash Flow,-45200000.0
 TTWO,2025-03-31,Repayment Of Debt,-8300000.0
 TTWO,2025-03-31,Repurchase Of Capital Stock,
 TTWO,2025-03-31,Stock Based Compensation,314600000.0
+TTWO,2026-03-31,Capital Expenditure,-162800000.0
+TTWO,2026-03-31,Change In Working Capital,-1007200000.0
+TTWO,2026-03-31,Depreciation And Amortization,1278000000.0
+TTWO,2026-03-31,Financing Cash Flow,94600000.0
+TTWO,2026-03-31,Free Cash Flow,461500000.0
+TTWO,2026-03-31,Investing Cash Flow,-649200000.0
+TTWO,2026-03-31,Issuance Of Capital Stock,1247500000.0
+TTWO,2026-03-31,Issuance Of Debt,0.0
+TTWO,2026-03-31,Operating Cash Flow,624300000.0
+TTWO,2026-03-31,Repayment Of Debt,-1150000000.0
+TTWO,2026-03-31,Repurchase Of Capital Stock,
+TTWO,2026-03-31,Stock Based Compensation,333200000.0
 TXN,2021-12-31,Capital Expenditure,
 TXN,2021-12-31,Cash Dividends Paid,
 TXN,2021-12-31,Change In Working Capital,
