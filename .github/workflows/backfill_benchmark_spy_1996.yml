@@ -1,0 +1,47 @@
+name: "[One-Time] Backfill SPY benchmark 1996-2000"
+
+# One-time: extends SPY in input_benchmark_daily.csv back to 1996 so the
+# hist1996 lab's SPY date-filter keeps 1996-2000 trading days.
+# Robust push (pull --rebase + retry) so a concurrent commit can't kill it.
+# Run manually via "Run workflow" — no schedule.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backfill_spy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run SPY backfill (1996-01-01 -> 2000-12-31)
+        run: python scripts/backfill_benchmark_spy_1996.py
+
+      - name: Commit and push (rebase + retry)
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_benchmark_daily.csv logs/
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "SPY benchmark backfill 1996-2000 (one-time, for hist1996 lab date axis)"
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase origin main || true
+            if git push origin HEAD:main; then echo "pushed on attempt $i"; ok=1; break; fi
+            echo "push attempt $i rejected — backing off..."; sleep $(( (RANDOM % 12) + 5 ))
+          done
+          [ "$ok" -eq 1 ] || { echo "ERROR: push failed after retries"; exit 1; }
