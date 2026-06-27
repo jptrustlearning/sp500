@@ -1,0 +1,62 @@
+name: "[One-Time] SP500 1996 Backfill + Survivorship Repair (combined)"
+
+# Consolidated one-time job. Replaces the two separate workflows that raced on
+# push. Runs BOTH steps, then commits + pushes ONCE with pull --rebase + retry
+# (the earlier failure was a non-fast-forward: concurrent commits landed on main
+# during the ~4 min download and the push step had no rebase).
+#   1. backfill_sp500_1996.py  -> input_sp500_daily_since1996.csv  (1996-2000)
+#   2. repair_sp500_delisted.py -> input_sp500_delisted_hist.csv   (delisted 1996-2010)
+# Run manually via "Run workflow" — no schedule.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backfill_repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+          fetch-depth: 0        # full history so pull --rebase is reliable
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas requests beautifulsoup4
+
+      - name: Step 1 — backfill 1996-2000 (current constituents)
+        run: python scripts/backfill_sp500_1996.py
+
+      - name: Step 2 — repair delisted names 1996-2010
+        run: python scripts/repair_sp500_delisted.py
+
+      - name: Commit and push (rebase + retry, single push)
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_sp500_daily_since1996.csv input_sp500_delisted_hist.csv logs/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — both scripts produced no new data."
+            exit 0
+          fi
+          git commit -m "S&P500 1996-2000 backfill + delisted 1996-2010 repair (one-time, combined)"
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase origin main || true
+            if git push origin HEAD:main; then
+              echo "pushed on attempt $i"; ok=1; break
+            fi
+            echo "push attempt $i rejected (concurrent commit) — backing off..."
+            sleep $(( (RANDOM % 12) + 5 ))
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "ERROR: push failed after retries"; exit 1
+          fi
