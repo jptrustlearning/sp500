@@ -1,0 +1,43 @@
+name: "[One-Time] Repair SP500 delisted constituents (1996-2010)"
+
+# One-time survivorship repair: fetches 1996-2010 data for S&P 500 members
+# that were later removed/delisted (Bear Stearns, Compaq, Lucent, Merrill, ...).
+# Reads survivorship_targets.csv; writes input_sp500_delisted_hist.csv.
+# Yahoo purges most bankruptcies -> recovery is PARTIAL (logged in the run).
+# Run manually via "Run workflow" — no schedule.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run survivorship repair (1996-2010 delisted names)
+        run: python scripts/repair_sp500_delisted.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_sp500_delisted_hist.csv logs/
+          git diff --cached --quiet || (
+            git commit -m "S&P500 survivorship repair: delisted constituents 1996-2010 (partial — Yahoo purges bankruptcies)"
+            git push
+          )
