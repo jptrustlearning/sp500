@@ -69,5 +69,77 @@ def main() -> int:
     return 0
 
 
+
+
+# =============================================================================
+# Rotation mini — last ~300 trading days, Close+Volume only
+# Used by: sector-rotation.html (JP Trust Sector & Theme Rotation Tracker)
+# Includes SPY (from input_benchmark_daily.csv) and GOLD/WTI
+# (from input_commodities_daily.csv) as reference series.
+# =============================================================================
+
+ROTATION_OUTPUT = 'mini_sp500_rotation.csv'
+ROTATION_DAYS   = 300
+BENCHMARK_CSV   = 'input_benchmark_daily.csv'
+COMMODITIES_CSV = 'input_commodities_daily.csv'
+
+
+def build_rotation_mini() -> int:
+    if not os.path.exists(INPUT_CSV):
+        print(f'❌ [rotation] Input file not found: {INPUT_CSV}', file=sys.stderr)
+        return 1
+
+    df = pd.read_csv(
+        INPUT_CSV,
+        usecols=['Ticker', 'Date', 'Close', 'Volume'],
+        dtype={'Ticker': 'string', 'Date': 'string'},
+    )
+
+    frames = [df]
+
+    # SPY benchmark
+    if os.path.exists(BENCHMARK_CSV):
+        b = pd.read_csv(
+            BENCHMARK_CSV,
+            usecols=['Ticker', 'Date', 'Close', 'Volume'],
+            dtype={'Ticker': 'string', 'Date': 'string'},
+        )
+        frames.append(b[b['Ticker'] == 'SPY'])
+    else:
+        print(f'⚠️ [rotation] {BENCHMARK_CSV} not found — SPY missing')
+
+    # GOLD / WTI reference
+    if os.path.exists(COMMODITIES_CSV):
+        c = pd.read_csv(
+            COMMODITIES_CSV,
+            usecols=['Ticker', 'Date', 'Close', 'Volume'],
+            dtype={'Ticker': 'string', 'Date': 'string'},
+        )
+        frames.append(c[c['Ticker'].isin(['GOLD', 'WTI'])])
+    else:
+        print(f'⚠️ [rotation] {COMMODITIES_CSV} not found — GOLD/WTI missing')
+
+    allrows = pd.concat(frames, ignore_index=True)
+
+    unique_dates = sorted(allrows['Date'].dropna().unique(), reverse=True)
+    keep_dates = set(unique_dates[:ROTATION_DAYS])
+    mini = allrows[allrows['Date'].isin(keep_dates)].copy()
+
+    mini['Close'] = pd.to_numeric(mini['Close'], errors='coerce').round(4)
+    mini['Volume'] = pd.to_numeric(mini['Volume'], errors='coerce').fillna(0).astype('int64')
+    mini.dropna(subset=['Close'], inplace=True)
+    mini.sort_values(['Ticker', 'Date'], inplace=True, kind='stable')
+    mini.reset_index(drop=True, inplace=True)
+
+    mini.to_csv(ROTATION_OUTPUT, index=False, lineterminator='\n')
+
+    out_size_mb = os.path.getsize(ROTATION_OUTPUT) / (1024 * 1024)
+    print(f'📤 [rotation] Wrote {ROTATION_OUTPUT}: {len(mini):,} rows · '
+          f'{out_size_mb:.1f} MB · {min(keep_dates)} → {max(keep_dates)}')
+    return 0
+
+
 if __name__ == '__main__':
-    sys.exit(main())
+    rc = main()
+    rc2 = build_rotation_mini()
+    sys.exit(rc or rc2)
