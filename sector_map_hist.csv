@@ -1,0 +1,658 @@
+Ticker,GICS_Sector,Source
+A,Health Care,gics-constituents
+AAL,Industrials,manual-delisted-besteffort
+AAPL,Information Technology,gics-constituents
+ABBV,Health Care,gics-constituents
+ABNB,Consumer Discretionary,gics-constituents
+ABT,Health Care,gics-constituents
+ACGL,Financials,gics-constituents
+ACN,Information Technology,gics-constituents
+ADBE,Information Technology,gics-constituents
+ADI,Information Technology,gics-constituents
+ADM,Consumer Staples,gics-constituents
+ADP,Industrials,gics-constituents
+ADSK,Information Technology,gics-constituents
+AEE,Utilities,gics-constituents
+AEP,Utilities,gics-constituents
+AES,Utilities,gics-constituents
+AET,Health Care,manual-delisted-besteffort
+AFL,Financials,gics-constituents
+AIG,Financials,gics-constituents
+AIT,Industrials,manual-delisted-besteffort
+AIV,Real Estate,manual-delisted-besteffort
+AIZ,Financials,gics-constituents
+AJG,Financials,gics-constituents
+AKAM,Information Technology,gics-constituents
+ALB,Materials,gics-constituents
+ALGN,Health Care,gics-constituents
+ALL,Financials,gics-constituents
+ALLE,Industrials,gics-constituents
+AMAT,Information Technology,gics-constituents
+AMCR,Materials,gics-constituents
+AMD,Information Technology,gics-constituents
+AME,Industrials,gics-constituents
+AMGN,Health Care,gics-constituents
+AMP,Financials,gics-constituents
+AMT,Real Estate,gics-constituents
+AMZN,Consumer Discretionary,gics-constituents
+AN,Consumer Discretionary,manual-delisted-besteffort
+ANDV,Energy,manual-delisted-besteffort
+ANET,Information Technology,gics-constituents
+ANF,Consumer Discretionary,manual-delisted-besteffort
+AON,Financials,gics-constituents
+AOS,Industrials,gics-constituents
+APA,Energy,gics-constituents
+APD,Materials,gics-constituents
+APH,Information Technology,gics-constituents
+APO,Financials,gics-constituents
+APP,Information Technology,gics-constituents
+APTV,Consumer Discretionary,gics-constituents
+ARE,Real Estate,gics-constituents
+ARES,Financials,gics-constituents
+ASH,Materials,manual-delisted-besteffort
+ATI,Materials,manual-delisted-besteffort
+ATO,Utilities,gics-constituents
+AVB,Real Estate,gics-constituents
+AVGO,Information Technology,gics-constituents
+AVY,Materials,gics-constituents
+AWK,Utilities,gics-constituents
+AXON,Industrials,gics-constituents
+AXP,Financials,gics-constituents
+AZO,Consumer Discretionary,gics-constituents
+BA,Industrials,gics-constituents
+BAC,Financials,gics-constituents
+BALL,Materials,gics-constituents
+BAX,Health Care,gics-constituents
+BBBY,Consumer Discretionary,manual-delisted-besteffort
+BBT,Financials,manual-delisted-besteffort
+BBY,Consumer Discretionary,gics-constituents
+BC,Consumer Discretionary,manual-delisted-besteffort
+BCO,Industrials,manual-delisted-besteffort
+BDX,Health Care,gics-constituents
+BEN,Financials,gics-constituents
+BG,Consumer Staples,gics-constituents
+BIIB,Health Care,gics-constituents
+BK,Financials,manual-delisted-besteffort
+BKNG,Consumer Discretionary,gics-constituents
+BKR,Energy,gics-constituents
+BLDR,Industrials,gics-constituents
+BLK,Financials,gics-constituents
+BMS,Materials,manual-delisted-besteffort
+BMY,Health Care,gics-constituents
+BNY,Financials,gics-constituents
+BR,Industrials,gics-constituents
+BRO,Financials,gics-constituents
+BSX,Health Care,gics-constituents
+BUD,Consumer Staples,manual-delisted-besteffort
+BX,Financials,gics-constituents
+BXP,Real Estate,gics-constituents
+C,Financials,gics-constituents
+CAG,Consumer Staples,wikipedia-gics-jul2026
+CAH,Health Care,gics-constituents
+CAL,Industrials,manual-delisted-besteffort
+CAR,Industrials,manual-delisted-besteffort
+CARR,Industrials,gics-constituents
+CASY,Consumer Staples,gics-constituents
+CAT,Industrials,gics-constituents
+CB,Financials,gics-constituents
+CBOE,Financials,gics-constituents
+CBRE,Real Estate,gics-constituents
+CCI,Real Estate,gics-constituents
+CCK,Materials,manual-delisted-besteffort
+CCL,Consumer Discretionary,gics-constituents
+CCU,Communication Services,manual-delisted-besteffort
+CDNS,Information Technology,gics-constituents
+CDW,Information Technology,gics-constituents
+CE,Materials,manual-delisted-besteffort
+CEG,Utilities,gics-constituents
+CF,Materials,gics-constituents
+CFG,Financials,gics-constituents
+CHD,Consumer Staples,gics-constituents
+CHRW,Industrials,gics-constituents
+CHTR,Communication Services,gics-constituents
+CI,Health Care,gics-constituents
+CIEN,Information Technology,gics-constituents
+CINF,Financials,gics-constituents
+CL,Consumer Staples,gics-constituents
+CLF,Materials,manual-delisted-besteffort
+CLX,Consumer Staples,gics-constituents
+CMCSA,Communication Services,gics-constituents
+CME,Financials,gics-constituents
+CMG,Consumer Discretionary,gics-constituents
+CMI,Industrials,gics-constituents
+CMS,Utilities,gics-constituents
+CMVT,Information Technology,manual-delisted-besteffort
+CNC,Health Care,gics-constituents
+CNP,Utilities,gics-constituents
+CNX,Energy,manual-delisted-besteffort
+COF,Financials,gics-constituents
+COHR,Information Technology,gics-constituents
+COIN,Financials,gics-constituents
+COO,Health Care,gics-constituents
+COP,Energy,gics-constituents
+COR,Health Care,gics-constituents
+COST,Consumer Staples,gics-constituents
+CPAY,Financials,gics-constituents
+CPB,Consumer Staples,manual-delisted-besteffort
+CPQ,Information Technology,manual-delisted-besteffort
+CPRT,Industrials,gics-constituents
+CPT,Real Estate,gics-constituents
+CPWR,Information Technology,manual-delisted-besteffort
+CRH,Materials,gics-constituents
+CRL,Health Care,gics-constituents
+CRM,Information Technology,gics-constituents
+CRWD,Information Technology,gics-constituents
+CSCO,Information Technology,gics-constituents
+CSE,Financials,manual-delisted-besteffort
+CSGP,Real Estate,gics-constituents
+CSR,Utilities,manual-delisted-besteffort
+CSX,Industrials,gics-constituents
+CTAS,Industrials,gics-constituents
+CTRA,Energy,manual-gics
+CTSH,Information Technology,gics-constituents
+CTVA,Materials,gics-constituents
+CVG,Industrials,manual-delisted-besteffort
+CVNA,Consumer Discretionary,gics-constituents
+CVS,Health Care,gics-constituents
+CVX,Energy,gics-constituents
+D,Utilities,gics-constituents
+DAL,Industrials,gics-constituents
+DASH,Consumer Discretionary,gics-constituents
+DD,Materials,gics-constituents
+DDOG,Information Technology,gics-constituents
+DDR,Real Estate,manual-delisted-besteffort
+DDS,Consumer Discretionary,manual-delisted-besteffort
+DE,Industrials,gics-constituents
+DECK,Consumer Discretionary,gics-constituents
+DELL,Information Technology,gics-constituents
+DG,Consumer Staples,gics-constituents
+DGX,Health Care,gics-constituents
+DHI,Consumer Discretionary,gics-constituents
+DHR,Health Care,gics-constituents
+DIGI,Information Technology,manual-delisted-besteffort
+DIS,Communication Services,gics-constituents
+DLR,Real Estate,gics-constituents
+DLTR,Consumer Staples,gics-constituents
+DLX,Industrials,manual-delisted-besteffort
+DOC,Real Estate,gics-constituents
+DOV,Industrials,gics-constituents
+DOW,Materials,gics-constituents
+DPZ,Consumer Discretionary,gics-constituents
+DRI,Consumer Discretionary,gics-constituents
+DTE,Utilities,gics-constituents
+DUK,Utilities,gics-constituents
+DVA,Health Care,gics-constituents
+DVN,Energy,gics-constituents
+DXC,Information Technology,manual-delisted-besteffort
+DXCM,Health Care,gics-constituents
+EA,Communication Services,gics-constituents
+EBAY,Consumer Discretionary,gics-constituents
+EC,Materials,manual-delisted-besteffort
+ECH,Consumer Discretionary,manual-delisted-besteffort
+ECHO,Communication Services,gics-constituents
+ECL,Materials,gics-constituents
+ED,Utilities,gics-constituents
+EFU,Energy,manual-delisted-besteffort
+EFX,Industrials,gics-constituents
+EG,Financials,gics-constituents
+EHC,Health Care,manual-delisted-besteffort
+EIX,Utilities,gics-constituents
+EL,Consumer Staples,gics-constituents
+ELV,Health Care,gics-constituents
+EME,Industrials,gics-constituents
+EMN,Materials,manual-delisted-besteffort
+EMR,Industrials,gics-constituents
+ENS,Industrials,manual-delisted-besteffort
+EOG,Energy,gics-constituents
+EP,Energy,manual-delisted-besteffort
+EPAM,Information Technology,manual-gics
+EQIX,Real Estate,gics-constituents
+EQR,Real Estate,gics-constituents
+EQT,Energy,gics-constituents
+ERIE,Financials,gics-constituents
+ES,Utilities,gics-constituents
+ESRX,Health Care,manual-delisted-besteffort
+ESS,Real Estate,gics-constituents
+ETN,Industrials,gics-constituents
+ETR,Utilities,gics-constituents
+EVRG,Utilities,gics-constituents
+EW,Health Care,gics-constituents
+EXC,Utilities,gics-constituents
+EXE,Energy,gics-constituents
+EXPD,Industrials,gics-constituents
+EXPE,Consumer Discretionary,gics-constituents
+EXR,Real Estate,gics-constituents
+F,Consumer Discretionary,gics-constituents
+FANG,Energy,gics-constituents
+FAST,Industrials,gics-constituents
+FCN,Industrials,manual-delisted-besteffort
+FCX,Materials,gics-constituents
+FDS,Financials,gics-constituents
+FDX,Industrials,gics-constituents
+FDXF,Industrials,gics-constituents
+FE,Utilities,gics-constituents
+FFIV,Information Technology,gics-constituents
+FHN,Financials,manual-delisted-besteffort
+FICO,Information Technology,gics-constituents
+FIS,Financials,gics-constituents
+FISV,Financials,gics-constituents
+FITB,Financials,gics-constituents
+FIX,Industrials,gics-constituents
+FLEX,Information Technology,gics-constituents
+FLR,Industrials,manual-delisted-besteffort
+FLS,Industrials,manual-delisted-besteffort
+FMC,Materials,manual-delisted-besteffort
+FMCC,Financials,manual-delisted-besteffort
+FMY,Materials,manual-delisted-besteffort
+FNMA,Financials,manual-delisted-besteffort
+FOX,Communication Services,gics-constituents
+FOXA,Communication Services,gics-constituents
+FRO,Energy,manual-delisted-besteffort
+FRT,Real Estate,gics-constituents
+FSH,Health Care,manual-delisted-besteffort
+FSLR,Information Technology,gics-constituents
+FTI,Energy,manual-delisted-besteffort
+FTNT,Information Technology,gics-constituents
+FTV,Industrials,gics-constituents
+G,Industrials,manual-delisted-besteffort
+GD,Industrials,gics-constituents
+GDDY,Information Technology,gics-constituents
+GDW,Financials,manual-delisted-besteffort
+GE,Industrials,gics-constituents
+GEHC,Health Care,gics-constituents
+GEN,Information Technology,gics-constituents
+GENZ,Health Care,manual-delisted-besteffort
+GEV,Industrials,gics-constituents
+GHC,Consumer Discretionary,manual-delisted-besteffort
+GILD,Health Care,gics-constituents
+GIS,Consumer Staples,gics-constituents
+GL,Financials,gics-constituents
+GLD,Materials,manual-delisted-besteffort
+GLK,Materials,manual-delisted-besteffort
+GLW,Information Technology,gics-constituents
+GM,Consumer Discretionary,gics-constituents
+GME,Consumer Discretionary,manual-delisted-besteffort
+GNRC,Industrials,gics-constituents
+GNW,Financials,manual-delisted-besteffort
+GOOG,Communication Services,gics-constituents
+GOOGL,Communication Services,gics-constituents
+GPC,Consumer Discretionary,gics-constituents
+GPN,Financials,gics-constituents
+GR,Industrials,manual-delisted-besteffort
+GRMN,Consumer Discretionary,gics-constituents
+GS,Financials,gics-constituents
+GT,Consumer Discretionary,manual-delisted-besteffort
+GTE,Communication Services,manual-delisted-besteffort
+GWW,Industrials,gics-constituents
+H,Consumer Discretionary,manual-delisted-besteffort
+HAL,Energy,gics-constituents
+HAS,Consumer Discretionary,gics-constituents
+HBAN,Financials,gics-constituents
+HCA,Health Care,gics-constituents
+HD,Consumer Discretionary,gics-constituents
+HIG,Financials,gics-constituents
+HII,Industrials,gics-constituents
+HLT,Consumer Discretionary,gics-constituents
+HOG,Consumer Discretionary,manual-delisted-besteffort
+HOLX,Health Care,manual-gics
+HON,Industrials,gics-constituents
+HONA,Industrials,gics-constituents
+HOOD,Financials,gics-constituents
+HP,Energy,manual-delisted-besteffort
+HPE,Information Technology,gics-constituents
+HPQ,Information Technology,gics-constituents
+HRB,Consumer Discretionary,manual-delisted-besteffort
+HRL,Consumer Staples,gics-constituents
+HSIC,Health Care,gics-constituents
+HST,Real Estate,gics-constituents
+HSY,Consumer Staples,gics-constituents
+HUBB,Industrials,gics-constituents
+HUM,Health Care,gics-constituents
+HWM,Industrials,gics-constituents
+IBKR,Financials,gics-constituents
+IBM,Information Technology,gics-constituents
+ICE,Financials,gics-constituents
+IDXX,Health Care,gics-constituents
+IEX,Industrials,gics-constituents
+IFF,Materials,gics-constituents
+INCY,Health Care,gics-constituents
+INGR,Consumer Staples,manual-delisted-besteffort
+INTC,Information Technology,gics-constituents
+INTU,Information Technology,gics-constituents
+INVH,Real Estate,gics-constituents
+IP,Materials,gics-constituents
+IQV,Health Care,gics-constituents
+IR,Industrials,gics-constituents
+IRM,Real Estate,gics-constituents
+ISRG,Health Care,gics-constituents
+IT,Information Technology,gics-constituents
+ITT,Industrials,manual-delisted-besteffort
+ITW,Industrials,gics-constituents
+IVZ,Financials,gics-constituents
+J,Industrials,gics-constituents
+JBHT,Industrials,gics-constituents
+JBL,Information Technology,gics-constituents
+JCI,Industrials,gics-constituents
+JEF,Financials,manual-delisted-besteffort
+JKHY,Financials,gics-constituents
+JNJ,Health Care,gics-constituents
+JPM,Financials,gics-constituents
+KBH,Consumer Discretionary,manual-delisted-besteffort
+KDP,Consumer Staples,gics-constituents
+KEY,Financials,gics-constituents
+KEYS,Information Technology,gics-constituents
+KG,Health Care,manual-delisted-besteffort
+KHC,Consumer Staples,gics-constituents
+KIM,Real Estate,gics-constituents
+KKR,Financials,gics-constituents
+KLAC,Information Technology,gics-constituents
+KMB,Consumer Staples,gics-constituents
+KMG,Energy,manual-delisted-besteffort
+KMI,Energy,gics-constituents
+KMX,Consumer Discretionary,manual-delisted-besteffort
+KO,Consumer Staples,gics-constituents
+KR,Consumer Staples,gics-constituents
+KSS,Consumer Discretionary,manual-delisted-besteffort
+KVUE,Consumer Staples,gics-constituents
+L,Financials,gics-constituents
+LDOS,Industrials,gics-constituents
+LEG,Consumer Discretionary,manual-delisted-besteffort
+LEN,Consumer Discretionary,gics-constituents
+LH,Health Care,gics-constituents
+LHX,Industrials,gics-constituents
+LII,Industrials,gics-constituents
+LIN,Materials,gics-constituents
+LITE,Information Technology,gics-constituents
+LLY,Health Care,gics-constituents
+LMT,Industrials,gics-constituents
+LNC,Financials,manual-delisted-besteffort
+LNT,Utilities,gics-constituents
+LOW,Consumer Discretionary,gics-constituents
+LPX,Materials,manual-delisted-besteffort
+LRCX,Information Technology,gics-constituents
+LULU,Consumer Discretionary,gics-constituents
+LUV,Industrials,gics-constituents
+LVS,Consumer Discretionary,gics-constituents
+LW,Consumer Staples,manual-gics
+LYB,Materials,gics-constituents
+LYV,Communication Services,gics-constituents
+M,Consumer Discretionary,manual-delisted-besteffort
+MA,Financials,gics-constituents
+MAA,Real Estate,gics-constituents
+MAR,Consumer Discretionary,gics-constituents
+MAS,Industrials,gics-constituents
+MAT,Consumer Discretionary,manual-delisted-besteffort
+MBI,Financials,manual-delisted-besteffort
+MCD,Consumer Discretionary,gics-constituents
+MCHP,Information Technology,gics-constituents
+MCK,Health Care,gics-constituents
+MCO,Financials,gics-constituents
+MD,Health Care,manual-delisted-besteffort
+MDLZ,Consumer Staples,gics-constituents
+MDT,Health Care,gics-constituents
+MET,Financials,gics-constituents
+META,Communication Services,gics-constituents
+MGM,Consumer Discretionary,gics-constituents
+MII,Industrials,manual-delisted-besteffort
+MKC,Consumer Staples,gics-constituents
+MLM,Materials,gics-constituents
+MMM,Industrials,gics-constituents
+MNST,Consumer Staples,gics-constituents
+MO,Consumer Staples,gics-constituents
+MOH,Health Care,manual-gics
+MOLX,Information Technology,manual-delisted-besteffort
+MOS,Materials,gics-constituents
+MPC,Energy,gics-constituents
+MPWR,Information Technology,gics-constituents
+MRK,Health Care,gics-constituents
+MRNA,Health Care,gics-constituents
+MRSH,Financials,gics-constituents
+MRVL,Information Technology,gics-constituents
+MS,Financials,gics-constituents
+MSCI,Financials,gics-constituents
+MSFT,Information Technology,gics-constituents
+MSI,Information Technology,gics-constituents
+MTB,Financials,gics-constituents
+MTCH,Communication Services,manual-gics
+MTD,Health Care,gics-constituents
+MTG,Financials,manual-delisted-besteffort
+MTW,Industrials,manual-delisted-besteffort
+MU,Information Technology,gics-constituents
+MUR,Energy,manual-delisted-besteffort
+NC,Energy,manual-delisted-besteffort
+NCLH,Consumer Discretionary,gics-constituents
+NDAQ,Financials,gics-constituents
+NDSN,Industrials,gics-constituents
+NEE,Utilities,gics-constituents
+NEM,Materials,gics-constituents
+NFLX,Communication Services,gics-constituents
+NFX,Energy,manual-delisted-besteffort
+NGH,Consumer Staples,manual-delisted-besteffort
+NI,Utilities,gics-constituents
+NKE,Consumer Discretionary,gics-constituents
+NLV,Utilities,manual-delisted-besteffort
+NMK,Utilities,manual-delisted-besteffort
+NOC,Industrials,gics-constituents
+NOV,Energy,manual-delisted-besteffort
+NOW,Information Technology,gics-constituents
+NRG,Utilities,gics-constituents
+NSC,Industrials,gics-constituents
+NTAP,Information Technology,gics-constituents
+NTRS,Financials,gics-constituents
+NUE,Materials,gics-constituents
+NVDA,Information Technology,gics-constituents
+NVR,Consumer Discretionary,gics-constituents
+NWL,Consumer Discretionary,manual-delisted-besteffort
+NWS,Communication Services,gics-constituents
+NWSA,Communication Services,gics-constituents
+NXPI,Information Technology,gics-constituents
+NYT,Communication Services,manual-delisted-besteffort
+O,Real Estate,gics-constituents
+ODFL,Industrials,gics-constituents
+OI,Materials,manual-delisted-besteffort
+OK,Financials,manual-delisted-besteffort
+OKE,Energy,gics-constituents
+OMC,Communication Services,gics-constituents
+ON,Information Technology,gics-constituents
+ORCL,Information Technology,gics-constituents
+ORLY,Consumer Discretionary,gics-constituents
+OTIS,Industrials,gics-constituents
+OXY,Energy,gics-constituents
+PAC,Industrials,manual-delisted-besteffort
+PANW,Information Technology,gics-constituents
+PAYC,Industrials,manual-gics
+PAYX,Industrials,gics-constituents
+PBG,Consumer Staples,manual-delisted-besteffort
+PBI,Industrials,manual-delisted-besteffort
+PCAR,Industrials,gics-constituents
+PCG,Utilities,gics-constituents
+PEG,Utilities,gics-constituents
+PEP,Consumer Staples,gics-constituents
+PFE,Health Care,gics-constituents
+PFG,Financials,gics-constituents
+PG,Consumer Staples,gics-constituents
+PGR,Financials,gics-constituents
+PH,Industrials,gics-constituents
+PHB,Materials,manual-delisted-besteffort
+PHM,Consumer Discretionary,gics-constituents
+PKG,Materials,gics-constituents
+PLD,Real Estate,gics-constituents
+PLTR,Information Technology,gics-constituents
+PM,Consumer Staples,gics-constituents
+PNC,Financials,gics-constituents
+PNR,Industrials,gics-constituents
+PNW,Utilities,gics-constituents
+PODD,Health Care,gics-constituents
+POOL,Consumer Discretionary,manual-gics
+PPG,Materials,gics-constituents
+PPL,Utilities,gics-constituents
+PRU,Financials,gics-constituents
+PSA,Real Estate,gics-constituents
+PSKY,Communication Services,gics-constituents
+PSX,Energy,gics-constituents
+PTC,Information Technology,gics-constituents
+PWJ,Financials,manual-delisted-besteffort
+PWR,Industrials,gics-constituents
+PYPL,Financials,gics-constituents
+PZE,Energy,manual-delisted-besteffort
+Q,Information Technology,gics-constituents
+QCOM,Information Technology,gics-constituents
+R,Industrials,manual-delisted-besteffort
+RCL,Consumer Discretionary,gics-constituents
+REG,Real Estate,gics-constituents
+REGN,Health Care,gics-constituents
+RF,Financials,gics-constituents
+RHI,Industrials,manual-delisted-besteffort
+RIG,Energy,manual-delisted-besteffort
+RJF,Financials,gics-constituents
+RL,Consumer Discretionary,gics-constituents
+RMD,Health Care,gics-constituents
+ROK,Industrials,gics-constituents
+ROL,Industrials,gics-constituents
+ROP,Information Technology,gics-constituents
+ROST,Consumer Discretionary,gics-constituents
+RRC,Energy,manual-delisted-besteffort
+RSG,Industrials,gics-constituents
+RTX,Industrials,gics-constituents
+RVTY,Health Care,gics-constituents
+SANM,Information Technology,manual-delisted-besteffort
+SATS,Communication Services,manual-gics
+SB,Industrials,manual-delisted-besteffort
+SBAC,Real Estate,gics-constituents
+SBUX,Consumer Discretionary,gics-constituents
+SCHW,Financials,gics-constituents
+SCI,Consumer Discretionary,manual-delisted-besteffort
+SHW,Materials,gics-constituents
+SII,Energy,manual-delisted-besteffort
+SJM,Consumer Staples,gics-constituents
+SLB,Energy,gics-constituents
+SLM,Financials,manual-delisted-besteffort
+SMCI,Information Technology,gics-constituents
+SNA,Industrials,gics-constituents
+SNDK,Information Technology,gics-constituents
+SNPS,Information Technology,gics-constituents
+SNT,Energy,manual-delisted-besteffort
+SO,Utilities,gics-constituents
+SOLV,Health Care,gics-constituents
+SPG,Real Estate,gics-constituents
+SPGI,Financials,gics-constituents
+SRE,Utilities,gics-constituents
+SRR,Consumer Discretionary,manual-delisted-besteffort
+SSP,Communication Services,manual-delisted-besteffort
+STE,Health Care,gics-constituents
+STLD,Materials,gics-constituents
+STT,Financials,gics-constituents
+STX,Information Technology,gics-constituents
+STZ,Consumer Staples,gics-constituents
+SUB,Financials,manual-delisted-besteffort
+SVU,Consumer Staples,manual-delisted-besteffort
+SW,Materials,gics-constituents
+SWK,Industrials,gics-constituents
+SWKS,Information Technology,gics-constituents
+SYF,Financials,gics-constituents
+SYK,Health Care,gics-constituents
+SYY,Consumer Staples,gics-constituents
+T,Communication Services,gics-constituents
+TAP,Consumer Staples,gics-constituents
+TDC,Information Technology,manual-delisted-besteffort
+TDG,Industrials,gics-constituents
+TDY,Information Technology,gics-constituents
+TECH,Health Care,gics-constituents
+TEL,Information Technology,gics-constituents
+TEN,Consumer Discretionary,manual-delisted-besteffort
+TER,Information Technology,gics-constituents
+TEX,Industrials,manual-delisted-besteffort
+TFC,Financials,gics-constituents
+TGT,Consumer Staples,gics-constituents
+THC,Health Care,manual-delisted-besteffort
+TIE,Materials,manual-delisted-besteffort
+TJX,Consumer Discretionary,gics-constituents
+TKO,Communication Services,gics-constituents
+TKR,Industrials,manual-delisted-besteffort
+TLAB,Information Technology,manual-delisted-besteffort
+TMO,Health Care,gics-constituents
+TMUS,Communication Services,gics-constituents
+TPL,Energy,gics-constituents
+TPR,Consumer Discretionary,gics-constituents
+TRGP,Energy,gics-constituents
+TRMB,Information Technology,gics-constituents
+TROW,Financials,gics-constituents
+TRV,Financials,gics-constituents
+TSCO,Consumer Discretionary,gics-constituents
+TSLA,Consumer Discretionary,gics-constituents
+TSN,Consumer Staples,gics-constituents
+TT,Industrials,gics-constituents
+TTD,Communication Services,gics-constituents
+TTWO,Communication Services,gics-constituents
+TWX,Communication Services,manual-delisted-besteffort
+TX,Energy,manual-delisted-besteffort
+TXN,Information Technology,gics-constituents
+TXT,Industrials,gics-constituents
+TYL,Information Technology,gics-constituents
+UAL,Industrials,gics-constituents
+UBER,Industrials,gics-constituents
+UCC,Materials,manual-delisted-besteffort
+UDR,Real Estate,gics-constituents
+UHS,Health Care,gics-constituents
+UIS,Information Technology,manual-delisted-besteffort
+ULTA,Consumer Discretionary,gics-constituents
+UNH,Health Care,gics-constituents
+UNM,Financials,manual-delisted-besteffort
+UNP,Industrials,gics-constituents
+UPS,Industrials,gics-constituents
+URBN,Consumer Discretionary,manual-delisted-besteffort
+URI,Industrials,gics-constituents
+USB,Financials,gics-constituents
+UST,Consumer Staples,manual-delisted-besteffort
+UVN,Communication Services,manual-delisted-besteffort
+V,Financials,gics-constituents
+VEEV,Health Care,gics-constituents
+VFC,Consumer Discretionary,manual-delisted-besteffort
+VIAV,Information Technology,manual-delisted-besteffort
+VICI,Real Estate,gics-constituents
+VLO,Energy,gics-constituents
+VLTO,Industrials,gics-constituents
+VMC,Materials,gics-constituents
+VNO,Real Estate,manual-delisted-besteffort
+VO,Consumer Staples,manual-delisted-besteffort
+VRSK,Industrials,gics-constituents
+VRSN,Information Technology,gics-constituents
+VRT,Industrials,gics-constituents
+VRTS,Financials,manual-delisted-besteffort
+VRTX,Health Care,gics-constituents
+VST,Utilities,gics-constituents
+VTR,Real Estate,gics-constituents
+VTRS,Health Care,gics-constituents
+VZ,Communication Services,gics-constituents
+WAB,Industrials,gics-constituents
+WAT,Health Care,gics-constituents
+WBD,Communication Services,gics-constituents
+WDAY,Information Technology,gics-constituents
+WDC,Information Technology,gics-constituents
+WEC,Utilities,gics-constituents
+WELL,Real Estate,gics-constituents
+WEN,Consumer Discretionary,manual-delisted-besteffort
+WFC,Financials,gics-constituents
+WHR,Consumer Discretionary,manual-delisted-besteffort
+WM,Industrials,gics-constituents
+WMB,Energy,gics-constituents
+WMT,Consumer Staples,gics-constituents
+WOR,Materials,manual-delisted-besteffort
+WRB,Financials,gics-constituents
+WSM,Consumer Discretionary,gics-constituents
+WST,Health Care,gics-constituents
+WTW,Financials,gics-constituents
+WU,Financials,manual-delisted-besteffort
+WY,Real Estate,gics-constituents
+WYNN,Consumer Discretionary,gics-constituents
+XEL,Utilities,gics-constituents
+XOM,Energy,gics-constituents
+XRAY,Health Care,manual-delisted-besteffort
+XRX,Information Technology,manual-delisted-besteffort
+XYL,Industrials,gics-constituents
+XYZ,Financials,gics-constituents
+YUM,Consumer Discretionary,gics-constituents
+ZBH,Health Care,gics-constituents
+ZBRA,Information Technology,gics-constituents
+ZION,Financials,manual-delisted-besteffort
+ZTS,Health Care,gics-constituents
