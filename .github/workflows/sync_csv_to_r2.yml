@@ -1,0 +1,55 @@
+name: Sync CSVs to Cloudflare R2
+
+# Uploads market-data CSVs to Cloudflare R2 so the frontend fetches them from
+# our own CDN (data.jptrustlearning.com) instead of raw.githubusercontent.com,
+# which rate-limits per-IP (429) and was blocking real users on the Lab pages.
+#
+# Requires repo secrets: R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
+# Bucket name assumed: jpt-market-data (change BUCKET below if you named it differently)
+#
+# NOTE: starts as manual-only (workflow_dispatch). Once the first manual run is
+# green, we add a `workflow_run` trigger so it auto-syncs after the daily update.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-r2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # avoid aws-cli v2 auto-checksum headers that R2 can reject
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      R2_ENDPOINT: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      BUCKET: jpt-market-data
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Upload CSVs to R2
+        run: |
+          set -e
+          FILES="input_sp500_daily.csv \
+                 input_sp500_daily_since2001.csv \
+                 input_sp500_daily_since1996.csv \
+                 input_sp500_delisted_hist.csv \
+                 input_benchmark_daily.csv \
+                 input_jpy_daily.csv \
+                 input_commodities_daily.csv"
+          for f in $FILES; do
+            if [ ! -f "$f" ]; then echo "::warning::missing $f — skipped"; continue; fi
+            echo "→ $f ($(du -h "$f" | cut -f1))"
+            aws s3 cp "$f" "s3://$BUCKET/$f" \
+              --endpoint-url "$R2_ENDPOINT" \
+              --content-type "text/csv" \
+              --cache-control "public, max-age=600" \
+              --only-show-errors
+          done
+          echo "✅ Synced all CSVs to R2 bucket: $BUCKET"
