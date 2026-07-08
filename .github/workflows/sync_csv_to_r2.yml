@@ -7,16 +7,27 @@ name: Sync CSVs to Cloudflare R2
 # Requires repo secrets: R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
 # Bucket name assumed: jpt-market-data (change BUCKET below if you named it differently)
 #
-# NOTE: starts as manual-only (workflow_dispatch). Once the first manual run is
-# green, we add a `workflow_run` trigger so it auto-syncs after the daily update.
+# Auto-syncs after each daily data workflow completes. Firing on all four means
+# whichever finishes LAST re-syncs everything fresh — order/delay-proof, since
+# GitHub scheduled crons are unreliable on timing (they run hours late). Also
+# runnable manually.
 
 on:
+  workflow_run:
+    workflows:
+      - "Daily S&P 500 Update"
+      - "Daily Benchmark Update"
+      - "Daily USDJPY Update"
+      - "Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL/SHY)"
+    types: [completed]
   workflow_dispatch:
 
 jobs:
   sync-r2:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # manual dispatch, or when the triggering data workflow succeeded
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
