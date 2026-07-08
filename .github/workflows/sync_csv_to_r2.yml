@@ -19,6 +19,7 @@ on:
       - "Daily Benchmark Update"
       - "Daily USDJPY Update"
       - "Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL/SHY)"
+      - "Mini S&P 500 — Last 14 Days"
     types: [completed]
   workflow_dispatch:
 
@@ -53,7 +54,11 @@ jobs:
                  input_sp500_delisted_hist.csv \
                  input_benchmark_daily.csv \
                  input_jpy_daily.csv \
-                 input_commodities_daily.csv"
+                 input_commodities_daily.csv \
+                 mini_sp500_last14days.csv \
+                 mini_sp500_rotation.csv \
+                 output_combined_score_sp500.csv \
+                 profiles/all_profiles.csv"
           for f in $FILES; do
             if [ ! -f "$f" ]; then echo "::warning::missing $f — skipped"; continue; fi
             echo "→ $f ($(du -h "$f" | cut -f1))"
