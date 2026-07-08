@@ -44,10 +44,14 @@ jobs:
         run: |
           git config user.email "jptrustlearning@users.noreply.github.com"
           git config user.name "JP Trust Learning"
-          git add mini_sp500_last14days.csv
+          # Stage BOTH generated files: the 14-day slice AND mini_sp500_rotation.csv
+          # (added 2 Jul). Using -A so any future output the script grows is
+          # captured and never left dirty — a dirty unstaged rotation file was
+          # making `git pull --rebase` abort with exit 128 (broken since 3 Jul).
+          git add -A
           git diff --cached --quiet || (
             TIMESTAMP=$(date -u +"%Y-%m-%d")
-            git commit -m "📊 Mini S&P500 (last 14 days) — ${TIMESTAMP}"
+            git commit -m "📊 Mini S&P500 (14d + rotation) — ${TIMESTAMP}"
             git pull --rebase origin main
             git push
           )
