@@ -57,7 +57,8 @@ jobs:
                  input_commodities_daily.csv \
                  mini_sp500_last14days.csv \
                  mini_sp500_rotation.csv \
-                 master_map.csv \n                 output_combined_score_sp500.csv \
+                 master_map.csv \
+                 output_combined_score_sp500.csv \
                  profiles/all_profiles.csv"
           for f in $FILES; do
             if [ ! -f "$f" ]; then echo "::warning::missing $f — skipped"; continue; fi
