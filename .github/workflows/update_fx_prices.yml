@@ -1,0 +1,48 @@
+name: Daily FX Update
+
+# EURUSD / GBPUSD / AUDUSD / USDCAD + DXY (ICE) from Yahoo → input_fx_daily.csv
+# Same pattern as Daily USDJPY Update. Auto-detects: file missing → backfill
+# from 2003; else incremental with a 10-day trailing re-fetch (keep latest).
+# Note: Yahoo FX "Close" = price at 00:00 UTC (07:00 Bangkok) of the row date,
+# not the New York close — see scripts/update_fx_daily.py docstring.
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ 00:25 UTC = 07:25 เวลาไทย (หลัง USDJPY 5 นาที)
+    - cron: '25 0 * * 2-6'
+  workflow_dispatch:
+
+jobs:
+  update-fx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run FX price updater
+        run: python scripts/update_fx_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_fx_daily.csv
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "💱 FX daily update (EUR/GBP/AUD/CAD/DXY) — ${TIMESTAMP}"
+            git pull --rebase origin main
+            git push
+          )

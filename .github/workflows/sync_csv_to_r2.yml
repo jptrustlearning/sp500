@@ -18,6 +18,7 @@ on:
       - "Daily S&P 500 Update"
       - "Daily Benchmark Update"
       - "Daily USDJPY Update"
+      - "Daily FX Update"
       - "Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL/SHY)"
       - "Mini S&P 500 — Last 14 Days"
     types: [completed]
@@ -54,6 +55,7 @@ jobs:
                  input_sp500_delisted_hist.csv \
                  input_benchmark_daily.csv \
                  input_jpy_daily.csv \
+                 input_fx_daily.csv \
                  input_commodities_daily.csv \
                  mini_sp500_last14days.csv \
                  mini_sp500_rotation.csv \
