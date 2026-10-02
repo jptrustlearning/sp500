@@ -57,6 +57,14 @@ jobs:
           git diff --cached --quiet || (
             TIMESTAMP=$(date -u +"%Y-%m-%d")
             git commit -m "🛢️🥇💴💵 Commodities+ETFs (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL/SHY) daily — ${TIMESTAMP}"
-            git pull --rebase origin main
-            git push
+            # push แบบลองใหม่ได้ 5 รอบ — GitHub ดีเลย์ cron หลายชั่วโมงจนหลาย workflow รันชนกัน
+            # ถ้าอีกตัว push ก่อน รอบนี้จะ pull --rebase แล้ว push ใหม่ (เหตุ 2 ต.ค. 2026)
+            for i in 1 2 3 4 5; do
+              if git pull --rebase origin main && git push; then exit 0; fi
+              echo "push attempt $i failed (another workflow likely pushed first) - retrying"
+              git rebase --abort 2>/dev/null || true
+              sleep $(( i * 10 + RANDOM % 10 ))
+            done
+            echo "push failed after 5 attempts"
+            exit 1
           )
