@@ -1,0 +1,45 @@
+name: Daily VIX Update
+
+on:
+  schedule:
+    # ทุกวันอังคาร-เสาร์ เวลา 00:45 UTC = 07:45 เวลาไทย
+    # (หลัง Mag7 update 15 นาที เพื่อไม่ให้ชนกัน — stagger: SP500 00:00, Benchmark 00:15, Mag7 00:30, VIX 00:45)
+    - cron: '45 0 * * 2-6'
+  workflow_dispatch:
+    # กด Run workflow ด้วยมือได้จาก Actions tab
+
+jobs:
+  update-vix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run VIX price updater
+        run: python scripts/update_vix_daily.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          git add input_vix_daily.csv logs/
+          # Only commit if there are changes
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "📊 VIX daily update — ${TIMESTAMP}"
+            git pull --rebase origin main
+            git push
+          )

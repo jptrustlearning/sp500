@@ -1,0 +1,66 @@
+name: Repair S&P 500 Splits (manual)
+
+# กดเอง รายเดือน จาก Actions tab — ไม่มี schedule (ตามแผน: เข้ามาเช็คเอง)
+# วิธีใช้:
+#   1) Run workflow ครั้งแรกด้วย mode = dry-run  -> ดู log ว่าจะแก้ตัวไหน factor เท่าไร
+#   2) ถ้าโอเค Run อีกครั้งด้วย mode = apply       -> backup (artifact) + เขียน CSV + commit
+# (ถ้าวันไหนอยากให้รันเองอัตโนมัติรายเดือน ค่อยปลด comment cron ด้านล่าง)
+# on:
+#   schedule:
+#     - cron: '0 1 1 * *'   # 1 ค่ำ UTC ของวันที่ 1 ทุกเดือน
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run = ดูแผนเฉย ๆ | apply = แก้จริง (backup + commit)'
+        type: choice
+        options:
+          - dry-run
+          - apply
+        default: dry-run
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run split repair (${{ github.event.inputs.mode }})
+        run: python scripts/repair_sp500_splits.py --${{ github.event.inputs.mode }}
+
+      - name: Upload pre-repair backup (artifact, 90 วัน)
+        if: github.event.inputs.mode == 'apply'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sp500-par-ratio-backup
+          path: input_sp500_daily_before*_par_ratio.csv
+          if-no-files-found: ignore
+          retention-days: 90
+
+      - name: Commit corrected CSV
+        if: github.event.inputs.mode == 'apply'
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          # commit เฉพาะไฟล์หลัก — backup ไม่ commit (อยู่เป็น artifact แล้ว)
+          git add input_sp500_daily.csv
+          git diff --cached --quiet || (
+            STAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "🔧 SP500 split/par-ratio repair — ${STAMP}"
+            git pull --rebase origin main
+            git push
+          )
