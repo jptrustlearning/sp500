@@ -6,11 +6,23 @@ name: Mini S&P 500 — Last 14 Days
 # so it doesn't have to download the full 63 MB CSV.
 on:
   workflow_run:
-    workflows: ["Daily S&P 500 Update"]
+    # S&P 500 = หุ้น 14 วัน + หุ้นในไฟล์ rotation
+    # Benchmark + Commodities = SPY / GOLD / WTI ในไฟล์ rotation — สองตัวนี้รันหลัง S&P 500 เสมอ
+    # ถ้ารอแค่ S&P 500 ไฟล์ rotation จะได้ SPY/GOLD/WTI ช้าไป 1 วันทุกวัน (เหตุ 5 ต.ค. 2026)
+    workflows:
+      - "Daily S&P 500 Update"
+      - "Daily Benchmark Update"
+      - "Daily Commodities + Macro ETFs Update (WTI/GOLD/FXY/USL/USO/GLD/SGOV/BIL/SHY)"
     types:
       - completed
   workflow_dispatch:
     # Manual trigger from Actions tab
+
+# รันทีละรอบ — ถ้ารอบหลัง Benchmark กับหลัง Commodities ซ้อนกัน ตัวหลังจะรอ
+# แล้วค่อย checkout main ล่าสุด (กัน rebase ชนกันที่ไฟล์ rotation)
+concurrency:
+  group: mini-sp500
+  cancel-in-progress: false
 
 jobs:
   create-mini:
