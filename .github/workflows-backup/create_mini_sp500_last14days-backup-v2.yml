@@ -1,0 +1,65 @@
+name: Mini S&P 500 — Last 14 Days
+
+# Runs automatically after "Daily S&P 500 Update" finishes successfully,
+# producing a small (~300 KB) slice of input_sp500_daily.csv with only
+# the last 14 trading days. Used by the News page Market Movers sparkline
+# so it doesn't have to download the full 63 MB CSV.
+on:
+  workflow_run:
+    workflows: ["Daily S&P 500 Update"]
+    types:
+      - completed
+  workflow_dispatch:
+    # Manual trigger from Actions tab
+
+jobs:
+  create-mini:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Only run if the upstream workflow succeeded (skip on failed daily update,
+    # but always run on manual dispatch).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SP500_PAT }}
+          # workflow_run starts from the default ref — make sure we have
+          # the freshly committed input_sp500_daily.csv from the upstream job.
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Generate mini_sp500_last14days.csv
+        run: python scripts/create_mini_sp500_last14days.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "jptrustlearning@users.noreply.github.com"
+          git config user.name "JP Trust Learning"
+          # Stage BOTH generated files: the 14-day slice AND mini_sp500_rotation.csv
+          # (added 2 Jul). Using -A so any future output the script grows is
+          # captured and never left dirty — a dirty unstaged rotation file was
+          # making `git pull --rebase` abort with exit 128 (broken since 3 Jul).
+          git add -A
+          git diff --cached --quiet || (
+            TIMESTAMP=$(date -u +"%Y-%m-%d")
+            git commit -m "📊 Mini S&P500 (14d + rotation) — ${TIMESTAMP}"
+            # push แบบลองใหม่ได้ 5 รอบ — GitHub ดีเลย์ cron หลายชั่วโมงจนหลาย workflow รันชนกัน
+            # ถ้าอีกตัว push ก่อน รอบนี้จะ pull --rebase แล้ว push ใหม่ (เหตุ 2 ต.ค. 2026)
+            for i in 1 2 3 4 5; do
+              if git pull --rebase origin main && git push; then exit 0; fi
+              echo "push attempt $i failed (another workflow likely pushed first) - retrying"
+              git rebase --abort 2>/dev/null || true
+              sleep $(( i * 10 + RANDOM % 10 ))
+            done
+            echo "push failed after 5 attempts"
+            exit 1
+          )
