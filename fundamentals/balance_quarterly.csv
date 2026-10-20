@@ -1141,6 +1141,25 @@ ADBE,2026-05-31,Total Assets,29933000000.0
 ADBE,2026-05-31,Total Debt,7065000000.0
 ADBE,2026-05-31,Total Liabilities Net Minority Interest,18415000000.0
 ADBE,2026-05-31,Working Capital,-3010000000.0
+ADBE,2026-08-31,Accounts Payable,529000000.0
+ADBE,2026-08-31,Accounts Receivable,2081000000.0
+ADBE,2026-08-31,Cash And Cash Equivalents,4359000000.0
+ADBE,2026-08-31,Current Assets,9158000000.0
+ADBE,2026-08-31,Current Liabilities,11888000000.0
+ADBE,2026-08-31,Goodwill And Other Intangible Assets,14993000000.0
+ADBE,2026-08-31,Invested Capital,18127000000.0
+ADBE,2026-08-31,Long Term Debt,4766000000.0
+ADBE,2026-08-31,Net Debt,2004000000.0
+ADBE,2026-08-31,Net PPE,2156000000.0
+ADBE,2026-08-31,Net Tangible Assets,-3229000000.0
+ADBE,2026-08-31,Ordinary Shares Number,399000000.0
+ADBE,2026-08-31,Retained Earnings,50594000000.0
+ADBE,2026-08-31,Share Issued,399000000.0
+ADBE,2026-08-31,Stockholders Equity,11764000000.0
+ADBE,2026-08-31,Total Assets,29981000000.0
+ADBE,2026-08-31,Total Debt,6762000000.0
+ADBE,2026-08-31,Total Liabilities Net Minority Interest,18217000000.0
+ADBE,2026-08-31,Working Capital,-2730000000.0
 ADI,2024-07-31,Accounts Payable,
 ADI,2024-07-31,Accounts Receivable,
 ADI,2024-07-31,Cash And Cash Equivalents,
@@ -8304,6 +8323,126 @@ BDX,2026-06-30,Total Assets,50731000000.0
 BDX,2026-06-30,Total Debt,16808000000.0
 BDX,2026-06-30,Total Liabilities Net Minority Interest,26315000000.0
 BDX,2026-06-30,Working Capital,-1265000000.0
+BE,2025-03-31,Accounts Payable,
+BE,2025-03-31,Accounts Receivable,
+BE,2025-03-31,Cash And Cash Equivalents,
+BE,2025-03-31,Current Assets,
+BE,2025-03-31,Current Liabilities,
+BE,2025-03-31,Goodwill And Other Intangible Assets,
+BE,2025-03-31,Inventory,
+BE,2025-03-31,Invested Capital,
+BE,2025-03-31,Long Term Debt,
+BE,2025-03-31,Net Debt,336062000.0
+BE,2025-03-31,Net PPE,
+BE,2025-03-31,Net Tangible Assets,
+BE,2025-03-31,Ordinary Shares Number,
+BE,2025-03-31,Retained Earnings,
+BE,2025-03-31,Share Issued,
+BE,2025-03-31,Stockholders Equity,
+BE,2025-03-31,Total Assets,
+BE,2025-03-31,Total Debt,
+BE,2025-03-31,Total Liabilities Net Minority Interest,
+BE,2025-03-31,Working Capital,
+BE,2025-06-30,Accounts Payable,144781000.0
+BE,2025-06-30,Accounts Receivable,467038000.0
+BE,2025-06-30,Cash And Cash Equivalents,574764000.0
+BE,2025-06-30,Current Assets,1933286000.0
+BE,2025-06-30,Current Liabilities,387339000.0
+BE,2025-06-30,Goodwill And Other Intangible Assets,
+BE,2025-06-30,Inventory,689963000.0
+BE,2025-06-30,Invested Capital,1727478000.0
+BE,2025-06-30,Long Term Debt,1129190000.0
+BE,2025-06-30,Net Debt,558133000.0
+BE,2025-06-30,Net PPE,520160000.0
+BE,2025-06-30,Net Tangible Assets,594581000.0
+BE,2025-06-30,Ordinary Shares Number,233661168.0
+BE,2025-06-30,Retained Earnings,-3964982000.0
+BE,2025-06-30,Share Issued,233661168.0
+BE,2025-06-30,Stockholders Equity,594581000.0
+BE,2025-06-30,Total Assets,2530422000.0
+BE,2025-06-30,Total Debt,1521631000.0
+BE,2025-06-30,Total Liabilities Net Minority Interest,1910992000.0
+BE,2025-06-30,Working Capital,1545947000.0
+BE,2025-09-30,Accounts Payable,167382000.0
+BE,2025-09-30,Accounts Receivable,411653000.0
+BE,2025-09-30,Cash And Cash Equivalents,595055000.0
+BE,2025-09-30,Current Assets,2047896000.0
+BE,2025-09-30,Current Liabilities,465951000.0
+BE,2025-09-30,Goodwill And Other Intangible Assets,
+BE,2025-09-30,Inventory,704996000.0
+BE,2025-09-30,Invested Capital,1785386000.0
+BE,2025-09-30,Long Term Debt,1130892000.0
+BE,2025-09-30,Net Debt,537261000.0
+BE,2025-09-30,Net PPE,513037000.0
+BE,2025-09-30,Net Tangible Assets,653070000.0
+BE,2025-09-30,Ordinary Shares Number,236356829.0
+BE,2025-09-30,Retained Earnings,-3988075000.0
+BE,2025-09-30,Share Issued,236356829.0
+BE,2025-09-30,Stockholders Equity,653070000.0
+BE,2025-09-30,Total Assets,2638199000.0
+BE,2025-09-30,Total Debt,1513379000.0
+BE,2025-09-30,Total Liabilities Net Minority Interest,1960720000.0
+BE,2025-09-30,Working Capital,1581945000.0
+BE,2025-12-31,Accounts Payable,203129000.0
+BE,2025-12-31,Accounts Receivable,371796000.0
+BE,2025-12-31,Cash And Cash Equivalents,2454108000.0
+BE,2025-12-31,Current Assets,3730567000.0
+BE,2025-12-31,Current Liabilities,623832000.0
+BE,2025-12-31,Goodwill And Other Intangible Assets,
+BE,2025-12-31,Inventory,643306000.0
+BE,2025-12-31,Invested Capital,3386520000.0
+BE,2025-12-31,Long Term Debt,2613726000.0
+BE,2025-12-31,Net Debt,163771000.0
+BE,2025-12-31,Net PPE,507048000.0
+BE,2025-12-31,Net Tangible Assets,768641000.0
+BE,2025-12-31,Ordinary Shares Number,280045459.0
+BE,2025-12-31,Retained Earnings,-3986983000.0
+BE,2025-12-31,Share Issued,280045459.0
+BE,2025-12-31,Stockholders Equity,768641000.0
+BE,2025-12-31,Total Assets,4396711000.0
+BE,2025-12-31,Total Debt,2991952000.0
+BE,2025-12-31,Total Liabilities Net Minority Interest,3603748000.0
+BE,2025-12-31,Working Capital,3106735000.0
+BE,2026-03-31,Accounts Payable,241649000.0
+BE,2026-03-31,Accounts Receivable,359406000.0
+BE,2026-03-31,Cash And Cash Equivalents,2491433000.0
+BE,2026-03-31,Current Assets,3954536000.0
+BE,2026-03-31,Current Liabilities,786804000.0
+BE,2026-03-31,Goodwill And Other Intangible Assets,
+BE,2026-03-31,Inventory,732528000.0
+BE,2026-03-31,Invested Capital,3524104000.0
+BE,2026-03-31,Long Term Debt,2598676000.0
+BE,2026-03-31,Net Debt,111202000.0
+BE,2026-03-31,Net PPE,510483000.0
+BE,2026-03-31,Net Tangible Assets,921469000.0
+BE,2026-03-31,Ordinary Shares Number,284207963.0
+BE,2026-03-31,Retained Earnings,-3917255000.0
+BE,2026-03-31,Share Issued,284207963.0
+BE,2026-03-31,Stockholders Equity,921469000.0
+BE,2026-03-31,Total Assets,4664729000.0
+BE,2026-03-31,Total Debt,2949133000.0
+BE,2026-03-31,Total Liabilities Net Minority Interest,3716721000.0
+BE,2026-03-31,Working Capital,3167732000.0
+BE,2026-06-30,Accounts Payable,309929000.0
+BE,2026-06-30,Accounts Receivable,458126000.0
+BE,2026-06-30,Cash And Cash Equivalents,2666859000.0
+BE,2026-06-30,Current Assets,4590062000.0
+BE,2026-06-30,Current Liabilities,1123187000.0
+BE,2026-06-30,Goodwill And Other Intangible Assets,215533000.0
+BE,2026-06-30,Inventory,758188000.0
+BE,2026-06-30,Invested Capital,4089971000.0
+BE,2026-06-30,Long Term Debt,2470704000.0
+BE,2026-06-30,Net Debt,
+BE,2026-06-30,Net PPE,549863000.0
+BE,2026-06-30,Net Tangible Assets,1396465000.0
+BE,2026-06-30,Ordinary Shares Number,293354001.0
+BE,2026-06-30,Retained Earnings,-3720965000.0
+BE,2026-06-30,Share Issued,293354001.0
+BE,2026-06-30,Stockholders Equity,1611998000.0
+BE,2026-06-30,Total Assets,5628401000.0
+BE,2026-06-30,Total Debt,2811628000.0
+BE,2026-06-30,Total Liabilities Net Minority Interest,3987730000.0
+BE,2026-06-30,Working Capital,3466875000.0
 BEN,2024-09-30,Accounts Payable,
 BEN,2024-09-30,Accounts Receivable,
 BEN,2024-09-30,Cash And Cash Equivalents,
@@ -13703,9 +13842,9 @@ CL,2026-06-30,Long Term Debt,7823000000.0
 CL,2026-06-30,Net Debt,6487000000.0
 CL,2026-06-30,Net PPE,4639000000.0
 CL,2026-06-30,Net Tangible Assets,-4359000000.0
-CL,2026-06-30,Ordinary Shares Number,797172829.0
+CL,2026-06-30,Ordinary Shares Number,800189310.0
 CL,2026-06-30,Retained Earnings,27085000000.0
-CL,2026-06-30,Share Issued,797172829.0
+CL,2026-06-30,Share Issued,800189310.0
 CL,2026-06-30,Stockholders Equity,236000000.0
 CL,2026-06-30,Total Assets,16790000000.0
 CL,2026-06-30,Total Debt,7857000000.0
@@ -31021,9 +31160,9 @@ GLW,2026-06-30,Long Term Debt,7756000000.0
 GLW,2026-06-30,Net Debt,5920000000.0
 GLW,2026-06-30,Net PPE,15784000000.0
 GLW,2026-06-30,Net Tangible Assets,9474000000.0
-GLW,2026-06-30,Ordinary Shares Number,906000000.0
+GLW,2026-06-30,Ordinary Shares Number,859637825.0
 GLW,2026-06-30,Retained Earnings,16747000000.0
-GLW,2026-06-30,Share Issued,906000000.0
+GLW,2026-06-30,Share Issued,859637825.0
 GLW,2026-06-30,Stockholders Equity,12560000000.0
 GLW,2026-06-30,Total Assets,32956000000.0
 GLW,2026-06-30,Total Debt,9379000000.0
@@ -36187,6 +36326,120 @@ IFF,2026-06-30,Total Assets,25154000000.0
 IFF,2026-06-30,Total Debt,6243000000.0
 IFF,2026-06-30,Total Liabilities Net Minority Interest,11145000000.0
 IFF,2026-06-30,Working Capital,4678000000.0
+ILMN,2025-03-31,Accounts Payable,207000000.0
+ILMN,2025-03-31,Accounts Receivable,699000000.0
+ILMN,2025-03-31,Cash And Cash Equivalents,1113000000.0
+ILMN,2025-03-31,Current Assets,2673000000.0
+ILMN,2025-03-31,Current Liabilities,1440000000.0
+ILMN,2025-03-31,Goodwill And Other Intangible Assets,1391000000.0
+ILMN,2025-03-31,Inventory,537000000.0
+ILMN,2025-03-31,Invested Capital,4358000000.0
+ILMN,2025-03-31,Long Term Debt,1491000000.0
+ILMN,2025-03-31,Net Debt,877000000.0
+ILMN,2025-03-31,Net PPE,1192000000.0
+ILMN,2025-03-31,Ordinary Shares Number,
+ILMN,2025-03-31,Retained Earnings,-1111000000.0
+ILMN,2025-03-31,Share Issued,
+ILMN,2025-03-31,Stockholders Equity,2368000000.0
+ILMN,2025-03-31,Total Assets,6182000000.0
+ILMN,2025-03-31,Total Debt,2607000000.0
+ILMN,2025-03-31,Total Liabilities Net Minority Interest,3814000000.0
+ILMN,2025-03-31,Working Capital,1233000000.0
+ILMN,2025-06-30,Accounts Payable,200000000.0
+ILMN,2025-06-30,Accounts Receivable,701000000.0
+ILMN,2025-06-30,Cash And Cash Equivalents,934000000.0
+ILMN,2025-06-30,Current Assets,2641000000.0
+ILMN,2025-06-30,Current Liabilities,1461000000.0
+ILMN,2025-06-30,Goodwill And Other Intangible Assets,1351000000.0
+ILMN,2025-06-30,Inventory,575000000.0
+ILMN,2025-06-30,Invested Capital,4249000000.0
+ILMN,2025-06-30,Long Term Debt,1492000000.0
+ILMN,2025-06-30,Net Debt,1057000000.0
+ILMN,2025-06-30,Net PPE,1161000000.0
+ILMN,2025-06-30,Ordinary Shares Number,159000000.0
+ILMN,2025-06-30,Retained Earnings,-876000000.0
+ILMN,2025-06-30,Share Issued,159000000.0
+ILMN,2025-06-30,Stockholders Equity,2258000000.0
+ILMN,2025-06-30,Total Assets,6087000000.0
+ILMN,2025-06-30,Total Debt,2598000000.0
+ILMN,2025-06-30,Total Liabilities Net Minority Interest,3829000000.0
+ILMN,2025-06-30,Working Capital,1180000000.0
+ILMN,2025-09-30,Accounts Payable,218000000.0
+ILMN,2025-09-30,Accounts Receivable,729000000.0
+ILMN,2025-09-30,Cash And Cash Equivalents,1050000000.0
+ILMN,2025-09-30,Current Assets,2796000000.0
+ILMN,2025-09-30,Current Liabilities,1962000000.0
+ILMN,2025-09-30,Goodwill And Other Intangible Assets,1338000000.0
+ILMN,2025-09-30,Inventory,590000000.0
+ILMN,2025-09-30,Invested Capital,4373000000.0
+ILMN,2025-09-30,Long Term Debt,994000000.0
+ILMN,2025-09-30,Net Debt,942000000.0
+ILMN,2025-09-30,Net PPE,1130000000.0
+ILMN,2025-09-30,Ordinary Shares Number,153000000.0
+ILMN,2025-09-30,Retained Earnings,-726000000.0
+ILMN,2025-09-30,Share Issued,201000000.0
+ILMN,2025-09-30,Stockholders Equity,2381000000.0
+ILMN,2025-09-30,Total Assets,6177000000.0
+ILMN,2025-09-30,Total Debt,2576000000.0
+ILMN,2025-09-30,Total Liabilities Net Minority Interest,3796000000.0
+ILMN,2025-09-30,Working Capital,834000000.0
+ILMN,2025-12-31,Accounts Payable,240000000.0
+ILMN,2025-12-31,Accounts Receivable,854000000.0
+ILMN,2025-12-31,Cash And Cash Equivalents,1418000000.0
+ILMN,2025-12-31,Current Assets,3289000000.0
+ILMN,2025-12-31,Current Liabilities,1585000000.0
+ILMN,2025-12-31,Goodwill And Other Intangible Assets,1323000000.0
+ILMN,2025-12-31,Inventory,564000000.0
+ILMN,2025-12-31,Invested Capital,4712000000.0
+ILMN,2025-12-31,Long Term Debt,1490000000.0
+ILMN,2025-12-31,Net Debt,571000000.0
+ILMN,2025-12-31,Net PPE,1129000000.0
+ILMN,2025-12-31,Ordinary Shares Number,153000000.0
+ILMN,2025-12-31,Retained Earnings,-392000000.0
+ILMN,2025-12-31,Share Issued,201000000.0
+ILMN,2025-12-31,Stockholders Equity,2723000000.0
+ILMN,2025-12-31,Total Assets,6644000000.0
+ILMN,2025-12-31,Total Debt,2553000000.0
+ILMN,2025-12-31,Total Liabilities Net Minority Interest,3921000000.0
+ILMN,2025-12-31,Working Capital,1704000000.0
+ILMN,2026-03-31,Accounts Payable,218000000.0
+ILMN,2026-03-31,Accounts Receivable,738000000.0
+ILMN,2026-03-31,Cash And Cash Equivalents,1089000000.0
+ILMN,2026-03-31,Current Assets,2738000000.0
+ILMN,2026-03-31,Current Liabilities,1566000000.0
+ILMN,2026-03-31,Goodwill And Other Intangible Assets,1714000000.0
+ILMN,2026-03-31,Inventory,611000000.0
+ILMN,2026-03-31,Invested Capital,4665000000.0
+ILMN,2026-03-31,Long Term Debt,1490000000.0
+ILMN,2026-03-31,Net Debt,900000000.0
+ILMN,2026-03-31,Net PPE,1126000000.0
+ILMN,2026-03-31,Ordinary Shares Number,152000000.0
+ILMN,2026-03-31,Retained Earnings,-258000000.0
+ILMN,2026-03-31,Share Issued,201000000.0
+ILMN,2026-03-31,Stockholders Equity,2676000000.0
+ILMN,2026-03-31,Total Assets,6559000000.0
+ILMN,2026-03-31,Total Debt,2544000000.0
+ILMN,2026-03-31,Total Liabilities Net Minority Interest,3883000000.0
+ILMN,2026-03-31,Working Capital,1172000000.0
+ILMN,2026-06-30,Accounts Payable,
+ILMN,2026-06-30,Accounts Receivable,
+ILMN,2026-06-30,Cash And Cash Equivalents,
+ILMN,2026-06-30,Current Assets,
+ILMN,2026-06-30,Current Liabilities,
+ILMN,2026-06-30,Goodwill And Other Intangible Assets,
+ILMN,2026-06-30,Inventory,
+ILMN,2026-06-30,Invested Capital,
+ILMN,2026-06-30,Long Term Debt,
+ILMN,2026-06-30,Net Debt,
+ILMN,2026-06-30,Net PPE,
+ILMN,2026-06-30,Ordinary Shares Number,151000000.0
+ILMN,2026-06-30,Retained Earnings,
+ILMN,2026-06-30,Share Issued,151000000.0
+ILMN,2026-06-30,Stockholders Equity,
+ILMN,2026-06-30,Total Assets,
+ILMN,2026-06-30,Total Debt,
+ILMN,2026-06-30,Total Liabilities Net Minority Interest,
+ILMN,2026-06-30,Working Capital,
 INCY,2024-12-31,Accounts Payable,197465000.0
 INCY,2024-12-31,Accounts Receivable,853154000.0
 INCY,2024-12-31,Cash And Cash Equivalents,1687829000.0
@@ -40712,6 +40965,26 @@ KR,2026-04-30,Total Assets,50292000000.0
 KR,2026-04-30,Total Debt,24192000000.0
 KR,2026-04-30,Total Liabilities Net Minority Interest,43814000000.0
 KR,2026-04-30,Working Capital,-3764000000.0
+KR,2026-07-31,Accounts Payable,10775000000.0
+KR,2026-07-31,Accounts Receivable,2187000000.0
+KR,2026-07-31,Cash And Cash Equivalents,1676000000.0
+KR,2026-07-31,Current Assets,12926000000.0
+KR,2026-07-31,Current Liabilities,18418000000.0
+KR,2026-07-31,Goodwill And Other Intangible Assets,3472000000.0
+KR,2026-07-31,Inventory,7282000000.0
+KR,2026-07-31,Invested Capital,21207000000.0
+KR,2026-07-31,Long Term Debt,13915000000.0
+KR,2026-07-31,Net Debt,13691000000.0
+KR,2026-07-31,Net PPE,32018000000.0
+KR,2026-07-31,Net Tangible Assets,2368000000.0
+KR,2026-07-31,Ordinary Shares Number,616560677.0
+KR,2026-07-31,Retained Earnings,29947000000.0
+KR,2026-07-31,Share Issued,616560677.0
+KR,2026-07-31,Stockholders Equity,5840000000.0
+KR,2026-07-31,Total Assets,49491000000.0
+KR,2026-07-31,Total Debt,24158000000.0
+KR,2026-07-31,Total Liabilities Net Minority Interest,43645000000.0
+KR,2026-07-31,Working Capital,-5492000000.0
 KVUE,2024-12-31,Accounts Payable,2254000000.0
 KVUE,2024-12-31,Accounts Receivable,2165000000.0
 KVUE,2024-12-31,Cash And Cash Equivalents,1070000000.0
@@ -47977,9 +48250,9 @@ MSFT,2026-06-30,Long Term Debt,31067000000.0
 MSFT,2026-06-30,Net Debt,19359000000.0
 MSFT,2026-06-30,Net PPE,337253000000.0
 MSFT,2026-06-30,Net Tangible Assets,304127000000.0
-MSFT,2026-06-30,Ordinary Shares Number,7427000000.0
+MSFT,2026-06-30,Ordinary Shares Number,7428434704.0
 MSFT,2026-06-30,Retained Earnings,328265000000.0
-MSFT,2026-06-30,Share Issued,7427000000.0
+MSFT,2026-06-30,Share Issued,7428434704.0
 MSFT,2026-06-30,Stockholders Equity,442387000000.0
 MSFT,2026-06-30,Total Assets,758376000000.0
 MSFT,2026-06-30,Total Debt,56826000000.0
@@ -53112,6 +53385,132 @@ OXY,2026-06-30,Total Assets,80358000000.0
 OXY,2026-06-30,Total Debt,14626000000.0
 OXY,2026-06-30,Total Liabilities Net Minority Interest,37977000000.0
 OXY,2026-06-30,Working Capital,3240000000.0
+P,2025-01-31,Accounts Payable,
+P,2025-01-31,Accounts Receivable,
+P,2025-01-31,Cash And Cash Equivalents,
+P,2025-01-31,Current Assets,
+P,2025-01-31,Current Liabilities,
+P,2025-01-31,Goodwill And Other Intangible Assets,
+P,2025-01-31,Inventory,
+P,2025-01-31,Invested Capital,
+P,2025-01-31,Net PPE,
+P,2025-01-31,Net Tangible Assets,
+P,2025-01-31,Ordinary Shares Number,
+P,2025-01-31,Retained Earnings,
+P,2025-01-31,Share Issued,
+P,2025-01-31,Stockholders Equity,
+P,2025-01-31,Total Assets,
+P,2025-01-31,Total Debt,
+P,2025-01-31,Total Liabilities Net Minority Interest,
+P,2025-01-31,Working Capital,
+P,2025-04-30,Accounts Payable,
+P,2025-04-30,Accounts Receivable,
+P,2025-04-30,Cash And Cash Equivalents,
+P,2025-04-30,Current Assets,
+P,2025-04-30,Current Liabilities,
+P,2025-04-30,Goodwill And Other Intangible Assets,
+P,2025-04-30,Inventory,
+P,2025-04-30,Invested Capital,
+P,2025-04-30,Net PPE,
+P,2025-04-30,Net Tangible Assets,
+P,2025-04-30,Ordinary Shares Number,
+P,2025-04-30,Retained Earnings,
+P,2025-04-30,Share Issued,
+P,2025-04-30,Stockholders Equity,
+P,2025-04-30,Total Assets,
+P,2025-04-30,Total Debt,
+P,2025-04-30,Total Liabilities Net Minority Interest,
+P,2025-04-30,Working Capital,
+P,2025-07-31,Accounts Payable,112162000.0
+P,2025-07-31,Accounts Receivable,530481000.0
+P,2025-07-31,Cash And Cash Equivalents,887849000.0
+P,2025-07-31,Current Assets,2524738000.0
+P,2025-07-31,Current Liabilities,1534408000.0
+P,2025-07-31,Goodwill And Other Intangible Assets,372570000.0
+P,2025-07-31,Inventory,46812000.0
+P,2025-07-31,Invested Capital,1318821000.0
+P,2025-07-31,Net PPE,735321000.0
+P,2025-07-31,Net Tangible Assets,946251000.0
+P,2025-07-31,Ordinary Shares Number,328315000.0
+P,2025-07-31,Retained Earnings,-1335889000.0
+P,2025-07-31,Share Issued,328315000.0
+P,2025-07-31,Stockholders Equity,1318821000.0
+P,2025-07-31,Total Assets,4026537000.0
+P,2025-07-31,Total Debt,223333000.0
+P,2025-07-31,Total Liabilities Net Minority Interest,2707716000.0
+P,2025-07-31,Working Capital,990330000.0
+P,2025-10-31,Accounts Payable,128022000.0
+P,2025-10-31,Accounts Receivable,620959000.0
+P,2025-10-31,Cash And Cash Equivalents,852838000.0
+P,2025-10-31,Current Assets,2652254000.0
+P,2025-10-31,Current Liabilities,1605023000.0
+P,2025-10-31,Goodwill And Other Intangible Assets,374149000.0
+P,2025-10-31,Inventory,82421000.0
+P,2025-10-31,Invested Capital,1402889000.0
+P,2025-10-31,Net PPE,760745000.0
+P,2025-10-31,Net Tangible Assets,1028740000.0
+P,2025-10-31,Ordinary Shares Number,330509000.0
+P,2025-10-31,Retained Earnings,-1281083000.0
+P,2025-10-31,Share Issued,330509000.0
+P,2025-10-31,Stockholders Equity,1402889000.0
+P,2025-10-31,Total Assets,4218411000.0
+P,2025-10-31,Total Debt,226111000.0
+P,2025-10-31,Total Liabilities Net Minority Interest,2815522000.0
+P,2025-10-31,Working Capital,1047231000.0
+P,2026-01-31,Accounts Payable,153312000.0
+P,2026-01-31,Accounts Receivable,944844000.0
+P,2026-01-31,Cash And Cash Equivalents,854873000.0
+P,2026-01-31,Current Assets,3063492000.0
+P,2026-01-31,Current Liabilities,1909990000.0
+P,2026-01-31,Goodwill And Other Intangible Assets,372421000.0
+P,2026-01-31,Inventory,75935000.0
+P,2026-01-31,Invested Capital,1445668000.0
+P,2026-01-31,Net PPE,772997000.0
+P,2026-01-31,Net Tangible Assets,1073247000.0
+P,2026-01-31,Ordinary Shares Number,326102000.0
+P,2026-01-31,Retained Earnings,-1180831000.0
+P,2026-01-31,Share Issued,326102000.0
+P,2026-01-31,Stockholders Equity,1445668000.0
+P,2026-01-31,Total Assets,4674259000.0
+P,2026-01-31,Total Debt,216715000.0
+P,2026-01-31,Total Liabilities Net Minority Interest,3228591000.0
+P,2026-01-31,Working Capital,1153502000.0
+P,2026-04-30,Accounts Payable,173207000.0
+P,2026-04-30,Accounts Receivable,886811000.0
+P,2026-04-30,Cash And Cash Equivalents,837794000.0
+P,2026-04-30,Current Assets,3049881000.0
+P,2026-04-30,Current Liabilities,1886411000.0
+P,2026-04-30,Goodwill And Other Intangible Assets,370417000.0
+P,2026-04-30,Inventory,77940000.0
+P,2026-04-30,Invested Capital,1442138000.0
+P,2026-04-30,Net PPE,815733000.0
+P,2026-04-30,Net Tangible Assets,1071721000.0
+P,2026-04-30,Ordinary Shares Number,326938000.0
+P,2026-04-30,Retained Earnings,-1156753000.0
+P,2026-04-30,Share Issued,326938000.0
+P,2026-04-30,Stockholders Equity,1442138000.0
+P,2026-04-30,Total Assets,4749947000.0
+P,2026-04-30,Total Debt,230961000.0
+P,2026-04-30,Total Liabilities Net Minority Interest,3307809000.0
+P,2026-04-30,Working Capital,1163470000.0
+P,2026-07-31,Accounts Payable,329848000.0
+P,2026-07-31,Accounts Receivable,1027665000.0
+P,2026-07-31,Cash And Cash Equivalents,385694000.0
+P,2026-07-31,Current Assets,3317973000.0
+P,2026-07-31,Current Liabilities,2196508000.0
+P,2026-07-31,Goodwill And Other Intangible Assets,489651000.0
+P,2026-07-31,Inventory,106300000.0
+P,2026-07-31,Invested Capital,1540838000.0
+P,2026-07-31,Net PPE,884291000.0
+P,2026-07-31,Net Tangible Assets,1051187000.0
+P,2026-07-31,Ordinary Shares Number,333324000.0
+P,2026-07-31,Retained Earnings,-1082604000.0
+P,2026-07-31,Share Issued,333324000.0
+P,2026-07-31,Stockholders Equity,1540838000.0
+P,2026-07-31,Total Assets,5220409000.0
+P,2026-07-31,Total Debt,225307000.0
+P,2026-07-31,Total Liabilities Net Minority Interest,3679571000.0
+P,2026-07-31,Working Capital,1121465000.0
 PANW,2024-07-31,Accounts Payable,
 PANW,2024-07-31,Accounts Receivable,
 PANW,2024-07-31,Cash And Cash Equivalents,
@@ -60975,6 +61374,126 @@ SJM,2026-07-31,Total Assets,16203200000.0
 SJM,2026-07-31,Total Debt,6897100000.0
 SJM,2026-07-31,Total Liabilities Net Minority Interest,10452400000.0
 SJM,2026-07-31,Working Capital,-297600000.0
+SKYD,2025-03-31,Accounts Payable,
+SKYD,2025-03-31,Accounts Receivable,
+SKYD,2025-03-31,Cash And Cash Equivalents,
+SKYD,2025-03-31,Current Assets,
+SKYD,2025-03-31,Current Liabilities,
+SKYD,2025-03-31,Goodwill And Other Intangible Assets,
+SKYD,2025-03-31,Inventory,
+SKYD,2025-03-31,Invested Capital,
+SKYD,2025-03-31,Long Term Debt,
+SKYD,2025-03-31,Net Debt,
+SKYD,2025-03-31,Net PPE,
+SKYD,2025-03-31,Net Tangible Assets,
+SKYD,2025-03-31,Ordinary Shares Number,
+SKYD,2025-03-31,Retained Earnings,
+SKYD,2025-03-31,Share Issued,
+SKYD,2025-03-31,Stockholders Equity,
+SKYD,2025-03-31,Total Assets,
+SKYD,2025-03-31,Total Debt,
+SKYD,2025-03-31,Total Liabilities Net Minority Interest,
+SKYD,2025-03-31,Working Capital,
+SKYD,2025-06-30,Accounts Payable,822000000.0
+SKYD,2025-06-30,Accounts Receivable,6291000000.0
+SKYD,2025-06-30,Cash And Cash Equivalents,2739000000.0
+SKYD,2025-06-30,Current Assets,12117000000.0
+SKYD,2025-06-30,Current Liabilities,8730000000.0
+SKYD,2025-06-30,Goodwill And Other Intangible Assets,12737000000.0
+SKYD,2025-06-30,Inventory,1519000000.0
+SKYD,2025-06-30,Invested Capital,31219000000.0
+SKYD,2025-06-30,Long Term Debt,14168000000.0
+SKYD,2025-06-30,Net Debt,11775000000.0
+SKYD,2025-06-30,Net PPE,2416000000.0
+SKYD,2025-06-30,Net Tangible Assets,3968000000.0
+SKYD,2025-06-30,Ordinary Shares Number,674702683.0
+SKYD,2025-06-30,Retained Earnings,7626000000.0
+SKYD,2025-06-30,Share Issued,1177724380.0
+SKYD,2025-06-30,Stockholders Equity,16705000000.0
+SKYD,2025-06-30,Total Assets,44926000000.0
+SKYD,2025-06-30,Total Debt,15507000000.0
+SKYD,2025-06-30,Total Liabilities Net Minority Interest,27815000000.0
+SKYD,2025-06-30,Working Capital,3387000000.0
+SKYD,2025-09-30,Accounts Payable,689000000.0
+SKYD,2025-09-30,Accounts Receivable,6302000000.0
+SKYD,2025-09-30,Cash And Cash Equivalents,3263000000.0
+SKYD,2025-09-30,Current Assets,13202000000.0
+SKYD,2025-09-30,Current Liabilities,9884000000.0
+SKYD,2025-09-30,Goodwill And Other Intangible Assets,7550000000.0
+SKYD,2025-09-30,Inventory,1776000000.0
+SKYD,2025-09-30,Invested Capital,25638000000.0
+SKYD,2025-09-30,Long Term Debt,13286000000.0
+SKYD,2025-09-30,Net Debt,10370000000.0
+SKYD,2025-09-30,Net PPE,3196000000.0
+SKYD,2025-09-30,Net Tangible Assets,4455000000.0
+SKYD,2025-09-30,Ordinary Shares Number,1097500087.0
+SKYD,2025-09-30,Retained Earnings,-1180000000.0
+SKYD,2025-09-30,Share Issued,1097500087.0
+SKYD,2025-09-30,Stockholders Equity,12005000000.0
+SKYD,2025-09-30,Total Assets,43181000000.0
+SKYD,2025-09-30,Total Debt,14733000000.0
+SKYD,2025-09-30,Total Liabilities Net Minority Interest,29910000000.0
+SKYD,2025-09-30,Working Capital,3318000000.0
+SKYD,2025-12-31,Accounts Payable,906000000.0
+SKYD,2025-12-31,Accounts Receivable,6615000000.0
+SKYD,2025-12-31,Cash And Cash Equivalents,3274000000.0
+SKYD,2025-12-31,Current Assets,13320000000.0
+SKYD,2025-12-31,Current Liabilities,10599000000.0
+SKYD,2025-12-31,Goodwill And Other Intangible Assets,7838000000.0
+SKYD,2025-12-31,Inventory,1461000000.0
+SKYD,2025-12-31,Invested Capital,25351000000.0
+SKYD,2025-12-31,Long Term Debt,13225000000.0
+SKYD,2025-12-31,Net Debt,10384000000.0
+SKYD,2025-12-31,Net PPE,3321000000.0
+SKYD,2025-12-31,Net Tangible Assets,3855000000.0
+SKYD,2025-12-31,Ordinary Shares Number,1107500087.0
+SKYD,2025-12-31,Retained Earnings,-1753000000.0
+SKYD,2025-12-31,Share Issued,1107500087.0
+SKYD,2025-12-31,Stockholders Equity,11693000000.0
+SKYD,2025-12-31,Total Assets,43342000000.0
+SKYD,2025-12-31,Total Debt,14808000000.0
+SKYD,2025-12-31,Total Liabilities Net Minority Interest,30455000000.0
+SKYD,2025-12-31,Working Capital,2721000000.0
+SKYD,2026-03-31,Accounts Payable,707000000.0
+SKYD,2026-03-31,Accounts Receivable,6850000000.0
+SKYD,2026-03-31,Cash And Cash Equivalents,1941000000.0
+SKYD,2026-03-31,Current Assets,11555000000.0
+SKYD,2026-03-31,Current Liabilities,10503000000.0
+SKYD,2026-03-31,Goodwill And Other Intangible Assets,7576000000.0
+SKYD,2026-03-31,Inventory,1000000000.0
+SKYD,2026-03-31,Invested Capital,27188000000.0
+SKYD,2026-03-31,Long Term Debt,14821000000.0
+SKYD,2026-03-31,Net Debt,13542000000.0
+SKYD,2026-03-31,Net PPE,3289000000.0
+SKYD,2026-03-31,Net Tangible Assets,4129000000.0
+SKYD,2026-03-31,Ordinary Shares Number,1117500087.0
+SKYD,2026-03-31,Retained Earnings,-1585000000.0
+SKYD,2026-03-31,Share Issued,1117500087.0
+SKYD,2026-03-31,Stockholders Equity,11705000000.0
+SKYD,2026-03-31,Total Assets,44488000000.0
+SKYD,2026-03-31,Total Debt,16595000000.0
+SKYD,2026-03-31,Total Liabilities Net Minority Interest,31739000000.0
+SKYD,2026-03-31,Working Capital,1052000000.0
+SKYD,2026-06-30,Accounts Payable,511000000.0
+SKYD,2026-06-30,Accounts Receivable,6178000000.0
+SKYD,2026-06-30,Cash And Cash Equivalents,1627000000.0
+SKYD,2026-06-30,Current Assets,11020000000.0
+SKYD,2026-06-30,Current Liabilities,10600000000.0
+SKYD,2026-06-30,Goodwill And Other Intangible Assets,7683000000.0
+SKYD,2026-06-30,Inventory,1655000000.0
+SKYD,2026-06-30,Invested Capital,26927000000.0
+SKYD,2026-06-30,Long Term Debt,14491000000.0
+SKYD,2026-06-30,Net Debt,13529000000.0
+SKYD,2026-06-30,Net PPE,3249000000.0
+SKYD,2026-06-30,Net Tangible Assets,4088000000.0
+SKYD,2026-06-30,Ordinary Shares Number,1120500087.0
+SKYD,2026-06-30,Retained Earnings,-1544000000.0
+SKYD,2026-06-30,Share Issued,1120500087.0
+SKYD,2026-06-30,Stockholders Equity,11771000000.0
+SKYD,2026-06-30,Total Assets,44411000000.0
+SKYD,2026-06-30,Total Debt,16202000000.0
+SKYD,2026-06-30,Total Liabilities Net Minority Interest,31601000000.0
+SKYD,2026-06-30,Working Capital,420000000.0
 SLB,2024-12-31,Accounts Payable,4230000000.0
 SLB,2024-12-31,Accounts Receivable,8011000000.0
 SLB,2024-12-31,Cash And Cash Equivalents,3544000000.0
@@ -67839,6 +68358,120 @@ TTWO,2026-06-30,Total Assets,9064200000.0
 TTWO,2026-06-30,Total Debt,2944700000.0
 TTWO,2026-06-30,Total Liabilities Net Minority Interest,5455800000.0
 TTWO,2026-06-30,Working Capital,173500000.0
+TWLO,2025-03-31,Accounts Payable,
+TWLO,2025-03-31,Accounts Receivable,
+TWLO,2025-03-31,Cash And Cash Equivalents,
+TWLO,2025-03-31,Current Assets,
+TWLO,2025-03-31,Current Liabilities,
+TWLO,2025-03-31,Goodwill And Other Intangible Assets,
+TWLO,2025-03-31,Invested Capital,
+TWLO,2025-03-31,Long Term Debt,
+TWLO,2025-03-31,Net Debt,
+TWLO,2025-03-31,Net PPE,
+TWLO,2025-03-31,Net Tangible Assets,
+TWLO,2025-03-31,Ordinary Shares Number,
+TWLO,2025-03-31,Retained Earnings,
+TWLO,2025-03-31,Share Issued,
+TWLO,2025-03-31,Stockholders Equity,
+TWLO,2025-03-31,Total Assets,
+TWLO,2025-03-31,Total Debt,
+TWLO,2025-03-31,Total Liabilities Net Minority Interest,
+TWLO,2025-03-31,Working Capital,
+TWLO,2025-06-30,Accounts Payable,76181000.0
+TWLO,2025-06-30,Accounts Receivable,587966000.0
+TWLO,2025-06-30,Cash And Cash Equivalents,969229000.0
+TWLO,2025-06-30,Current Assets,3531637000.0
+TWLO,2025-06-30,Current Liabilities,720059000.0
+TWLO,2025-06-30,Goodwill And Other Intangible Assets,5427526000.0
+TWLO,2025-06-30,Invested Capital,9035351000.0
+TWLO,2025-06-30,Long Term Debt,991429000.0
+TWLO,2025-06-30,Net Debt,22200000.0
+TWLO,2025-06-30,Net PPE,231131000.0
+TWLO,2025-06-30,Net Tangible Assets,2616396000.0
+TWLO,2025-06-30,Ordinary Shares Number,153576158.0
+TWLO,2025-06-30,Retained Earnings,-7786089000.0
+TWLO,2025-06-30,Share Issued,153576158.0
+TWLO,2025-06-30,Stockholders Equity,8043922000.0
+TWLO,2025-06-30,Total Assets,9848292000.0
+TWLO,2025-06-30,Total Debt,1102590000.0
+TWLO,2025-06-30,Total Liabilities Net Minority Interest,1804370000.0
+TWLO,2025-06-30,Working Capital,2811578000.0
+TWLO,2025-09-30,Accounts Payable,40321000.0
+TWLO,2025-09-30,Accounts Receivable,613120000.0
+TWLO,2025-09-30,Cash And Cash Equivalents,734843000.0
+TWLO,2025-09-30,Current Assets,3477326000.0
+TWLO,2025-09-30,Current Liabilities,742288000.0
+TWLO,2025-09-30,Goodwill And Other Intangible Assets,5400619000.0
+TWLO,2025-09-30,Invested Capital,8887145000.0
+TWLO,2025-09-30,Long Term Debt,991856000.0
+TWLO,2025-09-30,Net Debt,257013000.0
+TWLO,2025-09-30,Net PPE,222646000.0
+TWLO,2025-09-30,Net Tangible Assets,2494670000.0
+TWLO,2025-09-30,Ordinary Shares Number,152067819.0
+TWLO,2025-09-30,Retained Earnings,-8098632000.0
+TWLO,2025-09-30,Share Issued,152067819.0
+TWLO,2025-09-30,Stockholders Equity,7895289000.0
+TWLO,2025-09-30,Total Assets,9712319000.0
+TWLO,2025-09-30,Total Debt,1094843000.0
+TWLO,2025-09-30,Total Liabilities Net Minority Interest,1817030000.0
+TWLO,2025-09-30,Working Capital,2735038000.0
+TWLO,2025-12-31,Accounts Payable,85089000.0
+TWLO,2025-12-31,Accounts Receivable,636736000.0
+TWLO,2025-12-31,Cash And Cash Equivalents,682335000.0
+TWLO,2025-12-31,Current Assets,3576728000.0
+TWLO,2025-12-31,Current Liabilities,887008000.0
+TWLO,2025-12-31,Goodwill And Other Intangible Assets,5139910000.0
+TWLO,2025-12-31,Invested Capital,8813833000.0
+TWLO,2025-12-31,Long Term Debt,992287000.0
+TWLO,2025-12-31,Net Debt,309952000.0
+TWLO,2025-12-31,Net PPE,509936000.0
+TWLO,2025-12-31,Net Tangible Assets,2681636000.0
+TWLO,2025-12-31,Ordinary Shares Number,152411346.0
+TWLO,2025-12-31,Retained Earnings,-8342464000.0
+TWLO,2025-12-31,Share Issued,152411346.0
+TWLO,2025-12-31,Stockholders Equity,7821546000.0
+TWLO,2025-12-31,Total Assets,9770890000.0
+TWLO,2025-12-31,Total Debt,1081572000.0
+TWLO,2025-12-31,Total Liabilities Net Minority Interest,1949344000.0
+TWLO,2025-12-31,Working Capital,2689720000.0
+TWLO,2026-03-31,Accounts Payable,91706000.0
+TWLO,2026-03-31,Accounts Receivable,710516000.0
+TWLO,2026-03-31,Cash And Cash Equivalents,541976000.0
+TWLO,2026-03-31,Current Assets,3446819000.0
+TWLO,2026-03-31,Current Liabilities,740325000.0
+TWLO,2026-03-31,Goodwill And Other Intangible Assets,5417856000.0
+TWLO,2026-03-31,Invested Capital,8776806000.0
+TWLO,2026-03-31,Long Term Debt,992722000.0
+TWLO,2026-03-31,Net Debt,450746000.0
+TWLO,2026-03-31,Net PPE,210949000.0
+TWLO,2026-03-31,Net Tangible Assets,2366228000.0
+TWLO,2026-03-31,Ordinary Shares Number,152105999.0
+TWLO,2026-03-31,Retained Earnings,-8506279000.0
+TWLO,2026-03-31,Share Issued,152105999.0
+TWLO,2026-03-31,Stockholders Equity,7784084000.0
+TWLO,2026-03-31,Total Assets,9576805000.0
+TWLO,2026-03-31,Total Debt,1068131000.0
+TWLO,2026-03-31,Total Liabilities Net Minority Interest,1792721000.0
+TWLO,2026-03-31,Working Capital,2706494000.0
+TWLO,2026-06-30,Accounts Payable,70551000.0
+TWLO,2026-06-30,Accounts Receivable,760074000.0
+TWLO,2026-06-30,Cash And Cash Equivalents,823261000.0
+TWLO,2026-06-30,Current Assets,3746415000.0
+TWLO,2026-06-30,Current Liabilities,810686000.0
+TWLO,2026-06-30,Goodwill And Other Intangible Assets,5406521000.0
+TWLO,2026-06-30,Invested Capital,9970970000.0
+TWLO,2026-06-30,Long Term Debt,993162000.0
+TWLO,2026-06-30,Net Debt,169901000.0
+TWLO,2026-06-30,Net PPE,217090000.0
+TWLO,2026-06-30,Net Tangible Assets,3571287000.0
+TWLO,2026-06-30,Ordinary Shares Number,153571872.0
+TWLO,2026-06-30,Retained Earnings,-7505089000.0
+TWLO,2026-06-30,Share Issued,153571872.0
+TWLO,2026-06-30,Stockholders Equity,8977808000.0
+TWLO,2026-06-30,Total Assets,10838627000.0
+TWLO,2026-06-30,Total Debt,1065519000.0
+TWLO,2026-06-30,Total Liabilities Net Minority Interest,1860819000.0
+TWLO,2026-06-30,Working Capital,2935729000.0
 TXN,2024-09-30,Accounts Payable,
 TXN,2024-09-30,Accounts Receivable,
 TXN,2024-09-30,Cash And Cash Equivalents,
@@ -71817,6 +72450,22 @@ VTRS,2026-06-30,Total Assets,35044600000.0
 VTRS,2026-06-30,Total Debt,13626400000.0
 VTRS,2026-06-30,Total Liabilities Net Minority Interest,20784200000.0
 VTRS,2026-06-30,Working Capital,3709900000.0
+VYLR,2026-03-31,Accounts Payable,1702000000.0
+VYLR,2026-03-31,Accounts Receivable,3678000000.0
+VYLR,2026-03-31,Cash And Cash Equivalents,436000000.0
+VYLR,2026-03-31,Current Assets,7302000000.0
+VYLR,2026-03-31,Current Liabilities,6415000000.0
+VYLR,2026-03-31,Goodwill And Other Intangible Assets,12416000000.0
+VYLR,2026-03-31,Inventory,2626000000.0
+VYLR,2026-03-31,Invested Capital,15298000000.0
+VYLR,2026-03-31,Net PPE,2443000000.0
+VYLR,2026-03-31,Net Tangible Assets,2755000000.0
+VYLR,2026-03-31,Retained Earnings,0.0
+VYLR,2026-03-31,Stockholders Equity,15171000000.0
+VYLR,2026-03-31,Total Assets,23074000000.0
+VYLR,2026-03-31,Total Debt,127000000.0
+VYLR,2026-03-31,Total Liabilities Net Minority Interest,7898000000.0
+VYLR,2026-03-31,Working Capital,887000000.0
 VZ,2024-12-31,Accounts Payable,10425000000.0
 VZ,2024-12-31,Accounts Receivable,26109000000.0
 VZ,2024-12-31,Cash And Cash Equivalents,4194000000.0
