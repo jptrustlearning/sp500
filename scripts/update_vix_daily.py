@@ -100,6 +100,12 @@ if __name__ == '__main__':
     end_date = datetime.now().strftime('%Y-%m-%d')
     print(f'\n🔄 Fetching: {start_date} → {end_date}')
 
+    # กันรอบที่ GitHub cron มาช้าหลังข้อมูลเข้าแล้ว: start == end → Yahoo อาจคืนแท่งเมื่อวานจากอีกแหล่ง
+    # มาเขียนทับ (เหตุ 10 พ.ย. 2026: SPY volume 50,069,200 → 48,888,639) — เหมือน update_sp500_daily.py
+    if start_date >= end_date:
+        print('\n✅ Already up to date — nothing to fetch')
+        raise SystemExit(0)
+
     # Download
     print(f'\n📥 Downloading {YF_SYMBOL}...')
     df_new = download_vix_data(start_date, end_date)

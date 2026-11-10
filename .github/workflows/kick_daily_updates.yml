@@ -35,7 +35,8 @@ jobs:
     steps:
       - name: Dispatch daily workflows not yet run today (UTC)
         env:
-          GH_TOKEN: ${{ github.token }}
+          # ต้องใช้ PAT: run ที่สั่งด้วย github.token จะไม่ปลุก workflow_run ต่อ (Mini 14d · Sync R2 ไม่รัน · ทดสอบ 11 พ.ย.)
+          GH_TOKEN: ${{ secrets.SP500_PAT }}
           REPO: ${{ github.repository }}
           FORCE: ${{ github.event.inputs.force }}
         run: |
@@ -48,6 +49,7 @@ jobs:
                   -q '[.[] | select(.conclusion != "failure" and .conclusion != "cancelled" and .conclusion != "startup_failure")] | length')
               if [ "${n:-0}" -gt 0 ]; then echo "skip  $wf  (ran today: $n)"; continue; fi
             fi
-            gh workflow run "$wf" -R "$REPO" --ref main && echo "kick  $wf"
+            if gh workflow run "$wf" -R "$REPO" --ref main; then echo "kick  $wf"; else echo "FAIL  $wf"; fail=1; fi
             sleep 20
           done
+          exit ${fail:-0}

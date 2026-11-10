@@ -139,8 +139,8 @@ if __name__ == '__main__':
 
         print(f'\n📥 {label} ({yahoo_ticker}) — {mode} → {end_date}')
 
-        # Skip if start_date is already past end_date (already up to date)
-        if start_date > end_date:
+        # Skip if already up to date — start == end ก็ข้าม (เดิม > · รอบ cron มาช้าเขียนทับแท่งเมื่อวาน เหตุ 10 พ.ย. 2026)
+        if start_date >= end_date:
             print(f'  ℹ️  Already up to date')
             success_count += 1
             continue
