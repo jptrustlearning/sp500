@@ -1,0 +1,55 @@
+name: Kick Daily Updates (push-trigger)
+
+# ตัวช่วยกด "Run workflow" ให้ workflow รายวันทั้ง 7 ตัว (จูนสั่ง 11 พ.ย. 2026 · rev1264+)
+# เหตุ: GitHub ดีเลย์ cron 00:00 UTC ของ workflow รายวัน 4–7 ชม. (ต.ค.–พ.ย. 2026)
+#       ข้อมูลเลยเข้าแอปราวเที่ยง–บ่ายโมงแทน 07:00
+# วิธี: Claude scheduled task (อังคาร–เสาร์ 07:15 ไทย) push ไฟล์ ops/kick-daily.json
+#       → workflow นี้ทำงาน → สั่งรันตัวที่ยังไม่ได้รันวันนี้ (UTC)
+#       (scheduled session สั่ง dispatch ผ่าน API ตรงไม่ได้ ตั้งแต่ 16 ต.ค. 2026 · จึงใช้ทาง push)
+# - ตัวไหนรันแล้ว/กำลังรันวันนี้ = ข้าม · cron เดิมของแต่ละตัวยังอยู่ = ตัวสำรอง
+# - ไม่แตะ workflow / สคริปต์เดิม · ห้ามลบไฟล์นี้ (ถ้าเลิกใช้ ให้หยุด scheduled task อย่างเดียว)
+
+on:
+  push:
+    branches: [main]
+    paths: ['ops/kick-daily.json']
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'ชื่อไฟล์ workflow ที่ให้สั่งรันแม้รันแล้ววันนี้ (ว่าง = ไม่บังคับ)'
+        required: false
+        default: ''
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: kick-daily
+  cancel-in-progress: false
+
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Dispatch daily workflows not yet run today (UTC)
+        env:
+          # ต้องใช้ PAT: run ที่สั่งด้วย github.token จะไม่ปลุก workflow_run ต่อ (Mini 14d · Sync R2 ไม่รัน · ทดสอบ 11 พ.ย.)
+          GH_TOKEN: ${{ secrets.SP500_PAT }}
+          REPO: ${{ github.repository }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          echo "UTC now: $(date -u)  ·  event: ${{ github.event_name }}  ·  force: ${FORCE:-none}"
+          for wf in update_sp500_prices.yml update_benchmark_prices.yml update_commodities_prices.yml \
+                    update_jpy_prices.yml update_fx_prices.yml update_magnificent7_prices.yml update_vix_prices.yml; do
+            if [ "$wf" != "$FORCE" ]; then
+              n=$(gh run list -R "$REPO" --workflow "$wf" --created ">=$TODAY" --limit 20 --json conclusion \
+                  -q '[.[] | select(.conclusion != "failure" and .conclusion != "cancelled" and .conclusion != "startup_failure")] | length')
+              if [ "${n:-0}" -gt 0 ]; then echo "skip  $wf  (ran today: $n)"; continue; fi
+            fi
+            if gh workflow run "$wf" -R "$REPO" --ref main; then echo "kick  $wf"; else echo "FAIL  $wf"; fail=1; fi
+            sleep 20
+          done
+          exit ${fail:-0}

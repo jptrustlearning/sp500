@@ -3,7 +3,7 @@ name: Kick Daily Updates (push-trigger)
 # ตัวช่วยกด "Run workflow" ให้ workflow รายวันทั้ง 7 ตัว (จูนสั่ง 11 พ.ย. 2026 · rev1264+)
 # เหตุ: GitHub ดีเลย์ cron 00:00 UTC ของ workflow รายวัน 4–7 ชม. (ต.ค.–พ.ย. 2026)
 #       ข้อมูลเลยเข้าแอปราวเที่ยง–บ่ายโมงแทน 07:00
-# วิธี: Claude scheduled task (อังคาร–เสาร์ 07:15 ไทย) push ไฟล์ ops/kick-daily.json
+# วิธี: Claude scheduled task (อังคาร–เสาร์ 07:15 ไทย) push ไฟล์ใหม่ ops/kicks/<YYYY-MM-DD>.json
 #       → workflow นี้ทำงาน → สั่งรันตัวที่ยังไม่ได้รันวันนี้ (UTC)
 #       (scheduled session สั่ง dispatch ผ่าน API ตรงไม่ได้ ตั้งแต่ 16 ต.ค. 2026 · จึงใช้ทาง push)
 # - ตัวไหนรันแล้ว/กำลังรันวันนี้ = ข้าม · cron เดิมของแต่ละตัวยังอยู่ = ตัวสำรอง
@@ -12,7 +12,7 @@ name: Kick Daily Updates (push-trigger)
 on:
   push:
     branches: [main]
-    paths: ['ops/kick-daily.json']
+    paths: ['ops/kick-daily.json', 'ops/kicks/**']   # scheduled task สร้างไฟล์ใหม่ ops/kicks/<วันที่>.json วันละไฟล์ (ไม่แก้ไฟล์เดิม)
   workflow_dispatch:
     inputs:
       force:
