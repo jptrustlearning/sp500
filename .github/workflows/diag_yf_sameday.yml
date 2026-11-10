@@ -1,0 +1,32 @@
+name: "[Diagnostic] yfinance start==end probe (read-only)"
+
+# อ่านอย่างเดียว ไม่ commit · ใช้ตรวจว่า yfinance คืนแท่งอะไรเมื่อ start == end (11 พ.ย. 2026)
+on: workflow_dispatch
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q yfinance pandas
+      - run: |
+          python - <<'PY'
+          import yfinance as yf
+          from datetime import datetime, timedelta
+          now = datetime.now()
+          today = now.strftime('%Y-%m-%d'); yday = (now - timedelta(days=1)).strftime('%Y-%m-%d')
+          print('runner now (UTC):', now)
+          for t in ['SPY', '^VIX', 'GC=F', 'AAPL']:
+              for s, e in [(today, today), (yday, today)]:
+                  try:
+                      df = yf.Ticker(t).history(start=s, end=e, interval='1d')
+                      rows = [(str(i.date()), round(float(r.Close), 2), int(r.Volume)) for i, r in df.iterrows()]
+                      print(f'{t:6} start={s} end={e} -> {rows}')
+                  except Exception as ex:
+                      print(f'{t:6} start={s} end={e} -> ERR {ex}')
+          PY
